@@ -18,22 +18,60 @@
     -webkit-font-smoothing:antialiased}
   .wrap{max-width:1640px;margin:0 auto;padding:0 22px 60px}
 
-  header.top{background:linear-gradient(180deg,var(--forest),var(--forest-2));color:#fff;
-    margin:0 -22px 0;padding:22px 22px 24px}
-  header.top .inner{max-width:1640px;margin:0 auto}
-  header.top h1{font-size:20px;font-weight:600;margin:0 0 3px;letter-spacing:-.01em}
-  header.top p{margin:0;font-size:12.5px;opacity:.82;line-height:1.5}
-  .stamp{margin-top:12px;font-size:11.5px;opacity:.75}
+  /* The masthead is a white band with a single green hairline on top --
+     the colour signals the department without spending a fifth of the
+     first screen on a slab of it, and it lets the KPI strip below be the
+     first thing the eye lands on. */
+  header.top{background:var(--panel);border-top:3px solid var(--forest);
+    border-bottom:1px solid var(--line)}
+  header.top .inner{max-width:1640px;margin:0 auto;padding:16px 22px 17px}
+  header.top .brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  header.top .mark{flex:none;width:34px;height:34px;border-radius:9px;
+    background:var(--forest);display:flex;align-items:center;justify-content:center}
+  header.top .ttl{min-width:0}
+  header.top h1{font-size:18.5px;font-weight:600;margin:0;color:var(--ink);
+    letter-spacing:-.014em;line-height:1.25}
+  header.top .org{margin:2px 0 0;font-size:12px;color:var(--ink-2);line-height:1.4}
+  /* Cap the measure -- the scope line is a long sentence and full-bleed
+     lines at 1640px are genuinely hard to track back from. */
+  header.top .sub{margin:11px 0 0;font-size:11.5px;color:var(--ink-3);
+    line-height:1.5;max-width:1020px}
+  .stamp{margin-left:auto;font-size:11.5px;color:var(--grn);background:var(--grn-bg);
+    border:1px solid #cde3d6;border-radius:999px;padding:5px 12px;white-space:nowrap}
 
-  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:12px;margin:-18px 0 20px}
-  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px;
-    box-shadow:0 1px 2px rgba(20,24,20,.04)}
-  .kpi .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);font-weight:600}
-  .kpi .v{font-size:25px;font-weight:600;margin-top:5px;line-height:1;font-variant-numeric:tabular-nums}
-  .kpi .d{font-size:11px;margin-top:4px;color:var(--ink-3)}
+  /* Seven KPIs, one row. Fixed 7-up rather than auto-fit: the set is a
+     single glance-able strip, and a card wrapping onto its own line reads
+     as more important than the rest. minmax(0,...) lets them shrink
+     instead of overflowing when the window is narrow. */
+  .kpis{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin:20px 0 22px}
+  @media (max-width:1180px){.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  @media (max-width:760px){ .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  /* Each KPI owns a hue: tinted face, saturated rail, saturated figure.
+     The tint stays pale enough that the value keeps AA contrast on it. */
+  .kpi{position:relative;overflow:hidden;display:flex;flex-direction:column;
+    background:var(--cbg,var(--panel));border:1px solid var(--cbd,var(--line));
+    border-left:3px solid var(--c,var(--forest-2));border-radius:10px;
+    padding:11px 13px 12px;transition:box-shadow .14s,transform .14s}
+  .kpi:hover{box-shadow:0 3px 9px rgba(20,24,20,.09);transform:translateY(-1px)}
+  /* Reserve two lines for the label so every value sits on one baseline. */
+  .kpi .k{font-size:9.5px;text-transform:uppercase;letter-spacing:.045em;
+    color:var(--c,var(--ink-3));font-weight:700;line-height:1.32;min-height:2.64em}
+  .kpi .v{font-size:23px;font-weight:600;margin-top:auto;padding-top:6px;line-height:1;
+    font-variant-numeric:tabular-nums;color:var(--c,var(--ink))}
+  .kpi .d{font-size:10.5px;margin-top:4px;color:var(--ink-2);opacity:.85;line-height:1.35}
+  .kpi.accent{border-color:var(--line-2)}
+  .kpi.accent .v{color:var(--forest-2)}
+  /* The seven hues, ordered so no two neighbours share a family. */
+  .kpi.k1{--c:#1b6b40;--cbg:#eaf5ee;--cbd:#cbe5d6}  /* total       - green   */
+  .kpi.k2{--c:#1a5aa8;--cbg:#eaf1fb;--cbd:#cadcf2}  /* High Court  - blue    */
+  .kpi.k3{--c:#6f31a5;--cbg:#f3ecfb;--cbd:#dccef0}  /* KSAT        - violet  */
+  .kpi.k4{--c:#b5342a;--cbg:#fdeceb;--cbd:#f4cfcc}  /* contempt    - red     */
+  .kpi.k5{--c:#a8560c;--cbg:#fdf2e3;--cbd:#f2ddbf}  /* no action   - amber   */
+  .kpi.k6{--c:#0a7373;--cbg:#e6f4f4;--cbd:#c3e4e4}  /* LCO         - teal    */
+  .kpi.k7{--c:#9c2668;--cbg:#fceaf3;--cbd:#f2cbdf}  /* final order - magenta */
 
-  .filters{background:var(--panel);border:1px solid var(--line);border-radius:11px;
-    padding:4px 16px 12px;margin-bottom:16px}
+  .filters{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:4px 16px 12px;margin-bottom:16px;box-shadow:0 1px 2px rgba(20,24,20,.03)}
   .frow{display:grid;grid-template-columns:104px 1fr;gap:10px;align-items:start;
     padding:11px 0}
   .frow + .frow{border-top:1px solid var(--line)}
@@ -68,11 +106,11 @@
   .freset{font-size:11.5px;color:var(--acc);cursor:pointer;margin-left:4px;
     text-decoration:underline;text-underline-offset:2px}
 
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:11px;overflow:hidden;
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;
     box-shadow:0 1px 2px rgba(20,24,20,.04)}
-  .phead{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;
+  .phead{padding:15px 17px;border-bottom:1px solid var(--line);display:flex;
     justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
-  .phead h2{font-size:14.5px;font-weight:600;margin:0}
+  .phead h2{font-size:14.5px;font-weight:600;margin:0;letter-spacing:-.005em}
   .phead .m{font-size:11.5px;color:var(--ink-3)}
   .badge{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;
     letter-spacing:.04em;padding:2px 8px;border-radius:999px;background:var(--acc-bg);
@@ -144,9 +182,22 @@
 
 <header class="top">
   <div class="inner">
-    <h1>CCMS court case dashboard</h1>
-    <p>Karnataka Forest Department &middot; Forest, Ecology and Environment &mdash; Bengaluru Circle, Urban / Rural / Chikkaballapura / Kolar / Ramanagara divisions, Bannerghatta Wildlife, and Social Forestry divisions</p>
-    <div class="stamp" id="stamp">Loading&hellip;</div>
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#fff"
+             stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21v-9"/>
+          <path d="M12 13c0-4.2 2.6-7.2 7.2-8.2C19.5 9.6 16.7 13 12 13z"/>
+          <path d="M12 16.5c0-3.1-2-5.6-5.6-6.2C6.2 14 8.5 16.5 12 16.5z"/>
+        </svg>
+      </span>
+      <div class="ttl">
+        <h1>CCMS court case dashboard</h1>
+        <p class="org">Karnataka Forest Department &middot; Forest, Ecology and Environment</p>
+      </div>
+      <div class="stamp" id="stamp">Loading&hellip;</div>
+    </div>
+    <p class="sub">Statewide &mdash; Aranya Bhavana HQ and all 13 circles (territorial, wildlife and social forestry divisions), before the High Court of Karnataka and the Karnataka State Administrative Tribunal.</p>
   </div>
 </header>
 
@@ -296,13 +347,21 @@ function shortWing(name){
 // instead of returning a single number, so one pass fills a whole row of
 // chips.
 function tally(ov,by){
-  var o={court:COURT,circle:CIRCLE,wing:WING,unit:UNIT,stage:STAGE,ct:null};
+  var o={court:COURT,circle:CIRCLE,wing:WING,unit:UNIT,stage:STAGE,ct:null,metric:null};
   for(var k in (ov||{})) o[k]=ov[k];
   var single=0,bucket={},meta={};
 
   DATA.case_types.forEach(function(ct){
     if(o.ct!==null && ct.key!==o.ct) return;
     if(o.court!=='ALL' && ct.court!==o.court) return;
+
+    // Default statistic is the pending count. Pass o.metric (a regex on
+    // the column header) to total something else instead -- the key for
+    // the same statistic differs per report, so it is resolved here, per
+    // report, rather than assumed. A report lacking the column simply
+    // contributes nothing.
+    var MK='total_cases_pending';
+    if(o.metric){ MK=metricKey(ct,o.metric); if(!MK) return; }
 
     ct.rows.forEach(function(r){
       if(o.circle!=='ALL' && r.circle!==o.circle) return;
@@ -315,7 +374,7 @@ function tally(ov,by){
           var m=u.metrics;
           if(o.stage!=='ALL' && !(m[o.stage]>0)) return;
           var b=bucket[u.wing]||(bucket[u.wing]={total:0,users:0});
-          b.total+=m.total_cases_pending||0; b.users++;
+          b.total+=m[MK]||0; b.users++;
         });
         return;
       }
@@ -343,7 +402,7 @@ function tally(ov,by){
       }
 
       if(o.stage!=='ALL' && !(m[o.stage]>0)) return;
-      var v=m.total_cases_pending||0;
+      var v=m[MK]||0;
       if(by==='circle'){
         (bucket[r.circle]||(bucket[r.circle]={total:0})).total+=v;
       }else if(by==='unit'){
@@ -403,14 +462,60 @@ function shortUnit(name){
 // its chip, and what the table beneath will total if it is selected.
 function pend(ct){ return ct?tally({ct:ct.key}):0; }
 
+function kn(v){return (typeof v==='number')?v.toLocaleString('en-IN'):v;}
+function shortCourt(c){return c.indexOf('Administrative')>=0?'KSAT':'High Court';}
+
+// --- KPI plumbing -------------------------------------------------------
+// CCMS exports the same statistic under a different column key depending
+// on the report: Writ Petition names it `no_action_taken`, Writ Appeal
+// gives the identical column as `col_3`. Only the *header* is stable, so
+// every cross-report KPI resolves its key by header text.
+var KPI_COL={
+  noAction: /^\s*No Action Taken/i,
+  lco:      /^\s*LCO Proposal Stage/i,
+  finalOrd: /^\s*Final Order Compliance Pending/i
+};
+function metricKey(ct,re){
+  var cols=ct.columns||[];
+  for(var i=0;i<cols.length;i++){
+    if(re.test(cols[i].header||'')) return cols[i].key;
+  }
+  return null;
+}
+// How many of the reports in scope actually carry this column -- shown on
+// the card so a low number is never mistaken for a real zero. Writ Appeal
+// and S-KSAT have no "LCO Proposal Stage" column at all, only "GA/LCO
+// Auth Pending", which is a different stage and deliberately not folded in.
+function metricCoverage(re){
+  var list=typesFor(COURT), have=0;
+  list.forEach(function(ct){ if(metricKey(ct,re)) have++; });
+  return {have:have,of:list.length};
+}
+function courtNamed(frag){
+  var cs=courtsOf();
+  for(var i=0;i<cs.length;i++){
+    if(cs[i].toLowerCase().indexOf(frag)>=0) return cs[i];
+  }
+  return null;
+}
+function contemptTypes(){
+  return DATA.case_types.filter(function(ct){return /contempt/i.test(ct.label||'');});
+}
+
 function renderKPIs(){
   var list=typesFor(COURT);
   var totalPending=list.reduce(function(s,c){return s+pend(c);},0);
-  var divs={};
-  list.forEach(function(ct){rowsOf(ct).forEach(function(r){divs[r.code]=1;});});
+  var divs={}, groupTotal={}, groupUnits={};
+  list.forEach(function(ct){rowsOf(ct).forEach(function(r){
+    divs[r.code]=1;
+    var v=r.metrics.total_cases_pending||0;
+    groupTotal[r.group]=(groupTotal[r.group]||0)+v;
+    (groupUnits[r.group]||(groupUnits[r.group]={}))[r.code]=1;
+  });});
   var users=0;
   list.forEach(function(ct){rowsOf(ct).forEach(function(r){users+=r.users.length;});});
   var active=list.filter(function(c){return pend(c)>0;}).length;
+  var divCount=Object.keys(divs).length;
 
   var uLabel='';
   if(UNIT!=='ALL'){
@@ -424,16 +529,67 @@ function renderKPIs(){
   }
   var scope = (COURT==='ALL' ? 'both courts' : COURT)+(CIRCLE==='ALL'?'':' · '+CIRCLE)+
               (WING==='ALL'?'':' · '+WING)+uLabel+sLabel;
+
+  // Court totals. Each honours the court chip rather than overriding it,
+  // so selecting KSAT shows High Court as a real zero instead of quietly
+  // reporting the statewide figure the filter was meant to exclude.
+  var hcName=courtNamed('high court'), ksName=courtNamed('administrative');
+  var hcTotal=(hcName&&(COURT==='ALL'||COURT===hcName))?tally({court:hcName}):0;
+  var ksTotal=(ksName&&(COURT==='ALL'||COURT===ksName))?tally({court:ksName}):0;
+
+  // Contempt spans both forums: Civil Contempt Petition in the High Court
+  // and Contempt Application in KSAT. Kept as one KPI with the split
+  // underneath, because it is the exposure that carries personal
+  // liability and it is read as a single number.
+  var cHC=0,cKS=0;
+  contemptTypes().forEach(function(ct){
+    var v=tally({ct:ct.key});
+    if(ct.court===ksName) cKS+=v; else cHC+=v;
+  });
+  var contempt=cHC+cKS;
+
+  var noAction=tally({metric:KPI_COL.noAction});
+  var lco     =tally({metric:KPI_COL.lco});
+  var finalOrd=tally({metric:KPI_COL.finalOrd});
+  var lcoCov  =metricCoverage(KPI_COL.lco);
+
+  function share(v){
+    return totalPending?((v*100/totalPending).toFixed(1)+'% of total'):'no cases in scope';
+  }
+
+  // "(all courts)" marks these four as cross-forum figures, but only
+  // while that is true. Select a court and the tag drops off entirely:
+  // the court chip above already states the scope, so repeating it on
+  // four cards is noise, and leaving the words there would be a lie.
+  var forum=(COURT==='ALL')?' (all courts)':'';
+
   var cards=[
-    {k:'Total pending',v:totalPending,d:scope},
-    {k:'Case types',v:active+' / '+list.length,d:'with pending cases'},
-    {k:'Units',v:Object.keys(divs).length,d:UNIT==='ALL'?(CIRCLE==='ALL'?'with cases':'in this circle'):'selected'},
-    {k:'Users / offices',v:users,
-     d:WING==='ALL'?'rows across reports':'rows in this wing'}
+    {c:'k1',k:'Total cases',v:kn(totalPending),d:scope,
+     t:'Total cases pending, summed across every report in scope'},
+    {c:'k2',k:'High Court',v:kn(hcTotal),d:share(hcTotal),
+     t:'Writ Petition, Writ Appeal, Civil Contempt Petition and S-KSAT'},
+    {c:'k3',k:'KSAT',v:kn(ksTotal),d:share(ksTotal),
+     t:'Original, Contempt, Miscellaneous and Review Applications'},
+    {c:'k4',k:'Contempt'+forum,v:kn(contempt),d:share(contempt),
+     t:'Civil Contempt Petition (High Court) '+kn(cHC)+
+       ' + Contempt Application (KSAT) '+kn(cKS)},
+    {c:'k5',k:'No action'+forum,v:kn(noAction),d:share(noAction),
+     t:'Cases with no action taken yet -- the first stage of the pipeline'},
+    {c:'k6',k:'LCO pending'+forum,v:kn(lco),
+     d:lcoCov.have===lcoCov.of?share(lco):share(lco)+' · '+lcoCov.have+'/'+lcoCov.of+' reports',
+     t:'LCO Proposal Stage (pending from department). Writ Appeal and '+
+       'S-KSAT do not report this column, so they contribute nothing.'},
+    {c:'k7',k:'Final order compliance'+forum,v:kn(finalOrd),d:share(finalOrd),
+     t:'Final order compliance pending -- decided cases awaiting departmental compliance'}
   ];
+  void active; void users; void divCount; void groupTotal; void groupUnits;
+
   document.getElementById('kpis').innerHTML=cards.map(function(c){
-    return '<div class="kpi"><div class="k">'+esc(c.k)+'</div>'+
-           '<div class="v">'+c.v+'</div><div class="d">'+esc(c.d)+'</div></div>';
+    return '<div class="kpi '+(c.c||'')+(c.accent?' accent':'')+'"'+
+           (c.t?' title="'+esc(c.t)+'"':'')+'>'+
+           '<div class="k">'+esc(c.k)+'</div>'+
+           (c.html||('<div class="v">'+c.v+'</div><div class="d">'+esc(c.d)+'</div>'))+
+           '</div>';
   }).join('');
 }
 
