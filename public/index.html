@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CCMS Court Case Dashboard — Karnataka Forest Department</title>
+<style>
+  :root{
+    --bg:#f4f5f3; --panel:#ffffff; --line:#e6e4dd; --line-2:#d3d0c6;
+    --ink:#1b1c1a; --ink-2:#63665f; --ink-3:#9b9d95;
+    --grn:#1d6b40; --grn-bg:#e8f4ec; --red:#b3251d; --red-bg:#fbecea;
+    --acc:#16559b; --acc-bg:#e9f0f8; --head:#f3f2ee;
+    --forest:#1f4d33; --forest-2:#2d6a47;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1640px;margin:0 auto;padding:0 22px 60px}
+
+  header.top{background:linear-gradient(180deg,var(--forest),var(--forest-2));color:#fff;
+    margin:0 -22px 0;padding:22px 22px 24px}
+  header.top .inner{max-width:1640px;margin:0 auto}
+  header.top h1{font-size:20px;font-weight:600;margin:0 0 3px;letter-spacing:-.01em}
+  header.top p{margin:0;font-size:12.5px;opacity:.82;line-height:1.5}
+  .stamp{margin-top:12px;font-size:11.5px;opacity:.75}
+
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:12px;margin:-18px 0 20px}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px;
+    box-shadow:0 1px 2px rgba(20,24,20,.04)}
+  .kpi .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);font-weight:600}
+  .kpi .v{font-size:25px;font-weight:600;margin-top:5px;line-height:1;font-variant-numeric:tabular-nums}
+  .kpi .d{font-size:11px;margin-top:4px;color:var(--ink-3)}
+
+  .filters{background:var(--panel);border:1px solid var(--line);border-radius:11px;
+    padding:4px 16px 12px;margin-bottom:16px}
+  .frow{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:start;
+    padding:11px 0}
+  .frow + .frow{border-top:1px solid var(--line)}
+  .fchips{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+  .flabel{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);
+    font-weight:600;padding-top:7px;line-height:1.2}
+  /* Each filter row has its own hue so you can tell at a glance which
+     level of the hierarchy you are looking at. --c sets the family. */
+  .chip{font-size:12px;padding:5px 11px;border-radius:999px;cursor:pointer;
+    border:1px solid var(--c-bd);background:var(--c-bg);color:var(--c-fg);
+    display:inline-flex;align-items:center;gap:6px;line-height:1.35;
+    transition:background .12s,border-color .12s,color .12s,box-shadow .12s}
+  .chip:hover{border-color:var(--c-fg);box-shadow:0 1px 3px rgba(20,24,20,.10)}
+  .chip.on{background:var(--c-fg);border-color:var(--c-fg);color:#fff}
+  .chip.on:hover{background:var(--c-fg)}
+  .chip .n{font-size:10px;font-weight:600;padding:1px 6px;border-radius:999px;
+    background:rgba(255,255,255,.72);color:var(--c-fg);min-width:20px;text-align:center}
+  .chip.on .n{background:rgba(255,255,255,.24);color:#fff}
+  .chip.zero{opacity:.45}
+  .chip.zero.on{opacity:1}
+
+  .frow.f-circle{--c-bg:#eaf1fa; --c-bd:#c2d6ee; --c-fg:#16559b}  /* blue    */
+  .frow.f-unit  {--c-bg:#e9f4ec; --c-bd:#bfdfc9; --c-fg:#1d6b40}  /* green   */
+  .frow.f-court {--c-bg:#f0ecf8; --c-bd:#d3c8ea; --c-fg:#5a3fa0}  /* purple  */
+  .frow.f-type  {--c-bg:#fdf0e4; --c-bd:#f0d6bb; --c-fg:#a05a17}  /* orange  */
+  .frow.f-stage {--c-bg:#fbeaee; --c-bd:#eec6d0; --c-fg:#9b2f4c}  /* rose    */
+  .frow .flabel{color:var(--c-fg);opacity:.85}
+  .fhint{font-size:11.5px;color:var(--ink-3);align-self:center}
+  .freset{font-size:11.5px;color:var(--acc);cursor:pointer;margin-left:4px;
+    text-decoration:underline;text-underline-offset:2px}
+
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:11px;overflow:hidden;
+    box-shadow:0 1px 2px rgba(20,24,20,.04)}
+  .phead{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;
+    justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .phead h2{font-size:14.5px;font-weight:600;margin:0}
+  .phead .m{font-size:11.5px;color:var(--ink-3)}
+  .badge{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;
+    letter-spacing:.04em;padding:2px 8px;border-radius:999px;background:var(--acc-bg);
+    color:var(--acc);margin-left:7px;vertical-align:1px}
+
+  .scroll{overflow-x:auto}
+  table{border-collapse:separate;border-spacing:0;width:100%;font-size:11.5px}
+  thead th{background:var(--head);font-weight:600;color:var(--ink-2);text-align:right;
+    padding:8px 7px;border-bottom:1px solid var(--line-2);
+    vertical-align:bottom;font-size:10px;line-height:1.28;
+    white-space:normal;overflow-wrap:break-word;hyphens:auto;
+    width:74px;min-width:74px;max-width:74px}
+  thead th.grp{text-align:center;border-left:1px solid var(--line-2);
+    border-right:1px solid var(--line-2);text-transform:uppercase;letter-spacing:.04em;
+    font-size:9.5px;width:auto;max-width:none;padding-bottom:5px}
+  th.nm,td.nm{text-align:left;position:sticky;left:0;z-index:2;
+    width:232px;min-width:232px;max-width:232px}
+  thead th.nm{background:var(--head);vertical-align:bottom}
+  tbody td.nm{background:var(--panel);border-right:1px solid var(--line);
+    white-space:normal;overflow-wrap:break-word}
+  tbody tr.u td.nm{background:#fafaf7}
+  tbody td{padding:7px;text-align:right;border-bottom:1px solid var(--line);
+    white-space:nowrap;font-variant-numeric:tabular-nums}
+  tbody tr:hover td{background:#fafaf8}
+  tbody tr:hover td.nm{background:#f2f2ee}
+  tbody tr.u td{color:var(--ink-2);font-size:11px}
+  tbody tr.u td.nm{padding-left:24px}
+  .z{color:#c4c6bf}
+  .tot{font-weight:600;background:var(--acc-bg)!important}
+  tbody tr.u .tot{background:#eff4fa!important}
+  th.stg,.stg{background:#fdf3e3!important}
+  tbody tr.u .stg{background:#fbf6ec!important}
+  th.stg{box-shadow:inset 0 -2px 0 #d9a441}
+  tfoot td{padding:9px 7px;text-align:right;font-weight:600;border-top:2px solid var(--line-2);
+    background:var(--head);white-space:nowrap;font-variant-numeric:tabular-nums}
+  tfoot td.nm{text-align:left;position:sticky;left:0;background:var(--head);white-space:normal}
+
+  .dn{display:flex;align-items:flex-start;gap:6px;font-weight:600;line-height:1.3}
+  .car{display:inline-block;width:12px;color:var(--ink-3);cursor:pointer;user-select:none;font-size:9px}
+  .gt{font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3);font-weight:500}
+  .d{font-size:10px;font-weight:600;margin-left:5px;padding:1px 5px;border-radius:4px}
+  .d.increase{color:var(--grn);background:var(--grn-bg)}
+  .d.decrease{color:var(--red);background:var(--red-bg)}
+  .d.baseline,.d.same{color:var(--ink-3)}
+  .us{font-size:10.5px;color:var(--ink-3);font-weight:400;margin-top:1px}
+  .note{margin:12px 0 0;padding:10px 13px;font-size:11.5px;border-radius:9px;
+    background:#fdf7e8;color:#6a5415;border:1px solid #f0e3c0;line-height:1.5}
+  .empty{padding:34px 16px;text-align:center;color:var(--ink-3);font-size:13px}
+  .btn{font-size:12px;border:1px solid var(--line-2);background:#fff;padding:6px 12px;
+    border-radius:8px;cursor:pointer;color:var(--ink-2)}
+  .btn:hover{border-color:var(--acc);color:var(--acc)}
+  .lg{font-size:11.5px;color:var(--ink-2);display:flex;gap:13px;align-items:center}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="inner">
+    <h1>CCMS court case dashboard</h1>
+    <p>Karnataka Forest Department &middot; Forest, Ecology and Environment &mdash; Bengaluru Circle, Urban / Rural / Chikkaballapura / Kolar / Ramanagara divisions, Bannerghatta Wildlife, and Social Forestry divisions</p>
+    <div class="stamp" id="stamp">Loading&hellip;</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="kpis" id="kpis"></div>
+  <div class="filters" id="filters"></div>
+  <div id="panel"></div>
+</div>
+
+<script src="data.js"></script>
+<script>
+// UNIT holds a division code (r.code) -- the individual unit under the
+// selected circle -- or 'ALL'.
+var DATA=null, COURT='ALL', CT=null, CIRCLE='ALL', UNIT='ALL', STAGE='ALL';
+
+// Sort order for the unit chips within a circle: the circle office
+// first, then territorial, wildlife, social forestry.
+var UNIT_ORDER={circle:0, hq:0, division:1, wildlife:2, sf:3};
+var UNIT_KIND={hq:'Head office', circle:'Circle office', division:'Territorial',
+               wildlife:'Wildlife', sf:'Social forestry'};
+
+// Column headings, lightly trimmed so they wrap to two or three tidy
+// lines instead of being abbreviated into something unreadable. The full
+// report wording is always available on hover.
+var SHORT={
+  cases_received_as_on_yesterday:'Received as on yesterday',
+  total_cases_pending:'Total cases pending',
+  no_action_taken:'No action taken',
+  lco_proposal_stage_pending:'LCO proposal stage',
+  ga_lco_authorization_pending:'GA/LCO authorization pending',
+  draft_pwr_pending:'Draft PWR pending',
+  approved_pwr_pending:'Approved PWR pending',
+  draft_so_pending_from_advocate:'Draft SO pending from advocate',
+  approved_so_pending:'Approved SO pending',
+  affidavit_filing_pending:'Affidavit filing pending',
+  affidavit_filed_hearing_stage:'Affidavit filed, hearing stage',
+  interim_order_compliance_pending:'Interim order compliance pending',
+  disposed_case:'Disposed case',
+  final_order_compliance_pending:'Final order compliance pending',
+  proposed_for_appeal:'Proposed for appeal',
+  closed_with_appeal_number:'Closed with appeal number',
+  not_to_appeal:'Not to appeal'
+};
+var COMPLETED=['proposed_for_appeal','closed_with_appeal_number','not_to_appeal'];
+
+// Stage filter -- narrows the table to units that actually have cases
+// sitting at that stage, and highlights the column.
+var STAGES=[
+  {key:'no_action_taken',                label:'No action taken'},
+  {key:'lco_proposal_stage_pending',     label:'LCO proposal'},
+  {key:'disposed_case',                  label:'Disposed'},
+  {key:'final_order_compliance_pending', label:'Final order'},
+  {key:'not_to_appeal',                  label:'Not to appeal'}
+];
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function arw(d){return d==='increase'?'&#9650;':d==='decrease'?'&#9660;':'';}
+function dHTML(dir,delta){
+  if(dir==='increase'||dir==='decrease')
+    return '<span class="d '+dir+'">'+arw(dir)+(delta>0?'+':'')+delta+'</span>';
+  if(dir==='baseline') return '<span class="d baseline">new</span>';
+  return '';
+}
+function num(v){
+  if(v===null||v===undefined) return '<span class="z">&mdash;</span>';
+  if(v===0) return '<span class="z">0</span>';
+  return v;
+}
+function shortOf(c){
+  // Headings wrap now, so show the real wording rather than an
+  // abbreviation. SHORT only lightly trims the longest report labels.
+  return SHORT[c.key] || c.header || '';
+}
+function courtsOf(){
+  var seen=[],out=[];
+  DATA.case_types.forEach(function(ct){
+    if(seen.indexOf(ct.court)<0){seen.push(ct.court);out.push(ct.court);}
+  });
+  return out;
+}
+function typesFor(court){
+  return DATA.case_types.filter(function(ct){return court==='ALL'||ct.court===court;});
+}
+// Rows of a case type after the circle and unit filters.
+function rowsOf(ct){
+  if(!ct) return [];
+  return ct.rows.filter(function(r){
+    if(CIRCLE!=='ALL' && r.circle!==CIRCLE) return false;
+    if(UNIT!=='ALL' && r.code!==UNIT) return false;
+    if(STAGE!=='ALL' && !(r.metrics[STAGE]>0)) return false;
+    return true;
+  });
+}
+// Rows before the stage filter -- so the stage chip counts show what
+// selecting them would reveal, rather than what is already showing.
+function rowsBeforeStage(ct){
+  if(!ct) return [];
+  return ct.rows.filter(function(r){
+    return (CIRCLE==='ALL'||r.circle===CIRCLE) && (UNIT==='ALL'||r.code===UNIT);
+  });
+}
+function stageList(){
+  var scope=DATA.case_types.filter(function(ct){return COURT==='ALL'||ct.court===COURT;});
+  return STAGES.map(function(st){
+    var total=0,units=0;
+    scope.forEach(function(ct){
+      rowsBeforeStage(ct).forEach(function(r){
+        var v=r.metrics[st.key];
+        if(typeof v==='number'){ total+=v; if(v>0) units++; }
+      });
+    });
+    return {key:st.key,label:st.label,total:total,units:units};
+  });
+}
+// Rows filtered by circle only -- used for the unit chip counts, so they
+// reflect what's available in the chosen circle rather than the whole state.
+function rowsForUnitCounts(ct){
+  if(!ct) return [];
+  return CIRCLE==='ALL' ? ct.rows : ct.rows.filter(function(r){return r.circle===CIRCLE;});
+}
+// The individual units sitting under the selected circle, with their
+// pending totals across every case type currently in scope.
+function unitList(){
+  var tot={},meta={};
+  DATA.case_types.forEach(function(ct){
+    rowsForUnitCounts(ct).forEach(function(r){
+      tot[r.code]=(tot[r.code]||0)+(r.metrics.total_cases_pending||0);
+      meta[r.code]={code:r.code,name:r.name,group:r.group,circle:r.circle};
+    });
+  });
+  return Object.keys(meta).map(function(k){
+    return {code:k,name:meta[k].name,group:meta[k].group,total:tot[k]||0};
+  }).sort(function(a,b){return b.total-a.total;});
+}
+// Trim the repeated boilerplate so the chips stay readable.
+function shortUnit(name){
+  return name.replace(/ Division$/,'').replace(/^Forest Office /,'')
+             .replace(/ Wildlife Division$/,' WL').replace(/ Social Forestry Division$/,' SF')
+             .replace(/ SF Division$/,' SF').replace(/ Division SF$/,' SF');
+}
+// Pending count for a case type, respecting the circle filter, so the
+// chip counts always agree with the table underneath them.
+function pend(ct){
+  if(!ct) return 0;
+  if(CIRCLE==='ALL') return (ct.totals&&ct.totals.total_cases_pending)||0;
+  return rowsOf(ct).reduce(function(s,r){return s+(r.metrics.total_cases_pending||0);},0);
+}
+function circleList(){
+  var seen={},out=[];
+  (DATA.circles||[]).forEach(function(c){seen[c]=0;out.push(c);});
+  DATA.case_types.forEach(function(ct){ct.rows.forEach(function(r){
+    if(!(r.circle in seen)){seen[r.circle]=0;out.push(r.circle);}
+    seen[r.circle]+=r.metrics.total_cases_pending||0;
+  });});
+  return out.map(function(c){return {name:c,total:seen[c]||0};})
+            .sort(function(a,b){return b.total-a.total;});
+}
+
+function renderKPIs(){
+  var list=typesFor(COURT);
+  var totalPending=list.reduce(function(s,c){return s+pend(c);},0);
+  var divs={};
+  list.forEach(function(ct){rowsOf(ct).forEach(function(r){divs[r.code]=1;});});
+  var users=0;
+  list.forEach(function(ct){rowsOf(ct).forEach(function(r){users+=r.users.length;});});
+  var active=list.filter(function(c){return pend(c)>0;}).length;
+
+  var uLabel='';
+  if(UNIT!=='ALL'){
+    var u=unitList().filter(function(x){return x.code===UNIT;})[0];
+    uLabel=' · '+(u?shortUnit(u.name):UNIT);
+  }
+  var sLabel='';
+  if(STAGE!=='ALL'){
+    var st=STAGES.filter(function(x){return x.key===STAGE;})[0];
+    sLabel=' · '+(st?st.label:STAGE);
+  }
+  var scope = (COURT==='ALL' ? 'both courts' : COURT)+(CIRCLE==='ALL'?'':' · '+CIRCLE)+uLabel+sLabel;
+  var cards=[
+    {k:'Total pending',v:totalPending,d:scope},
+    {k:'Case types',v:active+' / '+list.length,d:'with pending cases'},
+    {k:'Units',v:Object.keys(divs).length,d:UNIT==='ALL'?(CIRCLE==='ALL'?'with cases':'in this circle'):'selected'},
+    {k:'Users / offices',v:users,d:'rows across reports'}
+  ];
+  document.getElementById('kpis').innerHTML=cards.map(function(c){
+    return '<div class="kpi"><div class="k">'+esc(c.k)+'</div>'+
+           '<div class="v">'+c.v+'</div><div class="d">'+esc(c.d)+'</div></div>';
+  }).join('');
+}
+
+function renderFilters(){
+  function row(label,inner,cls){
+    return '<div class="frow '+cls+'"><span class="flabel">'+label+'</span>'+
+           '<div class="fchips">'+inner+'</div></div>';
+  }
+  function chip(on,onclick,text,count,extra,title){
+    return '<div class="chip'+(on?' on':'')+(extra||'')+'"'+
+      (onclick?' onclick="'+onclick+'"':'')+
+      (title?' title="'+esc(title)+'"':'')+'>'+esc(text)+
+      (count===undefined?'':'<span class="n">'+count+'</span>')+'</div>';
+  }
+  var q=function(v){return JSON.stringify(v).replace(/"/g,'&quot;');};
+
+  // Circle
+  var cl=circleList();
+  var grand=cl.reduce(function(s,c){return s+c.total;},0);
+  var circleChips=chip(CIRCLE==='ALL',"setCircle('ALL')",'All circles',grand)+
+    cl.map(function(c){
+      return chip(CIRCLE===c.name,'setCircle('+q(c.name)+')',
+                  c.name.replace(/ Circle$/,''),c.total,c.total===0?' zero':'',c.name);
+    }).join('');
+
+  // Major unit -- the units sitting under the selected circle
+  var ul=unitList();
+  var unitTotal=ul.reduce(function(s,u){return s+u.total;},0);
+  var unitChips;
+  if(CIRCLE==='ALL'){
+    unitChips=chip(true,'','All units',unitTotal)+
+      '<span class="fhint">pick a circle above to list its '+ul.length+' units</span>';
+  }else{
+    unitChips=chip(UNIT==='ALL',"setUnit('ALL')",'All units',unitTotal)+
+      ul.map(function(u){
+        return chip(UNIT===u.code,'setUnit('+q(u.code)+')',shortUnit(u.name),u.total,
+                    u.total===0?' zero':'',u.name+' — '+(UNIT_KIND[u.group]||u.group));
+      }).join('');
+  }
+
+  // Court
+  var courts=courtsOf().sort(function(a,b){
+    return typesFor(b).reduce(function(s,x){return s+pend(x);},0)-
+           typesFor(a).reduce(function(s,x){return s+pend(x);},0);
+  });
+  var courtChips=chip(COURT==='ALL',"setCourt('ALL')",'All courts',
+      DATA.case_types.reduce(function(s,c){return s+pend(c);},0))+
+    courts.map(function(c){
+      var n=typesFor(c).reduce(function(s,x){return s+pend(x);},0);
+      return chip(COURT===c,'setCourt('+q(c)+')',
+                  c.indexOf('Administrative')>=0?'KSAT':c,n,'',c);
+    }).join('');
+
+  // Case type
+  var typeChips=typesFor(COURT).slice().sort(function(a,b){
+    return pend(b)-pend(a);
+  }).map(function(ct){
+    var n=pend(ct);
+    return chip(CT===ct.key,'setCT('+q(ct.key)+')',ct.label,n,n===0?' zero':'',
+                ct.court+(n===0?' — checked, no pending cases in scope':''));
+  }).join('');
+
+  // Stage -- narrows to units that have cases sitting at that stage
+  var sl=stageList().sort(function(a,b){return b.total-a.total;});
+  var stageChips=chip(STAGE==='ALL',"setStage('ALL')",'Any stage')+
+    sl.map(function(st){
+      return chip(STAGE===st.key,'setStage('+q(st.key)+')',st.label,st.total,
+                  st.total===0?' zero':'',
+                  st.units+' unit'+(st.units===1?'':'s')+' with cases at this stage');
+    }).join('');
+
+  var active=(CIRCLE!=='ALL')+(UNIT!=='ALL')+(COURT!=='ALL')+(STAGE!=='ALL');
+  if(active) stageChips+='<span class="freset" onclick="resetFilters()">clear all filters</span>';
+
+  document.getElementById('filters').innerHTML=
+    row('Circle',circleChips,'f-circle')+row('Major unit',unitChips,'f-unit')+
+    row('Court',courtChips,'f-court')+row('Case type',typeChips,'f-type')+
+    row('Stage',stageChips,'f-stage');
+}
+
+function setStage(s){STAGE=s; renderKPIs(); renderFilters(); renderPanel();}
+function resetFilters(){
+  CIRCLE='ALL'; UNIT='ALL'; COURT='ALL'; STAGE='ALL';
+  renderKPIs(); renderFilters(); renderPanel();
+}
+
+function setCircle(c){
+  CIRCLE=c;
+  // A unit type may not exist in the newly chosen circle -- fall back to
+  // All rather than showing an empty table with a stale chip selected.
+  if(UNIT!=='ALL' && !unitList().some(function(u){return u.code===UNIT;})) UNIT='ALL';
+  renderKPIs(); renderFilters(); renderPanel();
+}
+function setUnit(u){UNIT=u; renderKPIs(); renderFilters(); renderPanel();}
+
+function setCourt(c){
+  COURT=c;
+  var list=typesFor(COURT);
+  var still=list.some(function(x){return x.key===CT&&pend(x)>0;});
+  if(!still){var f=list.filter(function(x){return pend(x)>0;})[0]; CT=f?f.key:(list[0]&&list[0].key);}
+  renderKPIs(); renderFilters(); renderPanel();
+}
+function setCT(k){CT=k; renderFilters(); renderPanel();}
+
+function headHTML(ct){
+  var cols=ct.columns;
+  var hasC=cols.some(function(c){return COMPLETED.indexOf(c.key)>=0;});
+  if(!hasC){
+    return '<tr><th class="nm">Department name</th>'+cols.map(function(c){
+      return '<th'+(c.key===STAGE?' class="stg"':'')+' title="'+esc(c.header)+'">'+
+        esc(shortOf(c))+'</th>';}).join('')+'</tr>';
+  }
+  var pre=cols.filter(function(c){return COMPLETED.indexOf(c.key)<0;});
+  return '<tr><th class="nm" rowspan="2">Department name</th>'+
+    pre.map(function(c){return '<th rowspan="2"'+(c.key===STAGE?' class="stg"':'')+
+      ' title="'+esc(c.header)+'">'+esc(shortOf(c))+'</th>';}).join('')+
+    '<th class="grp" colspan="'+COMPLETED.length+'">Completed case</th></tr>'+
+    '<tr>'+COMPLETED.map(function(k){
+      var c=cols.filter(function(x){return x.key===k;})[0];
+      return c?'<th'+(c.key===STAGE?' class="stg"':'')+' title="'+esc(c.header)+'">'+
+        esc(shortOf(c))+'</th>':'';}).join('')+'</tr>';
+}
+function cellClass(k){
+  if(k===STAGE) return ' class="stg"';
+  if(k==='total_cases_pending') return ' class="tot"';
+  return '';
+}
+function cells(m,cols){
+  return cols.map(function(c){
+    return '<td'+cellClass(c.key)+'>'+num(m[c.key])+'</td>';
+  }).join('');
+}
+
+function renderPanel(){
+  var ct=DATA.case_types.filter(function(x){return x.key===CT;})[0];
+  var el=document.getElementById('panel');
+  if(!ct){el.innerHTML='';return;}
+  var ROWS=rowsOf(ct);
+  if(!ROWS.length){
+    el.innerHTML='<div class="panel"><div class="phead">'+
+      '<h2>'+esc(ct.label)+' report &mdash; non secretariat department</h2>'+
+      '<span class="m">'+esc(ct.court)+'</span></div>'+
+      '<div class="empty"><strong>No pending cases.</strong><br>'+
+      'This report was fetched successfully &mdash; no '+
+      (CIRCLE==='ALL'?'tracked unit':'unit in '+esc(CIRCLE))+
+      (UNIT==='ALL'?'':' matching that unit')+
+      (STAGE==='ALL'?'':' has cases at that stage, and none')+
+      ' has a pending '+esc(ct.label)+' case.</div></div>';
+    return;
+  }
+  var cols=ct.columns;
+  // Ordered by caseload -- by the selected stage if one is active, else
+  // by total pending.
+  var sortKey = STAGE==='ALL' ? 'total_cases_pending' : STAGE;
+  ROWS=ROWS.slice().sort(function(a,b){
+    return (b.metrics[sortKey]||0)-(a.metrics[sortKey]||0);
+  });
+  var body=ROWS.map(function(r,i){
+    var car=r.users.length?'<span class="car" onclick="tog('+i+')" id="c'+i+'">&#9656;</span>':'<span class="car"></span>';
+    var main='<tr><td class="nm"><span class="dn">'+car+'<span>'+esc(r.name)+'</span>'+
+      dHTML(r.direction,r.delta)+'</span><span class="gt">'+esc(UNIT_KIND[r.group]||r.group)+
+      (r.users.length?' &middot; '+r.users.length+' user'+(r.users.length===1?'':'s'):'')+
+      '</span></td>'+cells(r.metrics,cols)+'</tr>';
+    var kids=r.users.slice().sort(function(x,y){
+      return (y.metrics[sortKey]||0)-(x.metrics[sortKey]||0);
+    }).map(function(u){
+      return '<tr class="u" data-p="'+i+'" style="display:none"><td class="nm">'+
+        esc(u.post)+dHTML(u.direction,u.delta)+
+        (u.section?'<div class="us">'+esc(u.section)+'</div>':'')+'</td>'+
+        cells(u.metrics,cols)+'</tr>';
+    }).join('');
+    return main+kids;
+  }).join('');
+
+  var ftot={};
+  cols.forEach(function(c){
+    ftot[c.key]=ROWS.reduce(function(s,r){
+      var v=r.metrics[c.key]; return s+(typeof v==='number'?v:0);},0);
+  });
+  var foot='<tr><td class="nm">Total &mdash; '+ROWS.length+' unit'+(ROWS.length===1?'':'s')+
+    (CIRCLE==='ALL'?'':' in '+esc(CIRCLE))+
+    '</td>'+cols.map(function(c){
+      return '<td'+cellClass(c.key)+'>'+num(ftot[c.key])+'</td>';
+    }).join('')+'</tr>';
+
+  var scraped=cols.some(function(c){return c.scraped;});
+  var note='';
+  if(!ct.all_columns_known){
+    note='<div class="note"><strong>Column names unavailable.</strong> This report renders '+ct.column_count+
+      ' columns and the XML export omits their headings. The first two are verified as Cases Received / '+
+      'Total Cases Pending. Re-run the scraper to capture the real headings from the rendered report.</div>';
+  }else if(scraped){
+    note='<div class="note"><strong>Note:</strong> column names beyond the first two were read from the '+
+      'rendered report rather than a published schema. Worth a sanity check against the site.</div>';
+  }
+
+  el.innerHTML='<div class="panel"><div class="phead">'+
+      '<h2>'+esc(ct.label)+' report &mdash; non secretariat department'+
+      (ct.all_columns_known?'':'<span class="badge">partial headings</span>')+'</h2>'+
+      '<span class="m">'+esc(ct.court)+' &middot; '+ct.column_count+' columns &middot; '+
+      ROWS.length+' unit'+(ROWS.length===1?'':'s')+'</span></div>'+
+      '<div class="scroll"><table><thead>'+headHTML(ct)+'</thead><tbody>'+body+
+      '</tbody><tfoot>'+foot+'</tfoot></table></div></div>'+note;
+}
+
+function tog(i){
+  var rows=document.querySelectorAll('tr.u[data-p="'+i+'"]');
+  var c=document.getElementById('c'+i);
+  var open=rows.length&&rows[0].style.display!=='none';
+  for(var j=0;j<rows.length;j++) rows[j].style.display=open?'none':'';
+  if(c) c.innerHTML=open?'&#9656;':'&#9662;';
+}
+
+async function loadData(FORCE){
+  var st=document.getElementById('stamp');
+  st.textContent='Loading…';
+  var d=null,src='';
+  try{
+    // Default caching on purpose. The data changes once a day, so the
+    // Cache-Control header (30 min + stale-while-revalidate) is what
+    // keeps bandwidth flat as the audience grows. 'no-store' would
+    // override it and force a full re-download on every page view.
+    // The Refresh button passes cache:'reload' for an explicit bypass.
+    var r=await fetch('data.json', FORCE ? {cache:'reload'} : {});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    d=await r.json(); src='data.json';
+  }catch(e){ if(window.CCMS_DATA){d=window.CCMS_DATA;src='data.js';} }
+  if(!d){st.textContent='Could not load data. Run the scraper, or serve this folder with: python3 -m http.server';return;}
+  DATA=d;
+  if(!DATA.case_types||!DATA.case_types.length){
+    document.getElementById('panel').innerHTML='<div class="panel"><div class="empty">No case-type detail — re-run the scraper.</div></div>';
+    st.textContent='Data as of '+(DATA.latest_date||'unknown'); return;
+  }
+  var withData=DATA.case_types.filter(function(c){return pend(c)>0;});
+  if(!CT||!DATA.case_types.some(function(c){return c.key===CT;}))
+    CT=(withData[0]||DATA.case_types[0]).key;
+  renderKPIs(); renderFilters(); renderPanel();
+  st.textContent='Data as of '+DATA.latest_date+
+    (DATA.previous_date?' · compared to '+DATA.previous_date:' · no prior snapshot yet')+
+    (src==='data.js'?' · offline copy':'');
+}
+loadData();
+</script>
+</body>
+</html>
