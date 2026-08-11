@@ -17,6 +17,7 @@ published, previous data left intact).
 
 from __future__ import annotations
 
+import json
 import os
 import shutil
 import subprocess
@@ -33,6 +34,19 @@ KEEP_LOGS = 30
 # dashboard's up/down arrows compare today's snapshot with the previous
 # one, so the snapshot history has to be committed, not just the site.
 COMMIT_PATHS = ["data/snapshots", "public/data.json", "public/data.js"]
+
+SNAP_DIR = PROJECT_DIR / "data" / "snapshots"
+
+# --- degraded-scrape thresholds -----------------------------------------
+# scrape_ccms.py exits 0 when *some* of the eight reports come back, which
+# is the right call for the scraper but the wrong one for publishing: on
+# 2026-08-12 six reports returned zero rows and the seventh failed
+# outright, and a 2,777 -> 113 collapse got committed and pushed. These
+# thresholds are the publish gate that was missing.
+MAX_TOTAL_DROP = 0.35   # a >35% fall day-on-day is a scrape fault, not news
+COMBO_COLLAPSE_FLOOR = 10   # a report with >=10 cases never legitimately
+                            # empties overnight; below that a real zero is
+                            # plausible, so it is not treated as a fault
 
 
 class Tee:
@@ -86,6 +100,96 @@ def capture(cmd: list[str], cwd: Path) -> tuple[int, str]:
         errors="replace",
     )
     return proc.returncode, proc.stdout.strip()
+
+
+def snapshot_totals(path: Path) -> tuple[int, dict]:
+    """Total pending in a snapshot, plus the per-report breakdown."""
+    data = json.loads(path.read_text(encoding="utf-8"))
+    per = {}
+    for combo, divisions in (data.get("by_case_type") or {}).items():
+        per[combo] = sum(
+            (d.get("totals") or {}).get("total_cases_pending") or 0
+            for d in divisions.values()
+        )
+    return sum(per.values()), per
+
+
+def verify_scrape(tee: Tee) -> bool:
+    """Refuse to publish a scrape that lost most of its data.
+
+    Returns True if the new snapshot looks sane. On failure the bad
+    snapshot is quarantined and the regenerated site files are restored
+    from git, so the working tree goes back to the last good state.
+    """
+    snaps = sorted(SNAP_DIR.glob("*.json"))
+    if len(snaps) < 2:
+        log(tee, "Sanity check skipped: no earlier snapshot to compare against.")
+        return True
+
+    new, prev = snaps[-1], snaps[-2]
+    try:
+        new_total, new_per = snapshot_totals(new)
+        prev_total, prev_per = snapshot_totals(prev)
+    except Exception as exc:
+        log(tee, f"Sanity check could not read the snapshots: {exc}")
+        return True
+
+    log(tee)
+    log(tee, "--- sanity check ---")
+    log(tee, f"{prev.stem}: {prev_total:,} pending   ->   {new.stem}: {new_total:,} pending")
+
+    problems = []
+
+    if prev_total > 0:
+        drop = (prev_total - new_total) / prev_total
+        if drop > MAX_TOTAL_DROP:
+            problems.append(
+                f"total pending fell {drop*100:.0f}% "
+                f"({prev_total:,} -> {new_total:,}), over the {MAX_TOTAL_DROP*100:.0f}% limit"
+            )
+
+    for combo, was in sorted(prev_per.items()):
+        now = new_per.get(combo, 0)
+        if was >= COMBO_COLLAPSE_FLOOR and now == 0:
+            problems.append(f"{combo}: {was:,} cases yesterday, 0 today")
+
+    if not problems:
+        log(tee, "OK -- figures are within the expected range.")
+        return True
+
+    log(tee)
+    log(tee, "!!! DEGRADED SCRAPE -- refusing to publish !!!")
+    for p in problems:
+        log(tee, "  - " + p)
+    log(tee)
+
+    # Quarantine rather than delete: the file is evidence of what the site
+    # actually returned, and is worth keeping when diagnosing a failure.
+    rejected = new.with_suffix(".json.rejected")
+    try:
+        if rejected.exists():
+            rejected.unlink()
+        new.rename(rejected)
+        log(tee, f"Quarantined {new.name} -> {rejected.name}")
+    except OSError as exc:
+        log(tee, f"WARNING: could not quarantine {new.name}: {exc}")
+
+    # The scrape already overwrote the site files, so put the committed
+    # versions back. The dashboard keeps serving the last good day.
+    if (PROJECT_DIR / ".git").exists() and shutil.which("git"):
+        code, out = capture(
+            ["git", "checkout", "--", "public/data.json", "public/data.js"], PROJECT_DIR
+        )
+        if code == 0:
+            log(tee, "Restored public/data.json and public/data.js from the last commit.")
+        else:
+            log(tee, f"WARNING: could not restore the site files: {out}")
+
+    log(tee)
+    log(tee, "Nothing published. Check the scrape log above for the failing")
+    log(tee, "report, then re-run. The CCMS site is often the cause -- a")
+    log(tee, "retry a few minutes later usually comes back clean.")
+    return False
 
 
 def prune_logs() -> None:
@@ -190,6 +294,12 @@ def main() -> int:
             return status
 
         log(tee, f"=== scrape OK at {datetime.now():%H:%M:%S} ===")
+
+        # A zero exit from the scraper only means it did not crash. Whether
+        # the data it produced is publishable is a separate question.
+        if not verify_scrape(tee):
+            log(tee, f"=== SANITY CHECK FAILED at {datetime.now():%H:%M:%S} ===")
+            return 2
 
         if want_push:
             do_push(tee)
