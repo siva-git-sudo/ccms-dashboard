@@ -1,0 +1,179 @@
+{
+  "_comment": [
+    "Circle -> divisions mapping for the CCMS dashboard filter.",
+    "Names are written exactly as they appear in the CCMS ddldeptname",
+    "dropdown, which is what the reports return. Where the CCMS spelling",
+    "differs from common usage the CCMS one wins (e.g. 'Bangalore Urban",
+    "Division SF', not 'Bengaluru Urban SF'), otherwise the row will not",
+    "match and the division silently disappears from the dashboard.",
+    "Head office is listed first, then the 13 circles in the order given."
+  ],
+  "Aranya Bhavana": {
+    "type": "headquarters",
+    "divisions": [
+      "Araṇya bhavana",
+      "PCCFHead Of Forest Force",
+      "PCCF WL"
+    ]
+  },
+  "Bengaluru Circle": {
+    "type": "circle",
+    "divisions": [
+      "Bengaluru Circle",
+      "Bengaluru Urban Division",
+      "Bengaluru Rural Division",
+      "Ramanagara Division",
+      "Kolar Division",
+      "Chikkaballapura Division",
+      "Bannerghatta Wildlife Division",
+      "Bangalore Urban Division SF",
+      "Bangalore Rural Division SF",
+      "Ramnagar Division SF",
+      "Kolar Division SF",
+      "Chikkaballapur Division SF"
+    ]
+  },
+  "Ballari Circle": {
+    "type": "circle",
+    "divisions": [
+      "Ballari Circle",
+      "Ballari Division",
+      "Chitradurga Division",
+      "Davanagere Division",
+      "Koppal Division",
+      "Ballari Social Forestry Division",
+      "Chitradurga  Social Forestry Division",
+      "Davangere Social Forestry Division",
+      "KOPPALA Social Forestry Division",
+      "Vijayanagara Division"
+    ]
+  },
+  "Belagavi Circle": {
+    "type": "circle",
+    "divisions": [
+      "Belagavi Circle",
+      "Belagavi Division",
+      "Bagalkot Division",
+      "Vijayapura Division",
+      "Gokak Division",
+      "Belagavi SF Division",
+      "Bagalakote SF Division",
+      "Vijayapur SF Division"
+    ]
+  },
+  "Chamarajanagar Circle": {
+    "type": "circle",
+    "divisions": [
+      "Chamarajanagara Circle",
+      "BRT Tiger Conservation Reserve",
+      "Cauvery Wildlife Division Kollegala",
+      "Malai Mahadeshwara Wildlife Division",
+      "Chamarajanagara SF Division"
+    ]
+  },
+  "Chikkamagaluru Circle": {
+    "type": "circle",
+    "divisions": [
+      "Forest Office Chikkamagaluru Circle",
+      "Forest Office Chikkamagaluru Division",
+      "Koppa Division",
+      "Bhadra Wildlife Division",
+      "MUDIGERE SUB DIVISION"
+    ]
+  },
+  "Dharwad Circle": {
+    "type": "circle",
+    "divisions": [
+      "Dharwad Circle",
+      "Dharwad Division",
+      "Gadag Division",
+      "Haveri Division",
+      "DHARWAD SOCIAL FORESTRY DIVISION"
+    ]
+  },
+  "Hassan Circle": {
+    "type": "circle",
+    "divisions": [
+      "Hassan Circle",
+      "Hassan Division",
+      "Tumkur Division",
+      "Hassan Division SF",
+      "Hassan SF Division",
+      "Tumkur Division SF"
+    ]
+  },
+  "Kalaburagi Circle": {
+    "type": "circle",
+    "divisions": [
+      "Kalaburagi Circle",
+      "Kalaburagi Division",
+      "Bidar Division",
+      "Raichur Division",
+      "Yadgir Division",
+      "kalaburgi Social Forestry Division",
+      "Bidar Social Forestry Division",
+      "Raichur Social Forestry Division",
+      "Yadgiri Social Forestry Division"
+    ]
+  },
+  "Kanara Circle": {
+    "type": "circle",
+    "divisions": [
+      "Kanara Circle",
+      "Haliyal Division",
+      "Honnavara Division",
+      "Karwar Division",
+      "Sirsi Division",
+      "Yellapura Division",
+      "Kali Tiger Reserve",
+      "Karwar SF Dvision",
+      "UTTARA KANNADA DIVISION  ENVIRONMENT"
+    ]
+  },
+  "Kodagu Circle": {
+    "type": "circle",
+    "divisions": [
+      "Kodagu Circle",
+      "Madikeri Division",
+      "Virajpet Division",
+      "Virajpet Sub Division",
+      "Madikeri Wildlife Division",
+      "Nagarahole Wildlife Division"
+    ]
+  },
+  "Mangaluru Circle": {
+    "type": "circle",
+    "divisions": [
+      "Mangaluru Circle",
+      "Mangaluru Division",
+      "Kundapura Division",
+      "Kudremukha Wildlife Division",
+      "Mangaluru Division SF",
+      "Udupi division SF",
+      "UDUPI DIVISION ENVIRONMENT"
+    ]
+  },
+  "Mysuru Circle": {
+    "type": "circle",
+    "divisions": [
+      "Mysuru Circle",
+      "Mysuru Division",
+      "Mandya Division",
+      "Hunsur Division",
+      "Mysuru Wildlife Division",
+      "Mandya Social Forestry Division",
+      "Bandipur Tiger Reserve"
+    ]
+  },
+  "Shivamogga Circle": {
+    "type": "circle",
+    "divisions": [
+      "Shivamogga Circle",
+      "Shivamogga Division",
+      "Sagar Division",
+      "Bhadravathi Division",
+      "Shivamogga Wildlife Division",
+      "Shivamogga SF Division"
+    ]
+  }
+}

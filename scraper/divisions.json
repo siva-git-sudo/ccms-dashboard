@@ -1,0 +1,584 @@
+[
+  {
+    "code": "D000",
+    "name": "Araṇya bhavana",
+    "group": "hq",
+    "circle": "Aranya Bhavana"
+  },
+  {
+    "code": "D001",
+    "name": "PCCFHead Of Forest Force",
+    "group": "hq",
+    "circle": "Aranya Bhavana"
+  },
+  {
+    "code": "D002",
+    "name": "PCCF WL",
+    "group": "hq",
+    "circle": "Aranya Bhavana"
+  },
+  {
+    "code": "BL ",
+    "name": "Bengaluru Circle",
+    "group": "circle",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "AA ",
+    "name": "Bengaluru Urban Division",
+    "group": "division",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "AC ",
+    "name": "Bengaluru Rural Division",
+    "group": "division",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "AE ",
+    "name": "Ramanagara Division",
+    "group": "division",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "AD ",
+    "name": "Kolar Division",
+    "group": "division",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "AG ",
+    "name": "Chikkaballapura Division",
+    "group": "division",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "AF ",
+    "name": "Bannerghatta Wildlife Division",
+    "group": "wildlife",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "D010",
+    "name": "Bangalore Urban Division SF",
+    "group": "sf",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "D011",
+    "name": "Bangalore Rural Division SF",
+    "group": "sf",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "RS ",
+    "name": "Ramnagar Division SF",
+    "group": "sf",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "KS ",
+    "name": "Kolar Division SF",
+    "group": "sf",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "CS ",
+    "name": "Chikkaballapur Division SF",
+    "group": "sf",
+    "circle": "Bengaluru Circle"
+  },
+  {
+    "code": "D015",
+    "name": "Ballari Circle",
+    "group": "circle",
+    "circle": "Ballari Circle"
+  },
+  {
+    "code": "D016",
+    "name": "Ballari Division",
+    "group": "division",
+    "circle": "Ballari Circle"
+  },
+  {
+    "code": "D017",
+    "name": "Chitradurga Division",
+    "group": "division",
+    "circle": "Ballari Circle"
+  },
+  {
+    "code": "D018",
+    "name": "Davanagere Division",
+    "group": "division",
+    "circle": "Ballari Circle"
+  },
+  {
+    "code": "D019",
+    "name": "Koppal Division",
+    "group": "division",
+    "circle": "Ballari Circle"
+  },
+  {
+    "code": "D020",
+    "name": "Ballari Social Forestry Division",
+    "group": "sf",
+    "circle": "Ballari Circle"
+  },
+  {
+    "code": "D021",
+    "name": "Chitradurga  Social Forestry Division",
+    "group": "sf",
+    "circle": "Ballari Circle"
+  },
+  {
+    "code": "D022",
+    "name": "Davangere Social Forestry Division",
+    "group": "sf",
+    "circle": "Ballari Circle"
+  },
+  {
+    "code": "D023",
+    "name": "KOPPALA Social Forestry Division",
+    "group": "sf",
+    "circle": "Ballari Circle"
+  },
+  {
+    "code": "D024",
+    "name": "Belagavi Circle",
+    "group": "circle",
+    "circle": "Belagavi Circle"
+  },
+  {
+    "code": "D025",
+    "name": "Belagavi Division",
+    "group": "division",
+    "circle": "Belagavi Circle"
+  },
+  {
+    "code": "D026",
+    "name": "Bagalkot Division",
+    "group": "division",
+    "circle": "Belagavi Circle"
+  },
+  {
+    "code": "D027",
+    "name": "Vijayapura Division",
+    "group": "division",
+    "circle": "Belagavi Circle"
+  },
+  {
+    "code": "D028",
+    "name": "Gokak Division",
+    "group": "division",
+    "circle": "Belagavi Circle"
+  },
+  {
+    "code": "D029",
+    "name": "Belagavi SF Division",
+    "group": "sf",
+    "circle": "Belagavi Circle"
+  },
+  {
+    "code": "D030",
+    "name": "Bagalakote SF Division",
+    "group": "sf",
+    "circle": "Belagavi Circle"
+  },
+  {
+    "code": "D031",
+    "name": "Vijayapur SF Division",
+    "group": "sf",
+    "circle": "Belagavi Circle"
+  },
+  {
+    "code": "D032",
+    "name": "Chamarajanagara Circle",
+    "group": "circle",
+    "circle": "Chamarajanagar Circle"
+  },
+  {
+    "code": "D033",
+    "name": "BRT Tiger Conservation Reserve",
+    "group": "wildlife",
+    "circle": "Chamarajanagar Circle"
+  },
+  {
+    "code": "D034",
+    "name": "Cauvery Wildlife Division Kollegala",
+    "group": "wildlife",
+    "circle": "Chamarajanagar Circle"
+  },
+  {
+    "code": "D035",
+    "name": "Malai Mahadeshwara Wildlife Division",
+    "group": "wildlife",
+    "circle": "Chamarajanagar Circle"
+  },
+  {
+    "code": "D036",
+    "name": "Chamarajanagara SF Division",
+    "group": "sf",
+    "circle": "Chamarajanagar Circle"
+  },
+  {
+    "code": "D037",
+    "name": "Forest Office Chikkamagaluru Circle",
+    "group": "circle",
+    "circle": "Chikkamagaluru Circle"
+  },
+  {
+    "code": "D038",
+    "name": "Forest Office Chikkamagaluru Division",
+    "group": "division",
+    "circle": "Chikkamagaluru Circle"
+  },
+  {
+    "code": "D039",
+    "name": "Koppa Division",
+    "group": "division",
+    "circle": "Chikkamagaluru Circle"
+  },
+  {
+    "code": "D040",
+    "name": "Bhadra Wildlife Division",
+    "group": "wildlife",
+    "circle": "Chikkamagaluru Circle"
+  },
+  {
+    "code": "D041",
+    "name": "MUDIGERE SUB DIVISION",
+    "group": "division",
+    "circle": "Chikkamagaluru Circle"
+  },
+  {
+    "code": "D042",
+    "name": "Dharwad Circle",
+    "group": "circle",
+    "circle": "Dharwad Circle"
+  },
+  {
+    "code": "D043",
+    "name": "Dharwad Division",
+    "group": "division",
+    "circle": "Dharwad Circle"
+  },
+  {
+    "code": "D044",
+    "name": "Gadag Division",
+    "group": "division",
+    "circle": "Dharwad Circle"
+  },
+  {
+    "code": "D045",
+    "name": "Haveri Division",
+    "group": "division",
+    "circle": "Dharwad Circle"
+  },
+  {
+    "code": "D046",
+    "name": "DHARWAD SOCIAL FORESTRY DIVISION",
+    "group": "sf",
+    "circle": "Dharwad Circle"
+  },
+  {
+    "code": "D047",
+    "name": "Hassan Circle",
+    "group": "circle",
+    "circle": "Hassan Circle"
+  },
+  {
+    "code": "D048",
+    "name": "Hassan Division",
+    "group": "division",
+    "circle": "Hassan Circle"
+  },
+  {
+    "code": "D049",
+    "name": "Tumkur Division",
+    "group": "division",
+    "circle": "Hassan Circle"
+  },
+  {
+    "code": "D050",
+    "name": "Hassan Division SF",
+    "group": "sf",
+    "circle": "Hassan Circle"
+  },
+  {
+    "code": "D051",
+    "name": "Hassan SF Division",
+    "group": "sf",
+    "circle": "Hassan Circle"
+  },
+  {
+    "code": "D052",
+    "name": "Tumkur Division SF",
+    "group": "sf",
+    "circle": "Hassan Circle"
+  },
+  {
+    "code": "D053",
+    "name": "Kalaburagi Circle",
+    "group": "circle",
+    "circle": "Kalaburagi Circle"
+  },
+  {
+    "code": "D054",
+    "name": "Kalaburagi Division",
+    "group": "division",
+    "circle": "Kalaburagi Circle"
+  },
+  {
+    "code": "D055",
+    "name": "Bidar Division",
+    "group": "division",
+    "circle": "Kalaburagi Circle"
+  },
+  {
+    "code": "D056",
+    "name": "Raichur Division",
+    "group": "division",
+    "circle": "Kalaburagi Circle"
+  },
+  {
+    "code": "D057",
+    "name": "Yadgir Division",
+    "group": "division",
+    "circle": "Kalaburagi Circle"
+  },
+  {
+    "code": "D058",
+    "name": "kalaburgi Social Forestry Division",
+    "group": "sf",
+    "circle": "Kalaburagi Circle"
+  },
+  {
+    "code": "D059",
+    "name": "Bidar Social Forestry Division",
+    "group": "sf",
+    "circle": "Kalaburagi Circle"
+  },
+  {
+    "code": "D060",
+    "name": "Raichur Social Forestry Division",
+    "group": "sf",
+    "circle": "Kalaburagi Circle"
+  },
+  {
+    "code": "D061",
+    "name": "Yadgiri Social Forestry Division",
+    "group": "sf",
+    "circle": "Kalaburagi Circle"
+  },
+  {
+    "code": "D062",
+    "name": "Kanara Circle",
+    "group": "circle",
+    "circle": "Kanara Circle"
+  },
+  {
+    "code": "D063",
+    "name": "Haliyal Division",
+    "group": "division",
+    "circle": "Kanara Circle"
+  },
+  {
+    "code": "D064",
+    "name": "Honnavara Division",
+    "group": "division",
+    "circle": "Kanara Circle"
+  },
+  {
+    "code": "D065",
+    "name": "Karwar Division",
+    "group": "division",
+    "circle": "Kanara Circle"
+  },
+  {
+    "code": "D066",
+    "name": "Sirsi Division",
+    "group": "division",
+    "circle": "Kanara Circle"
+  },
+  {
+    "code": "D067",
+    "name": "Yellapura Division",
+    "group": "division",
+    "circle": "Kanara Circle"
+  },
+  {
+    "code": "D068",
+    "name": "Kali Tiger Reserve",
+    "group": "wildlife",
+    "circle": "Kanara Circle"
+  },
+  {
+    "code": "D069",
+    "name": "Karwar SF Dvision",
+    "group": "sf",
+    "circle": "Kanara Circle"
+  },
+  {
+    "code": "D070",
+    "name": "UTTARA KANNADA DIVISION  ENVIRONMENT",
+    "group": "division",
+    "circle": "Kanara Circle"
+  },
+  {
+    "code": "D071",
+    "name": "Kodagu Circle",
+    "group": "circle",
+    "circle": "Kodagu Circle"
+  },
+  {
+    "code": "D072",
+    "name": "Madikeri Division",
+    "group": "division",
+    "circle": "Kodagu Circle"
+  },
+  {
+    "code": "D073",
+    "name": "Virajpet Division",
+    "group": "division",
+    "circle": "Kodagu Circle"
+  },
+  {
+    "code": "D074",
+    "name": "Virajpet Sub Division",
+    "group": "division",
+    "circle": "Kodagu Circle"
+  },
+  {
+    "code": "D075",
+    "name": "Madikeri Wildlife Division",
+    "group": "wildlife",
+    "circle": "Kodagu Circle"
+  },
+  {
+    "code": "N076",
+    "name": "Nagarahole Wildlife Division",
+    "group": "wildlife",
+    "circle": "Kodagu Circle"
+  },
+  {
+    "code": "D076",
+    "name": "Mangaluru Circle",
+    "group": "circle",
+    "circle": "Mangaluru Circle"
+  },
+  {
+    "code": "D077",
+    "name": "Mangaluru Division",
+    "group": "division",
+    "circle": "Mangaluru Circle"
+  },
+  {
+    "code": "D078",
+    "name": "Kundapura Division",
+    "group": "division",
+    "circle": "Mangaluru Circle"
+  },
+  {
+    "code": "D079",
+    "name": "Kudremukha Wildlife Division",
+    "group": "wildlife",
+    "circle": "Mangaluru Circle"
+  },
+  {
+    "code": "D080",
+    "name": "Mangaluru Division SF",
+    "group": "sf",
+    "circle": "Mangaluru Circle"
+  },
+  {
+    "code": "D081",
+    "name": "Udupi division SF",
+    "group": "sf",
+    "circle": "Mangaluru Circle"
+  },
+  {
+    "code": "D082",
+    "name": "UDUPI DIVISION ENVIRONMENT",
+    "group": "division",
+    "circle": "Mangaluru Circle"
+  },
+  {
+    "code": "D083",
+    "name": "Mysuru Circle",
+    "group": "circle",
+    "circle": "Mysuru Circle"
+  },
+  {
+    "code": "D084",
+    "name": "Mysuru Division",
+    "group": "division",
+    "circle": "Mysuru Circle"
+  },
+  {
+    "code": "D085",
+    "name": "Mandya Division",
+    "group": "division",
+    "circle": "Mysuru Circle"
+  },
+  {
+    "code": "D086",
+    "name": "Hunsur Division",
+    "group": "division",
+    "circle": "Mysuru Circle"
+  },
+  {
+    "code": "D087",
+    "name": "Mysuru Wildlife Division",
+    "group": "wildlife",
+    "circle": "Mysuru Circle"
+  },
+  {
+    "code": "D088",
+    "name": "Mandya Social Forestry Division",
+    "group": "sf",
+    "circle": "Mysuru Circle"
+  },
+  {
+    "code": "N090",
+    "name": "Bandipur Tiger Reserve",
+    "group": "wildlife",
+    "circle": "Mysuru Circle"
+  },
+  {
+    "code": "D089",
+    "name": "Shivamogga Circle",
+    "group": "circle",
+    "circle": "Shivamogga Circle"
+  },
+  {
+    "code": "D090",
+    "name": "Shivamogga Division",
+    "group": "division",
+    "circle": "Shivamogga Circle"
+  },
+  {
+    "code": "D091",
+    "name": "Sagar Division",
+    "group": "division",
+    "circle": "Shivamogga Circle"
+  },
+  {
+    "code": "D092",
+    "name": "Bhadravathi Division",
+    "group": "division",
+    "circle": "Shivamogga Circle"
+  },
+  {
+    "code": "D093",
+    "name": "Shivamogga Wildlife Division",
+    "group": "wildlife",
+    "circle": "Shivamogga Circle"
+  },
+  {
+    "code": "D094",
+    "name": "Shivamogga SF Division",
+    "group": "sf",
+    "circle": "Shivamogga Circle"
+  }
+]
