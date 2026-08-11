@@ -1,0 +1,32 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/.DS_Store",
+      "**/__pycache__/**"
+    ],
+    "headers": [
+      {
+        "source": "/data.@(json|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=1800, stale-while-revalidate=86400"
+          }
+        ]
+      },
+      {
+        "source": "/index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=600"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -75,17 +75,22 @@ jobs:
             git push
           fi
 
-      - name: Upload the site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: public
+      - name: Summary
+        run: |
+          echo "### CCMS scrape finished" >> $GITHUB_STEP_SUMMARY
+          python - <<'PY' >> $GITHUB_STEP_SUMMARY
+          import json
+          try:
+              d = json.load(open("public/data.json"))
+              tot = sum((c.get("totals", {}).get("total_cases_pending") or 0)
+                        for c in d.get("case_types", []))
+              print(f"- data as of **{d.get('latest_date')}**")
+              print(f"- total pending: **{tot}**")
+              print(f"- compared against: {d.get('previous_date') or 'no earlier snapshot yet'}")
+          except Exception as e:
+              print(f"- could not summarise: {e}")
+          PY
 
-  deploy:
-    needs: scrape
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+# Publishing is handled by publish.yml, which fires on the commit this
+# workflow pushes. Deploying from here as well would mean two concurrent
+# deployments to the same Pages site.
