@@ -7,23 +7,50 @@ jobs:
   test-ccms:
     runs-on: ubuntu-latest
     steps:
-      - name: Test CCMS connectivity
+      - name: Diagnose CCMS connectivity
         run: |
-          python - <<'PY'
-          import urllib.request
-          import sys
+          set +e
 
-          url = "http://117.252.94.131/Budget/Circle/Circle_PerformanceReport.aspx"
-          print(f"Testing: {url}")
-          try:
-              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-              with urllib.request.urlopen(req, timeout=30) as response:
-                  print(f"HTTP status: {response.status}")
-                  print(f"Final URL: {response.geturl()}")
-                  data = response.read(1000)
-                  print(f"Received {len(data)} bytes")
-                  print(data[:500])
-          except Exception as e:
-              print(f"CCMS access failed: {type(e).__name__}: {e}")
-              sys.exit(1)
-          PY
+          echo "=== DNS ==="
+          getent hosts ccms.karnataka.gov.in
+          DNS_EXIT=$?
+          echo "DNS exit code: $DNS_EXIT"
+
+          echo
+          echo "=== HTTPS HEAD / redirect test ==="
+          curl -I -L --max-time 30 -v \
+            https://ccms.karnataka.gov.in/ccms/StateReport.aspx \
+            2>&1 | tail -100
+          HEAD_EXIT=${PIPESTATUS[0]}
+          echo "curl HEAD exit code: $HEAD_EXIT"
+
+          echo
+          echo "=== HTTPS GET ==="
+          rm -f /tmp/ccms.html
+          curl -L --max-time 30 \
+            -o /tmp/ccms.html \
+            -w "HTTP=%{http_code} TIME=%{time_total} SIZE=%{size_download} REMOTE_IP=%{remote_ip} FINAL_URL=%{url_effective}\n" \
+            https://ccms.karnataka.gov.in/ccms/StateReport.aspx
+          GET_EXIT=$?
+          echo "curl GET exit code: $GET_EXIT"
+
+          echo
+          echo "=== RESPONSE PREVIEW ==="
+          if [ -f /tmp/ccms.html ]; then
+            head -c 2000 /tmp/ccms.html
+            echo
+          else
+            echo "No response file was created."
+          fi
+
+          echo
+          echo "=== HTTP (non-HTTPS) test ==="
+          curl -I -L --max-time 30 -v \
+            http://ccms.karnataka.gov.in/ccms/StateReport.aspx \
+            2>&1 | tail -80
+          HTTP_EXIT=${PIPESTATUS[0]}
+          echo "curl HTTP exit code: $HTTP_EXIT"
+
+          echo
+          echo "=== SUMMARY ==="
+          echo "DNS=$DNS_EXIT HTTPS_HEAD=$HEAD_EXIT HTTPS_GET=$GET_EXIT HTTP=$HTTP_EXIT"
