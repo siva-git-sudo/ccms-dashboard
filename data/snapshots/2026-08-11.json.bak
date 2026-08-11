@@ -2020,6 +2020,27 @@
       "_combined_from": 1,
       "combined_from_combos": 1
     },
+    "D070": {
+      "closed_with_appeal_number": null,
+      "interim_order_compliance_pending": null,
+      "final_order_compliance_pending": null,
+      "cases_received_as_on_yesterday": 0,
+      "draft_so_pending_from_advocate": null,
+      "disposed_case": null,
+      "approved_so_pending": null,
+      "not_to_appeal": null,
+      "total_cases_pending": 0,
+      "lco_proposal_stage_pending": null,
+      "draft_pwr_pending": null,
+      "affidavit_filing_pending": null,
+      "ga_lco_authorization_pending": null,
+      "affidavit_filed_hearing_stage": null,
+      "proposed_for_appeal": null,
+      "no_action_taken": null,
+      "approved_pwr_pending": null,
+      "_combined_from": 0,
+      "combined_from_combos": 0
+    },
     "D071": {
       "closed_with_appeal_number": 0,
       "interim_order_compliance_pending": 0,
@@ -2416,6 +2437,27 @@
       "affidavit_filing_pending": 0,
       "ga_lco_authorization_pending": 0,
       "affidavit_filed_hearing_stage": 0,
+      "proposed_for_appeal": 0,
+      "no_action_taken": 0,
+      "approved_pwr_pending": 0,
+      "_combined_from": 1,
+      "combined_from_combos": 1
+    },
+    "D082": {
+      "closed_with_appeal_number": 0,
+      "interim_order_compliance_pending": 0,
+      "final_order_compliance_pending": 0,
+      "cases_received_as_on_yesterday": 0,
+      "draft_so_pending_from_advocate": 0,
+      "disposed_case": 0,
+      "approved_so_pending": 0,
+      "not_to_appeal": 0,
+      "total_cases_pending": 5,
+      "lco_proposal_stage_pending": 3,
+      "draft_pwr_pending": 0,
+      "affidavit_filing_pending": 0,
+      "ga_lco_authorization_pending": 0,
+      "affidavit_filed_hearing_stage": 2,
       "proposed_for_appeal": 0,
       "no_action_taken": 0,
       "approved_pwr_pending": 0,
@@ -8104,6 +8146,7 @@
         "not_to_appeal": 0
       }
     ],
+    "D070": [],
     "D071": [
       {
         "section": "Inward",
@@ -9174,6 +9217,29 @@
         "proposed_for_appeal": 0,
         "closed_with_appeal_number": 0,
         "not_to_appeal": 1
+      }
+    ],
+    "D082": [
+      {
+        "section": "REGIONAL DIRECTOR  ENVIRONMENT",
+        "post": "REGIONAL DIRECTORS  ENVIRONMENT",
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 5,
+        "no_action_taken": 0,
+        "lco_proposal_stage_pending": 3,
+        "ga_lco_authorization_pending": 0,
+        "draft_pwr_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "approved_so_pending": 0,
+        "affidavit_filing_pending": 0,
+        "affidavit_filed_hearing_stage": 2,
+        "interim_order_compliance_pending": 0,
+        "disposed_case": 0,
+        "final_order_compliance_pending": 0,
+        "proposed_for_appeal": 0,
+        "closed_with_appeal_number": 0,
+        "not_to_appeal": 0
       }
     ],
     "D083": [
@@ -27502,6 +27568,52 @@
           }
         ]
       },
+      "D082": {
+        "totals": {
+          "cases_received_as_on_yesterday": 0,
+          "total_cases_pending": 5,
+          "no_action_taken": 0,
+          "lco_proposal_stage_pending": 3,
+          "ga_lco_authorization_pending": 0,
+          "draft_pwr_pending": 0,
+          "approved_pwr_pending": 0,
+          "draft_so_pending_from_advocate": 0,
+          "approved_so_pending": 0,
+          "affidavit_filing_pending": 0,
+          "affidavit_filed_hearing_stage": 2,
+          "interim_order_compliance_pending": 0,
+          "disposed_case": 0,
+          "final_order_compliance_pending": 0,
+          "proposed_for_appeal": 0,
+          "closed_with_appeal_number": 0,
+          "not_to_appeal": 0,
+          "_column_count": 17
+        },
+        "officers": [
+          {
+            "section": "REGIONAL DIRECTOR  ENVIRONMENT",
+            "post": "REGIONAL DIRECTORS  ENVIRONMENT",
+            "cases_received_as_on_yesterday": 0,
+            "total_cases_pending": 5,
+            "no_action_taken": 0,
+            "lco_proposal_stage_pending": 3,
+            "ga_lco_authorization_pending": 0,
+            "draft_pwr_pending": 0,
+            "approved_pwr_pending": 0,
+            "draft_so_pending_from_advocate": 0,
+            "approved_so_pending": 0,
+            "affidavit_filing_pending": 0,
+            "affidavit_filed_hearing_stage": 2,
+            "interim_order_compliance_pending": 0,
+            "disposed_case": 0,
+            "final_order_compliance_pending": 0,
+            "proposed_for_appeal": 0,
+            "closed_with_appeal_number": 0,
+            "not_to_appeal": 0,
+            "_column_count": 17
+          }
+        ]
+      },
       "D081": {
         "totals": {
           "cases_received_as_on_yesterday": 0,
@@ -32730,6 +32842,12 @@
       "circle": "Kanara Circle"
     },
     {
+      "code": "D070",
+      "name": "UTTARA KANNADA DIVISION  ENVIRONMENT",
+      "group": "division",
+      "circle": "Kanara Circle"
+    },
+    {
       "code": "D071",
       "name": "Kodagu Circle",
       "group": "circle",
@@ -32799,6 +32917,12 @@
       "code": "D081",
       "name": "Udupi division SF",
       "group": "sf",
+      "circle": "Mangaluru Circle"
+    },
+    {
+      "code": "D082",
+      "name": "UDUPI DIVISION ENVIRONMENT",
+      "group": "division",
       "circle": "Mangaluru Circle"
     },
     {
@@ -33116,6 +33240,7 @@
       "Shivamogga Wildlife Division",
       "Sirsi Division",
       "Tumkur Division",
+      "UDUPI DIVISION ENVIRONMENT",
       "Udupi division SF",
       "Vijayanagara Division",
       "Virajpet Division",

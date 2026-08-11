@@ -269,6 +269,7 @@ function rowsOf(ct){
     if(CIRCLE!=='ALL' && r.circle!==CIRCLE) return;
     if(UNIT!=='ALL' && r.code!==UNIT) return;
     var s=scopeRow(r); if(!s) return;
+    if(!(s.metrics.total_cases_pending>0)) return;
     if(STAGE!=='ALL' && !(s.metrics[STAGE]>0)) return;
     out.push(s);
   });
