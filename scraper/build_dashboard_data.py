@@ -34,21 +34,30 @@ def load_divisions() -> list[dict]:
     return json.loads((HERE / "divisions.json").read_text(encoding="utf-8"))
 
 
-def load_circle_index() -> tuple[dict, list[str]]:
-    """Return (normalised division name -> circle, ordered circle names).
+def load_circle_index() -> tuple[dict, list[str], set[str]]:
+    """Return (normalised division name -> circle, circle names, excluded).
 
     circles.json maps each circle to its divisions using the exact CCMS
     department names. Anything the reports return that is not listed --
     boards, corporations, zoos, tiger reserves that report directly --
     falls into OTHER_CIRCLE rather than disappearing from the dashboard.
+
+    That fallback is deliberate, which is why hiding a department needs
+    an explicit `_exclude` entry: simply deleting it from a circle would
+    reroute it to OTHER_CIRCLE, not remove it.
+
+    `_exclude` applies here, at build time, and nowhere else. The scraper
+    still fetches those departments and the snapshots still record them,
+    so the history is intact -- removing a name from `_exclude` brings
+    its whole past back on the next build, with no re-scraping.
     """
     path = HERE / "circles.json"
     if not path.exists():
-        return {}, []
+        return {}, [], set()
     try:
         raw = json.loads(path.read_text(encoding="utf-8"))
     except Exception:
-        return {}, []
+        return {}, [], set()
 
     index, order = {}, []
     for circle, cfg in raw.items():
@@ -57,11 +66,69 @@ def load_circle_index() -> tuple[dict, list[str]]:
         order.append(circle)
         for name in (cfg or {}).get("divisions", []):
             index[_norm(name)] = circle
-    return index, order
+    excluded = {_norm(n) for n in raw.get("_exclude") or []}
+    return index, order, excluded
 
 
 def _norm(name: str) -> str:
     return " ".join((name or "").split()).lower()
+
+
+UNASSIGNED_WING = "Unassigned"
+
+
+def load_wing_index() -> tuple[dict, list[str], set[str]]:
+    """Return (normalised section -> wing, ordered wing names, HQ dept names).
+
+    wings.json groups the CCMS "user" rows of the Aranya Bhavana
+    departments into the wings/units they actually sit under. The report
+    gives us a free-text `section` per user and nothing above it, so the
+    wing has to come from this hand-maintained map -- same approach as
+    circles.json for divisions.
+
+    The map applies only to the departments in `applies_to_departments`;
+    a section name like "Legal Cell" in a field division is that
+    division's own cell, not the HQ wing, so it is left unwinged rather
+    than folded into an HQ total.
+
+    `_unmapped` groups (field offices created under the HQ code, system
+    accounts) are carried through as wings too, under their `label`, so
+    they stay visible instead of silently inflating a real wing.
+    """
+    path = HERE / "wings.json"
+    if not path.exists():
+        return {}, [], set()
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}, [], set()
+
+    index, order = {}, []
+
+    def add(label: str, cfg: dict) -> None:
+        if label not in order:
+            order.append(label)
+        for section in (cfg or {}).get("sections", []):
+            index[_norm(section)] = label
+
+    for name, cfg in (raw.get("wings") or {}).items():
+        if name.startswith("_"):
+            continue
+        add(name, cfg)
+    for key, cfg in (raw.get("_unmapped") or {}).items():
+        if key.startswith("_"):
+            continue
+        add((cfg or {}).get("label") or key, cfg)
+
+    depts = {_norm(d) for d in raw.get("applies_to_departments") or []}
+    return index, order, depts
+
+
+def _wing_of(section: str, wing_index: dict, in_scope: bool) -> str | None:
+    """The wing a user row belongs to, or None if wings don't apply here."""
+    if not in_scope:
+        return None
+    return wing_index.get(_norm(section), UNASSIGNED_WING)
 
 
 def load_snapshots() -> list[dict]:
@@ -88,7 +155,12 @@ def _delta_and_direction(total, prev_total):
     return None, "no_data"
 
 
-def _officers_with_deltas(latest_rows: list[dict], prev_rows: list[dict]) -> list[dict]:
+def _officers_with_deltas(
+    latest_rows: list[dict],
+    prev_rows: list[dict],
+    wing_index: dict | None = None,
+    winged: bool = False,
+) -> list[dict]:
     prev_by_key = {(r["section"], r["post"]): r for r in (prev_rows or [])}
     out = []
     for row in latest_rows or []:
@@ -101,6 +173,7 @@ def _officers_with_deltas(latest_rows: list[dict], prev_rows: list[dict]) -> lis
             {
                 "section": row["section"],
                 "post": row["post"],
+                "wing": _wing_of(row["section"], wing_index or {}, winged),
                 "total_pending": total,
                 "previous_total_pending": prev_total,
                 "delta": delta,
@@ -110,6 +183,45 @@ def _officers_with_deltas(latest_rows: list[dict], prev_rows: list[dict]) -> lis
     # Group by section, largest pending first within each section, for a
     # readable "user" list under each division card.
     out.sort(key=lambda r: (r["section"], -(r["total_pending"] or 0)))
+    return out
+
+
+def _wing_rollup(users: list[dict], wing_order: list[str]) -> list[dict]:
+    """Collapse a unit's user rows into one row per wing.
+
+    Only meaningful for the HQ departments -- everywhere else `wing` is
+    None and this returns []. Wings are ordered by caseload, so the
+    heaviest wing is the first thing read off the card.
+    """
+    buckets: dict[str, dict] = {}
+    for u in users:
+        wing = u.get("wing")
+        if not wing:
+            continue
+        b = buckets.setdefault(
+            wing, {"wing": wing, "total_pending": 0, "previous_total_pending": 0,
+                   "user_count": 0, "_had_prev": False}
+        )
+        b["total_pending"] += u.get("total_pending") or 0
+        if u.get("previous_total_pending") is not None:
+            b["previous_total_pending"] += u["previous_total_pending"]
+            b["_had_prev"] = True
+        b["user_count"] += 1
+
+    out = []
+    for wing, b in buckets.items():
+        prev = b["previous_total_pending"] if b["_had_prev"] else None
+        delta, direction = _delta_and_direction(b["total_pending"], prev)
+        out.append({
+            "wing": wing,
+            "total_pending": b["total_pending"],
+            "previous_total_pending": prev,
+            "user_count": b["user_count"],
+            "delta": delta,
+            "direction": direction,
+            "order": wing_order.index(wing) if wing in wing_order else len(wing_order),
+        })
+    out.sort(key=lambda r: (-r["total_pending"], r["order"]))
     return out
 
 
@@ -177,11 +289,14 @@ def build() -> dict:
 
     latest = snapshots[-1]
     previous = snapshots[-2] if len(snapshots) >= 2 else None
-    circle_index, circle_order = load_circle_index()
+    circle_index, circle_order, excluded = load_circle_index()
+    wing_index, wing_order, wing_depts = load_wing_index()
+    divisions = [d for d in divisions if _norm(d["name"]) not in excluded]
 
     out_divisions = []
     for d in divisions:
         code, name, group = d["code"], d["name"], d["group"]
+        winged = _norm(name) in wing_depts
         latest_rec = latest.get("divisions", {}).get(code)
         prev_rec = previous.get("divisions", {}).get(code) if previous else None
 
@@ -191,6 +306,7 @@ def build() -> dict:
 
         latest_officers = latest.get("officers", {}).get(code, [])
         prev_officers = previous.get("officers", {}).get(code, []) if previous else []
+        users = _officers_with_deltas(latest_officers, prev_officers, wing_index, winged)
 
         out_divisions.append(
             {
@@ -207,7 +323,8 @@ def build() -> dict:
                     for k, v in (latest_rec or {}).items()
                     if k not in ("raw", "footer_tag", "_combined_from", "_skipped", "combined_from_combos")
                 },
-                "users": _officers_with_deltas(latest_officers, prev_officers),
+                "users": users,
+                "wings": _wing_rollup(users, wing_order),
             }
         )
 
@@ -217,6 +334,7 @@ def build() -> dict:
         "previous_date": previous.get("date") if previous else None,
         "divisions": out_divisions,
         "circles": circle_order + [OTHER_CIRCLE],
+        "wings": wing_order,
         "case_types": _build_case_types(latest, previous, divisions),
     }
 
@@ -345,7 +463,9 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
     and S-KSAT 16). Each row carries its full metric set plus a delta on
     Total Cases Pending versus the previous snapshot.
     """
-    circle_index, _ = load_circle_index()
+    circle_index, _, excluded = load_circle_index()
+    wing_index, _wing_order, wing_depts = load_wing_index()
+    divisions = [d for d in divisions if _norm(d["name"]) not in excluded]
     meta = latest.get("case_types") or []
     latest_by_ct = latest.get("by_case_type") or {}
     prev_by_ct = (previous or {}).get("by_case_type") or {}
@@ -429,6 +549,9 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
                 users.append({
                     "post": u.get("post", ""),
                     "section": u.get("section", ""),
+                    "wing": _wing_of(
+                        u.get("section", ""), wing_index, _norm(d["name"]) in wing_depts
+                    ),
                     "metrics": u_metrics,
                     "delta": u_delta,
                     "direction": u_direction,

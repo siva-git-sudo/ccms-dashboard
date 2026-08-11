@@ -2,7 +2,7 @@
 // Fallback copy of data.json so the dashboard also works when
 // index.html is opened directly from disk (file://).
 window.CCMS_DATA = {
-  "generated_at": "2026-08-11T14:34:17.637128+05:30",
+  "generated_at": "2026-08-11T18:50:42.943069+05:30",
   "latest_date": "2026-08-11",
   "previous_date": null,
   "divisions": [
@@ -56,6 +56,7 @@ window.CCMS_DATA = {
         {
           "section": "Administration  Co-ord",
           "post": "APCCF",
+          "wing": "Administration & Coordination",
           "total_pending": 7,
           "previous_total_pending": null,
           "delta": null,
@@ -64,6 +65,7 @@ window.CCMS_DATA = {
         {
           "section": "Administrative Officer PCCF HOFF Office",
           "post": "Administrative Officer",
+          "wing": "Administration & Coordination",
           "total_pending": 61,
           "previous_total_pending": null,
           "delta": null,
@@ -72,6 +74,7 @@ window.CCMS_DATA = {
         {
           "section": "Bangalore Rural Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": "Field offices under HQ code",
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -80,6 +83,7 @@ window.CCMS_DATA = {
         {
           "section": "Bangalore Urban Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": "Field offices under HQ code",
           "total_pending": 6,
           "previous_total_pending": null,
           "delta": null,
@@ -88,6 +92,7 @@ window.CCMS_DATA = {
         {
           "section": "Bangalore Urban Range",
           "post": "Range Forest Officer",
+          "wing": "Field offices under HQ code",
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -96,6 +101,7 @@ window.CCMS_DATA = {
         {
           "section": "EST Non Gazetted",
           "post": "Administrative Assistant",
+          "wing": "Personnel & Recruitment",
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -104,6 +110,7 @@ window.CCMS_DATA = {
         {
           "section": "Est Gazetted",
           "post": "Administrative Officer",
+          "wing": "Personnel & Recruitment",
           "total_pending": 144,
           "previous_total_pending": null,
           "delta": null,
@@ -112,6 +119,7 @@ window.CCMS_DATA = {
         {
           "section": "Evaluation",
           "post": "APCCF",
+          "wing": "Evaluation",
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -120,6 +128,7 @@ window.CCMS_DATA = {
         {
           "section": "FC",
           "post": "CCF",
+          "wing": "Forest Conservation (FCA)",
           "total_pending": 14,
           "previous_total_pending": null,
           "delta": null,
@@ -128,6 +137,7 @@ window.CCMS_DATA = {
         {
           "section": "FC",
           "post": "PCCF",
+          "wing": "Forest Conservation (FCA)",
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -136,6 +146,7 @@ window.CCMS_DATA = {
         {
           "section": "FC",
           "post": "Section Officer",
+          "wing": "Forest Conservation (FCA)",
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -144,6 +155,7 @@ window.CCMS_DATA = {
         {
           "section": "Forest Resource Management",
           "post": "Chief Conservator of Forests",
+          "wing": "Forest Resource Management",
           "total_pending": 135,
           "previous_total_pending": null,
           "delta": null,
@@ -152,6 +164,7 @@ window.CCMS_DATA = {
         {
           "section": "Forest Resource Management",
           "post": "Additional Principal Chief Conservator of Forests",
+          "wing": "Forest Resource Management",
           "total_pending": 31,
           "previous_total_pending": null,
           "delta": null,
@@ -160,6 +173,7 @@ window.CCMS_DATA = {
         {
           "section": "Kaggalipura Range",
           "post": "Range Forest Officer",
+          "wing": "Field offices under HQ code",
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -168,6 +182,7 @@ window.CCMS_DATA = {
         {
           "section": "Kolar Division",
           "post": "Deputy Conservator of Forests",
+          "wing": "Field offices under HQ code",
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -176,6 +191,7 @@ window.CCMS_DATA = {
         {
           "section": "LEGAL CELL",
           "post": "Additional Principal Chief Conservator of Forests",
+          "wing": "Legal Cell",
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -184,6 +200,7 @@ window.CCMS_DATA = {
         {
           "section": "Land Records",
           "post": "APCCF",
+          "wing": "Land Records",
           "total_pending": 26,
           "previous_total_pending": null,
           "delta": null,
@@ -192,6 +209,7 @@ window.CCMS_DATA = {
         {
           "section": "Legal Cell",
           "post": "Additional Principal Chief Conservator of Forests",
+          "wing": "Legal Cell",
           "total_pending": 49,
           "previous_total_pending": null,
           "delta": null,
@@ -200,6 +218,7 @@ window.CCMS_DATA = {
         {
           "section": "Legal Cell SO",
           "post": "Superintendent",
+          "wing": "Legal Cell",
           "total_pending": 28,
           "previous_total_pending": null,
           "delta": null,
@@ -208,6 +227,7 @@ window.CCMS_DATA = {
         {
           "section": "Legal cell RI",
           "post": "First Division Assistant",
+          "wing": "Legal Cell",
           "total_pending": 6,
           "previous_total_pending": null,
           "delta": null,
@@ -216,6 +236,7 @@ window.CCMS_DATA = {
         {
           "section": "Mysore WL Range",
           "post": "Range Forest Officer",
+          "wing": "Field offices under HQ code",
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -224,6 +245,7 @@ window.CCMS_DATA = {
         {
           "section": "PCCF WL",
           "post": "PCCF WL",
+          "wing": "Wildlife",
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -232,6 +254,7 @@ window.CCMS_DATA = {
         {
           "section": "Personnel  Recruitment",
           "post": "AO",
+          "wing": "Personnel & Recruitment",
           "total_pending": 50,
           "previous_total_pending": null,
           "delta": null,
@@ -240,6 +263,7 @@ window.CCMS_DATA = {
         {
           "section": "Personnel  Recruitment",
           "post": "APCCF",
+          "wing": "Personnel & Recruitment",
           "total_pending": 8,
           "previous_total_pending": null,
           "delta": null,
@@ -248,6 +272,7 @@ window.CCMS_DATA = {
         {
           "section": "Personnel  Recruitment",
           "post": "FIRST DIVISION ASSISTANT- B3 SECTION",
+          "wing": "Personnel & Recruitment",
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -256,6 +281,7 @@ window.CCMS_DATA = {
         {
           "section": "Personnel  Recruitment",
           "post": "MANAGER",
+          "wing": "Personnel & Recruitment",
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -264,6 +290,7 @@ window.CCMS_DATA = {
         {
           "section": "Personnel  Recruitment",
           "post": "FIRST DIVISION ASSISTANT- A1  B1 SECTION",
+          "wing": "Personnel & Recruitment",
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -272,6 +299,7 @@ window.CCMS_DATA = {
         {
           "section": "Vigilance",
           "post": "APCCF VIG",
+          "wing": "Vigilance",
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -280,6 +308,7 @@ window.CCMS_DATA = {
         {
           "section": "WILDLIFE",
           "post": "APCCF",
+          "wing": "Wildlife",
           "total_pending": 7,
           "previous_total_pending": null,
           "delta": null,
@@ -288,10 +317,112 @@ window.CCMS_DATA = {
         {
           "section": "Working plan",
           "post": "APCCF working plan",
+          "wing": "Working Plan",
           "total_pending": 11,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
+        }
+      ],
+      "wings": [
+        {
+          "wing": "Personnel & Recruitment",
+          "total_pending": 206,
+          "previous_total_pending": null,
+          "user_count": 7,
+          "delta": null,
+          "direction": "baseline",
+          "order": 1
+        },
+        {
+          "wing": "Forest Resource Management",
+          "total_pending": 166,
+          "previous_total_pending": null,
+          "user_count": 2,
+          "delta": null,
+          "direction": "baseline",
+          "order": 3
+        },
+        {
+          "wing": "Legal Cell",
+          "total_pending": 86,
+          "previous_total_pending": null,
+          "user_count": 4,
+          "delta": null,
+          "direction": "baseline",
+          "order": 2
+        },
+        {
+          "wing": "Administration & Coordination",
+          "total_pending": 68,
+          "previous_total_pending": null,
+          "user_count": 2,
+          "delta": null,
+          "direction": "baseline",
+          "order": 0
+        },
+        {
+          "wing": "Land Records",
+          "total_pending": 26,
+          "previous_total_pending": null,
+          "user_count": 1,
+          "delta": null,
+          "direction": "baseline",
+          "order": 5
+        },
+        {
+          "wing": "Forest Conservation (FCA)",
+          "total_pending": 24,
+          "previous_total_pending": null,
+          "user_count": 3,
+          "delta": null,
+          "direction": "baseline",
+          "order": 4
+        },
+        {
+          "wing": "Field offices under HQ code",
+          "total_pending": 14,
+          "previous_total_pending": null,
+          "user_count": 6,
+          "delta": null,
+          "direction": "baseline",
+          "order": 10
+        },
+        {
+          "wing": "Wildlife",
+          "total_pending": 12,
+          "previous_total_pending": null,
+          "user_count": 2,
+          "delta": null,
+          "direction": "baseline",
+          "order": 7
+        },
+        {
+          "wing": "Working Plan",
+          "total_pending": 11,
+          "previous_total_pending": null,
+          "user_count": 1,
+          "delta": null,
+          "direction": "baseline",
+          "order": 6
+        },
+        {
+          "wing": "Vigilance",
+          "total_pending": 1,
+          "previous_total_pending": null,
+          "user_count": 1,
+          "delta": null,
+          "direction": "baseline",
+          "order": 8
+        },
+        {
+          "wing": "Evaluation",
+          "total_pending": 1,
+          "previous_total_pending": null,
+          "user_count": 1,
+          "delta": null,
+          "direction": "baseline",
+          "order": 9
         }
       ]
     },
@@ -345,10 +476,22 @@ window.CCMS_DATA = {
         {
           "section": "CCMS Admin",
           "post": "CCMS Admin",
+          "wing": "System account / unallocated",
           "total_pending": 21,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
+        }
+      ],
+      "wings": [
+        {
+          "wing": "System account / unallocated",
+          "total_pending": 21,
+          "previous_total_pending": null,
+          "user_count": 1,
+          "delta": null,
+          "direction": "baseline",
+          "order": 11
         }
       ]
     },
@@ -380,7 +523,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "BL",
@@ -432,6 +576,7 @@ window.CCMS_DATA = {
         {
           "section": "Bengaluru Circle",
           "post": "Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -440,6 +585,7 @@ window.CCMS_DATA = {
         {
           "section": "Bengaluru Circle",
           "post": "CF BENGALURU",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -448,12 +594,14 @@ window.CCMS_DATA = {
         {
           "section": "EST-Gazetted",
           "post": "Assistant Administrator",
+          "wing": null,
           "total_pending": 23,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "AA",
@@ -505,6 +653,7 @@ window.CCMS_DATA = {
         {
           "section": "Anekal Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 8,
           "previous_total_pending": null,
           "delta": null,
@@ -513,6 +662,7 @@ window.CCMS_DATA = {
         {
           "section": "Bengaluru Lake Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -521,6 +671,7 @@ window.CCMS_DATA = {
         {
           "section": "Bengaluru North Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 8,
           "previous_total_pending": null,
           "delta": null,
@@ -529,6 +680,7 @@ window.CCMS_DATA = {
         {
           "section": "Bengaluru South Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -537,6 +689,7 @@ window.CCMS_DATA = {
         {
           "section": "Bengaluru Urban Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 129,
           "previous_total_pending": null,
           "delta": null,
@@ -545,6 +698,7 @@ window.CCMS_DATA = {
         {
           "section": "Bengaluru Urban Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 21,
           "previous_total_pending": null,
           "delta": null,
@@ -553,6 +707,7 @@ window.CCMS_DATA = {
         {
           "section": "K R Puram Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 9,
           "previous_total_pending": null,
           "delta": null,
@@ -561,6 +716,7 @@ window.CCMS_DATA = {
         {
           "section": "Kaggalipura Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 38,
           "previous_total_pending": null,
           "delta": null,
@@ -569,12 +725,14 @@ window.CCMS_DATA = {
         {
           "section": "Yelahanka Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "AC",
@@ -626,6 +784,7 @@ window.CCMS_DATA = {
         {
           "section": "Bengaluru Rural Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -634,6 +793,7 @@ window.CCMS_DATA = {
         {
           "section": "Devanahalli Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -642,6 +802,7 @@ window.CCMS_DATA = {
         {
           "section": "Doddaballapura Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -650,6 +811,7 @@ window.CCMS_DATA = {
         {
           "section": "Doddaballapura Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 27,
           "previous_total_pending": null,
           "delta": null,
@@ -658,6 +820,7 @@ window.CCMS_DATA = {
         {
           "section": "Hosakote Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -666,12 +829,14 @@ window.CCMS_DATA = {
         {
           "section": "Nelamangala Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "AE",
@@ -705,6 +870,7 @@ window.CCMS_DATA = {
         {
           "section": "Kanakapura Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -713,6 +879,7 @@ window.CCMS_DATA = {
         {
           "section": "Magadi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -721,6 +888,7 @@ window.CCMS_DATA = {
         {
           "section": "Ramanagar Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -729,6 +897,7 @@ window.CCMS_DATA = {
         {
           "section": "Ramanagara Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 12,
           "previous_total_pending": null,
           "delta": null,
@@ -737,12 +906,14 @@ window.CCMS_DATA = {
         {
           "section": "Ramanagara Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "AD",
@@ -794,6 +965,7 @@ window.CCMS_DATA = {
         {
           "section": "Kolar Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 86,
           "previous_total_pending": null,
           "delta": null,
@@ -802,6 +974,7 @@ window.CCMS_DATA = {
         {
           "section": "Kolar Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 21,
           "previous_total_pending": null,
           "delta": null,
@@ -810,6 +983,7 @@ window.CCMS_DATA = {
         {
           "section": "Kolar Sub Division",
           "post": "Assistant Conservator Of Forest",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -818,6 +992,7 @@ window.CCMS_DATA = {
         {
           "section": "Mulabagilu Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -826,12 +1001,14 @@ window.CCMS_DATA = {
         {
           "section": "Shreenivasapura Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "AG",
@@ -883,6 +1060,7 @@ window.CCMS_DATA = {
         {
           "section": "Bagepalli Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -891,6 +1069,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkaballapura Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 21,
           "previous_total_pending": null,
           "delta": null,
@@ -899,6 +1078,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkaballapura Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -907,6 +1087,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkaballapura Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 7,
           "previous_total_pending": null,
           "delta": null,
@@ -915,6 +1096,7 @@ window.CCMS_DATA = {
         {
           "section": "Chintamani Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -923,12 +1105,14 @@ window.CCMS_DATA = {
         {
           "section": "Chintamani Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "AF",
@@ -980,6 +1164,7 @@ window.CCMS_DATA = {
         {
           "section": "Anekal Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -988,6 +1173,7 @@ window.CCMS_DATA = {
         {
           "section": "Bannerghatta Wildlife Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -996,12 +1182,14 @@ window.CCMS_DATA = {
         {
           "section": "Bannerghatta Wildlife Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D010",
@@ -1035,6 +1223,7 @@ window.CCMS_DATA = {
         {
           "section": "Anekal RAnge Sf",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1043,12 +1232,14 @@ window.CCMS_DATA = {
         {
           "section": "Kaggalipura SF range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D011",
@@ -1078,7 +1269,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "RS",
@@ -1108,7 +1300,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "KS",
@@ -1156,12 +1349,14 @@ window.CCMS_DATA = {
         {
           "section": "Kolar Division SF",
           "post": "Deputy Conservator of Forest",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "CS",
@@ -1209,6 +1404,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkaballapur SF Sub Division",
           "post": "Assistant Conservator Of Forest",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1217,12 +1413,14 @@ window.CCMS_DATA = {
         {
           "section": "Chikkaballapura SF Division",
           "post": "Deputy Conservator Of Forest",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D015",
@@ -1270,6 +1468,7 @@ window.CCMS_DATA = {
         {
           "section": "Ballari Circle",
           "post": "Chief Conservator Of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -1278,6 +1477,7 @@ window.CCMS_DATA = {
         {
           "section": "Inward",
           "post": "Inward Officer",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -1286,12 +1486,14 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 6,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D016",
@@ -1343,6 +1545,7 @@ window.CCMS_DATA = {
         {
           "section": "Ballari Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 42,
           "previous_total_pending": null,
           "delta": null,
@@ -1351,6 +1554,7 @@ window.CCMS_DATA = {
         {
           "section": "Ballari Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1359,6 +1563,7 @@ window.CCMS_DATA = {
         {
           "section": "Ballari Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -1367,6 +1572,7 @@ window.CCMS_DATA = {
         {
           "section": "Hospet Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -1375,6 +1581,7 @@ window.CCMS_DATA = {
         {
           "section": "Kudligi Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1383,12 +1590,14 @@ window.CCMS_DATA = {
         {
           "section": "Sandur North Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D017",
@@ -1436,6 +1645,7 @@ window.CCMS_DATA = {
         {
           "section": "Chithradurga Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 27,
           "previous_total_pending": null,
           "delta": null,
@@ -1444,6 +1654,7 @@ window.CCMS_DATA = {
         {
           "section": "Chithradurga Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1452,6 +1663,7 @@ window.CCMS_DATA = {
         {
           "section": "Chitradurga Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1460,6 +1672,7 @@ window.CCMS_DATA = {
         {
           "section": "Holalkere Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -1468,12 +1681,14 @@ window.CCMS_DATA = {
         {
           "section": "Hosadurga Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D018",
@@ -1521,6 +1736,7 @@ window.CCMS_DATA = {
         {
           "section": "Davanagere Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 15,
           "previous_total_pending": null,
           "delta": null,
@@ -1529,6 +1745,7 @@ window.CCMS_DATA = {
         {
           "section": "Davanagere Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -1537,6 +1754,7 @@ window.CCMS_DATA = {
         {
           "section": "Davanagere Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -1545,12 +1763,14 @@ window.CCMS_DATA = {
         {
           "section": "Jagalur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D019",
@@ -1584,6 +1804,7 @@ window.CCMS_DATA = {
         {
           "section": "Gangavathi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -1592,6 +1813,7 @@ window.CCMS_DATA = {
         {
           "section": "Koppal Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1600,12 +1822,14 @@ window.CCMS_DATA = {
         {
           "section": "Kushtagi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D020",
@@ -1639,12 +1863,14 @@ window.CCMS_DATA = {
         {
           "section": "BALLARI SF DIVISION",
           "post": "DCF SF",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D021",
@@ -1678,12 +1904,14 @@ window.CCMS_DATA = {
         {
           "section": "Chitradurga SF Division",
           "post": "DCF SF",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D022",
@@ -1717,12 +1945,14 @@ window.CCMS_DATA = {
         {
           "section": "Davangere SF DIVISION",
           "post": "DCF SF",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D023",
@@ -1756,12 +1986,14 @@ window.CCMS_DATA = {
         {
           "section": "KOPPALA SF DIVISION",
           "post": "DCF SF",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "V024",
@@ -1795,6 +2027,7 @@ window.CCMS_DATA = {
         {
           "section": "Hospet Sub Division",
           "post": "Assistant Conservator of Forest Hospet",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1803,12 +2036,14 @@ window.CCMS_DATA = {
         {
           "section": "Vijayanagara Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 12,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D024",
@@ -1856,6 +2091,7 @@ window.CCMS_DATA = {
         {
           "section": "Belagavi Circle",
           "post": "Chief Conservator Of Forests",
+          "wing": null,
           "total_pending": 10,
           "previous_total_pending": null,
           "delta": null,
@@ -1864,12 +2100,14 @@ window.CCMS_DATA = {
         {
           "section": "Inward officer",
           "post": "Inward officer",
+          "wing": null,
           "total_pending": 10,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D025",
@@ -1903,6 +2141,7 @@ window.CCMS_DATA = {
         {
           "section": "Belagavi Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 9,
           "previous_total_pending": null,
           "delta": null,
@@ -1911,6 +2150,7 @@ window.CCMS_DATA = {
         {
           "section": "Belagavi Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -1919,6 +2159,7 @@ window.CCMS_DATA = {
         {
           "section": "Kankumbi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1927,6 +2168,7 @@ window.CCMS_DATA = {
         {
           "section": "Khanapur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -1935,6 +2177,7 @@ window.CCMS_DATA = {
         {
           "section": "Khanapur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -1943,12 +2186,14 @@ window.CCMS_DATA = {
         {
           "section": "Londa Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D026",
@@ -1978,7 +2223,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D027",
@@ -2008,7 +2254,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D028",
@@ -2042,6 +2289,7 @@ window.CCMS_DATA = {
         {
           "section": "Gokak Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 17,
           "previous_total_pending": null,
           "delta": null,
@@ -2050,6 +2298,7 @@ window.CCMS_DATA = {
         {
           "section": "Gokak Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2058,6 +2307,7 @@ window.CCMS_DATA = {
         {
           "section": "Raibag Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2066,6 +2316,7 @@ window.CCMS_DATA = {
         {
           "section": "Raibag Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2074,12 +2325,14 @@ window.CCMS_DATA = {
         {
           "section": "Savadatti Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D029",
@@ -2113,6 +2366,7 @@ window.CCMS_DATA = {
         {
           "section": "Belagavi SF Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2121,12 +2375,14 @@ window.CCMS_DATA = {
         {
           "section": "Raibag SF Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D030",
@@ -2160,6 +2416,7 @@ window.CCMS_DATA = {
         {
           "section": "Badami SF Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2168,12 +2425,14 @@ window.CCMS_DATA = {
         {
           "section": "Bagalakote SF Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D031",
@@ -2203,7 +2462,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D032",
@@ -2255,6 +2515,7 @@ window.CCMS_DATA = {
         {
           "section": "Cauvery WL Division",
           "post": "Deputy Conservator Of Forest",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2263,6 +2524,7 @@ window.CCMS_DATA = {
         {
           "section": "Chamarajanagara Circle",
           "post": "Chief Conservator Of Forests",
+          "wing": null,
           "total_pending": 22,
           "previous_total_pending": null,
           "delta": null,
@@ -2271,6 +2533,7 @@ window.CCMS_DATA = {
         {
           "section": "Halaguru Range",
           "post": "RANGE FOREST OFFICER",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2279,6 +2542,7 @@ window.CCMS_DATA = {
         {
           "section": "Kanakpura Sub Division",
           "post": "Assistant Conservator Of Forest",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2287,6 +2551,7 @@ window.CCMS_DATA = {
         {
           "section": "Kollegala WL Sub Division",
           "post": "Assistant Conservator Of Forest",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2295,6 +2560,7 @@ window.CCMS_DATA = {
         {
           "section": "Male Mahadeshwara Hills WL Division",
           "post": "Deputy Conservator Of Forest",
+          "wing": null,
           "total_pending": 8,
           "previous_total_pending": null,
           "delta": null,
@@ -2303,6 +2569,7 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2311,12 +2578,14 @@ window.CCMS_DATA = {
         {
           "section": "inward officer",
           "post": "Inward Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D033",
@@ -2364,6 +2633,7 @@ window.CCMS_DATA = {
         {
           "section": "BRT Tiger Conservation Reserve Chamrajanagara",
           "post": "Deputy Conservator of Forests  Director",
+          "wing": null,
           "total_pending": 11,
           "previous_total_pending": null,
           "delta": null,
@@ -2372,6 +2642,7 @@ window.CCMS_DATA = {
         {
           "section": "Chamarajnagar Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 11,
           "previous_total_pending": null,
           "delta": null,
@@ -2380,6 +2651,7 @@ window.CCMS_DATA = {
         {
           "section": "Kollegal WL Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2388,6 +2660,7 @@ window.CCMS_DATA = {
         {
           "section": "Yelandur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2396,12 +2669,14 @@ window.CCMS_DATA = {
         {
           "section": "Yelandur WL Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D034",
@@ -2435,6 +2710,7 @@ window.CCMS_DATA = {
         {
           "section": "Cauvery WL Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -2443,6 +2719,7 @@ window.CCMS_DATA = {
         {
           "section": "Halagur WL Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2451,6 +2728,7 @@ window.CCMS_DATA = {
         {
           "section": "Hanur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2459,12 +2737,14 @@ window.CCMS_DATA = {
         {
           "section": "Sangam WL Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D035",
@@ -2498,12 +2778,14 @@ window.CCMS_DATA = {
         {
           "section": "Malai Mahadeshwara WL Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D036",
@@ -2537,6 +2819,7 @@ window.CCMS_DATA = {
         {
           "section": "Chamarajanagara SF Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2545,6 +2828,7 @@ window.CCMS_DATA = {
         {
           "section": "Chamarajanagara SFSub  Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -2553,12 +2837,14 @@ window.CCMS_DATA = {
         {
           "section": "Gundlupet SF Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D037",
@@ -2610,6 +2896,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkamagaluru Circle",
           "post": "Conservator Of Forests",
+          "wing": null,
           "total_pending": 16,
           "previous_total_pending": null,
           "delta": null,
@@ -2618,6 +2905,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkamagaluru Circle",
           "post": "Chief Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -2626,6 +2914,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkamagaluru Circle",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2634,12 +2923,14 @@ window.CCMS_DATA = {
         {
           "section": "Inward",
           "post": "Inward Officer",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D038",
@@ -2687,6 +2978,7 @@ window.CCMS_DATA = {
         {
           "section": "Alduru Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -2695,6 +2987,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkamagalur Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 30,
           "previous_total_pending": null,
           "delta": null,
@@ -2703,6 +2996,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkamagalur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 16,
           "previous_total_pending": null,
           "delta": null,
@@ -2711,6 +3005,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkamagalur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 12,
           "previous_total_pending": null,
           "delta": null,
@@ -2719,6 +3014,7 @@ window.CCMS_DATA = {
         {
           "section": "Government Timber Depot Kadur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2727,6 +3023,7 @@ window.CCMS_DATA = {
         {
           "section": "Kadur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 6,
           "previous_total_pending": null,
           "delta": null,
@@ -2735,6 +3032,7 @@ window.CCMS_DATA = {
         {
           "section": "Mudigere Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -2743,6 +3041,7 @@ window.CCMS_DATA = {
         {
           "section": "Mudigere Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -2751,12 +3050,14 @@ window.CCMS_DATA = {
         {
           "section": "Muthodi Range",
           "post": "Range Forest Offcer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D039",
@@ -2804,6 +3105,7 @@ window.CCMS_DATA = {
         {
           "section": "Balehonnur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2812,6 +3114,7 @@ window.CCMS_DATA = {
         {
           "section": "Balehonnuru Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 8,
           "previous_total_pending": null,
           "delta": null,
@@ -2820,6 +3123,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkagrahara Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2828,6 +3132,7 @@ window.CCMS_DATA = {
         {
           "section": "Kalasa Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -2836,6 +3141,7 @@ window.CCMS_DATA = {
         {
           "section": "Koppa Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 7,
           "previous_total_pending": null,
           "delta": null,
@@ -2844,6 +3150,7 @@ window.CCMS_DATA = {
         {
           "section": "Koppa Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -2852,6 +3159,7 @@ window.CCMS_DATA = {
         {
           "section": "Koppa Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -2860,12 +3168,14 @@ window.CCMS_DATA = {
         {
           "section": "Sringeri Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D040",
@@ -2899,6 +3209,7 @@ window.CCMS_DATA = {
         {
           "section": "Bhadra WL Chikkamagalur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -2907,6 +3218,7 @@ window.CCMS_DATA = {
         {
           "section": "Bhadra WL Lakkavalli Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -2915,12 +3227,14 @@ window.CCMS_DATA = {
         {
           "section": "Bhadra WL Lakkavalli Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D041",
@@ -2950,7 +3264,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D042",
@@ -2984,12 +3299,14 @@ window.CCMS_DATA = {
         {
           "section": "Dharwad Circle",
           "post": "Chief Conservator Of Forests",
+          "wing": null,
           "total_pending": 10,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D043",
@@ -3023,6 +3340,7 @@ window.CCMS_DATA = {
         {
           "section": "Dharwad Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 9,
           "previous_total_pending": null,
           "delta": null,
@@ -3031,6 +3349,7 @@ window.CCMS_DATA = {
         {
           "section": "Dharwad Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -3039,12 +3358,14 @@ window.CCMS_DATA = {
         {
           "section": "Hubli Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D044",
@@ -3078,6 +3399,7 @@ window.CCMS_DATA = {
         {
           "section": "Gadag Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -3086,12 +3408,14 @@ window.CCMS_DATA = {
         {
           "section": "Gadag Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D045",
@@ -3125,6 +3449,7 @@ window.CCMS_DATA = {
         {
           "section": "Hanagal Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -3133,6 +3458,7 @@ window.CCMS_DATA = {
         {
           "section": "Haveri Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 7,
           "previous_total_pending": null,
           "delta": null,
@@ -3141,6 +3467,7 @@ window.CCMS_DATA = {
         {
           "section": "Haveri Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -3149,12 +3476,14 @@ window.CCMS_DATA = {
         {
           "section": "Hirekerur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D046",
@@ -3188,12 +3517,14 @@ window.CCMS_DATA = {
         {
           "section": "DHARWAD SOCIAL FORESTRY DIVISION",
           "post": "DCF DHARWAD SOCIAL FORESTRY",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D047",
@@ -3245,6 +3576,7 @@ window.CCMS_DATA = {
         {
           "section": "Hassan Circle",
           "post": "Chief Conservator Of Forests",
+          "wing": null,
           "total_pending": 49,
           "previous_total_pending": null,
           "delta": null,
@@ -3253,6 +3585,7 @@ window.CCMS_DATA = {
         {
           "section": "Inward officer",
           "post": "Inward officer",
+          "wing": null,
           "total_pending": 28,
           "previous_total_pending": null,
           "delta": null,
@@ -3261,12 +3594,14 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 21,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D048",
@@ -3318,6 +3653,7 @@ window.CCMS_DATA = {
         {
           "section": "Arkalgudu Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -3326,6 +3662,7 @@ window.CCMS_DATA = {
         {
           "section": "Belur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 7,
           "previous_total_pending": null,
           "delta": null,
@@ -3334,6 +3671,7 @@ window.CCMS_DATA = {
         {
           "section": "Channarayapatna Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -3342,6 +3680,7 @@ window.CCMS_DATA = {
         {
           "section": "Channarayapatna Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 11,
           "previous_total_pending": null,
           "delta": null,
@@ -3350,6 +3689,7 @@ window.CCMS_DATA = {
         {
           "section": "Hassan Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 88,
           "previous_total_pending": null,
           "delta": null,
@@ -3358,6 +3698,7 @@ window.CCMS_DATA = {
         {
           "section": "Hassan Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 14,
           "previous_total_pending": null,
           "delta": null,
@@ -3366,6 +3707,7 @@ window.CCMS_DATA = {
         {
           "section": "Sakaleshpura Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -3374,12 +3716,14 @@ window.CCMS_DATA = {
         {
           "section": "Sakaleshpura Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 19,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D049",
@@ -3427,6 +3771,7 @@ window.CCMS_DATA = {
         {
           "section": "Bukkapatna Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -3435,6 +3780,7 @@ window.CCMS_DATA = {
         {
           "section": "Chikkanayakanahalli Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -3443,6 +3789,7 @@ window.CCMS_DATA = {
         {
           "section": "Gubbi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -3451,6 +3798,7 @@ window.CCMS_DATA = {
         {
           "section": "Kunigal Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -3459,6 +3807,7 @@ window.CCMS_DATA = {
         {
           "section": "Tiptur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -3467,6 +3816,7 @@ window.CCMS_DATA = {
         {
           "section": "Tumkur Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -3475,6 +3825,7 @@ window.CCMS_DATA = {
         {
           "section": "Tumkur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 10,
           "previous_total_pending": null,
           "delta": null,
@@ -3483,6 +3834,7 @@ window.CCMS_DATA = {
         {
           "section": "Tumkur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -3491,12 +3843,14 @@ window.CCMS_DATA = {
         {
           "section": "Tumkur Sub Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D050",
@@ -3548,6 +3902,7 @@ window.CCMS_DATA = {
         {
           "section": "Hassan Division SF",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -3556,6 +3911,7 @@ window.CCMS_DATA = {
         {
           "section": "Hassan Range SF",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -3564,12 +3920,14 @@ window.CCMS_DATA = {
         {
           "section": "Sakaleshpur Range Sf",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D051",
@@ -3599,7 +3957,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D052",
@@ -3633,6 +3992,7 @@ window.CCMS_DATA = {
         {
           "section": "Madhugiri Sub Division SF",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -3641,12 +4001,14 @@ window.CCMS_DATA = {
         {
           "section": "Pavagada Range SF",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D053",
@@ -3694,6 +4056,7 @@ window.CCMS_DATA = {
         {
           "section": "Kalaburagi Circle",
           "post": "Chief Conservator of Forests",
+          "wing": null,
           "total_pending": 22,
           "previous_total_pending": null,
           "delta": null,
@@ -3702,6 +4065,7 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 7,
           "previous_total_pending": null,
           "delta": null,
@@ -3710,12 +4074,14 @@ window.CCMS_DATA = {
         {
           "section": "inward officer",
           "post": "Inward Officer",
+          "wing": null,
           "total_pending": 6,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D054",
@@ -3767,6 +4133,7 @@ window.CCMS_DATA = {
         {
           "section": "Alanda Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -3775,6 +4142,7 @@ window.CCMS_DATA = {
         {
           "section": "Kalaburagi  Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -3783,6 +4151,7 @@ window.CCMS_DATA = {
         {
           "section": "Kalaburagi Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -3791,6 +4160,7 @@ window.CCMS_DATA = {
         {
           "section": "Kalaburagi Division admin",
           "post": "Manager",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -3799,12 +4169,14 @@ window.CCMS_DATA = {
         {
           "section": "Kalaburagi Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 13,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D055",
@@ -3852,6 +4224,7 @@ window.CCMS_DATA = {
         {
           "section": "Aurad",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -3860,6 +4233,7 @@ window.CCMS_DATA = {
         {
           "section": "Basavakalyana Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -3868,6 +4242,7 @@ window.CCMS_DATA = {
         {
           "section": "Bidar Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 8,
           "previous_total_pending": null,
           "delta": null,
@@ -3876,6 +4251,7 @@ window.CCMS_DATA = {
         {
           "section": "Bidar Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 16,
           "previous_total_pending": null,
           "delta": null,
@@ -3884,6 +4260,7 @@ window.CCMS_DATA = {
         {
           "section": "Bidar Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 16,
           "previous_total_pending": null,
           "delta": null,
@@ -3892,6 +4269,7 @@ window.CCMS_DATA = {
         {
           "section": "Chitguppa range",
           "post": "Chitguppa Range",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -3900,12 +4278,14 @@ window.CCMS_DATA = {
         {
           "section": "Humanabad",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D056",
@@ -3953,6 +4333,7 @@ window.CCMS_DATA = {
         {
           "section": "Lingasugur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -3961,6 +4342,7 @@ window.CCMS_DATA = {
         {
           "section": "Manvi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -3969,6 +4351,7 @@ window.CCMS_DATA = {
         {
           "section": "Raichur Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -3977,12 +4360,14 @@ window.CCMS_DATA = {
         {
           "section": "Raichur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D057",
@@ -4030,6 +4415,7 @@ window.CCMS_DATA = {
         {
           "section": "Yadgir Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -4038,12 +4424,14 @@ window.CCMS_DATA = {
         {
           "section": "Yadgir Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D058",
@@ -4073,7 +4461,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D059",
@@ -4103,7 +4492,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D060",
@@ -4133,7 +4523,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D061",
@@ -4163,7 +4554,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D062",
@@ -4197,6 +4589,7 @@ window.CCMS_DATA = {
         {
           "section": "Inward officer",
           "post": "Inward officer",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -4205,6 +4598,7 @@ window.CCMS_DATA = {
         {
           "section": "Kanara Circle",
           "post": "Chief Conservator Of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -4213,12 +4607,14 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D063",
@@ -4266,6 +4662,7 @@ window.CCMS_DATA = {
         {
           "section": "Dandeli Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -4274,6 +4671,7 @@ window.CCMS_DATA = {
         {
           "section": "Haliyal Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 20,
           "previous_total_pending": null,
           "delta": null,
@@ -4282,12 +4680,14 @@ window.CCMS_DATA = {
         {
           "section": "Haliyal Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D064",
@@ -4321,6 +4721,7 @@ window.CCMS_DATA = {
         {
           "section": "Bhatkal Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -4329,6 +4730,7 @@ window.CCMS_DATA = {
         {
           "section": "Honnavara Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 11,
           "previous_total_pending": null,
           "delta": null,
@@ -4337,6 +4739,7 @@ window.CCMS_DATA = {
         {
           "section": "Honnavara Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -4345,12 +4748,14 @@ window.CCMS_DATA = {
         {
           "section": "Honnavara Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D065",
@@ -4398,6 +4803,7 @@ window.CCMS_DATA = {
         {
           "section": "Ankola Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -4406,6 +4812,7 @@ window.CCMS_DATA = {
         {
           "section": "Ankola Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -4414,6 +4821,7 @@ window.CCMS_DATA = {
         {
           "section": "Karwar Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 9,
           "previous_total_pending": null,
           "delta": null,
@@ -4422,6 +4830,7 @@ window.CCMS_DATA = {
         {
           "section": "Karwar Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -4430,12 +4839,14 @@ window.CCMS_DATA = {
         {
           "section": "Karwar Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D066",
@@ -4487,6 +4898,7 @@ window.CCMS_DATA = {
         {
           "section": "Janmane Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -4495,6 +4907,7 @@ window.CCMS_DATA = {
         {
           "section": "Sirsi Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 25,
           "previous_total_pending": null,
           "delta": null,
@@ -4503,6 +4916,7 @@ window.CCMS_DATA = {
         {
           "section": "Sirsi Range",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -4511,12 +4925,14 @@ window.CCMS_DATA = {
         {
           "section": "Sirsi Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D067",
@@ -4564,6 +4980,7 @@ window.CCMS_DATA = {
         {
           "section": "Mundhagodu  Depot",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -4572,6 +4989,7 @@ window.CCMS_DATA = {
         {
           "section": "Mundhagodu Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -4580,6 +4998,7 @@ window.CCMS_DATA = {
         {
           "section": "Yellapura Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 15,
           "previous_total_pending": null,
           "delta": null,
@@ -4588,6 +5007,7 @@ window.CCMS_DATA = {
         {
           "section": "Yellapura Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -4596,12 +5016,14 @@ window.CCMS_DATA = {
         {
           "section": "Yellapura Sub Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D068",
@@ -4635,12 +5057,14 @@ window.CCMS_DATA = {
         {
           "section": "Kali Tiger Reserve Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D069",
@@ -4674,12 +5098,14 @@ window.CCMS_DATA = {
         {
           "section": "SF Yellapura",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D070",
@@ -4709,7 +5135,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D071",
@@ -4761,6 +5188,7 @@ window.CCMS_DATA = {
         {
           "section": "Inward",
           "post": "Inward officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -4769,6 +5197,7 @@ window.CCMS_DATA = {
         {
           "section": "Kodagu Circle",
           "post": "Conservator OF Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -4777,12 +5206,14 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D072",
@@ -4834,6 +5265,7 @@ window.CCMS_DATA = {
         {
           "section": "Inward officer",
           "post": "Inward officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -4842,6 +5274,7 @@ window.CCMS_DATA = {
         {
           "section": "Kushalnagara Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -4850,6 +5283,7 @@ window.CCMS_DATA = {
         {
           "section": "Madikeri Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 46,
           "previous_total_pending": null,
           "delta": null,
@@ -4858,6 +5292,7 @@ window.CCMS_DATA = {
         {
           "section": "Madikeri Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -4866,6 +5301,7 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -4874,6 +5310,7 @@ window.CCMS_DATA = {
         {
           "section": "Shanivarasanthe Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -4882,12 +5319,14 @@ window.CCMS_DATA = {
         {
           "section": "Somwarpet Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D073",
@@ -4939,6 +5378,7 @@ window.CCMS_DATA = {
         {
           "section": "Inward officer",
           "post": "Inward officer",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -4947,6 +5387,7 @@ window.CCMS_DATA = {
         {
           "section": "Makutta Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -4955,6 +5396,7 @@ window.CCMS_DATA = {
         {
           "section": "Ponnampet Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -4963,6 +5405,7 @@ window.CCMS_DATA = {
         {
           "section": "Thithimathi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -4971,6 +5414,7 @@ window.CCMS_DATA = {
         {
           "section": "Virajpet Division",
           "post": "Deputy conservator of Forests",
+          "wing": null,
           "total_pending": 48,
           "previous_total_pending": null,
           "delta": null,
@@ -4979,12 +5423,14 @@ window.CCMS_DATA = {
         {
           "section": "Virajpet Sub Dvision",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D074",
@@ -5014,7 +5460,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D075",
@@ -5062,6 +5509,7 @@ window.CCMS_DATA = {
         {
           "section": "Bramhagiri Wildlife Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5070,6 +5518,7 @@ window.CCMS_DATA = {
         {
           "section": "Madikeri Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -5078,6 +5527,7 @@ window.CCMS_DATA = {
         {
           "section": "Madikeri WL Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -5086,12 +5536,14 @@ window.CCMS_DATA = {
         {
           "section": "Pushpagiri Wildlife Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "N076",
@@ -5143,6 +5595,7 @@ window.CCMS_DATA = {
         {
           "section": "Antarasante Wildlife Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5151,6 +5604,7 @@ window.CCMS_DATA = {
         {
           "section": "Hunsur Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -5159,6 +5613,7 @@ window.CCMS_DATA = {
         {
           "section": "Metikuppe Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5167,6 +5622,7 @@ window.CCMS_DATA = {
         {
           "section": "Nagarahole Wildlife Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -5175,12 +5631,14 @@ window.CCMS_DATA = {
         {
           "section": "Nagarahole Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D076",
@@ -5232,6 +5690,7 @@ window.CCMS_DATA = {
         {
           "section": "Inward officer",
           "post": "Inward officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5240,6 +5699,7 @@ window.CCMS_DATA = {
         {
           "section": "Mangaluru Circle",
           "post": "Chief Conservator Of Forests",
+          "wing": null,
           "total_pending": 18,
           "previous_total_pending": null,
           "delta": null,
@@ -5248,12 +5708,14 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D077",
@@ -5301,6 +5763,7 @@ window.CCMS_DATA = {
         {
           "section": "Bantwal Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5309,6 +5772,7 @@ window.CCMS_DATA = {
         {
           "section": "Belthangadi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5317,6 +5781,7 @@ window.CCMS_DATA = {
         {
           "section": "Mangaluru Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 22,
           "previous_total_pending": null,
           "delta": null,
@@ -5325,6 +5790,7 @@ window.CCMS_DATA = {
         {
           "section": "Mangaluru Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5333,6 +5799,7 @@ window.CCMS_DATA = {
         {
           "section": "Mangaluru Sub  Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -5341,6 +5808,7 @@ window.CCMS_DATA = {
         {
           "section": "Panja Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -5349,6 +5817,7 @@ window.CCMS_DATA = {
         {
           "section": "Puttur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -5357,6 +5826,7 @@ window.CCMS_DATA = {
         {
           "section": "Puttur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -5365,6 +5835,7 @@ window.CCMS_DATA = {
         {
           "section": "Subrahmanya Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5373,6 +5844,7 @@ window.CCMS_DATA = {
         {
           "section": "Subrahmanya Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 9,
           "previous_total_pending": null,
           "delta": null,
@@ -5381,12 +5853,14 @@ window.CCMS_DATA = {
         {
           "section": "Uppina angadi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D078",
@@ -5434,6 +5908,7 @@ window.CCMS_DATA = {
         {
           "section": "Byndoor Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5442,6 +5917,7 @@ window.CCMS_DATA = {
         {
           "section": "Kundapur Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -5450,6 +5926,7 @@ window.CCMS_DATA = {
         {
           "section": "Kundapur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -5458,6 +5935,7 @@ window.CCMS_DATA = {
         {
           "section": "Kundapur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5466,12 +5944,14 @@ window.CCMS_DATA = {
         {
           "section": "Moodabidre Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D079",
@@ -5523,6 +6003,7 @@ window.CCMS_DATA = {
         {
           "section": "Kudremukha Wildlife Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -5531,12 +6012,14 @@ window.CCMS_DATA = {
         {
           "section": "Siddapura Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D080",
@@ -5566,7 +6049,8 @@ window.CCMS_DATA = {
         "no_action_taken": null,
         "approved_pwr_pending": null
       },
-      "users": []
+      "users": [],
+      "wings": []
     },
     {
       "code": "D081",
@@ -5600,6 +6084,7 @@ window.CCMS_DATA = {
         {
           "section": "Karkala Range SF",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5608,6 +6093,7 @@ window.CCMS_DATA = {
         {
           "section": "Udupi Dvision SF",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -5616,6 +6102,7 @@ window.CCMS_DATA = {
         {
           "section": "Udupi Range SF",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -5624,12 +6111,14 @@ window.CCMS_DATA = {
         {
           "section": "kundapura Range SF",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D082",
@@ -5663,12 +6152,14 @@ window.CCMS_DATA = {
         {
           "section": "REGIONAL DIRECTOR  ENVIRONMENT",
           "post": "REGIONAL DIRECTORS  ENVIRONMENT",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D083",
@@ -5720,6 +6211,7 @@ window.CCMS_DATA = {
         {
           "section": "Mysuru Circle",
           "post": "Conservator Of Forests",
+          "wing": null,
           "total_pending": 48,
           "previous_total_pending": null,
           "delta": null,
@@ -5728,12 +6220,14 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 8,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D084",
@@ -5781,6 +6275,7 @@ window.CCMS_DATA = {
         {
           "section": "H D Kote Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -5789,6 +6284,7 @@ window.CCMS_DATA = {
         {
           "section": "Mysuru Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 23,
           "previous_total_pending": null,
           "delta": null,
@@ -5797,6 +6293,7 @@ window.CCMS_DATA = {
         {
           "section": "Mysuru Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -5805,6 +6302,7 @@ window.CCMS_DATA = {
         {
           "section": "Mysuru Sub Division",
           "post": "Assistant Conservator Of Forests",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -5813,12 +6311,14 @@ window.CCMS_DATA = {
         {
           "section": "Nanjangudu Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D085",
@@ -5870,6 +6370,7 @@ window.CCMS_DATA = {
         {
           "section": "Malavalli Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -5878,6 +6379,7 @@ window.CCMS_DATA = {
         {
           "section": "Mandya Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 52,
           "previous_total_pending": null,
           "delta": null,
@@ -5886,6 +6388,7 @@ window.CCMS_DATA = {
         {
           "section": "Mandya Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -5894,6 +6397,7 @@ window.CCMS_DATA = {
         {
           "section": "Mandya Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -5902,6 +6406,7 @@ window.CCMS_DATA = {
         {
           "section": "Nagamangala Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -5910,12 +6415,14 @@ window.CCMS_DATA = {
         {
           "section": "Srirangapattana Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D086",
@@ -5949,6 +6456,7 @@ window.CCMS_DATA = {
         {
           "section": "Hunsur Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 8,
           "previous_total_pending": null,
           "delta": null,
@@ -5957,6 +6465,7 @@ window.CCMS_DATA = {
         {
           "section": "Hunsur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -5965,12 +6474,14 @@ window.CCMS_DATA = {
         {
           "section": "Periyapattana Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D087",
@@ -6018,12 +6529,14 @@ window.CCMS_DATA = {
         {
           "section": "Mysuru Wildlife Division",
           "post": "Deputy Conservator Of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D088",
@@ -6057,12 +6570,14 @@ window.CCMS_DATA = {
         {
           "section": "Assistant Conservator of Forests",
           "post": "Assistant Conservator Of Forest",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "N090",
@@ -6114,12 +6629,14 @@ window.CCMS_DATA = {
         {
           "section": "DIRECTORandCF",
           "post": "DIRECTOR",
+          "wing": null,
           "total_pending": 11,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D089",
@@ -6171,6 +6688,7 @@ window.CCMS_DATA = {
         {
           "section": "Inward officer",
           "post": "Inward officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -6179,6 +6697,7 @@ window.CCMS_DATA = {
         {
           "section": "Section Officer",
           "post": "Section Officer",
+          "wing": null,
           "total_pending": 9,
           "previous_total_pending": null,
           "delta": null,
@@ -6187,12 +6706,14 @@ window.CCMS_DATA = {
         {
           "section": "Shivamogga Circle",
           "post": "Chief Conservator of Forests",
+          "wing": null,
           "total_pending": 11,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D090",
@@ -6240,6 +6761,7 @@ window.CCMS_DATA = {
         {
           "section": "Ayanur Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -6248,6 +6770,7 @@ window.CCMS_DATA = {
         {
           "section": "Ayanur Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 11,
           "previous_total_pending": null,
           "delta": null,
@@ -6256,6 +6779,7 @@ window.CCMS_DATA = {
         {
           "section": "Govt. Sandalwood Shivamogga Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -6264,6 +6788,7 @@ window.CCMS_DATA = {
         {
           "section": "Mandagadde Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -6272,6 +6797,7 @@ window.CCMS_DATA = {
         {
           "section": "Rippanpate Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -6280,6 +6806,7 @@ window.CCMS_DATA = {
         {
           "section": "Shankar Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -6288,6 +6815,7 @@ window.CCMS_DATA = {
         {
           "section": "Shivamogga Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 34,
           "previous_total_pending": null,
           "delta": null,
@@ -6296,6 +6824,7 @@ window.CCMS_DATA = {
         {
           "section": "Thirthahalli Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 6,
           "previous_total_pending": null,
           "delta": null,
@@ -6304,12 +6833,14 @@ window.CCMS_DATA = {
         {
           "section": "Thirthahalli Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 17,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D091",
@@ -6343,6 +6874,7 @@ window.CCMS_DATA = {
         {
           "section": "Ambligola Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -6351,6 +6883,7 @@ window.CCMS_DATA = {
         {
           "section": "Anandapuram Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 0,
           "previous_total_pending": null,
           "delta": null,
@@ -6359,6 +6892,7 @@ window.CCMS_DATA = {
         {
           "section": "Anavatti Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -6367,6 +6901,7 @@ window.CCMS_DATA = {
         {
           "section": "Hosanagara Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
@@ -6375,6 +6910,7 @@ window.CCMS_DATA = {
         {
           "section": "Hosanagara Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 6,
           "previous_total_pending": null,
           "delta": null,
@@ -6383,6 +6919,7 @@ window.CCMS_DATA = {
         {
           "section": "RFO ICT Legal Sagar Division",
           "post": "RFO ICT Legal Sagar Division",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -6391,6 +6928,7 @@ window.CCMS_DATA = {
         {
           "section": "Sagar Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 17,
           "previous_total_pending": null,
           "delta": null,
@@ -6399,6 +6937,7 @@ window.CCMS_DATA = {
         {
           "section": "Sagar Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -6407,6 +6946,7 @@ window.CCMS_DATA = {
         {
           "section": "Sagar Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 15,
           "previous_total_pending": null,
           "delta": null,
@@ -6415,6 +6955,7 @@ window.CCMS_DATA = {
         {
           "section": "Shikaripura Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -6423,6 +6964,7 @@ window.CCMS_DATA = {
         {
           "section": "Shiralkoppa Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -6431,12 +6973,14 @@ window.CCMS_DATA = {
         {
           "section": "Soraba Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D092",
@@ -6488,6 +7032,7 @@ window.CCMS_DATA = {
         {
           "section": "Ajjampura Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -6496,6 +7041,7 @@ window.CCMS_DATA = {
         {
           "section": "Bhadravathi Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 25,
           "previous_total_pending": null,
           "delta": null,
@@ -6504,6 +7050,7 @@ window.CCMS_DATA = {
         {
           "section": "Bhadravathi Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 5,
           "previous_total_pending": null,
           "delta": null,
@@ -6512,6 +7059,7 @@ window.CCMS_DATA = {
         {
           "section": "Channagiri Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 10,
           "previous_total_pending": null,
           "delta": null,
@@ -6520,6 +7068,7 @@ window.CCMS_DATA = {
         {
           "section": "Lakkavalli  Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -6528,6 +7077,7 @@ window.CCMS_DATA = {
         {
           "section": "Tharikere Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 15,
           "previous_total_pending": null,
           "delta": null,
@@ -6536,12 +7086,14 @@ window.CCMS_DATA = {
         {
           "section": "Umbalebyle Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 4,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D093",
@@ -6575,6 +7127,7 @@ window.CCMS_DATA = {
         {
           "section": "Hanagere Wildlife Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
@@ -6583,6 +7136,7 @@ window.CCMS_DATA = {
         {
           "section": "Mugudthi Wildlife Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -6591,6 +7145,7 @@ window.CCMS_DATA = {
         {
           "section": "Sakrebylu Wildlife Range",
           "post": "Range Forest Officer",
+          "wing": null,
           "total_pending": 1,
           "previous_total_pending": null,
           "delta": null,
@@ -6599,6 +7154,7 @@ window.CCMS_DATA = {
         {
           "section": "Shivamogga Wildlife Division",
           "post": "Deputy Conservator of Forests",
+          "wing": null,
           "total_pending": 3,
           "previous_total_pending": null,
           "delta": null,
@@ -6607,12 +7163,14 @@ window.CCMS_DATA = {
         {
           "section": "Shivamogga Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     },
     {
       "code": "D094",
@@ -6646,12 +7204,14 @@ window.CCMS_DATA = {
         {
           "section": "Shivamogga SF Division",
           "post": "Deputy Conservator of Forest",
+          "wing": null,
           "total_pending": 2,
           "previous_total_pending": null,
           "delta": null,
           "direction": "baseline"
         }
-      ]
+      ],
+      "wings": []
     }
   ],
   "circles": [
@@ -6670,6 +7230,20 @@ window.CCMS_DATA = {
     "Mysuru Circle",
     "Shivamogga Circle",
     "Other / direct reporting"
+  ],
+  "wings": [
+    "Administration & Coordination",
+    "Personnel & Recruitment",
+    "Legal Cell",
+    "Forest Resource Management",
+    "Forest Conservation (FCA)",
+    "Land Records",
+    "Working Plan",
+    "Wildlife",
+    "Vigilance",
+    "Evaluation",
+    "Field offices under HQ code",
+    "System account / unallocated"
   ],
   "case_types": [
     {
@@ -6796,6 +7370,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator of Forests",
               "section": "Forest Resource Management",
+              "wing": "Forest Resource Management",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 135,
@@ -6821,6 +7396,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "Legal Cell",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 42,
@@ -6846,6 +7422,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Officer",
               "section": "Administrative Officer PCCF HOFF Office",
+              "wing": "Administration & Coordination",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 39,
@@ -6871,6 +7448,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "Forest Resource Management",
+              "wing": "Forest Resource Management",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 30,
@@ -6896,6 +7474,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF",
               "section": "Land Records",
+              "wing": "Land Records",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 26,
@@ -6921,6 +7500,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Officer",
               "section": "Est Gazetted",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 23,
@@ -6946,6 +7526,7 @@ window.CCMS_DATA = {
             {
               "post": "CCF",
               "section": "FC",
+              "wing": "Forest Conservation (FCA)",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 14,
@@ -6971,6 +7552,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF working plan",
               "section": "Working plan",
+              "wing": "Working Plan",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 11,
@@ -6996,6 +7578,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF",
               "section": "WILDLIFE",
+              "wing": "Wildlife",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 7,
@@ -7021,6 +7604,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -7046,6 +7630,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bangalore Urban Division",
+              "wing": "Field offices under HQ code",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -7071,6 +7656,7 @@ window.CCMS_DATA = {
             {
               "post": "PCCF",
               "section": "FC",
+              "wing": "Forest Conservation (FCA)",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -7096,6 +7682,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "FC",
+              "wing": "Forest Conservation (FCA)",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -7121,6 +7708,7 @@ window.CCMS_DATA = {
             {
               "post": "PCCF WL",
               "section": "PCCF WL",
+              "wing": "Wildlife",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -7146,6 +7734,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF",
               "section": "Administration  Co-ord",
+              "wing": "Administration & Coordination",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -7171,6 +7760,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kaggalipura Range",
+              "wing": "Field offices under HQ code",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -7196,6 +7786,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Mysore WL Range",
+              "wing": "Field offices under HQ code",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -7221,6 +7812,7 @@ window.CCMS_DATA = {
             {
               "post": "AO",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -7246,6 +7838,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bangalore Rural Division",
+              "wing": "Field offices under HQ code",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -7271,6 +7864,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bangalore Urban Range",
+              "wing": "Field offices under HQ code",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -7296,6 +7890,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF",
               "section": "Evaluation",
+              "wing": "Evaluation",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -7321,6 +7916,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "LEGAL CELL",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -7346,6 +7942,7 @@ window.CCMS_DATA = {
             {
               "post": "Superintendent",
               "section": "Legal Cell SO",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -7371,6 +7968,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF VIG",
               "section": "Vigilance",
+              "wing": "Vigilance",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -7396,6 +7994,7 @@ window.CCMS_DATA = {
             {
               "post": "First Division Assistant",
               "section": "Legal cell RI",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -7450,6 +8049,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bengaluru Urban Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 126,
@@ -7475,6 +8075,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kaggalipura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 35,
@@ -7500,6 +8101,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bengaluru Urban Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 21,
@@ -7525,6 +8127,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "K R Puram Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 9,
@@ -7550,6 +8153,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bengaluru North Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -7575,6 +8179,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Anekal Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -7600,6 +8205,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Yelahanka Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -7625,6 +8231,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bengaluru Lake Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -7650,6 +8257,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bengaluru South Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -7704,6 +8312,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Hassan Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 73,
@@ -7729,6 +8338,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Sakaleshpura Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 19,
@@ -7754,6 +8364,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Channarayapatna Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 11,
@@ -7779,6 +8390,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Belur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 7,
@@ -7804,6 +8416,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Sakaleshpura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -7829,6 +8442,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Arkalgudu Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -7854,6 +8468,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Hassan Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -7879,6 +8494,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Channarayapatna Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -7933,6 +8549,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Kolar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 78,
@@ -7958,6 +8575,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kolar Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 20,
@@ -7983,6 +8601,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator Of Forest",
               "section": "Kolar Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -8008,6 +8627,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Shreenivasapura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -8033,6 +8653,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Mulabagilu Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -8087,6 +8708,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Chikkamagalur Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 29,
@@ -8112,6 +8734,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Chikkamagalur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 15,
@@ -8137,6 +8760,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chikkamagalur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 10,
@@ -8162,6 +8786,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kadur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -8187,6 +8812,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Alduru Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -8212,6 +8838,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Mudigere Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -8237,6 +8864,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Mudigere Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -8262,6 +8890,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Government Timber Depot Kadur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -8287,6 +8916,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Offcer",
               "section": "Muthodi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -8341,6 +8971,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 27,
@@ -8366,6 +8997,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Hassan Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 25,
@@ -8391,6 +9023,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 18,
@@ -8445,6 +9078,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Shivamogga Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 26,
@@ -8470,6 +9104,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Thirthahalli Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 17,
@@ -8495,6 +9130,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Ayanur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 9,
@@ -8520,6 +9156,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Shankar Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -8545,6 +9182,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Thirthahalli Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -8570,6 +9208,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Mandagadde Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -8595,6 +9234,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Govt. Sandalwood Shivamogga Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -8620,6 +9260,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Rippanpate Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -8674,6 +9315,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mandya Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 49,
@@ -8699,6 +9341,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Mandya Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -8724,6 +9367,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Malavalli Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -8749,6 +9393,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Mandya Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -8774,6 +9419,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Srirangapattana Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -8828,6 +9474,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Sagar Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 15,
@@ -8853,6 +9500,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Sagar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 11,
@@ -8878,6 +9526,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Hosanagara Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -8903,6 +9552,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Ambligola Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -8928,6 +9578,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Soraba Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -8953,6 +9604,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Anavatti Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -8978,6 +9630,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hosanagara Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -9003,6 +9656,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Shikaripura Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -9028,6 +9682,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Sagar Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -9053,6 +9708,7 @@ window.CCMS_DATA = {
             {
               "post": "RFO ICT Legal Sagar Division",
               "section": "RFO ICT Legal Sagar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -9078,6 +9734,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Shiralkoppa Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -9103,6 +9760,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Anandapuram Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -9157,6 +9815,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Bhadravathi Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 23,
@@ -9182,6 +9841,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Tharikere Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 14,
@@ -9207,6 +9867,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Channagiri Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 9,
@@ -9232,6 +9893,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bhadravathi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -9257,6 +9919,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Umbalebyle Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -9282,6 +9945,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Ajjampura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -9307,6 +9971,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Lakkavalli  Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -9361,6 +10026,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy conservator of Forests",
               "section": "Virajpet Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 42,
@@ -9386,6 +10052,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Thithimathi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -9411,6 +10078,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Ponnampet Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -9436,6 +10104,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Virajpet Sub Dvision",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -9461,6 +10130,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -9515,6 +10185,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Madikeri Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 36,
@@ -9540,6 +10211,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -9565,6 +10237,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Madikeri Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -9590,6 +10263,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -9615,6 +10289,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kushalnagara Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -9669,6 +10344,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Ballari Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 40,
@@ -9694,6 +10370,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Ballari Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -9719,6 +10396,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Ballari Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -9744,6 +10422,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Kudligi Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -9769,6 +10448,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Sandur North Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -9794,6 +10474,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Hospet Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -9848,6 +10529,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator Of Forests",
               "section": "Mysuru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 34,
@@ -9873,6 +10555,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -9927,6 +10610,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Doddaballapura Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 27,
@@ -9952,6 +10636,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Devanahalli Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -9977,6 +10662,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bengaluru Rural Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -10002,6 +10688,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Nelamangala Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -10027,6 +10714,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hosakote Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10052,6 +10740,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Doddaballapura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -10106,6 +10795,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Chikkaballapura Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 19,
@@ -10131,6 +10821,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chikkaballapura Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 7,
@@ -10156,6 +10847,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chintamani Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -10181,6 +10873,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bagepalli Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -10206,6 +10899,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Chikkaballapura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -10231,6 +10925,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Chintamani Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10285,6 +10980,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Mangaluru Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 15,
@@ -10310,6 +11006,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Subrahmanya Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 7,
@@ -10335,6 +11032,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Mangaluru Sub  Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -10360,6 +11058,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Panja Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -10385,6 +11084,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Puttur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -10410,6 +11110,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Puttur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -10435,6 +11136,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bantwal Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10460,6 +11162,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Belthangadi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10485,6 +11188,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Mangaluru Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10510,6 +11214,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Subrahmanya Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10535,6 +11240,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Uppina angadi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10589,6 +11295,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Tumkur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 10,
@@ -10614,6 +11321,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bukkapatna Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -10639,6 +11347,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Gubbi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -10664,6 +11373,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Tumkur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -10689,6 +11399,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Chikkanayakanahalli Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -10714,6 +11425,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Tiptur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -10739,6 +11451,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kunigal Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10764,6 +11477,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Tumkur Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10789,6 +11503,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Tumkur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10843,6 +11558,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bidar Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 12,
@@ -10868,6 +11584,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bidar Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -10893,6 +11610,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Bidar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -10918,6 +11636,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Basavakalyana Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -10943,6 +11662,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Aurad",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10968,6 +11688,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Humanabad",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -10993,6 +11714,7 @@ window.CCMS_DATA = {
             {
               "post": "Chitguppa Range",
               "section": "Chitguppa range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -11047,6 +11769,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Chithradurga Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 26,
@@ -11072,6 +11795,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Holalkere Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -11097,6 +11821,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Chitradurga Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11122,6 +11847,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hosadurga Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11176,6 +11902,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Sirsi Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 24,
@@ -11201,6 +11928,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Sirsi Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -11226,6 +11954,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Janmane Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11251,6 +11980,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Sirsi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11305,6 +12035,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mysuru Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 19,
@@ -11330,6 +12061,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Mysuru Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -11355,6 +12087,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator Of Forests",
               "section": "Mysuru Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -11380,6 +12113,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Nanjangudu Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -11405,6 +12139,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "H D Kote Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11459,6 +12194,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Balehonnuru Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -11484,6 +12220,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Koppa Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -11509,6 +12246,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Koppa Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -11534,6 +12272,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Chikkagrahara Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -11559,6 +12298,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kalasa Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -11584,6 +12324,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Koppa Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -11609,6 +12350,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Sringeri Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -11634,6 +12376,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Balehonnur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11688,6 +12431,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator of Forests",
               "section": "Kalaburagi Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 18,
@@ -11713,6 +12457,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward Officer",
               "section": "inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -11738,6 +12483,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -11792,6 +12538,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Gokak Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 17,
@@ -11817,6 +12564,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Raibag Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -11842,6 +12590,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Gokak Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11867,6 +12616,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Raibag Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11892,6 +12642,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Savadatti Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11946,6 +12697,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Haliyal Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 18,
@@ -11971,6 +12723,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Dandeli Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -11996,6 +12749,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Haliyal Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -12050,6 +12804,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Administrator",
               "section": "EST-Gazetted",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 18,
@@ -12075,6 +12830,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator of Forests",
               "section": "Bengaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -12100,6 +12856,7 @@ window.CCMS_DATA = {
             {
               "post": "CF BENGALURU",
               "section": "Bengaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -12154,6 +12911,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Kalaburagi Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 10,
@@ -12179,6 +12937,7 @@ window.CCMS_DATA = {
             {
               "post": "Manager",
               "section": "Kalaburagi Division admin",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -12204,6 +12963,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kalaburagi  Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -12229,6 +12989,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Alanda Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -12254,6 +13015,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Kalaburagi Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -12308,6 +13070,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Yellapura Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 12,
@@ -12333,6 +13096,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Mundhagodu  Depot",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -12358,6 +13122,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Yellapura Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -12383,6 +13148,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Mundhagodu Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -12408,6 +13174,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Yellapura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -12462,6 +13229,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Ramanagara Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 11,
@@ -12487,6 +13255,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Kanakapura Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -12512,6 +13281,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Ramanagara Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -12537,6 +13307,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Magadi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -12562,6 +13333,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Ramanagar Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -12616,6 +13388,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Davanagere Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 11,
@@ -12641,6 +13414,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Davanagere Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -12666,6 +13440,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Davanagere Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -12691,6 +13466,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Jagalur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -12745,6 +13521,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Mangaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 14,
@@ -12770,6 +13547,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -12795,6 +13573,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -12849,6 +13628,7 @@ window.CCMS_DATA = {
             {
               "post": "CCMS Admin",
               "section": "CCMS Admin",
+              "wing": "System account / unallocated",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 17,
@@ -12903,6 +13683,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests  Director",
               "section": "BRT Tiger Conservation Reserve Chamrajanagara",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -12928,6 +13709,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chamarajnagar Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -12953,6 +13735,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kollegal WL Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -12978,6 +13761,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Yelandur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -13003,6 +13787,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Yelandur WL Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -13057,6 +13842,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Honnavara Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 9,
@@ -13082,6 +13868,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Honnavara Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -13107,6 +13894,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bhatkal Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -13132,6 +13920,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Honnavara Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13186,6 +13975,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 9,
@@ -13211,6 +14001,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Belagavi Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 7,
@@ -13265,6 +14056,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Belagavi Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 9,
@@ -13290,6 +14082,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Khanapur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -13315,6 +14108,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Belagavi Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13340,6 +14134,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kankumbi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13365,6 +14160,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Khanapur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13390,6 +14186,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Londa Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13444,6 +14241,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forest",
               "section": "Male Mahadeshwara Hills WL Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -13469,6 +14267,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forest",
               "section": "Cauvery WL Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -13494,6 +14293,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Chamarajanagara Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13519,6 +14319,7 @@ window.CCMS_DATA = {
             {
               "post": "RANGE FOREST OFFICER",
               "section": "Halaguru Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13544,6 +14345,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator Of Forest",
               "section": "Kanakpura Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13569,6 +14371,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13594,6 +14397,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward Officer",
               "section": "inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -13648,6 +14452,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -13673,6 +14478,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator of Forests",
               "section": "Shivamogga Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -13698,6 +14504,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -13752,6 +14559,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Vijayanagara Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 12,
@@ -13777,6 +14585,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forest Hospet",
               "section": "Hospet Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13831,6 +14640,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Haveri Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 7,
@@ -13856,6 +14666,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Haveri Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -13881,6 +14692,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Hanagal Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -13906,6 +14718,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hirekerur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -13960,6 +14773,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Karwar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 9,
@@ -13985,6 +14799,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Ankola Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14010,6 +14825,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Ankola Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14035,6 +14851,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Karwar Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14089,6 +14906,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Dharwad Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -14114,6 +14932,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Dharwad Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -14139,6 +14958,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hubli Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -14193,6 +15013,7 @@ window.CCMS_DATA = {
             {
               "post": "DIRECTOR",
               "section": "DIRECTORandCF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 10,
@@ -14247,6 +15068,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -14272,6 +15094,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Kanara Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -14297,6 +15120,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -14351,6 +15175,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Hunsur Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -14376,6 +15201,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hunsur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -14401,6 +15227,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Periyapattana Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -14455,6 +15282,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Dharwad Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -14509,6 +15337,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hanagere Wildlife Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -14534,6 +15363,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Shivamogga Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -14559,6 +15389,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Mugudthi Wildlife Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14584,6 +15415,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Sakrebylu Wildlife Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14609,6 +15441,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Shivamogga Wildlife Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14663,6 +15496,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -14688,6 +15522,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Ballari Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -14713,6 +15548,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward Officer",
               "section": "Inward",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -14767,6 +15603,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Cauvery WL Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -14792,6 +15629,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Halagur WL Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14817,6 +15655,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Sangam WL Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14871,6 +15710,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Sakaleshpur Range Sf",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -14896,6 +15736,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Hassan Division SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14921,6 +15762,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hassan Range SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -14975,6 +15817,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Raichur Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -15000,6 +15843,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Lingasugur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15025,6 +15869,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Manvi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15079,6 +15924,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Nagarahole Wildlife Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -15104,6 +15950,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Hunsur Wildlife Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15129,6 +15976,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Metikuppe Wildlife Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15154,6 +16002,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Nagarahole Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15208,6 +16057,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Kundapur Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -15233,6 +16083,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Byndoor Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15258,6 +16109,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kundapur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15283,6 +16135,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Moodabidre Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15337,6 +16190,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bannerghatta Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -15362,6 +16216,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Anekal Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15416,6 +16271,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bhadra WL Chikkamagalur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -15441,6 +16297,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bhadra WL Lakkavalli Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15495,6 +16352,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Kudremukha Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -15549,6 +16407,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "kundapura Range SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -15574,6 +16433,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Udupi Dvision SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -15599,6 +16459,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Karkala Range SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15624,6 +16485,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Udupi Range SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -15678,6 +16540,7 @@ window.CCMS_DATA = {
             {
               "post": "REGIONAL DIRECTORS  ENVIRONMENT",
               "section": "REGIONAL DIRECTOR  ENVIRONMENT",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -15732,6 +16595,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Gangavathi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -15757,6 +16621,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Koppal Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15782,6 +16647,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kushtagi Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15836,6 +16702,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chamarajanagara SFSub  Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -15861,6 +16728,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Chamarajanagara SF Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15886,6 +16754,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Gundlupet SF Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15940,6 +16809,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator Of Forests",
               "section": "Chikkamagaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -15965,6 +16835,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Chikkamagaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -15990,6 +16861,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward Officer",
               "section": "Inward",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -16044,6 +16916,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -16069,6 +16942,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator OF Forests",
               "section": "Kodagu Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16123,6 +16997,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Belagavi SF Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -16148,6 +17023,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Raibag SF Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16202,6 +17078,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Bagalakote SF Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -16227,6 +17104,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Badami SF Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16281,6 +17159,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Gadag Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -16306,6 +17185,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Gadag Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16360,6 +17240,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Madikeri WL Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -16385,6 +17266,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Pushpagiri Wildlife Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16410,6 +17292,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Madikeri Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -16464,6 +17347,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Anekal RAnge Sf",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16489,6 +17373,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kaggalipura SF range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16543,6 +17428,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator Of Forest",
               "section": "Chikkaballapur SF Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16568,6 +17454,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forest",
               "section": "Chikkaballapura SF Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16622,6 +17509,7 @@ window.CCMS_DATA = {
             {
               "post": "DCF SF",
               "section": "BALLARI SF DIVISION",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -16676,6 +17564,7 @@ window.CCMS_DATA = {
             {
               "post": "DCF SF",
               "section": "Davangere SF DIVISION",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -16730,6 +17619,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Malai Mahadeshwara WL Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -16784,6 +17674,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Kali Tiger Reserve Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -16838,6 +17729,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forest",
               "section": "Kolar Division SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16892,6 +17784,7 @@ window.CCMS_DATA = {
             {
               "post": "DCF SF",
               "section": "Chitradurga SF Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -16946,6 +17839,7 @@ window.CCMS_DATA = {
             {
               "post": "DCF SF",
               "section": "KOPPALA SF DIVISION",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -17000,6 +17894,7 @@ window.CCMS_DATA = {
             {
               "post": "DCF DHARWAD SOCIAL FORESTRY",
               "section": "DHARWAD SOCIAL FORESTRY DIVISION",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -17054,6 +17949,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "SF Yellapura",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -17108,6 +18004,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mysuru Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -17162,6 +18059,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator Of Forest",
               "section": "Assistant Conservator of Forests",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -17216,6 +18114,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forest",
               "section": "Shivamogga SF Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -17869,6 +18768,7 @@ window.CCMS_DATA = {
             {
               "post": "Superintendent",
               "section": "Legal Cell SO",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 21,
@@ -17893,6 +18793,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Officer",
               "section": "Administrative Officer PCCF HOFF Office",
+              "wing": "Administration & Coordination",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -17917,6 +18818,7 @@ window.CCMS_DATA = {
             {
               "post": "First Division Assistant",
               "section": "Legal cell RI",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -17969,6 +18871,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bidar Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -17993,6 +18896,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bidar Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -18017,6 +18921,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Bidar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -18041,6 +18946,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Humanabad",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18093,6 +18999,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Hassan Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -18145,6 +19052,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Madikeri Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -18197,6 +19105,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bengaluru South Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -18249,6 +19158,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18301,6 +19211,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Chamarajanagara Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18353,6 +19264,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Chikkamagalur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18405,6 +19317,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Koppa Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18457,6 +19370,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hassan Range SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18509,6 +19423,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18561,6 +19476,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Yadgir Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18613,6 +19529,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Haliyal Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18665,6 +19582,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Karwar Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18717,6 +19635,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Yellapura Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18769,6 +19688,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator OF Forests",
               "section": "Kodagu Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18821,6 +19741,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy conservator of Forests",
               "section": "Virajpet Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18873,6 +19794,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mysuru Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18925,6 +19847,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mandya Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -18977,6 +19900,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -19029,6 +19953,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Govt. Sandalwood Shivamogga Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -20215,6 +21140,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Hassan Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -21336,6 +22262,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Madikeri Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -21364,6 +22291,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Somwarpet Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -21392,6 +22320,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Shanivarasanthe Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -21452,6 +22381,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Hassan Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -21512,6 +22442,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Officer",
               "section": "Administrative Officer PCCF HOFF Office",
+              "wing": "Administration & Coordination",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -21540,6 +22471,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "Forest Resource Management",
+              "wing": "Forest Resource Management",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -21568,6 +22500,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "LEGAL CELL",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -21596,6 +22529,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "Legal Cell",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -21624,6 +22558,7 @@ window.CCMS_DATA = {
             {
               "post": "First Division Assistant",
               "section": "Legal cell RI",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -21652,6 +22587,7 @@ window.CCMS_DATA = {
             {
               "post": "Superintendent",
               "section": "Legal Cell SO",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -21712,6 +22648,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bengaluru South Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -21772,6 +22709,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Kolar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -21832,6 +22770,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Chamarajanagara Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -21892,6 +22831,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy conservator of Forests",
               "section": "Virajpet Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -21952,6 +22892,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Nagarahole Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -21980,6 +22921,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Nagarahole Wildlife Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22040,6 +22982,7 @@ window.CCMS_DATA = {
             {
               "post": "CCMS Admin",
               "section": "CCMS Admin",
+              "wing": "System account / unallocated",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22100,6 +23043,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Administrator",
               "section": "EST-Gazetted",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22128,6 +23072,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator of Forests",
               "section": "Bengaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -22188,6 +23133,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Doddaballapura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22248,6 +23194,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Ballari Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22308,6 +23255,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator of Forests",
               "section": "Chikkamagaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22336,6 +23284,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Chikkamagaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -22396,6 +23345,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Hassan Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22456,6 +23406,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Kalaburagi Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22516,6 +23467,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Sirsi Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22576,6 +23528,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22636,6 +23589,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22696,6 +23650,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mandya Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22756,6 +23711,7 @@ window.CCMS_DATA = {
             {
               "post": "DIRECTOR",
               "section": "DIRECTORandCF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22816,6 +23772,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Tharikere Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -22938,6 +23895,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Chikkaballapura Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -22998,6 +23956,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bannerghatta Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -24174,6 +25133,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Hassan Division SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -24916,6 +25876,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Kudremukha Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -25069,6 +26030,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -25253,6 +26215,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator of Forests",
               "section": "Shivamogga Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -25560,6 +26523,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Officer",
               "section": "Est Gazetted",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 9,
@@ -25584,6 +26548,7 @@ window.CCMS_DATA = {
             {
               "post": "AO",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -25608,6 +26573,7 @@ window.CCMS_DATA = {
             {
               "post": "First Division Assistant",
               "section": "Legal cell RI",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -25632,6 +26598,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF",
               "section": "Administration  Co-ord",
+              "wing": "Administration & Coordination",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -25656,6 +26623,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Officer",
               "section": "Administrative Officer PCCF HOFF Office",
+              "wing": "Administration & Coordination",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -25680,6 +26648,7 @@ window.CCMS_DATA = {
             {
               "post": "Superintendent",
               "section": "Legal Cell SO",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -25704,6 +26673,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -25728,6 +26698,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Assistant",
               "section": "EST Non Gazetted",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -25752,6 +26723,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "Legal Cell",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -25776,6 +26748,7 @@ window.CCMS_DATA = {
             {
               "post": "FIRST DIVISION ASSISTANT- B3 SECTION",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -25800,6 +26773,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "LEGAL CELL",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -25852,6 +26826,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Chamarajanagara Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -25876,6 +26851,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward Officer",
               "section": "inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -25900,6 +26876,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -25952,6 +26929,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Hassan Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -26004,6 +26982,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chamarajnagar Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 7,
@@ -26056,6 +27035,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator Of Forests",
               "section": "Mysuru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 5,
@@ -26108,6 +27088,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bengaluru Urban Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -26132,6 +27113,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Anekal Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26156,6 +27138,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kaggalipura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26208,6 +27191,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator Of Forests",
               "section": "Chikkamagaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -26260,6 +27244,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Shivamogga Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -26312,6 +27297,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator of Forests",
               "section": "Bengaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -26336,6 +27322,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Administrator",
               "section": "EST-Gazetted",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26388,6 +27375,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Kolar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -26440,6 +27428,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Hassan Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -26464,6 +27453,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Arkalgudu Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26516,6 +27506,7 @@ window.CCMS_DATA = {
             {
               "post": "CCMS Admin",
               "section": "CCMS Admin",
+              "wing": "System account / unallocated",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -26568,6 +27559,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Ballari Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -26592,6 +27584,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward Officer",
               "section": "Inward",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -26644,6 +27637,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Tumkur Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -26696,6 +27690,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Basavakalyana Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26720,6 +27715,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bidar Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26772,6 +27768,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Hunsur Wildlife Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26796,6 +27793,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Nagarahole Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26848,6 +27846,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Mangaluru Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -26900,6 +27899,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Kundapur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26924,6 +27924,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Moodabidre Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -26976,6 +27977,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27000,6 +28002,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator of Forests",
               "section": "Shivamogga Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27052,6 +28055,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forest",
               "section": "Kolar Division SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27104,6 +28108,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hosadurga Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27156,6 +28161,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Davanagere Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27208,6 +28214,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Chikkamagalur Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27260,6 +28267,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Raichur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27312,6 +28320,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27364,6 +28373,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kushalnagara Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27416,6 +28426,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy conservator of Forests",
               "section": "Virajpet Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27468,6 +28479,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bramhagiri Wildlife Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27520,6 +28532,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27544,6 +28557,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -27596,6 +28610,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator Of Forests",
               "section": "Mysuru Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27648,6 +28663,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mysuru Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27700,6 +28716,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Channagiri Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -27968,6 +28985,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forest",
               "section": "Chikkaballapura SF Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -29674,6 +30692,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Officer",
               "section": "Est Gazetted",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 110,
@@ -29699,6 +30718,7 @@ window.CCMS_DATA = {
             {
               "post": "AO",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 38,
@@ -29724,6 +30744,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Officer",
               "section": "Administrative Officer PCCF HOFF Office",
+              "wing": "Administration & Coordination",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 16,
@@ -29749,6 +30770,7 @@ window.CCMS_DATA = {
             {
               "post": "Superintendent",
               "section": "Legal Cell SO",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -29774,6 +30796,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "Legal Cell",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -29799,6 +30822,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "LEGAL CELL",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -29824,6 +30848,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bangalore Rural Division",
+              "wing": "Field offices under HQ code",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -29849,6 +30874,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bangalore Urban Division",
+              "wing": "Field offices under HQ code",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -29874,6 +30900,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Kolar Division",
+              "wing": "Field offices under HQ code",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -29899,6 +30926,7 @@ window.CCMS_DATA = {
             {
               "post": "FIRST DIVISION ASSISTANT- A1  B1 SECTION",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -29953,6 +30981,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Hassan Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 10,
@@ -29978,6 +31007,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Hassan Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 7,
@@ -30003,6 +31033,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Channarayapatna Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30057,6 +31088,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Hassan Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 11,
@@ -30082,6 +31114,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -30107,6 +31140,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward officer",
               "section": "Inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30161,6 +31195,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator Of Forests",
               "section": "Chikkamagaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 9,
@@ -30186,6 +31221,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator of Forests",
               "section": "Chikkamagaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -30211,6 +31247,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Chikkamagaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30265,6 +31302,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Chamarajanagara Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 12,
@@ -30290,6 +31328,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator Of Forest",
               "section": "Kollegala WL Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30315,6 +31354,7 @@ window.CCMS_DATA = {
             {
               "post": "Inward Officer",
               "section": "inward officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -30369,6 +31409,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Mangaluru Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -30394,6 +31435,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Mangaluru Sub  Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -30419,6 +31461,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Puttur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -30444,6 +31487,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Subrahmanya Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -30498,6 +31542,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator Of Forests",
               "section": "Mysuru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 8,
@@ -30552,6 +31597,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Shivamogga Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -30577,6 +31623,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Ayanur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -30602,6 +31649,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Ayanur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30627,6 +31675,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Thirthahalli Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30681,6 +31730,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator of Forests",
               "section": "Kalaburagi Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -30706,6 +31756,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -30760,6 +31811,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Kalaburagi Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -30785,6 +31837,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kalaburagi  Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30810,6 +31863,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Kalaburagi Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30835,6 +31889,7 @@ window.CCMS_DATA = {
             {
               "post": "Manager",
               "section": "Kalaburagi Division admin",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30889,6 +31944,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Sagar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 6,
@@ -30943,6 +31999,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Hosadurga Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -30968,6 +32025,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Chithradurga Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -30993,6 +32051,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chithradurga Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31018,6 +32077,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Holalkere Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31072,6 +32132,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator of Forests",
               "section": "Shivamogga Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -31097,6 +32158,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31151,6 +32213,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kaggalipura Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -31176,6 +32239,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Anekal Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31201,6 +32265,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Bengaluru Urban Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31255,6 +32320,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Kolar Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -31280,6 +32346,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kolar Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31334,6 +32401,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Koppa Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -31359,6 +32427,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Koppa Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -31413,6 +32482,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Haliyal Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -31438,6 +32508,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Dandeli Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31463,6 +32534,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Haliyal Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31517,6 +32589,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Karwar Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -31571,6 +32644,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Madikeri Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -31596,6 +32670,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Somwarpet Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31650,6 +32725,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Makutta Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -31675,6 +32751,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy conservator of Forests",
               "section": "Virajpet Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -31729,6 +32806,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Mangaluru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 4,
@@ -31783,6 +32861,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Nagamangala Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -31808,6 +32887,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mandya Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -31862,6 +32942,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Administrator",
               "section": "EST-Gazetted",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -31916,6 +32997,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Davanagere Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -31970,6 +33052,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Belagavi Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -32024,6 +33107,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chikkamagalur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -32049,6 +33133,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kadur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32103,6 +33188,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Dharwad Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -32157,6 +33243,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Siddapura Wildlife Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -32211,6 +33298,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mysuru Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -32265,6 +33353,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Hunsur Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -32319,6 +33408,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bannerghatta Wildlife Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -32373,6 +33463,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests  Director",
               "section": "BRT Tiger Conservation Reserve Chamrajanagara",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -32427,6 +33518,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Dharwad Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -32481,6 +33573,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Madhugiri Sub Division SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32506,6 +33599,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Pavagada Range SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32560,6 +33654,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Raichur Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32585,6 +33680,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Raichur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32639,6 +33735,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Honnavara Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -32693,6 +33790,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Yellapura Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -32747,6 +33845,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Antarasante Wildlife Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32772,6 +33871,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Nagarahole Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32826,6 +33926,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Kundapur Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32851,6 +33952,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Moodabidre Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32905,6 +34007,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Bhadravathi Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -32959,6 +34062,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Shivamogga Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -32984,6 +34088,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Shivamogga Wildlife Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33038,6 +34143,7 @@ window.CCMS_DATA = {
             {
               "post": "CCMS Admin",
               "section": "CCMS Admin",
+              "wing": "System account / unallocated",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33092,6 +34198,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Ramanagara Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33146,6 +34253,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Chikkaballapura Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33200,6 +34308,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forest",
               "section": "Chikkaballapura SF Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33254,6 +34363,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Ballari Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33308,6 +34418,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Ballari Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33362,6 +34473,7 @@ window.CCMS_DATA = {
             {
               "post": "DCF SF",
               "section": "BALLARI SF DIVISION",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33416,6 +34528,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Belagavi Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33470,6 +34583,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Hanur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33524,6 +34638,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chamarajanagara SFSub  Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33578,6 +34693,7 @@ window.CCMS_DATA = {
             {
               "post": "Range Forest Officer",
               "section": "Bhadra WL Lakkavalli Range",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33632,6 +34748,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Tiptur Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33686,6 +34803,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Yadgir Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33740,6 +34858,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Madikeri WL Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33794,6 +34913,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Mysuru Wildlife Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -33848,6 +34968,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forest",
               "section": "Shivamogga SF Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -34042,6 +35163,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forest",
               "section": "Kolar Division SF",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -34880,6 +36002,7 @@ window.CCMS_DATA = {
             {
               "post": "Section Officer",
               "section": "Section Officer",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -35217,6 +36340,7 @@ window.CCMS_DATA = {
             {
               "post": "Administrative Officer",
               "section": "Est Gazetted",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 2,
@@ -35242,6 +36366,7 @@ window.CCMS_DATA = {
             {
               "post": "APCCF",
               "section": "Administration  Co-ord",
+              "wing": "Administration & Coordination",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -35267,6 +36392,7 @@ window.CCMS_DATA = {
             {
               "post": "AO",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -35292,6 +36418,7 @@ window.CCMS_DATA = {
             {
               "post": "MANAGER",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -35317,6 +36444,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "Legal Cell",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -35342,6 +36470,7 @@ window.CCMS_DATA = {
             {
               "post": "Superintendent",
               "section": "Legal Cell SO",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 0,
@@ -35396,6 +36525,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Bengaluru South Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -35450,6 +36580,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator Of Forests",
               "section": "Chikkaballapura Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -35504,6 +36635,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests  Director",
               "section": "BRT Tiger Conservation Reserve Chamrajanagara",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -35558,6 +36690,7 @@ window.CCMS_DATA = {
             {
               "post": "Chief Conservator Of Forests",
               "section": "Hassan Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -35612,6 +36745,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Hassan Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -35666,6 +36800,7 @@ window.CCMS_DATA = {
             {
               "post": "Deputy Conservator of Forests",
               "section": "Mangaluru Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -35720,6 +36855,7 @@ window.CCMS_DATA = {
             {
               "post": "Conservator Of Forests",
               "section": "Mysuru Circle",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -38409,6 +39545,7 @@ window.CCMS_DATA = {
             {
               "post": "AO",
               "section": "Personnel  Recruitment",
+              "wing": "Personnel & Recruitment",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,
@@ -41294,6 +42431,7 @@ window.CCMS_DATA = {
             {
               "post": "Additional Principal Chief Conservator of Forests",
               "section": "Legal Cell",
+              "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 3,
@@ -41348,6 +42486,7 @@ window.CCMS_DATA = {
             {
               "post": "Assistant Conservator of Forests",
               "section": "Chamarajnagar Sub Division",
+              "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
                 "total_cases_pending": 1,

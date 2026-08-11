@@ -34,7 +34,7 @@
 
   .filters{background:var(--panel);border:1px solid var(--line);border-radius:11px;
     padding:4px 16px 12px;margin-bottom:16px}
-  .frow{display:grid;grid-template-columns:92px 1fr;gap:10px;align-items:start;
+  .frow{display:grid;grid-template-columns:104px 1fr;gap:10px;align-items:start;
     padding:11px 0}
   .frow + .frow{border-top:1px solid var(--line)}
   .fchips{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
@@ -62,6 +62,9 @@
   .frow.f-stage {--c-bg:#fbeaee; --c-bd:#eec6d0; --c-fg:#9b2f4c}  /* rose    */
   .frow .flabel{color:var(--c-fg);opacity:.85}
   .fhint{font-size:11.5px;color:var(--ink-3);align-self:center}
+  /* Divides the wing chips from the division chips inside the one
+     Wings / Divisions row. */
+  .fsep{width:1px;align-self:stretch;margin:2px 4px;background:var(--c-bd)}
   .freset{font-size:11.5px;color:var(--acc);cursor:pointer;margin-left:4px;
     text-decoration:underline;text-underline-offset:2px}
 
@@ -97,6 +100,13 @@
   tbody tr:hover td.nm{background:#f2f2ee}
   tbody tr.u td{color:var(--ink-2);font-size:11px}
   tbody tr.u td.nm{padding-left:24px}
+  /* Wing subtotal row -- HQ units only, sits between the unit and its users. */
+  tbody tr.wg td{font-size:11px;font-weight:600;background:#f6f5ef}
+  tbody tr.wg td.nm{padding-left:24px;background:#f2f1e9;
+    border-left:3px solid var(--ink-3)}
+  tbody tr.wg.um td.nm{border-left-color:#d9a441;color:#8a6a1c}
+  tbody tr.wg .tot{background:#e9eef6!important}
+  tbody tr.u.inw td.nm{padding-left:40px}
   .z{color:#c4c6bf}
   .tot{font-weight:600;background:var(--acc-bg)!important}
   tbody tr.u .tot{background:#eff4fa!important}
@@ -108,7 +118,13 @@
   tfoot td.nm{text-align:left;position:sticky;left:0;background:var(--head);white-space:normal}
 
   .dn{display:flex;align-items:flex-start;gap:6px;font-weight:600;line-height:1.3}
-  .car{display:inline-block;width:12px;color:var(--ink-3);cursor:pointer;user-select:none;font-size:9px}
+  /* The division name is the control that reveals its user rows -- a
+     dotted underline reads as "there is more here" without spending a
+     column on a disclosure triangle. Solid once open. */
+  .dl{color:var(--acc);cursor:pointer;text-decoration:underline;
+    text-decoration-style:dotted;text-decoration-thickness:1px;text-underline-offset:3px}
+  .dl:hover{text-decoration-style:solid}
+  .dl.open{text-decoration-style:solid;color:var(--ink)}
   .gt{font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3);font-weight:500}
   .d{font-size:10px;font-weight:600;margin-left:5px;padding:1px 5px;border-radius:4px}
   .d.increase{color:var(--grn);background:var(--grn-bg)}
@@ -144,7 +160,11 @@
 <script>
 // UNIT holds a division code (r.code) -- the individual unit under the
 // selected circle -- or 'ALL'.
-var DATA=null, COURT='ALL', CT=null, CIRCLE='ALL', UNIT='ALL', STAGE='ALL';
+// WING holds an Aranya Bhavana wing name (from scraper/wings.json) or
+// 'ALL'. It sits between Circle and Major unit: wings are a subdivision
+// of the HQ units, so picking one narrows to those units *and* rewrites
+// every row to that wing's share of them.
+var DATA=null, COURT='ALL', CT=null, CIRCLE='ALL', WING='ALL', UNIT='ALL', STAGE='ALL';
 
 // Sort order for the unit chips within a circle: the circle office
 // first, then territorial, wildlife, social forestry.
@@ -215,80 +235,172 @@ function courtsOf(){
 function typesFor(court){
   return DATA.case_types.filter(function(ct){return court==='ALL'||ct.court===court;});
 }
-// Rows of a case type after the circle and unit filters.
+// A row narrowed to the selected wing: only that wing's users, and
+// metrics re-summed over them. Returns null if the unit has no user in
+// the wing, which is how units drop out of the table. With no wing
+// selected the row is passed through untouched, so this costs nothing
+// on the normal path.
+//
+// Every downstream count -- table, footer totals, KPIs, chip counts --
+// goes through here, so selecting "Legal Cell" shows the Legal Cell
+// caseload rather than the whole of Aranya Bhavana with a filter
+// hint attached.
+function scopeRow(r){
+  if(WING==='ALL') return r;
+  var us=r.users.filter(function(u){return u.wing===WING;});
+  if(!us.length) return null;
+  var m={},d=0,hasDelta=false,anyBaseline=false;
+  us.forEach(function(u){
+    for(var k in u.metrics){
+      if(typeof u.metrics[k]==='number') m[k]=(m[k]||0)+u.metrics[k];
+    }
+    if(typeof u.delta==='number'){d+=u.delta;hasDelta=true;}
+    else if(u.direction==='baseline') anyBaseline=true;
+  });
+  var dir=hasDelta?(d>0?'increase':d<0?'decrease':'same'):(anyBaseline?'baseline':'');
+  return {code:r.code,name:r.name,group:r.group,circle:r.circle,
+          metrics:m,delta:hasDelta?d:null,direction:dir,users:us};
+}
+// Rows of a case type after the circle, wing and unit filters.
 function rowsOf(ct){
   if(!ct) return [];
-  return ct.rows.filter(function(r){
-    if(CIRCLE!=='ALL' && r.circle!==CIRCLE) return false;
-    if(UNIT!=='ALL' && r.code!==UNIT) return false;
-    if(STAGE!=='ALL' && !(r.metrics[STAGE]>0)) return false;
-    return true;
+  var out=[];
+  ct.rows.forEach(function(r){
+    if(CIRCLE!=='ALL' && r.circle!==CIRCLE) return;
+    if(UNIT!=='ALL' && r.code!==UNIT) return;
+    var s=scopeRow(r); if(!s) return;
+    if(STAGE!=='ALL' && !(s.metrics[STAGE]>0)) return;
+    out.push(s);
   });
+  return out;
 }
-// Rows before the stage filter -- so the stage chip counts show what
-// selecting them would reveal, rather than what is already showing.
-function rowsBeforeStage(ct){
-  if(!ct) return [];
-  return ct.rows.filter(function(r){
-    return (CIRCLE==='ALL'||r.circle===CIRCLE) && (UNIT==='ALL'||r.code===UNIT);
-  });
+// Wing chips are trimmed the same way division chips are.
+function shortWing(name){
+  return name.replace(/^Administration & Coordination$/,'Admin & Coord')
+             .replace(/^Forest Resource Management$/,'Forest Resource Mgmt')
+             .replace(/^Field offices under HQ code$/,'Field offices (misfiled)')
+             .replace(/^System account \/ unallocated$/,'Unallocated');
 }
-function stageList(){
-  var scope=DATA.case_types.filter(function(ct){return COURT==='ALL'||ct.court===COURT;});
-  return STAGES.map(function(st){
-    var total=0,units=0;
-    scope.forEach(function(ct){
-      rowsBeforeStage(ct).forEach(function(r){
-        var v=r.metrics[st.key];
-        if(typeof v==='number'){ total+=v; if(v>0) units++; }
-      });
-    });
-    return {key:st.key,label:st.label,total:total,units:units};
-  });
-}
-// Rows filtered by circle only -- used for the unit chip counts, so they
-// reflect what's available in the chosen circle rather than the whole state.
-function rowsForUnitCounts(ct){
-  if(!ct) return [];
-  return CIRCLE==='ALL' ? ct.rows : ct.rows.filter(function(r){return r.circle===CIRCLE;});
-}
-// The individual units sitting under the selected circle, with their
-// pending totals across every case type currently in scope.
-function unitList(){
-  var tot={},meta={};
+// ---- Chip counts -------------------------------------------------------
+//
+// Every chip's number answers the same question: "if I click this, what
+// will the table below total?" So each count is computed with all the
+// *other* active filters applied and only its own facet overridden.
+// Pick Aranya Bhavana, and the Court chips immediately show Aranya
+// Bhavana's split between High Court and KSAT rather than the state's;
+// pick Legal Cell as well, and they show Legal Cell's.
+//
+// tally() is that one calculation. `ov` overrides any of the six facets;
+// `by` optionally buckets the result (by circle, wing, unit or stage)
+// instead of returning a single number, so one pass fills a whole row of
+// chips.
+function tally(ov,by){
+  var o={court:COURT,circle:CIRCLE,wing:WING,unit:UNIT,stage:STAGE,ct:null};
+  for(var k in (ov||{})) o[k]=ov[k];
+  var single=0,bucket={},meta={};
+
   DATA.case_types.forEach(function(ct){
-    rowsForUnitCounts(ct).forEach(function(r){
-      tot[r.code]=(tot[r.code]||0)+(r.metrics.total_cases_pending||0);
-      meta[r.code]={code:r.code,name:r.name,group:r.group,circle:r.circle};
+    if(o.ct!==null && ct.key!==o.ct) return;
+    if(o.court!=='ALL' && ct.court!==o.court) return;
+
+    ct.rows.forEach(function(r){
+      if(o.circle!=='ALL' && r.circle!==o.circle) return;
+      if(o.unit!=='ALL' && r.code!==o.unit) return;
+
+      // Bucketing by wing needs every wing, so it can't pre-filter to one.
+      if(by==='wing'){
+        (r.users||[]).forEach(function(u){
+          if(!u.wing) return;
+          var m=u.metrics;
+          if(o.stage!=='ALL' && !(m[o.stage]>0)) return;
+          var b=bucket[u.wing]||(bucket[u.wing]={total:0,users:0});
+          b.total+=m.total_cases_pending||0; b.users++;
+        });
+        return;
+      }
+
+      var m=r.metrics,n=(r.users||[]).length;
+      if(o.wing!=='ALL'){
+        var us=(r.users||[]).filter(function(u){return u.wing===o.wing;});
+        if(!us.length) return;
+        m={}; n=us.length;
+        us.forEach(function(u){
+          for(var k2 in u.metrics){
+            if(typeof u.metrics[k2]==='number') m[k2]=(m[k2]||0)+u.metrics[k2];
+          }
+        });
+      }
+
+      if(by==='stage'){
+        STAGES.forEach(function(st){
+          var v=m[st.key];
+          if(typeof v!=='number') return;
+          var b=bucket[st.key]||(bucket[st.key]={total:0,units:0});
+          b.total+=v; if(v>0) b.units++;
+        });
+        return;
+      }
+
+      if(o.stage!=='ALL' && !(m[o.stage]>0)) return;
+      var v=m.total_cases_pending||0;
+      if(by==='circle'){
+        (bucket[r.circle]||(bucket[r.circle]={total:0})).total+=v;
+      }else if(by==='unit'){
+        var b=bucket[r.code]||(bucket[r.code]={total:0});
+        b.total+=v;
+        meta[r.code]={name:r.name,group:r.group};
+      }else{
+        single+=v;
+      }
+      void n;
     });
   });
-  return Object.keys(meta).map(function(k){
-    return {code:k,name:meta[k].name,group:meta[k].group,total:tot[k]||0};
-  }).sort(function(a,b){return b.total-a.total;});
+
+  if(!by) return single;
+  if(by==='circle'){
+    var seen={},order=[];
+    (DATA.circles||[]).forEach(function(c){seen[c]=1;order.push(c);});
+    Object.keys(bucket).forEach(function(c){if(!seen[c])order.push(c);});
+    return order.map(function(c){return {name:c,total:(bucket[c]||{}).total||0};})
+                .sort(function(a,b){return b.total-a.total;});
+  }
+  if(by==='wing'){
+    var wo=DATA.wings||[];
+    return Object.keys(bucket).map(function(w){
+      return {name:w,total:bucket[w].total,users:bucket[w].users};
+    }).sort(function(a,b){
+      return (b.total-a.total)||(wo.indexOf(a.name)-wo.indexOf(b.name));
+    });
+  }
+  if(by==='unit'){
+    return Object.keys(bucket).map(function(c){
+      return {code:c,name:meta[c].name,group:meta[c].group,total:bucket[c].total};
+    }).sort(function(a,b){return b.total-a.total;});
+  }
+  return STAGES.map(function(st){
+    var b=bucket[st.key]||{total:0,units:0};
+    return {key:st.key,label:st.label,total:b.total,units:b.units};
+  });
 }
+
+// Facet lists. Each row of chips ignores its own facet and honours the
+// rest, so the counts describe what selecting that chip would give --
+// which means also ignoring whatever that click would clear. Choosing a
+// circle resets the wing/division below it, and wing and division reset
+// each other, so all three are counted with those cleared.
+function circleList(){ return tally({circle:'ALL',wing:'ALL',unit:'ALL'},'circle'); }
+function wingList(){   return tally({wing:'ALL',unit:'ALL'},'wing'); }
+function unitList(){   return tally({unit:'ALL',wing:'ALL'},'unit'); }
+function stageList(){  return tally({stage:'ALL'},'stage'); }
 // Trim the repeated boilerplate so the chips stay readable.
 function shortUnit(name){
   return name.replace(/ Division$/,'').replace(/^Forest Office /,'')
              .replace(/ Wildlife Division$/,' WL').replace(/ Social Forestry Division$/,' SF')
              .replace(/ SF Division$/,' SF').replace(/ Division SF$/,' SF');
 }
-// Pending count for a case type, respecting the circle filter, so the
-// chip counts always agree with the table underneath them.
-function pend(ct){
-  if(!ct) return 0;
-  if(CIRCLE==='ALL') return (ct.totals&&ct.totals.total_cases_pending)||0;
-  return rowsOf(ct).reduce(function(s,r){return s+(r.metrics.total_cases_pending||0);},0);
-}
-function circleList(){
-  var seen={},out=[];
-  (DATA.circles||[]).forEach(function(c){seen[c]=0;out.push(c);});
-  DATA.case_types.forEach(function(ct){ct.rows.forEach(function(r){
-    if(!(r.circle in seen)){seen[r.circle]=0;out.push(r.circle);}
-    seen[r.circle]+=r.metrics.total_cases_pending||0;
-  });});
-  return out.map(function(c){return {name:c,total:seen[c]||0};})
-            .sort(function(a,b){return b.total-a.total;});
-}
+// Pending for one case type under the active filters -- the number on
+// its chip, and what the table beneath will total if it is selected.
+function pend(ct){ return ct?tally({ct:ct.key}):0; }
 
 function renderKPIs(){
   var list=typesFor(COURT);
@@ -309,12 +421,14 @@ function renderKPIs(){
     var st=STAGES.filter(function(x){return x.key===STAGE;})[0];
     sLabel=' · '+(st?st.label:STAGE);
   }
-  var scope = (COURT==='ALL' ? 'both courts' : COURT)+(CIRCLE==='ALL'?'':' · '+CIRCLE)+uLabel+sLabel;
+  var scope = (COURT==='ALL' ? 'both courts' : COURT)+(CIRCLE==='ALL'?'':' · '+CIRCLE)+
+              (WING==='ALL'?'':' · '+WING)+uLabel+sLabel;
   var cards=[
     {k:'Total pending',v:totalPending,d:scope},
     {k:'Case types',v:active+' / '+list.length,d:'with pending cases'},
     {k:'Units',v:Object.keys(divs).length,d:UNIT==='ALL'?(CIRCLE==='ALL'?'with cases':'in this circle'):'selected'},
-    {k:'Users / offices',v:users,d:'rows across reports'}
+    {k:'Users / offices',v:users,
+     d:WING==='ALL'?'rows across reports':'rows in this wing'}
   ];
   document.getElementById('kpis').innerHTML=cards.map(function(c){
     return '<div class="kpi"><div class="k">'+esc(c.k)+'</div>'+
@@ -335,41 +449,53 @@ function renderFilters(){
   }
   var q=function(v){return JSON.stringify(v).replace(/"/g,'&quot;');};
 
-  // Circle
+  // HQ / Circle -- Aranya Bhavana sits alongside the 13 territorial
+  // circles, so the row is named for both.
   var cl=circleList();
   var grand=cl.reduce(function(s,c){return s+c.total;},0);
-  var circleChips=chip(CIRCLE==='ALL',"setCircle('ALL')",'All circles',grand)+
+  var circleChips=chip(CIRCLE==='ALL',"setCircle('ALL')",'All',grand)+
     cl.map(function(c){
       return chip(CIRCLE===c.name,'setCircle('+q(c.name)+')',
                   c.name.replace(/ Circle$/,''),c.total,c.total===0?' zero':'',c.name);
     }).join('');
 
-  // Major unit -- the units sitting under the selected circle
-  var ul=unitList();
-  var unitTotal=ul.reduce(function(s,u){return s+u.total;},0);
-  var unitChips;
+  // Wings / Divisions -- one row for both, because they are the same
+  // level of the hierarchy reached by different routes: at Aranya
+  // Bhavana the subdivision that matters is the wing, everywhere else it
+  // is the division. Where a circle has both (the HQ departments do,
+  // since the wings span all three) the wings come first, then a rule,
+  // then the departments themselves.
+  var wl=wingList(), ul=unitList();
+  var subChips;
   if(CIRCLE==='ALL'){
-    unitChips=chip(true,'','All units',unitTotal)+
-      '<span class="fhint">pick a circle above to list its '+ul.length+' units</span>';
+    subChips=chip(true,'','All',tally({unit:'ALL'}))+
+      '<span class="fhint">pick an HQ or circle above to list its '+
+      (wl.length?wl.length+' wings and ':'')+ul.length+' divisions</span>';
   }else{
-    unitChips=chip(UNIT==='ALL',"setUnit('ALL')",'All units',unitTotal)+
-      ul.map(function(u){
-        return chip(UNIT===u.code,'setUnit('+q(u.code)+')',shortUnit(u.name),u.total,
-                    u.total===0?' zero':'',u.name+' — '+(UNIT_KIND[u.group]||u.group));
-      }).join('');
+    var allOn=(WING==='ALL'&&UNIT==='ALL');
+    subChips=chip(allOn,"setSub('ALL')",'All',tally({wing:'ALL',unit:'ALL'}));
+    if(wl.length){
+      subChips+=wl.map(function(w){
+        return chip(WING===w.name,'setWing('+q(w.name)+')',shortWing(w.name),w.total,
+                    w.total===0?' zero':'',
+                    'Wing — '+w.name+', '+w.users+' user'+(w.users===1?'':'s'));
+      }).join('')+'<span class="fsep"></span>';
+    }
+    subChips+=ul.map(function(u){
+      return chip(UNIT===u.code,'setUnit('+q(u.code)+')',shortUnit(u.name),u.total,
+                  u.total===0?' zero':'',u.name+' — '+(UNIT_KIND[u.group]||u.group));
+    }).join('');
   }
 
   // Court
   var courts=courtsOf().sort(function(a,b){
-    return typesFor(b).reduce(function(s,x){return s+pend(x);},0)-
-           typesFor(a).reduce(function(s,x){return s+pend(x);},0);
+    return tally({court:b})-tally({court:a});
   });
-  var courtChips=chip(COURT==='ALL',"setCourt('ALL')",'All courts',
-      DATA.case_types.reduce(function(s,c){return s+pend(c);},0))+
+  var courtChips=chip(COURT==='ALL',"setCourt('ALL')",'All courts',tally({court:'ALL'}))+
     courts.map(function(c){
-      var n=typesFor(c).reduce(function(s,x){return s+pend(x);},0);
+      var n=tally({court:c});
       return chip(COURT===c,'setCourt('+q(c)+')',
-                  c.indexOf('Administrative')>=0?'KSAT':c,n,'',c);
+                  c.indexOf('Administrative')>=0?'KSAT':c,n,n===0?' zero':'',c);
     }).join('');
 
   // Case type
@@ -390,29 +516,45 @@ function renderFilters(){
                   st.units+' unit'+(st.units===1?'':'s')+' with cases at this stage');
     }).join('');
 
-  var active=(CIRCLE!=='ALL')+(UNIT!=='ALL')+(COURT!=='ALL')+(STAGE!=='ALL');
+  var active=(CIRCLE!=='ALL')+(WING!=='ALL')+(UNIT!=='ALL')+(COURT!=='ALL')+(STAGE!=='ALL');
   if(active) stageChips+='<span class="freset" onclick="resetFilters()">clear all filters</span>';
 
   document.getElementById('filters').innerHTML=
-    row('Circle',circleChips,'f-circle')+row('Major unit',unitChips,'f-unit')+
+    row('HQ / Circle',circleChips,'f-circle')+
+    row('Wings / Divisions',subChips,'f-unit')+
     row('Court',courtChips,'f-court')+row('Case type',typeChips,'f-type')+
     row('Stage',stageChips,'f-stage');
 }
 
 function setStage(s){STAGE=s; renderKPIs(); renderFilters(); renderPanel();}
 function resetFilters(){
-  CIRCLE='ALL'; UNIT='ALL'; COURT='ALL'; STAGE='ALL';
+  CIRCLE='ALL'; WING='ALL'; UNIT='ALL'; COURT='ALL'; STAGE='ALL';
   renderKPIs(); renderFilters(); renderPanel();
 }
 
+// Filters cascade downward: changing one clears anything below it that
+// the new selection has made impossible, rather than leaving a stale
+// chip lit over an empty table.
 function setCircle(c){
-  CIRCLE=c;
-  // A unit type may not exist in the newly chosen circle -- fall back to
-  // All rather than showing an empty table with a stale chip selected.
-  if(UNIT!=='ALL' && !unitList().some(function(u){return u.code===UNIT;})) UNIT='ALL';
+  CIRCLE=c; WING='ALL'; UNIT='ALL';
   renderKPIs(); renderFilters(); renderPanel();
 }
-function setUnit(u){UNIT=u; renderKPIs(); renderFilters(); renderPanel();}
+// Wing and division share one filter row, so they behave as one control:
+// picking either clears the other. Selecting "Legal Cell" and then a
+// division would otherwise read as an intersection, which is not what
+// the row offers.
+function setWing(w){
+  WING=w; UNIT='ALL';
+  renderKPIs(); renderFilters(); renderPanel();
+}
+function setUnit(u){
+  UNIT=u; WING='ALL';
+  renderKPIs(); renderFilters(); renderPanel();
+}
+function setSub(){
+  WING='ALL'; UNIT='ALL';
+  renderKPIs(); renderFilters(); renderPanel();
+}
 
 function setCourt(c){
   COURT=c;
@@ -452,6 +594,53 @@ function cells(m,cols){
   }).join('');
 }
 
+// Users listed under a unit. For most units that is a flat list. For the
+// Aranya Bhavana departments the builder tags each user with the wing it
+// belongs to (from scraper/wings.json), so those are grouped: one
+// subtotal row per wing, heaviest first, with its users beneath it.
+// A unit is never half-grouped -- if any user carries a wing, every user
+// does, falling back to "Unassigned".
+function userRows(r,i,cols,sortKey){
+  var us=r.users.slice().sort(function(x,y){
+    return (y.metrics[sortKey]||0)-(x.metrics[sortKey]||0);
+  });
+  function urow(u,inWing){
+    return '<tr class="u'+(inWing?' inw':'')+'" data-p="'+i+'" style="display:none">'+
+      '<td class="nm">'+esc(u.post)+dHTML(u.direction,u.delta)+
+      (u.section?'<div class="us">'+esc(u.section)+'</div>':'')+'</td>'+
+      cells(u.metrics,cols)+'</tr>';
+  }
+  // With a wing already selected the row *is* that wing, so the subtotal
+  // header would just restate the row above it -- list the users flat.
+  var winged=WING==='ALL'&&us.some(function(u){return u.wing;});
+  if(!winged) return us.map(function(u){return urow(u,false);}).join('');
+
+  var order=[],by={};
+  us.forEach(function(u){
+    var w=u.wing||'Unassigned';
+    if(!by[w]){by[w]=[];order.push(w);}
+    by[w].push(u);
+  });
+  function sum(list,k){
+    return list.reduce(function(s,u){
+      var v=u.metrics[k]; return s+(typeof v==='number'?v:0);},0);
+  }
+  order.sort(function(a,b){return sum(by[b],sortKey)-sum(by[a],sortKey);});
+
+  return order.map(function(w){
+    var list=by[w],m={};
+    cols.forEach(function(c){m[c.key]=sum(list,c.key);});
+    // Flag the buckets that are not a real wing -- field offices created
+    // under the HQ department code, and the CCMS Admin system account.
+    var odd=/^(Field offices|System account|Unassigned)/.test(w);
+    return '<tr class="wg'+(odd?' um':'')+'" data-p="'+i+'" style="display:none">'+
+      '<td class="nm">'+esc(w)+'<span class="gt"> &middot; '+list.length+
+      ' user'+(list.length===1?'':'s')+'</span></td>'+
+      cells(m,cols)+'</tr>'+
+      list.map(function(u){return urow(u,true);}).join('');
+  }).join('');
+}
+
 function renderPanel(){
   var ct=DATA.case_types.filter(function(x){return x.key===CT;})[0];
   var el=document.getElementById('panel');
@@ -464,6 +653,7 @@ function renderPanel(){
       '<div class="empty"><strong>No pending cases.</strong><br>'+
       'This report was fetched successfully &mdash; no '+
       (CIRCLE==='ALL'?'tracked unit':'unit in '+esc(CIRCLE))+
+      (WING==='ALL'?'':' under '+esc(WING))+
       (UNIT==='ALL'?'':' matching that unit')+
       (STAGE==='ALL'?'':' has cases at that stage, and none')+
       ' has a pending '+esc(ct.label)+' case.</div></div>';
@@ -477,20 +667,16 @@ function renderPanel(){
     return (b.metrics[sortKey]||0)-(a.metrics[sortKey]||0);
   });
   var body=ROWS.map(function(r,i){
-    var car=r.users.length?'<span class="car" onclick="tog('+i+')" id="c'+i+'">&#9656;</span>':'<span class="car"></span>';
-    var main='<tr><td class="nm"><span class="dn">'+car+'<span>'+esc(r.name)+'</span>'+
+    var n=r.users.length;
+    // The name itself opens the user list -- no separate caret column.
+    var nm=n?'<a class="dl" id="c'+i+'" onclick="tog('+i+')" title="Show the '+n+
+              ' user row'+(n===1?'':'s')+' under '+esc(r.name)+'">'+esc(r.name)+'</a>'
+           :'<span>'+esc(r.name)+'</span>';
+    var main='<tr><td class="nm"><span class="dn">'+nm+
       dHTML(r.direction,r.delta)+'</span><span class="gt">'+esc(UNIT_KIND[r.group]||r.group)+
-      (r.users.length?' &middot; '+r.users.length+' user'+(r.users.length===1?'':'s'):'')+
+      (n?' &middot; '+n+' user'+(n===1?'':'s'):'')+
       '</span></td>'+cells(r.metrics,cols)+'</tr>';
-    var kids=r.users.slice().sort(function(x,y){
-      return (y.metrics[sortKey]||0)-(x.metrics[sortKey]||0);
-    }).map(function(u){
-      return '<tr class="u" data-p="'+i+'" style="display:none"><td class="nm">'+
-        esc(u.post)+dHTML(u.direction,u.delta)+
-        (u.section?'<div class="us">'+esc(u.section)+'</div>':'')+'</td>'+
-        cells(u.metrics,cols)+'</tr>';
-    }).join('');
-    return main+kids;
+    return main+userRows(r,i,cols,sortKey);
   }).join('');
 
   var ftot={};
@@ -500,6 +686,7 @@ function renderPanel(){
   });
   var foot='<tr><td class="nm">Total &mdash; '+ROWS.length+' unit'+(ROWS.length===1?'':'s')+
     (CIRCLE==='ALL'?'':' in '+esc(CIRCLE))+
+    (WING==='ALL'?'':' &middot; '+esc(WING)+' only')+
     '</td>'+cols.map(function(c){
       return '<td'+cellClass(c.key)+'>'+num(ftot[c.key])+'</td>';
     }).join('')+'</tr>';
@@ -525,11 +712,11 @@ function renderPanel(){
 }
 
 function tog(i){
-  var rows=document.querySelectorAll('tr.u[data-p="'+i+'"]');
+  var rows=document.querySelectorAll('tr.u[data-p="'+i+'"],tr.wg[data-p="'+i+'"]');
   var c=document.getElementById('c'+i);
   var open=rows.length&&rows[0].style.display!=='none';
   for(var j=0;j<rows.length;j++) rows[j].style.display=open?'none':'';
-  if(c) c.innerHTML=open?'&#9656;':'&#9662;';
+  if(c) c.className='dl'+(open?'':' open');
 }
 
 async function loadData(FORCE){

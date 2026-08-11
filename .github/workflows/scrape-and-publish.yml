@@ -28,12 +28,7 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
-      # scraper/ is a Git submodule in this repository, so it must be
-      # checked out explicitly before requirements.txt and scrape_ccms.py
-      # can be used.
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
       - uses: actions/setup-python@v5
         with:

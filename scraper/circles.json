@@ -6,7 +6,22 @@
     "differs from common usage the CCMS one wins (e.g. 'Bangalore Urban",
     "Division SF', not 'Bengaluru Urban SF'), otherwise the row will not",
     "match and the division silently disappears from the dashboard.",
-    "Head office is listed first, then the 13 circles in the order given."
+    "Head office is listed first, then the 13 circles in the order given.",
+    "",
+    "'_exclude' hides a department from the dashboard at build time. The",
+    "scraper still fetches it and the snapshots still record it, so the",
+    "history stays intact and un-excluding a name brings its full past",
+    "back with it -- nothing has to be re-scraped. Without _exclude,",
+    "removing a name from a circle only moves it to 'Other / direct",
+    "reporting'; that fallback exists so nothing silently disappears.",
+    "The Environment divisions are Environment-department units that the",
+    "report returns under Forest, Ecology & Environment; they are not KFD",
+    "divisions and do not belong in a KFD caseload."
+  ],
+
+  "_exclude": [
+    "UDUPI DIVISION ENVIRONMENT",
+    "UTTARA KANNADA DIVISION  ENVIRONMENT"
   ],
   "Aranya Bhavana": {
     "type": "headquarters",
@@ -126,8 +141,7 @@
       "Sirsi Division",
       "Yellapura Division",
       "Kali Tiger Reserve",
-      "Karwar SF Dvision",
-      "UTTARA KANNADA DIVISION  ENVIRONMENT"
+      "Karwar SF Dvision"
     ]
   },
   "Kodagu Circle": {
@@ -149,8 +163,7 @@
       "Kundapura Division",
       "Kudremukha Wildlife Division",
       "Mangaluru Division SF",
-      "Udupi division SF",
-      "UDUPI DIVISION ENVIRONMENT"
+      "Udupi division SF"
     ]
   },
   "Mysuru Circle": {

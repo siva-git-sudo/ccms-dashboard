@@ -1,0 +1,120 @@
+{
+  "_comment": [
+    "PRELIMINARY — needs verification against the Aranya Bhavana",
+    "office order / section allocation before it is wired into the build.",
+    "",
+    "Maps CCMS 'user' rows (the section+post pairs the report returns for",
+    "the HQ departments) to the wing/unit they sit under at Aranya Bhavana.",
+    "Keys under 'sections' are the CCMS section string EXACTLY as it comes",
+    "back in the report — including the case and double-space quirks — the",
+    "same rule as circles.json. Match is on section first; where one section",
+    "string is split across wings, add a 'post' qualifier.",
+    "",
+    "'_unmapped' holds rows that are NOT an Aranya Bhavana wing: field",
+    "offices whose users were created under the HQ department code, and the",
+    "CCMS Admin account under PCCFHead Of Forest Force."
+  ],
+
+  "applies_to_departments": [
+    "Araṇya bhavana",
+    "PCCFHead Of Forest Force",
+    "PCCF WL"
+  ],
+
+  "wings": {
+    "Administration & Coordination": {
+      "head": "APCCF (Admin & Coord)",
+      "sections": [
+        "Administration  Co-ord",
+        "Administrative Officer PCCF HOFF Office"
+      ]
+    },
+    "Personnel & Recruitment": {
+      "head": "APCCF (Personnel & Recruitment)",
+      "_note": "Establishment (gazetted and non-gazetted) sits under this wing, not under Admin & Coord.",
+      "sections": [
+        "Personnel  Recruitment",
+        "Est Gazetted",
+        "EST Non Gazetted"
+      ]
+    },
+    "Legal Cell": {
+      "head": "APCCF (Legal)",
+      "sections": [
+        "LEGAL CELL",
+        "Legal Cell",
+        "Legal Cell SO",
+        "Legal cell RI"
+      ]
+    },
+    "Forest Resource Management": {
+      "head": "APCCF (FRM)",
+      "sections": [
+        "Forest Resource Management"
+      ]
+    },
+    "Forest Conservation (FCA)": {
+      "head": "PCCF / CCF (FC)",
+      "sections": [
+        "FC"
+      ]
+    },
+    "Land Records": {
+      "head": "APCCF (Land Records)",
+      "sections": [
+        "Land Records"
+      ]
+    },
+    "Working Plan": {
+      "head": "APCCF (Working Plan)",
+      "sections": [
+        "Working plan"
+      ]
+    },
+    "Wildlife": {
+      "head": "PCCF (Wildlife) / APCCF (WL)",
+      "sections": [
+        "WILDLIFE",
+        "PCCF WL"
+      ]
+    },
+    "Vigilance": {
+      "head": "APCCF (Vigilance)",
+      "sections": [
+        "Vigilance"
+      ]
+    },
+    "Evaluation": {
+      "head": "APCCF (Evaluation)",
+      "sections": [
+        "Evaluation"
+      ]
+    }
+  },
+
+  "_unmapped": {
+    "field_offices_under_hq_code": {
+      "label": "Field offices under HQ code",
+      "_note": "Users belonging to territorial/WL field offices but created under the Aranya Bhavana department code. Data-hygiene issue to raise with CCMS Admin, not a wing.",
+      "sections": [
+        "Bangalore Rural Division",
+        "Bangalore Urban Division",
+        "Bangalore Urban Range",
+        "Kaggalipura Range",
+        "Kolar Division",
+        "Mysore WL Range"
+      ]
+    },
+    "system_accounts": {
+      "label": "System account / unallocated",
+      "_note": "Sits under the PCCFHead Of Forest Force department, not a wing. Cases parked here are unallocated.",
+      "sections": [
+        "CCMS Admin"
+      ]
+    }
+  },
+
+  "_known_duplicates": [
+    ["LEGAL CELL", "Legal Cell", "Same wing, two CCMS user records differing only in case — merge in display."]
+  ]
+}

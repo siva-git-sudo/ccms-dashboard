@@ -219,10 +219,111 @@ The `public/` folder is the entire site — `index.html` + `data.json`.
 Re-running the scraper and re-deploying is all that's needed to refresh
 the dashboard.
 
+## Wings (Aranya Bhavana)
+
+The report gives each user a free-text `section` and nothing above it, so
+at HQ the 30-odd user rows arrive as a flat list with no indication of
+which wing they belong to. `scraper/wings.json` supplies that layer —
+same idea as `circles.json`, and matched on the CCMS section string
+*exactly* as returned, quirks included ("Administration  Co-ord" has two
+spaces, "Working plan" is lower-case). Ten wings today:
+
+| Wing | Pending |
+|---|---|
+| Personnel & Recruitment (incl. Establishment gazetted/non-gazetted) | 206 |
+| Forest Resource Management | 166 |
+| Legal Cell | 86 |
+| Administration & Coordination | 68 |
+| Land Records | 26 |
+| Forest Conservation (FCA) | 24 |
+| Wildlife | 12 |
+| Working Plan | 11 |
+| Vigilance | 1 |
+| Evaluation | 1 |
+
+The map applies only to the departments listed in
+`applies_to_departments`. That matters: a section called "Legal Cell" in
+a field division is *that division's* cell, not the HQ wing, so outside
+those departments users stay unwinged rather than being folded into an
+HQ total.
+
+Two buckets under `_unmapped` are carried through as wings so they stay
+visible instead of quietly inflating a real one:
+
+- **Field offices under HQ code (14)** — Bangalore Urban/Rural Division,
+  Kolar Division, Bangalore Urban Range, Kaggalipura Range, Mysore WL
+  Range. These users were created under the HQ department code; they are
+  field offices and would be double-counted in a naive circle rollup.
+- **System account / unallocated (21)** — the CCMS Admin user under
+  `PCCFHead Of Forest Force`.
+
+Anything the map doesn't recognise falls into **Unassigned** rather than
+disappearing — if that bucket is ever non-zero, a section has been
+renamed upstream or a new one created, and `wings.json` needs a line.
+
+On the dashboard, wings and divisions share one filter row — **Wings /
+Divisions**, under **HQ / Circle**. They are the same level of the
+hierarchy reached by different routes: at Aranya Bhavana the subdivision
+that matters is the wing, everywhere else it is the division. Where a
+circle has both, the wings come first, then a rule, then the departments.
+Picking either clears the other, since the row offers a choice rather
+than an intersection.
+
+Selecting a wing narrows the table to the units that have it *and*
+rewrites every row to that wing's share, so the table, the footer totals
+and the KPI cards describe the wing rather than the whole of Aranya
+Bhavana with a filter hint attached. With no wing selected, opening an HQ
+division shows a wing subtotal row with its users indented beneath,
+heaviest first.
+
+Wing totals are still **preliminary** — worth confirming against the
+Aranya Bhavana section allocation, particularly whether Land Records sits
+under FRM and whether Evaluation sits under Admin & Coord.
+
+### How the filter chain counts
+
+All five filter rows — HQ/Circle, Wings/Divisions, Court, Case type,
+Stage — go through one function, `tally()`. Every chip's number is
+computed with the other filters applied and its own facet overridden, so
+a chip always answers "if I click this, what will the table below total?"
+Pick Aranya Bhavana and the Court chips immediately re-count to Aranya
+Bhavana's split between High Court and KSAT; add Legal Cell and they
+re-count again to Legal Cell's. A chip also discounts whatever its own
+click would clear — choosing a circle resets the wing/division below it,
+so the circle counts are computed with those cleared rather than
+promising a number the click won't deliver.
+
+## Hiding a department from the dashboard
+
+Add the exact CCMS name to the top-level `_exclude` list in
+`circles.json`. That is the whole change.
+
+Note that simply removing a name from its circle does *not* hide it — it
+reroutes it to "Other / direct reporting", the fallback that stops an
+upstream rename from silently losing a unit. `_exclude` is the explicit
+way to say "not on this dashboard".
+
+**Scrape, keep, hide — in that order.** `_exclude` applies at build time
+and nowhere else. The scraper still fetches these departments, and the
+snapshots still record them in full. That is deliberate: the history
+stays intact, so taking a name back out of `_exclude` restores its entire
+past on the next build with nothing to re-scrape, and the raw record of
+what CCMS actually returned is never edited to match an editorial
+decision about what to display.
+
+Currently excluded: **UDUPI DIVISION ENVIRONMENT** and **UTTARA KANNADA
+DIVISION  ENVIRONMENT** (note the double space — it is how CCMS spells
+it; matching is on the normalised name, so you don't have to reproduce it
+exactly). These are Environment-department units that the report returns
+under Forest, Ecology & Environment; they are not KFD divisions and do
+not belong in a KFD caseload.
+
 ## Files
 
 - `scraper/divisions.json` — the 12 circles/divisions and their CCMS
   department codes (from the live `ddldeptname` dropdown).
+- `scraper/wings.json` — CCMS section → Aranya Bhavana wing, for the HQ
+  departments only. See "Wings" above.
 - `scraper/parse_ccms_xml.py` — parses one CCMS XML export into labeled
   fields. Note: each case type is a **separate SSRS report with its own
   column count** (Writ Petition = 17 numeric columns, Civil Contempt =

@@ -5,20 +5,18 @@
     <key>Label</key>
     <string>gov.kfd.ccms-scrape</string>
 
-    <!-- IMPORTANT: replace __PROJECT_DIR__ below with the real absolute
-         path to this project folder before installing. The install
-         instructions in README.md do this substitution for you. -->
+    <!-- __PROJECT_DIR__ is replaced with the real path by
+         install_schedule.sh. Do not edit it by hand. -->
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>__PROJECT_DIR__/run_scrape.sh</string>
-        <string>--deploy</string>
+        <string>__PROJECT_DIR__/update.sh</string>
     </array>
 
     <key>WorkingDirectory</key>
     <string>__PROJECT_DIR__</string>
 
-    <!-- Run every weekday at 07:30. Adjust Hour/Minute to taste. -->
+    <!-- Every day at 07:30 local time. -->
     <key>StartCalendarInterval</key>
     <array>
         <dict>
@@ -27,8 +25,8 @@
         </dict>
     </array>
 
-    <!-- If the Mac was asleep at the scheduled time, run as soon as it
-         wakes rather than skipping the day entirely. -->
+    <!-- If the Mac was asleep or off at 07:30, run once it wakes rather
+         than skipping the day entirely. -->
     <key>RunAtLoad</key>
     <false/>
 
@@ -39,6 +37,8 @@
 
     <key>EnvironmentVariables</key>
     <dict>
+        <!-- launchd starts with a bare PATH; git, python3 and node live
+             in these directories. -->
         <key>PATH</key>
         <string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
         <key>HEADLESS</key>
