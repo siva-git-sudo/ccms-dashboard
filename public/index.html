@@ -481,7 +481,7 @@ function renderFilters(){
                     'Wing — '+w.name+', '+w.users+' user'+(w.users===1?'':'s'));
       }).join('')+'<span class="fsep"></span>';
     }
-    subChips+=ul.map(function(u){
+    subChips+=ul.filter(function(u){return u.total>0||UNIT===u.code;}).map(function(u){
       return chip(UNIT===u.code,'setUnit('+q(u.code)+')',shortUnit(u.name),u.total,
                   u.total===0?' zero':'',u.name+' — '+(UNIT_KIND[u.group]||u.group));
     }).join('');
