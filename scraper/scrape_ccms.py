@@ -597,7 +597,7 @@ def scrape_all_departments(page, combo: dict, out_xml_path: Path) -> None:
     """Pull one report for ddldeptname=--All-- (every circle/division
     under Forest, Ecology & Environment) for a given (court, case type)
     combo, and save its XML export."""
-    page.goto(REPORT_URL, wait_until="networkidle")
+    page.goto(REPORT_URL, wait_until="domcontentloaded", timeout=60000)
     _wait_for_form_ready(page, context="initial page load", min_selects=0)
 
     # Order matters: the rblstatereport radio ("Secretariat" vs "Non
@@ -960,7 +960,7 @@ def capture_headers(only: list[str] | None = None) -> None:
             label = combo_label(combo)
             print(f"\n=== {combo['label']} ({combo['court']}) ===", file=sys.stderr)
             try:
-                page.goto(REPORT_URL, wait_until="networkidle")
+                page.goto(REPORT_URL, wait_until="domcontentloaded", timeout=60000)
                 _wait_for_form_ready(page, context="initial page load", min_selects=0)
                 _check_aspnet_radio(page, "rblstatereport", BASE_FILTERS["rblstatereport"])
                 _select_aspnet(page, "ddlsecdeptname", BASE_FILTERS["ddlsecdeptname"])
@@ -1030,7 +1030,7 @@ def inspect_page() -> None:
         page = context.new_page()
 
         print("=== loading report page ===", file=sys.stderr)
-        page.goto(REPORT_URL, wait_until="networkidle")
+        page.goto(REPORT_URL, wait_until="domcontentloaded", timeout=60000)
         _wait_for_form_ready(page, context="initial page load", min_selects=0)
 
         steps = [
