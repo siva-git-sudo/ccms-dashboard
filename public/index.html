@@ -36,11 +36,18 @@
   header.top .ttl{min-width:0}
   header.top h1{font-size:18.5px;font-weight:600;margin:0;color:var(--ink);
     letter-spacing:-.014em;line-height:1.2}
+  /* The subtitle carries the currency of the data rather than the
+     department's full name -- which report you are looking at matters
+     less than how old it is, and the old green pill said the same thing
+     twice as far from the title. */
   header.top .org{margin:1px 0 0;font-size:13px;color:var(--ink-2);line-height:1.4;
     display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+  .stamp{color:var(--grn);font-weight:600;white-space:nowrap}
   .hmeta{margin-left:auto;display:flex;flex-direction:row;align-items:center;gap:9px}
-  .stamp{font-size:13px;color:var(--grn);background:var(--grn-bg);
-    border:1px solid #cde3d6;border-radius:999px;padding:3px 9px;white-space:nowrap}
+  /* Names the segment beside it: three bare durations do not say what
+     they re-base. */
+  .pslab{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;
+    font-weight:700;color:var(--ink-3)}
   /* Period control. Re-bases every delta on the page. All three
      baselines are on show as one segment rather than folded into a
      select -- there are only three, and a visible set of options is one
@@ -232,10 +239,14 @@
      .mcards below -- so no table CSS needs a mobile override. */
   @media (max-width:640px){
     /* The masthead is already compact at every width -- see header.top
-       above. All a phone changes is the side padding and dropping the
-       stamp and trend segment onto their own full-width row, since
-       there is no room for them beside the title. */
+       above. A phone changes the side padding, drops the trend row to
+       full width, and breaks the subtitle in two: clamped to one line
+       the date is the half that gets cut, and the date is the half
+       worth reading. */
     header.top .inner{padding:10px 14px 11px}
+    header.top .org{-webkit-line-clamp:2}
+    header.top .org .osep{display:none}
+    header.top .org .stamp{display:block}
     .hmeta{width:100%;margin-left:0;justify-content:space-between;gap:8px}
 
     .frow{grid-template-columns:1fr;row-gap:6px}
@@ -360,10 +371,11 @@
       </span>
       <div class="ttl">
         <h1>CCMS Dashboard</h1>
-        <p class="org">Karnataka Forest Department &middot; Forest, Ecology and Environment</p>
+        <p class="org">Karnataka Forest Department<span class="osep"> &middot; </span><span
+           class="stamp" id="stamp">Loading&hellip;</span></p>
       </div>
       <div class="hmeta">
-        <div class="stamp" id="stamp">Loading&hellip;</div>
+        <span class="pslab">Trend</span>
         <div class="pseg" id="pseg" role="group" aria-label="Trend period"></div>
       </div>
     </div>
@@ -390,7 +402,7 @@ var DATA=null, COURT='ALL', CT=null, CIRCLE='ALL', WING='ALL', UNIT='ALL', STAGE
 // first, then territorial, wildlife, social forestry.
 var UNIT_ORDER={circle:0, hq:0, division:1, wildlife:2, sf:3};
 var UNIT_KIND={hq:'Head office', circle:'Circle office', division:'Territorial',
-               wildlife:'Wildlife', sf:'Social forestry'};
+               wildlife:'Wildlife', sf:'Social forestry', wing:'Wing'};
 
 // ---- Mobile layout -------------------------------------------------
 // Below 640px the page swaps the wide table for tap-to-expand cards and
@@ -415,9 +427,15 @@ function lsSet(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
 function qa(v){ return JSON.stringify(v).replace(/"/g,'&quot;'); }
 // 'YYYY-MM-DD' -> 'DD/MM'. The scraper's dates are always ISO, so this
 // is a straight split rather than a real date parse.
+// Now that the subtitle carries the only date on the page, it spells the
+// month out: "12/08" costs nothing to widen and "08" is read as a month
+// or a day depending on where the reader learned to write dates.
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function ddmm(iso){
   var p=String(iso||'').split('-');
-  return p.length===3 ? (p[2]+'/'+p[1]) : (iso||'');
+  if(p.length!==3) return iso||'';
+  var m=MON[+p[1]-1];
+  return m ? (+p[2]+' '+m+' '+p[0]) : (p[2]+'/'+p[1]);
 }
 
 // Column headings, lightly trimmed so they wrap to two or three tidy
@@ -1529,6 +1547,65 @@ function mobCard(r,i,cols){
   }
   return card(h);
 }
+// At Aranya Bhavana the subdivision that matters is the wing, not the
+// department -- one HQ card holding 25 officers from eleven unrelated
+// wings is a card nobody can act on. So a row whose officers carry wing
+// names is split into one card per wing, which puts wings alongside
+// divisions at the same level the filter row already treats them as
+// equals. Rows without wings (PCCF HoFF, PCCF WL, and every territorial
+// division) pass through untouched.
+function mobRows(ROWS,cols){
+  // Baselines are summed per period the same way the metrics are, so a
+  // wing card's delta is computed against its own officers rather than
+  // inherited from the department. A wing whose officers are all new to
+  // the archive has no baseline and simply shows none.
+  function sumBase(us){
+    var out={};
+    ['d','w','m'].forEach(function(p){
+      var acc=null;
+      us.forEach(function(u){
+        var b=u.base_metrics&&u.base_metrics[p];
+        if(!b) return;
+        acc=acc||{};
+        for(var k in b) if(typeof b[k]==='number') acc[k]=(acc[k]||0)+b[k];
+      });
+      if(acc) out[p]=acc;
+    });
+    return out;
+  }
+  var out=[];
+  ROWS.forEach(function(r){
+    var us=r.users||[];
+    // Only when the wing filter is off -- once a wing is picked the
+    // department card is already down to that one wing's officers.
+    if(WING!=='ALL' || !us.some(function(u){return u.wing;})){ out.push(r); return; }
+    var by={},order=[];
+    us.forEach(function(u){
+      var w=u.wing||'Unassigned';
+      if(!by[w]){ by[w]=[]; order.push(w); }
+      by[w].push(u);
+    });
+    // A department that resolves to a single wing is not a department
+    // worth dissolving -- PCCF Head Of Forest Force has one officer
+    // tagged to a system bucket, and replacing the department's name
+    // with that bucket's name loses the only useful label on the card.
+    if(order.length<2){ out.push(r); return; }
+    order.forEach(function(w){
+      var mine=by[w],m={};
+      cols.forEach(function(c){
+        var s=0,any=false;
+        mine.forEach(function(u){
+          var v=u.metrics[c.key];
+          if(typeof v==='number'){ s+=v; any=true; }
+        });
+        if(any) m[c.key]=s;
+      });
+      out.push({name:w,group:'wing',code:r.code+'~'+w,users:mine,
+                metrics:m,base_metrics:sumBase(mine)});
+    });
+  });
+  return out;
+}
 function renderPanelMobile(ct,ROWS,cols){
   var cards=ROWS.map(function(r,i){return mobCard(r,i,cols);}).join('');
   return '<div class="panel"><div class="phead">'+
@@ -1559,13 +1636,15 @@ function renderPanel(){
   // Ordered by caseload -- by the selected stage if one is active, else
   // by total pending.
   var sortKey = STAGE==='ALL' ? 'total_cases_pending' : STAGE;
-  ROWS=ROWS.slice().sort(function(a,b){
-    return (b.metrics[sortKey]||0)-(a.metrics[sortKey]||0);
-  });
+  function byLoad(a,b){ return (b.metrics[sortKey]||0)-(a.metrics[sortKey]||0); }
   if(IS_MOBILE){
-    el.innerHTML=renderPanelMobile(ct,ROWS,cols);
+    // Split into wing cards first, then sort -- otherwise the wings of
+    // one department stay clumped where that department happened to
+    // rank, instead of taking their own place in the order.
+    el.innerHTML=renderPanelMobile(ct,mobRows(ROWS,cols).sort(byLoad),cols);
     return;
   }
+  ROWS=ROWS.slice().sort(byLoad);
   var body=ROWS.map(function(r,i){
     var n=r.users.length;
     // The name itself opens the user list -- no separate caret column.
@@ -1645,8 +1724,11 @@ async function loadData(FORCE){
     CT=(withData[0]||DATA.case_types[0]).key;
   renderPeriodSelect();
   renderKPIs(); renderFilters(); renderPanel();
+  // Date only. What it is compared against is the trend segment's job to
+  // say, and it says it per option. The two exceptions still earn their
+  // words: no baseline at all, and a stale offline copy.
   st.textContent='Data as on '+ddmm(DATA.latest_date)+
-    (DATA.previous_date?' · vs '+ddmm(DATA.previous_date):' · no prior snapshot yet')+
+    (DATA.previous_date?'':' · no prior snapshot yet')+
     (src==='data.js'?' · offline copy':'');
   if(IS_MOBILE && savedCircle===null) showOnboard(1);
 }
