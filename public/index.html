@@ -248,18 +248,17 @@
     .mcard:last-child{margin-bottom:0}
     .mcard .mh{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
     .mcard .mname{font-size:12.5px;font-weight:600;color:var(--ink)}
-    .mcard .mname.lk{color:var(--acc);text-decoration:underline dotted;
-      text-decoration-thickness:1px;text-underline-offset:3px}
     .mcard .mtot{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;
       white-space:nowrap}
     .mcard .mmeta{display:flex;align-items:center;justify-content:space-between;
       gap:8px;font-size:10.5px;color:var(--ink-2);margin-top:2px}
-    /* Metrics toggle. A collapsed card is name and case number only, so
-       the whole roster is scannable; the phase blocks are one tap away
-       and only one card holds them open at a time. */
-    .mcard .mmet{flex:none;font-size:10px;color:var(--acc);cursor:pointer;
-      white-space:nowrap}
-    .mcard .mmet i{font-style:normal;font-size:9px;margin-left:2px}
+    /* The whole card is the tap target -- a collapsed card is a name and
+       a case number, and opening it brings the metrics and the roster
+       together. The chevron is the only affordance it needs. */
+    .mcard{cursor:pointer}
+    .mcard.on{border-color:var(--forest-2)}
+    .mcard .mchev{flex:none;font-size:9px;color:var(--ink-3)}
+    .mcard.on .mchev{color:var(--forest-2)}
     .mcard .mrecv{font-size:9.5px;color:var(--ink-3);margin-top:2px}
     .mcrumb{font-size:10px;color:var(--ink-3);margin-bottom:7px}
     .mcrumb .cur{color:var(--ink);font-weight:600}
@@ -304,9 +303,9 @@
     .md.decrease{color:#1d8a68}
     .md.same{color:var(--ink-3)}
 
-    .mshow{display:flex;align-items:center;gap:4px;margin-top:9px;
-      font-size:10.5px;color:var(--acc);cursor:pointer}
-    .museres{margin-top:7px;padding-top:2px}
+    .museres{margin-top:9px;padding-top:7px;border-top:1px solid var(--line)}
+    .museres .usl{font-size:8.5px;font-weight:700;text-transform:uppercase;
+      letter-spacing:.045em;color:var(--ink-2);margin-bottom:2px}
     .muser{border-left:2px solid var(--line-2);padding:7px 0 7px 9px;
       margin-top:6px;cursor:pointer}
     .muser:hover{border-left-color:var(--acc)}
@@ -1425,7 +1424,13 @@ function mGroupsHTML(rec,cols){
   }
   return out;
 }
-function mCardState(i){ return MCARD[i]||(MCARD[i]={open:false,drill:null}); }
+// Card state. Two taps on one card -- one for metrics, one for the
+// roster -- was a choice nobody asked to make, so there is one: tapping
+// a card opens it, and open means metrics with the roster beneath.
+// MCARD survives only as the filter-reset signal; when it is cleared the
+// open card is cleared with it.
+function mOpenIdx(){ return MCARD.open===undefined?null:MCARD.open; }
+function mDrillIdx(){ return MCARD.drill===undefined?null:MCARD.drill; }
 // renderPanel() rewrites the whole card list, so a card that was tapped
 // near the bottom of a long roster ends up somewhere else on the page --
 // the officer's data renders above the viewport and reads as nothing
@@ -1445,76 +1450,72 @@ function mAnchor(i){
 // neighbours. Cleared whenever the card's contents change underneath it
 // -- drilling into an officer opens a different record in the same slot,
 // and that record starts collapsed like everything else.
-var MET_OPEN=null;
-function mToggleMetrics(i){
-  MET_OPEN=(MET_OPEN===i)?null:i; renderPanel(); mAnchor(i);
-}
-function mToggleUsers(i){
-  var st=mCardState(i); st.open=!st.open; st.drill=null;
-  MET_OPEN=null; renderPanel(); mAnchor(i);
+// One open card at a time: the expansion is tall, and two of them open
+// means neither can be read against its neighbours.
+function mTapCard(i){
+  if(mOpenIdx()===i){ MCARD={}; } else { MCARD={open:i,drill:null}; }
+  renderPanel(); mAnchor(i);
 }
 function mDrillUser(i,ui){
-  var st=mCardState(i); st.open=true; st.drill=ui;
-  MET_OPEN=null; renderPanel(); mAnchor(i);
+  MCARD={open:i,drill:ui}; renderPanel(); mAnchor(i);
 }
 function mDrillBack(i){
-  var st=mCardState(i); st.drill=null;
-  MET_OPEN=null; renderPanel(); mAnchor(i);
+  MCARD={open:i,drill:null}; renderPanel(); mAnchor(i);
 }
-// One division's card -- or, if a user has been tapped, that user's
-// card in its place with a breadcrumb and a way back. The division's
-// own users list stays open underneath so drilling into one officer
-// doesn't lose the rest of the roster.
+// One division's card. Collapsed it is a name and a case number; open it
+// carries the phase blocks and the roster beneath them, so the officers
+// can be read against the shape of the division they sit in. Tapping an
+// officer swaps the card for that officer's own, with a breadcrumb back.
 function mobCard(r,i,cols){
-  var st=mCardState(i);
+  var open=(mOpenIdx()===i), drill=open?mDrillIdx():null;
   var n=r.users.length;
-  var met=(MET_OPEN===i);
-  // The meta line doubles as the metrics toggle: everything below it --
-  // the received figure and the phase blocks -- is what folds away.
-  function metaRow(txt){
-    return '<div class="mmeta"><span>'+txt+'</span>'+
-      '<span class="mmet" onclick="mToggleMetrics('+i+')">metrics<i>'+
-      (met?'&#9652;':'&#9662;')+'</i></span></div>';
-  }
+  // Inner controls sit inside the card's own tap target, so each one
+  // has to stop the tap reaching the card and closing it.
+  function stop(call){ return 'onclick="event.stopPropagation();'+call+'"'; }
   function metrics(rec){
-    if(!met) return '';
     var h='';
     if(typeof rec.metrics.cases_received_as_on_yesterday==='number')
       h+='<div class="mrecv">Received as on yesterday: '+
          rec.metrics.cases_received_as_on_yesterday+'</div>';
     return h+mGroupsHTML(rec,cols);
   }
+  function card(inner){
+    return '<div class="mcard'+(open?' on':'')+'" id="mc'+i+'" '+
+      stop('mTapCard('+i+')')+'>'+inner+'</div>';
+  }
 
-  if(st.drill!=null && r.users[st.drill]){
-    var u=r.users[st.drill];
-    var h='<div class="mcrumb"><span onclick="mDrillBack('+i+')" style="text-decoration:underline;cursor:pointer">'+
-      esc(r.name)+'</span> &rsaquo; <span class="cur">'+esc(u.post)+'</span></div>'+
+  if(drill!=null && r.users[drill]){
+    var u=r.users[drill];
+    return card('<div class="mcrumb"><span '+stop('mDrillBack('+i+')')+
+      ' style="text-decoration:underline;cursor:pointer">'+esc(r.name)+
+      '</span> &rsaquo; <span class="cur">'+esc(u.post)+'</span></div>'+
       '<div class="mh"><span class="mname">'+esc(u.post)+'</span>'+
       '<span class="mtot">'+num(u.metrics.total_cases_pending)+'</span></div>'+
-      metaRow(esc(u.section||'')+recDeltaHTML(u))+
-      metrics(u);
-    h+='<div class="mback" onclick="mDrillBack('+i+')">&larr;&nbsp;back to '+esc(r.name)+'</div>';
-    return '<div class="mcard" id="mc'+i+'">'+h+'</div>';
+      '<div class="mmeta"><span>'+esc(u.section||'')+recDeltaHTML(u)+'</span></div>'+
+      metrics(u)+
+      '<div class="mback" '+stop('mDrillBack('+i+')')+'>&larr;&nbsp;back to '+
+      esc(r.name)+'</div>');
   }
-  var h='<div class="mh"><span class="mname'+(n?' lk':'')+'"'+
-    (n?' onclick="mToggleUsers('+i+')"':'')+'>'+esc(r.name)+'</span>'+
+
+  var h='<div class="mh"><span class="mname">'+esc(r.name)+'</span>'+
     '<span class="mtot">'+num(r.metrics.total_cases_pending)+'</span></div>'+
-    metaRow(esc(UNIT_KIND[r.group]||r.group)+
-      (n?' &middot; '+n+' user'+(n===1?'':'s'):'')+recDeltaHTML(r))+
-    metrics(r);
-  if(n){
-    h+='<div class="mshow" onclick="mToggleUsers('+i+')">'+
-      '<span>'+(st.open?'hide':'show')+' '+n+' user'+(n===1?'':'s')+'</span></div>';
-    if(st.open){
-      h+='<div class="museres">'+r.users.map(function(u,ui){
-        return '<div class="muser" onclick="mDrillUser('+i+','+ui+')">'+
-          '<div class="mh"><span class="mname" style="font-size:11.5px">'+esc(u.post)+'</span>'+
-          '<span class="mtot" style="font-size:12.5px">'+num(u.metrics.total_cases_pending)+'</span></div>'+
-          '<div class="mmeta" style="font-size:9.5px">'+esc(u.section||'')+recDeltaHTML(u)+'</div></div>';
-      }).join('')+'</div>';
+    '<div class="mmeta"><span>'+esc(UNIT_KIND[r.group]||r.group)+
+      (n?' &middot; '+n+' user'+(n===1?'':'s'):'')+recDeltaHTML(r)+'</span>'+
+      '<span class="mchev">'+(open?'&#9652;':'&#9662;')+'</span></div>';
+  if(open){
+    h+=metrics(r);
+    if(n){
+      h+='<div class="museres"><div class="usl">'+n+' user'+(n===1?'':'s')+'</div>'+
+        r.users.map(function(u,ui){
+          return '<div class="muser" '+stop('mDrillUser('+i+','+ui+')')+'>'+
+            '<div class="mh"><span class="mname" style="font-size:11.5px">'+esc(u.post)+'</span>'+
+            '<span class="mtot" style="font-size:12.5px">'+num(u.metrics.total_cases_pending)+'</span></div>'+
+            '<div class="mmeta" style="font-size:9.5px"><span>'+esc(u.section||'')+
+            recDeltaHTML(u)+'</span></div></div>';
+        }).join('')+'</div>';
     }
   }
-  return '<div class="mcard" id="mc'+i+'">'+h+'</div>';
+  return card(h);
 }
 function renderPanelMobile(ct,ROWS,cols){
   var cards=ROWS.map(function(r,i){return mobCard(r,i,cols);}).join('');
