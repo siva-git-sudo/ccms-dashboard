@@ -24,40 +24,35 @@
      first thing the eye lands on. */
   header.top{background:var(--panel);border-top:3px solid var(--forest);
     border-bottom:1px solid var(--line)}
-  header.top .inner{max-width:1640px;margin:0 auto;padding:16px 22px 17px}
-  header.top .brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-  header.top .mark{flex:none;width:34px;height:34px;border-radius:9px;
+  /* One header at both widths: the compact treatment the phone needed
+     turned out to be the right one everywhere -- the masthead is
+     orientation, not content, and the KPI strip should be the first
+     thing the eye lands on. Only the horizontal padding still varies. */
+  header.top .inner{max-width:1640px;margin:0 auto;padding:10px 22px 11px}
+  header.top .brand{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  header.top .mark{flex:none;width:26px;height:26px;border-radius:7px;
     background:var(--forest);display:flex;align-items:center;justify-content:center}
+  header.top .mark svg{width:15px;height:15px}
   header.top .ttl{min-width:0}
-  header.top h1{font-size:18.5px;font-weight:600;margin:0;color:var(--ink);
-    letter-spacing:-.014em;line-height:1.25}
-  header.top .org{margin:2px 0 0;font-size:12px;color:var(--ink-2);line-height:1.4}
-  /* Cap the measure -- the scope line is a long sentence and full-bleed
-     lines at 1640px are genuinely hard to track back from. */
-  header.top .sub{position:relative;margin:11px 0 0;font-size:11.5px;color:var(--ink-3);
-    line-height:1.5;max-width:1020px}
-  .hmeta{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:7px}
-  .stamp{font-size:11.5px;color:var(--grn);background:var(--grn-bg);
-    border:1px solid #cde3d6;border-radius:999px;padding:5px 12px;white-space:nowrap}
-  /* Period selector. Re-bases every delta on the page; deliberately a
-     plain select rather than another control to learn. */
-  .periodsel{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;
-    color:var(--ink-3)}
-  .periodsel > span{text-transform:uppercase;letter-spacing:.05em;font-weight:700;
-    font-size:9.5px}
-  .periodsel select{font:inherit;font-size:11.5px;color:var(--ink-2);background:#fff;
-    border:1px solid var(--line-2);border-radius:999px;padding:4px 10px;cursor:pointer}
-  .periodsel select:hover{border-color:var(--forest-2);color:var(--forest-2)}
-  .periodsel select:disabled{opacity:.55;cursor:default}
-  /* Mobile-only twin of the period select: the same three baselines laid
-     out as one pill segment, so the choice costs a tap instead of a menu.
-     Hidden on desktop, where the labelled select carries more detail. */
-  .pseg{display:none;align-items:center;border:1px solid var(--line-2);
+  header.top h1{font-size:15px;font-weight:600;margin:0;color:var(--ink);
+    letter-spacing:-.014em;line-height:1.2}
+  header.top .org{margin:1px 0 0;font-size:10.5px;color:var(--ink-2);line-height:1.4;
+    display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+  .hmeta{margin-left:auto;display:flex;flex-direction:row;align-items:center;gap:9px}
+  .stamp{font-size:10.5px;color:var(--grn);background:var(--grn-bg);
+    border:1px solid #cde3d6;border-radius:999px;padding:3px 9px;white-space:nowrap}
+  /* Period control. Re-bases every delta on the page. All three
+     baselines are on show as one segment rather than folded into a
+     select -- there are only three, and a visible set of options is one
+     less control to learn. The full label ("weekly - vs 5d ago") rides
+     along as each button's title and aria-label. */
+  .pseg{display:inline-flex;align-items:center;border:1px solid var(--line-2);
     border-radius:999px;overflow:hidden;background:#fff}
   .pseg button{font:inherit;font-size:10.5px;font-weight:600;color:var(--ink-3);
     background:none;border:0;border-left:1px solid var(--line-2);
     padding:4px 11px;cursor:pointer;white-space:nowrap;line-height:1.5}
   .pseg button:first-child{border-left:0}
+  .pseg button:hover:not(:disabled){color:var(--forest-2)}
   .pseg button[aria-pressed="true"]{background:var(--grn-bg);color:var(--forest-2)}
   .pseg button:disabled{opacity:.42;cursor:default}
 
@@ -224,26 +219,12 @@
      wide table is replaced entirely by tap-to-expand cards -- see
      .mcards below -- so no table CSS needs a mobile override. */
   @media (max-width:640px){
-    /* Masthead on a phone. Full-size it eats ~200px -- a third of the
-       viewport -- before a single number is visible. Shrink the mark and
-       title, drop the meta row to one strip carrying the stamp and a
-       three-way trend segment, and drop the scope sentence entirely --
-       it is orienting prose, not something a phone user reads twice. */
+    /* The masthead is already compact at every width -- see header.top
+       above. All a phone changes is the side padding and dropping the
+       stamp and trend segment onto their own full-width row, since
+       there is no room for them beside the title. */
     header.top .inner{padding:10px 14px 11px}
-    header.top .brand{gap:9px}
-    header.top .mark{width:26px;height:26px;border-radius:7px}
-    header.top .mark svg{width:15px;height:15px}
-    header.top h1{font-size:15px;line-height:1.2}
-    header.top .org{font-size:10.5px;margin-top:1px;
-      display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
-    .hmeta{width:100%;margin-left:0;flex-direction:row;align-items:center;
-      justify-content:space-between;gap:8px}
-    .stamp{font-size:10.5px;padding:3px 9px}
-    /* The select is a control to learn and hides its own options; on a
-       phone there are only three, so show them all as one segment. */
-    .periodsel{display:none}
-    .pseg{display:inline-flex}
-    header.top .sub{display:none}
+    .hmeta{width:100%;margin-left:0;justify-content:space-between;gap:8px}
 
     .frow{grid-template-columns:1fr;row-gap:6px}
     .flabel{padding-top:0}
@@ -365,14 +346,9 @@
       </div>
       <div class="hmeta">
         <div class="stamp" id="stamp">Loading&hellip;</div>
-        <label class="periodsel">
-          <span>Trend</span>
-          <select id="period" onchange="setPeriod(this.value)"></select>
-        </label>
         <div class="pseg" id="pseg" role="group" aria-label="Trend period"></div>
       </div>
     </div>
-    <p class="sub">Statewide &mdash; Aranya Bhavana HQ and all 13 circles (territorial, wildlife and social forestry divisions), before the High Court of Karnataka and the Karnataka State Administrative Tribunal.</p>
   </div>
 </header>
 
@@ -904,21 +880,12 @@ function periodLabel(k){
   if(!b.date) return (b.label||k)+' (not enough data)';
   return (b.label||k)+' \u00b7 vs '+b.span+'d ago';
 }
-// Short labels for the mobile segment. The desktop select spells out the
-// real span ("weekly - vs 5d ago"); the segment has no room, so the full
-// label rides along as the button's title/aria-label instead.
+// Button labels. The segment has no room for the real span, so the full
+// label ("weekly - vs 5d ago") rides along as title and aria-label.
 var PSEG_LBL={d:'Daily',w:'7 days',m:'30 days'};
 function renderPeriodSelect(){
   var keys=['d','w','m'];
   if(!periodOK(PERIOD)) PERIOD='d';
-  var sel=document.getElementById('period');
-  if(sel){
-    sel.innerHTML=keys.map(function(k){
-      return '<option value="'+k+'"'+(k===PERIOD?' selected':'')+
-             (periodOK(k)?'':' disabled')+'>'+esc(periodLabel(k))+'</option>';
-    }).join('');
-    sel.disabled=!periodOK('d');
-  }
   var seg=document.getElementById('pseg');
   if(seg){
     seg.innerHTML=keys.map(function(k){
