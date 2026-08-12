@@ -120,6 +120,12 @@
     "circle": "Ballari Circle"
   },
   {
+    "code": "D095",
+    "name": "Vijayanagara Division",
+    "group": "division",
+    "circle": "Ballari Circle"
+  },
+  {
     "code": "D020",
     "name": "Ballari Social Forestry Division",
     "group": "sf",

@@ -289,6 +289,7 @@ def build() -> dict:
 
     latest = snapshots[-1]
     previous = snapshots[-2] if len(snapshots) >= 2 else None
+    baselines = _pick_baselines(snapshots)
     circle_index, circle_order, excluded = load_circle_index()
     wing_index, wing_order, wing_depts = load_wing_index()
     divisions = [d for d in divisions if _norm(d["name"]) not in excluded]
@@ -335,11 +336,72 @@ def build() -> dict:
         "divisions": out_divisions,
         "circles": circle_order + [OTHER_CIRCLE],
         "wings": wing_order,
-        "case_types": _build_case_types(latest, previous, divisions),
+        "case_types": _build_case_types(latest, previous, divisions, baselines),
+        # What each period actually compares against. The dropdown labels
+        # itself from this, so it can never offer a period the data cannot
+        # answer, or claim "weekly" over a two-day gap without saying so.
+        "baselines": {
+            key: (
+                {
+                    "date": baselines[key].get("date"),
+                    "span": _days_between(
+                        baselines[key].get("date"), latest.get("date")
+                    ),
+                    "label": label,
+                }
+                if baselines.get(key) else {"label": label, "date": None, "span": None}
+            )
+            for key, label, _d, _m in BASELINE_PERIODS
+        },
     }
 
     _write_outputs(payload)
     return payload
+
+
+#: Comparison periods offered by the dashboard's period dropdown, and the
+#: minimum age a snapshot must have to serve as that period's baseline.
+#: Weekly falls back to the oldest snapshot held so it says something from
+#: day two; monthly refuses to answer below 28 days, because a "monthly"
+#: change measured over nine days would be actively misleading.
+BASELINE_PERIODS = [
+    ("d", "Daily", 1, 1),
+    ("w", "Weekly", 7, 1),
+    ("m", "Monthly", 30, 28),
+]
+
+
+def _days_between(a: str, b: str) -> int:
+    fmt = "%Y-%m-%d"
+    return (datetime.strptime(b, fmt) - datetime.strptime(a, fmt)).days
+
+
+def _pick_baselines(snapshots: list[dict]) -> dict:
+    """Choose one baseline snapshot per period.
+
+    Every delta on the page is differenced against one of these, at row
+    and officer granularity, so the period dropdown can re-base the whole
+    dashboard without another round trip.
+    """
+    out = {}
+    if len(snapshots) < 2:
+        return {key: None for key, _, _, _ in BASELINE_PERIODS}
+
+    latest = snapshots[-1]
+    latest_date = latest.get("date") or ""
+    for key, _label, want_days, min_span in BASELINE_PERIODS:
+        pick = None
+        for snap in snapshots[:-1]:
+            date = snap.get("date")
+            if not date or not latest_date:
+                continue
+            if _days_between(date, latest_date) >= want_days:
+                pick = snap
+        if pick is None:
+            pick = snapshots[-2]  # nothing that old -- use the newest older one
+        span = _days_between(pick.get("date", latest_date), latest_date)
+        out[key] = pick if span >= min_span else None
+    return out
 
 
 def _metrics_of(payload: dict) -> dict:
@@ -350,6 +412,17 @@ def _metrics_of(payload: dict) -> dict:
     return {
         k: v
         for k, v in src.items()
+        if isinstance(v, (int, float)) and not k.startswith("_")
+    }
+
+
+def _officer_metrics(officer: dict | None) -> dict:
+    """Same, for an officer row, which carries its numbers flat."""
+    if not officer:
+        return {}
+    return {
+        k: v
+        for k, v in officer.items()
         if isinstance(v, (int, float)) and not k.startswith("_")
     }
 
@@ -456,7 +529,8 @@ def _apply_scraped_headers(columns: list[dict], scraped: list[str] | None) -> li
     return out
 
 
-def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]) -> list[dict]:
+def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict],
+                      baselines: dict | None = None) -> list[dict]:
     """Build one table per case type, each with the columns that report
     actually has -- rather than merging reports whose column layouts
     differ (Writ Petition has 17 columns, Civil Contempt 20, Writ Appeal
@@ -469,6 +543,12 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
     meta = latest.get("case_types") or []
     latest_by_ct = latest.get("by_case_type") or {}
     prev_by_ct = (previous or {}).get("by_case_type") or {}
+    # One by_case_type map per period, so a row can be differenced against
+    # any of them without re-reading the snapshots.
+    base_by_ct = {
+        key: ((snap or {}).get("by_case_type") or {}) if snap else None
+        for key, snap in (baselines or {}).items()
+    }
 
     # Column headings live in their own file (written by
     # `scrape_ccms.py --headers`) so that rebuilding a snapshot can never
@@ -510,6 +590,11 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
         flat = _flatten_report_headers(hs.get("headers"), hs.get("followingRows"))
         columns = _apply_scraped_headers(columns, flat or hs.get("headers"))
 
+        base_rows = {
+            k: ((v.get(key) or {}) if v is not None else None)
+            for k, v in base_by_ct.items()
+        }
+
         rows = []
         for d in divisions:
             code = d["code"]
@@ -536,6 +621,13 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
                 (u.get("section"), u.get("post")): u
                 for u in (prev_rows.get(code, {}) or {}).get("officers", [])
             }
+            prev_users_by_period = {
+                pk: {
+                    (u.get("section"), u.get("post")): u
+                    for u in ((br.get(code) or {}).get("officers") or [])
+                }
+                for pk, br in base_rows.items() if br is not None
+            }
             for u in payload.get("officers", []):
                 u_metrics = {
                     k: v for k, v in u.items()
@@ -553,6 +645,21 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
                         u.get("section", ""), wing_index, _norm(d["name"]) in wing_depts
                     ),
                     "metrics": u_metrics,
+                    # One baseline per period, in full rather than as a
+                    # single precomputed delta: a KPI on "LCO pending"
+                    # filtered to one wing has to sum the baseline the same
+                    # way it sums today, which a delta on one column cannot
+                    # do. This is what lets the period dropdown re-base
+                    # every figure on the page.
+                    "base_metrics": {
+                        pk: _officer_metrics(
+                            (prev_users_by_period.get(pk) or {}).get(
+                                (u.get("section"), u.get("post"))
+                            )
+                        )
+                        for pk in base_rows
+                        if base_rows[pk] is not None
+                    },
                     "delta": u_delta,
                     "direction": u_direction,
                 })
@@ -564,6 +671,10 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
                 "group": d["group"],
                 "circle": circle_index.get(_norm(d["name"]), OTHER_CIRCLE),
                 "metrics": metrics,
+                "base_metrics": {
+                    pk: _metrics_of((br or {}).get(code))
+                    for pk, br in base_rows.items() if br is not None
+                },
                 "delta": delta,
                 "direction": direction,
                 "users": users,

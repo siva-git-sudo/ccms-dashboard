@@ -36,8 +36,19 @@
      lines at 1640px are genuinely hard to track back from. */
   header.top .sub{margin:11px 0 0;font-size:11.5px;color:var(--ink-3);
     line-height:1.5;max-width:1020px}
-  .stamp{margin-left:auto;font-size:11.5px;color:var(--grn);background:var(--grn-bg);
+  .hmeta{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+  .stamp{font-size:11.5px;color:var(--grn);background:var(--grn-bg);
     border:1px solid #cde3d6;border-radius:999px;padding:5px 12px;white-space:nowrap}
+  /* Period selector. Re-bases every delta on the page; deliberately a
+     plain select rather than another control to learn. */
+  .periodsel{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;
+    color:var(--ink-3)}
+  .periodsel > span{text-transform:uppercase;letter-spacing:.05em;font-weight:700;
+    font-size:9.5px}
+  .periodsel select{font:inherit;font-size:11.5px;color:var(--ink-2);background:#fff;
+    border:1px solid var(--line-2);border-radius:999px;padding:4px 10px;cursor:pointer}
+  .periodsel select:hover{border-color:var(--forest-2);color:var(--forest-2)}
+  .periodsel select:disabled{opacity:.55;cursor:default}
 
   /* Seven KPIs, one row. Fixed 7-up rather than auto-fit: the set is a
      single glance-able strip, and a card wrapping onto its own line reads
@@ -56,8 +67,17 @@
   /* Reserve two lines for the label so every value sits on one baseline. */
   .kpi .k{font-size:9.5px;text-transform:uppercase;letter-spacing:.045em;
     color:var(--c,var(--ink-3));font-weight:700;line-height:1.32;min-height:2.64em}
-  .kpi .v{font-size:23px;font-weight:600;margin-top:auto;padding-top:6px;line-height:1;
+  .kpi .vrow{display:flex;align-items:baseline;gap:7px;margin-top:auto;padding-top:6px;
+    flex-wrap:wrap}
+  .kpi .v{font-size:23px;font-weight:600;line-height:1;
     font-variant-numeric:tabular-nums;color:var(--c,var(--ink))}
+  /* The delta rides on a white chip so it stays legible on the tinted
+     card face without competing with the figure itself. */
+  .kpi .kd{font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:5px;
+    background:rgba(255,255,255,.78);font-variant-numeric:tabular-nums;line-height:1.2}
+  .kpi .kd.increase{color:var(--grn)}
+  .kpi .kd.decrease{color:var(--red)}
+  .kpi .kd.same{color:var(--ink-3)}
   .kpi .d{font-size:10.5px;margin-top:4px;color:var(--ink-2);opacity:.85;line-height:1.35}
   .kpi.accent{border-color:var(--line-2)}
   .kpi.accent .v{color:var(--forest-2)}
@@ -92,6 +112,14 @@
   .chip.on .n{background:rgba(255,255,255,.24);color:#fff}
   .chip.zero{opacity:.45}
   .chip.zero.on{opacity:1}
+  /* Chip delta. Sits after the count, deliberately smaller than it: the
+     count is what you filter on, the delta is context. Absent entirely
+     when there is no change, so a busy row stays readable. */
+  .chip .cd{font-size:9.5px;font-weight:700;margin-left:-1px;
+    font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .chip .cd.increase{color:var(--grn)}
+  .chip .cd.decrease{color:var(--red)}
+  .chip.on .cd{color:#fff;opacity:.9}
 
   .frow.f-circle{--c-bg:#eaf1fa; --c-bd:#c2d6ee; --c-fg:#16559b}  /* blue    */
   .frow.f-unit  {--c-bg:#e9f4ec; --c-bd:#bfdfc9; --c-fg:#1d6b40}  /* green   */
@@ -195,7 +223,13 @@
         <h1>CCMS court case dashboard</h1>
         <p class="org">Karnataka Forest Department &middot; Forest, Ecology and Environment</p>
       </div>
-      <div class="stamp" id="stamp">Loading&hellip;</div>
+      <div class="hmeta">
+        <div class="stamp" id="stamp">Loading&hellip;</div>
+        <label class="periodsel">
+          <span>Trend</span>
+          <select id="period" onchange="setPeriod(this.value)"></select>
+        </label>
+      </div>
     </div>
     <p class="sub">Statewide &mdash; Aranya Bhavana HQ and all 13 circles (territorial, wildlife and social forestry divisions), before the High Court of Karnataka and the Karnataka State Administrative Tribunal.</p>
   </div>
@@ -260,6 +294,23 @@ var STAGES=[
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){
   return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function arw(d){return d==='increase'?'&#9650;':d==='decrease'?'&#9660;':'';}
+// Delta for one row or officer under the active period. r.delta is only
+// ever the daily figure, so it is not used for display -- differencing
+// against base_metrics[PERIOD] is what makes the table follow the
+// dropdown along with everything else.
+function recDelta(rec){
+  var b=baseOf(rec);
+  if(!b) return {dir:'no_data',delta:null};
+  var now=(rec.metrics||{}).total_cases_pending||0;
+  var was=b.total_cases_pending;
+  if(was===undefined||was===null) return {dir:'baseline',delta:null};
+  var d=now-was;
+  return {dir:d>0?'increase':(d<0?'decrease':'same'),delta:d};
+}
+function recDeltaHTML(rec){
+  var x=recDelta(rec);
+  return dHTML(x.dir,x.delta);
+}
 function dHTML(dir,delta){
   if(dir==='increase'||dir==='decrease')
     return '<span class="d '+dir+'">'+arw(dir)+(delta>0?'+':'')+delta+'</span>';
@@ -347,7 +398,8 @@ function shortWing(name){
 // instead of returning a single number, so one pass fills a whole row of
 // chips.
 function tally(ov,by){
-  var o={court:COURT,circle:CIRCLE,wing:WING,unit:UNIT,stage:STAGE,ct:null,metric:null};
+  var o={court:COURT,circle:CIRCLE,wing:WING,unit:UNIT,stage:STAGE,ct:null,metric:null,
+         prev:false};
   for(var k in (ov||{})) o[k]=ov[k];
   var single=0,bucket={},meta={};
 
@@ -374,26 +426,33 @@ function tally(ov,by){
           var m=u.metrics;
           if(o.stage!=='ALL' && !(m[o.stage]>0)) return;
           var b=bucket[u.wing]||(bucket[u.wing]={total:0,users:0});
-          b.total+=m[MK]||0; b.users++;
+          b.total+=(o.prev?(baseOf(u)||{}):m)[MK]||0; b.users++;
         });
         return;
       }
 
-      var m=r.metrics,n=(r.users||[]).length;
+      // pm shadows m throughout: the previous snapshot has to be summed
+      // by exactly the same path as today, or a delta at wing level would
+      // be today's wing against yesterday's whole division.
+      var m=r.metrics,pm=baseOf(r)||{},n=(r.users||[]).length;
       if(o.wing!=='ALL'){
         var us=(r.users||[]).filter(function(u){return u.wing===o.wing;});
         if(!us.length) return;
-        m={}; n=us.length;
+        m={}; pm={}; n=us.length;
         us.forEach(function(u){
           for(var k2 in u.metrics){
             if(typeof u.metrics[k2]==='number') m[k2]=(m[k2]||0)+u.metrics[k2];
+          }
+          var upm=baseOf(u)||{};
+          for(var k3 in upm){
+            if(typeof upm[k3]==='number') pm[k3]=(pm[k3]||0)+upm[k3];
           }
         });
       }
 
       if(by==='stage'){
         STAGES.forEach(function(st){
-          var v=m[st.key];
+          var v=(o.prev?pm:m)[st.key];
           if(typeof v!=='number') return;
           var b=bucket[st.key]||(bucket[st.key]={total:0,units:0});
           b.total+=v; if(v>0) b.units++;
@@ -402,7 +461,7 @@ function tally(ov,by){
       }
 
       if(o.stage!=='ALL' && !(m[o.stage]>0)) return;
-      var v=m[MK]||0;
+      var v=(o.prev?pm:m)[MK]||0;
       if(by==='circle'){
         (bucket[r.circle]||(bucket[r.circle]={total:0})).total+=v;
       }else if(by==='unit'){
@@ -452,6 +511,37 @@ function circleList(){ return tally({circle:'ALL',wing:'ALL',unit:'ALL'},'circle
 function wingList(){   return tally({wing:'ALL',unit:'ALL'},'wing'); }
 function unitList(){   return tally({unit:'ALL',wing:'ALL'},'unit'); }
 function stageList(){  return tally({stage:'ALL'},'stage'); }
+
+// --- deltas -------------------------------------------------------------
+// Every figure on the page can be differenced because the builder emits
+// one baseline per period on every row and officer. That matters:
+// a precomputed delta on one column could not answer "LCO pending, this
+// wing, versus yesterday" -- yesterday has to be re-summed down the same
+// filter path, which is what passing prev:true through tally() does.
+function hasPrev(){ return periodOK(PERIOD); }
+function withPrev(ov){
+  var o={}; for(var k in (ov||{})) o[k]=ov[k];
+  o.prev=true; return o;
+}
+// null means "nothing to compare against", which is not the same as 0.
+function dlt(ov){
+  if(!hasPrev()) return null;
+  return tally(ov)-tally(withPrev(ov));
+}
+// Bucketed version: returns {key: delta} so a whole row of chips costs
+// one extra pass rather than one per chip.
+function dltBy(ov,by,keyOf){
+  if(!hasPrev()) return null;
+  var was={};
+  tally(withPrev(ov),by).forEach(function(b){ was[keyOf(b)]=b.total; });
+  return was;
+}
+function dHTMLsmall(delta){
+  if(delta===null||delta===undefined||delta===0) return '';
+  var dir=delta>0?'increase':'decrease';
+  return '<span class="cd '+dir+'">'+(delta>0?'&#9650;':'&#9660;')+
+         Math.abs(delta)+'</span>';
+}
 // Trim the repeated boilerplate so the chips stay readable.
 function shortUnit(name){
   return name.replace(/ Division$/,'').replace(/^Forest Office /,'')
@@ -563,46 +653,111 @@ function renderKPIs(){
   // four cards is noise, and leaving the words there would be a lie.
   var forum=(COURT==='ALL')?' (all courts)':'';
 
+  // Deltas against the previous snapshot. Contempt spans two case types,
+  // so its delta is the sum of theirs rather than a single tally.
+  var dContempt=null;
+  if(hasPrev()){
+    dContempt=0;
+    contemptTypes().forEach(function(ct){ dContempt+=dlt({ct:ct.key})||0; });
+  }
+
   var cards=[
-    {c:'k1',k:'Total cases',v:kn(totalPending),d:scope,
+    {c:'k1',k:'Total cases',v:kn(totalPending),d:scope,dv:dlt({}),
      t:'Total cases pending, summed across every report in scope'},
     {c:'k2',k:'High Court',v:kn(hcTotal),d:share(hcTotal),
+     dv:(hcName&&(COURT==='ALL'||COURT===hcName))?dlt({court:hcName}):null,
      t:'Writ Petition, Writ Appeal, Civil Contempt Petition and S-KSAT'},
     {c:'k3',k:'KSAT',v:kn(ksTotal),d:share(ksTotal),
+     dv:(ksName&&(COURT==='ALL'||COURT===ksName))?dlt({court:ksName}):null,
      t:'Original, Contempt, Miscellaneous and Review Applications'},
-    {c:'k4',k:'Contempt'+forum,v:kn(contempt),d:share(contempt),
+    {c:'k4',k:'Contempt'+forum,v:kn(contempt),d:share(contempt),dv:dContempt,
      t:'Civil Contempt Petition (High Court) '+kn(cHC)+
        ' + Contempt Application (KSAT) '+kn(cKS)},
     {c:'k5',k:'No action'+forum,v:kn(noAction),d:share(noAction),
+     dv:dlt({metric:KPI_COL.noAction}),
      t:'Cases with no action taken yet -- the first stage of the pipeline'},
-    {c:'k6',k:'LCO pending'+forum,v:kn(lco),
+    {c:'k6',k:'LCO pending'+forum,v:kn(lco),dv:dlt({metric:KPI_COL.lco}),
      d:lcoCov.have===lcoCov.of?share(lco):share(lco)+' · '+lcoCov.have+'/'+lcoCov.of+' reports',
      t:'LCO Proposal Stage (pending from department). Writ Appeal and '+
        'S-KSAT do not report this column, so they contribute nothing.'},
     {c:'k7',k:'Final order compliance'+forum,v:kn(finalOrd),d:share(finalOrd),
+     dv:dlt({metric:KPI_COL.finalOrd}),
      t:'Final order compliance pending -- decided cases awaiting departmental compliance'}
   ];
   void active; void users; void divCount; void groupTotal; void groupUnits;
 
+  var since=DATA.previous_date?(' vs '+DATA.previous_date):'';
   document.getElementById('kpis').innerHTML=cards.map(function(c){
+    var dv='';
+    if(c.dv!==null&&c.dv!==undefined){
+      dv=(c.dv===0)
+        ? '<span class="kd same" title="no change'+since+'">&ndash;</span>'
+        : '<span class="kd '+(c.dv>0?'increase':'decrease')+'" title="'+
+          (c.dv>0?'up ':'down ')+Math.abs(c.dv)+since+'">'+
+          (c.dv>0?'&#9650;':'&#9660;')+Math.abs(c.dv)+'</span>';
+    }
     return '<div class="kpi '+(c.c||'')+(c.accent?' accent':'')+'"'+
            (c.t?' title="'+esc(c.t)+'"':'')+'>'+
            '<div class="k">'+esc(c.k)+'</div>'+
-           (c.html||('<div class="v">'+c.v+'</div><div class="d">'+esc(c.d)+'</div>'))+
+           (c.html||('<div class="vrow"><span class="v">'+c.v+'</span>'+dv+'</div>'+
+                     '<div class="d">'+esc(c.d)+'</div>'))+
            '</div>';
   }).join('');
 }
+
+// --- comparison period ---------------------------------------------------
+// PERIOD picks which baseline every delta on the page is measured
+// against. The builder writes one baseline per period onto every row and
+// every officer, so switching period re-bases the KPI cards, the filter
+// chips and the table together -- there is no second source of truth and
+// nothing extra to render.
+var PERIOD='d';
+
+function periodOK(k){
+  var b=(DATA&&DATA.baselines&&DATA.baselines[k])||null;
+  return !!(b&&b.date);
+}
+// The baseline for a period can be older than its name suggests when the
+// history is short -- with three snapshots "weekly" is really "vs 2 days
+// ago". The label says so rather than overstating it.
+function periodLabel(k){
+  var b=(DATA&&DATA.baselines&&DATA.baselines[k])||{};
+  if(!b.date) return (b.label||k)+' (not enough data)';
+  return (b.label||k)+' \u00b7 vs '+b.span+'d ago';
+}
+function renderPeriodSelect(){
+  var sel=document.getElementById('period');
+  if(!sel) return;
+  var keys=['d','w','m'];
+  if(!periodOK(PERIOD)) PERIOD='d';
+  sel.innerHTML=keys.map(function(k){
+    return '<option value="'+k+'"'+(k===PERIOD?' selected':'')+
+           (periodOK(k)?'':' disabled')+'>'+esc(periodLabel(k))+'</option>';
+  }).join('');
+  sel.disabled=!periodOK('d');
+}
+function setPeriod(k){
+  if(!periodOK(k)) return;
+  PERIOD=k;
+  renderKPIs(); renderFilters(); renderPanel();
+}
+// The baseline figures for one row or officer under the active period.
+function baseOf(rec){
+  return (rec && rec.base_metrics && rec.base_metrics[PERIOD]) || null;
+}
+
 
 function renderFilters(){
   function row(label,inner,cls){
     return '<div class="frow '+cls+'"><span class="flabel">'+label+'</span>'+
            '<div class="fchips">'+inner+'</div></div>';
   }
-  function chip(on,onclick,text,count,extra,title){
+  function chip(on,onclick,text,count,extra,title,delta){
     return '<div class="chip'+(on?' on':'')+(extra||'')+'"'+
       (onclick?' onclick="'+onclick+'"':'')+
       (title?' title="'+esc(title)+'"':'')+'>'+esc(text)+
-      (count===undefined?'':'<span class="n">'+count+'</span>')+'</div>';
+      (count===undefined?'':'<span class="n">'+count+'</span>')+
+      dHTMLsmall(delta)+'</div>';
   }
   var q=function(v){return JSON.stringify(v).replace(/"/g,'&quot;');};
 
@@ -610,10 +765,14 @@ function renderFilters(){
   // circles, so the row is named for both.
   var cl=circleList();
   var grand=cl.reduce(function(s,c){return s+c.total;},0);
-  var circleChips=chip(CIRCLE==='ALL',"setCircle('ALL')",'All',grand)+
+  var clWas=dltBy({circle:'ALL',wing:'ALL',unit:'ALL'},'circle',function(b){return b.name;});
+  var grandWas=clWas?Object.keys(clWas).reduce(function(s,k){return s+clWas[k];},0):null;
+  var circleChips=chip(CIRCLE==='ALL',"setCircle('ALL')",'All',grand,'','',
+                       grandWas===null?null:grand-grandWas)+
     cl.map(function(c){
       return chip(CIRCLE===c.name,'setCircle('+q(c.name)+')',
-                  c.name.replace(/ Circle$/,''),c.total,c.total===0?' zero':'',c.name);
+                  c.name.replace(/ Circle$/,''),c.total,c.total===0?' zero':'',c.name,
+                  clWas?c.total-(clWas[c.name]||0):null);
     }).join('');
 
   // Wings / Divisions -- one row for both, because they are the same
@@ -630,17 +789,22 @@ function renderFilters(){
       (wl.length?wl.length+' wings and ':'')+ul.length+' divisions</span>';
   }else{
     var allOn=(WING==='ALL'&&UNIT==='ALL');
-    subChips=chip(allOn,"setSub('ALL')",'All',tally({wing:'ALL',unit:'ALL'}));
+    subChips=chip(allOn,"setSub('ALL')",'All',tally({wing:'ALL',unit:'ALL'}),'','',
+                  dlt({wing:'ALL',unit:'ALL'}));
+    var wlWas=dltBy({wing:'ALL',unit:'ALL'},'wing',function(b){return b.name;});
+    var ulWas=dltBy({unit:'ALL',wing:'ALL'},'unit',function(b){return b.code;});
     if(wl.length){
       subChips+=wl.map(function(w){
         return chip(WING===w.name,'setWing('+q(w.name)+')',shortWing(w.name),w.total,
                     w.total===0?' zero':'',
-                    'Wing — '+w.name+', '+w.users+' user'+(w.users===1?'':'s'));
+                    'Wing — '+w.name+', '+w.users+' user'+(w.users===1?'':'s'),
+                    wlWas?w.total-(wlWas[w.name]||0):null);
       }).join('')+'<span class="fsep"></span>';
     }
     subChips+=ul.filter(function(u){return u.total>0||UNIT===u.code;}).map(function(u){
       return chip(UNIT===u.code,'setUnit('+q(u.code)+')',shortUnit(u.name),u.total,
-                  u.total===0?' zero':'',u.name+' — '+(UNIT_KIND[u.group]||u.group));
+                  u.total===0?' zero':'',u.name+' — '+(UNIT_KIND[u.group]||u.group),
+                  ulWas?u.total-(ulWas[u.code]||0):null);
     }).join('');
   }
 
@@ -648,11 +812,13 @@ function renderFilters(){
   var courts=courtsOf().sort(function(a,b){
     return tally({court:b})-tally({court:a});
   });
-  var courtChips=chip(COURT==='ALL',"setCourt('ALL')",'All courts',tally({court:'ALL'}))+
+  var courtChips=chip(COURT==='ALL',"setCourt('ALL')",'All courts',tally({court:'ALL'}),
+                      '','',dlt({court:'ALL'}))+
     courts.map(function(c){
       var n=tally({court:c});
       return chip(COURT===c,'setCourt('+q(c)+')',
-                  c.indexOf('Administrative')>=0?'KSAT':c,n,n===0?' zero':'',c);
+                  c.indexOf('Administrative')>=0?'KSAT':c,n,n===0?' zero':'',c,
+                  dlt({court:c}));
     }).join('');
 
   // Case type
@@ -661,16 +827,19 @@ function renderFilters(){
   }).map(function(ct){
     var n=pend(ct);
     return chip(CT===ct.key,'setCT('+q(ct.key)+')',ct.label,n,n===0?' zero':'',
-                ct.court+(n===0?' — checked, no pending cases in scope':''));
+                ct.court+(n===0?' — checked, no pending cases in scope':''),
+                dlt({ct:ct.key}));
   }).join('');
 
   // Stage -- narrows to units that have cases sitting at that stage
   var sl=stageList().sort(function(a,b){return b.total-a.total;});
+  var slWas=dltBy({stage:'ALL'},'stage',function(b){return b.key;});
   var stageChips=chip(STAGE==='ALL',"setStage('ALL')",'Any stage')+
     sl.map(function(st){
       return chip(STAGE===st.key,'setStage('+q(st.key)+')',st.label,st.total,
                   st.total===0?' zero':'',
-                  st.units+' unit'+(st.units===1?'':'s')+' with cases at this stage');
+                  st.units+' unit'+(st.units===1?'':'s')+' with cases at this stage',
+                  slWas?st.total-(slWas[st.key]||0):null);
     }).join('');
 
   var active=(CIRCLE!=='ALL')+(WING!=='ALL')+(UNIT!=='ALL')+(COURT!=='ALL')+(STAGE!=='ALL');
@@ -763,7 +932,7 @@ function userRows(r,i,cols,sortKey){
   });
   function urow(u,inWing){
     return '<tr class="u'+(inWing?' inw':'')+'" data-p="'+i+'" style="display:none">'+
-      '<td class="nm">'+esc(u.post)+dHTML(u.direction,u.delta)+
+      '<td class="nm">'+esc(u.post)+recDeltaHTML(u)+
       (u.section?'<div class="us">'+esc(u.section)+'</div>':'')+'</td>'+
       cells(u.metrics,cols)+'</tr>';
   }
@@ -830,7 +999,7 @@ function renderPanel(){
               ' user row'+(n===1?'':'s')+' under '+esc(r.name)+'">'+esc(r.name)+'</a>'
            :'<span>'+esc(r.name)+'</span>';
     var main='<tr><td class="nm"><span class="dn">'+nm+
-      dHTML(r.direction,r.delta)+'</span><span class="gt">'+esc(UNIT_KIND[r.group]||r.group)+
+      recDeltaHTML(r)+'</span><span class="gt">'+esc(UNIT_KIND[r.group]||r.group)+
       (n?' &middot; '+n+' user'+(n===1?'':'s'):'')+
       '</span></td>'+cells(r.metrics,cols)+'</tr>';
     return main+userRows(r,i,cols,sortKey);
@@ -899,6 +1068,7 @@ async function loadData(FORCE){
   var withData=DATA.case_types.filter(function(c){return pend(c)>0;});
   if(!CT||!DATA.case_types.some(function(c){return c.key===CT;}))
     CT=(withData[0]||DATA.case_types[0]).key;
+  renderPeriodSelect();
   renderKPIs(); renderFilters(); renderPanel();
   st.textContent='Data as of '+DATA.latest_date+
     (DATA.previous_date?' · compared to '+DATA.previous_date:' · no prior snapshot yet')+
