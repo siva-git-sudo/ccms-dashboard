@@ -34,12 +34,12 @@
     background:var(--forest);display:flex;align-items:center;justify-content:center}
   header.top .mark svg{width:15px;height:15px}
   header.top .ttl{min-width:0}
-  header.top h1{font-size:15px;font-weight:600;margin:0;color:var(--ink);
+  header.top h1{font-size:18.5px;font-weight:600;margin:0;color:var(--ink);
     letter-spacing:-.014em;line-height:1.2}
-  header.top .org{margin:1px 0 0;font-size:10.5px;color:var(--ink-2);line-height:1.4;
+  header.top .org{margin:1px 0 0;font-size:13px;color:var(--ink-2);line-height:1.4;
     display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
   .hmeta{margin-left:auto;display:flex;flex-direction:row;align-items:center;gap:9px}
-  .stamp{font-size:10.5px;color:var(--grn);background:var(--grn-bg);
+  .stamp{font-size:13px;color:var(--grn);background:var(--grn-bg);
     border:1px solid #cde3d6;border-radius:999px;padding:3px 9px;white-space:nowrap}
   /* Period control. Re-bases every delta on the page. All three
      baselines are on show as one segment rather than folded into a
@@ -48,7 +48,7 @@
      along as each button's title and aria-label. */
   .pseg{display:inline-flex;align-items:center;border:1px solid var(--line-2);
     border-radius:999px;overflow:hidden;background:#fff}
-  .pseg button{font:inherit;font-size:10.5px;font-weight:600;color:var(--ink-3);
+  .pseg button{font:inherit;font-size:13px;font-weight:600;color:var(--ink-3);
     background:none;border:0;border-left:1px solid var(--line-2);
     padding:4px 11px;cursor:pointer;white-space:nowrap;line-height:1.5}
   .pseg button:first-child{border-left:0}
@@ -61,30 +61,32 @@
      as more important than the rest. minmax(0,...) lets them shrink
      instead of overflowing when the window is narrow. */
   .kpis{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin:20px 0 22px}
-  @media (max-width:1180px){.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}}
-  @media (max-width:760px){ .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  /* Breakpoints moved out with the type: a 7-up strip of larger figures
+     needs more room before the labels start stacking three lines deep. */
+  @media (max-width:1320px){.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}}
+  @media (max-width:900px){ .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
   /* Each KPI owns a hue: tinted face, saturated rail, saturated figure.
      The tint stays pale enough that the value keeps AA contrast on it. */
   .kpi{position:relative;overflow:hidden;display:flex;flex-direction:column;
     background:var(--cbg,var(--panel));border:1px solid var(--cbd,var(--line));
     border-left:3px solid var(--c,var(--forest-2));border-radius:10px;
-    padding:11px 13px 12px;transition:box-shadow .14s,transform .14s}
+    padding:12px 14px 13px;transition:box-shadow .14s,transform .14s}
   .kpi:hover{box-shadow:0 3px 9px rgba(20,24,20,.09);transform:translateY(-1px)}
   /* Reserve two lines for the label so every value sits on one baseline. */
-  .kpi .k{font-size:9.5px;text-transform:uppercase;letter-spacing:.045em;
+  .kpi .k{font-size:11.5px;text-transform:uppercase;letter-spacing:.045em;
     color:var(--c,var(--ink-3));font-weight:700;line-height:1.32;min-height:2.64em}
   .kpi .vrow{display:flex;align-items:baseline;gap:7px;margin-top:auto;padding-top:6px;
     flex-wrap:wrap}
-  .kpi .v{font-size:23px;font-weight:600;line-height:1;
+  .kpi .v{font-size:28px;font-weight:600;line-height:1;
     font-variant-numeric:tabular-nums;color:var(--c,var(--ink))}
   /* The delta rides on a white chip so it stays legible on the tinted
      card face without competing with the figure itself. */
-  .kpi .kd{font-size:10.5px;font-weight:700;padding:2px 6px;border-radius:5px;
+  .kpi .kd{font-size:13px;font-weight:700;padding:2px 6px;border-radius:5px;
     background:rgba(255,255,255,.78);font-variant-numeric:tabular-nums;line-height:1.2}
   .kpi .kd.increase{color:var(--grn)}
   .kpi .kd.decrease{color:var(--red)}
   .kpi .kd.same{color:var(--ink-3)}
-  .kpi .d{font-size:10.5px;margin-top:4px;color:var(--ink-2);opacity:.85;line-height:1.35}
+  .kpi .d{font-size:13px;margin-top:4px;color:var(--ink-2);opacity:.85;line-height:1.35}
   .kpi.accent{border-color:var(--line-2)}
   .kpi.accent .v{color:var(--forest-2)}
   /* The seven hues, ordered so no two neighbours share a family. */
@@ -98,22 +100,22 @@
 
   .filters{background:var(--panel);border:1px solid var(--line);border-radius:12px;
     padding:4px 16px 12px;margin-bottom:16px;box-shadow:0 1px 2px rgba(20,24,20,.03)}
-  .frow{display:grid;grid-template-columns:104px 1fr;gap:10px;align-items:start;
-    padding:11px 0}
+  .frow{display:grid;grid-template-columns:132px 1fr;gap:12px;align-items:start;
+    padding:12px 0}
   .frow + .frow{border-top:1px solid var(--line)}
   .fchips{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
-  .flabel{font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);
+  .flabel{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);
     font-weight:600;padding-top:7px;line-height:1.2}
   /* Each filter row has its own hue so you can tell at a glance which
      level of the hierarchy you are looking at. --c sets the family. */
-  .chip{font-size:12px;padding:5px 11px;border-radius:999px;cursor:pointer;
+  .chip{font-size:14.5px;padding:6px 13px;border-radius:999px;cursor:pointer;
     border:1px solid var(--c-bd);background:var(--c-bg);color:var(--c-fg);
     display:inline-flex;align-items:center;gap:6px;line-height:1.35;
     transition:background .12s,border-color .12s,color .12s,box-shadow .12s}
   .chip:hover{border-color:var(--c-fg);box-shadow:0 1px 3px rgba(20,24,20,.10)}
   .chip.on{background:var(--c-fg);border-color:var(--c-fg);color:#fff}
   .chip.on:hover{background:var(--c-fg)}
-  .chip .n{font-size:10px;font-weight:600;padding:1px 6px;border-radius:999px;
+  .chip .n{font-size:12px;font-weight:600;padding:1px 6px;border-radius:999px;
     background:rgba(255,255,255,.72);color:var(--c-fg);min-width:20px;text-align:center}
   .chip.on .n{background:rgba(255,255,255,.24);color:#fff}
   .chip.zero{opacity:.45}
@@ -121,7 +123,7 @@
   /* Chip delta. Sits after the count, deliberately smaller than it: the
      count is what you filter on, the delta is context. Absent entirely
      when there is no change, so a busy row stays readable. */
-  .chip .cd{font-size:9.5px;font-weight:700;margin-left:-1px;
+  .chip .cd{font-size:11.5px;font-weight:700;margin-left:-1px;
     font-variant-numeric:tabular-nums;letter-spacing:-.01em}
   .chip .cd.increase{color:var(--grn)}
   .chip .cd.decrease{color:var(--red)}
@@ -133,47 +135,57 @@
   .frow.f-type  {--c-bg:#fdf0e4; --c-bd:#f0d6bb; --c-fg:#a05a17}  /* orange  */
   .frow.f-stage {--c-bg:#fbeaee; --c-bd:#eec6d0; --c-fg:#9b2f4c}  /* rose    */
   .frow .flabel{color:var(--c-fg);opacity:.85}
-  .fhint{font-size:11.5px;color:var(--ink-3);align-self:center}
+  .fhint{font-size:14px;color:var(--ink-3);align-self:center}
   /* Divides the wing chips from the division chips inside the one
      Wings / Divisions row. */
   .fsep{width:1px;align-self:stretch;margin:2px 4px;background:var(--c-bd)}
-  .freset{font-size:11.5px;color:var(--acc);cursor:pointer;margin-left:4px;
+  .freset{font-size:14px;color:var(--acc);cursor:pointer;margin-left:4px;
     text-decoration:underline;text-underline-offset:2px}
 
   .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;
     box-shadow:0 1px 2px rgba(20,24,20,.04)}
   .phead{padding:15px 17px;border-bottom:1px solid var(--line);display:flex;
     justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
-  .phead h2{font-size:14.5px;font-weight:600;margin:0;letter-spacing:-.005em}
-  .phead .m{font-size:11.5px;color:var(--ink-3)}
-  .badge{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;
+  .phead h2{font-size:17.5px;font-weight:600;margin:0;letter-spacing:-.005em}
+  .phead .m{font-size:14px;color:var(--ink-3)}
+  .badge{display:inline-block;font-size:12px;font-weight:600;text-transform:uppercase;
     letter-spacing:.04em;padding:2px 8px;border-radius:999px;background:var(--acc-bg);
     color:var(--acc);margin-left:7px;vertical-align:1px}
 
   .scroll{overflow-x:auto}
-  table{border-collapse:separate;border-spacing:0;width:100%;font-size:11.5px}
+  table{border-collapse:separate;border-spacing:0;width:100%;font-size:14px}
+  /* Headings wrap between words and never inside one. Hyphenating
+     "authorization" across two lines to save a few pixels made the row
+     of headings unreadable at a glance, which is the only thing that row
+     is for. Columns size to their own longest word rather than to a
+     single fixed width -- "Disposed case" does not need the room
+     "GA/LCO Authorization pending" does -- and are capped so no one
+     heading can run away with the table. Right-aligned and
+     bottom-aligned, so every heading ends on the same baseline directly
+     above the figures it names. The table scrolls sideways when 17 of
+     them will not fit; that is the honest tradeoff for legible type. */
   thead th{background:var(--head);font-weight:600;color:var(--ink-2);text-align:right;
-    padding:8px 7px;border-bottom:1px solid var(--line-2);
-    vertical-align:bottom;font-size:10px;line-height:1.28;
-    white-space:normal;overflow-wrap:break-word;hyphens:auto;
-    width:74px;min-width:74px;max-width:74px}
+    padding:9px 9px;border-bottom:1px solid var(--line-2);
+    vertical-align:bottom;font-size:12px;line-height:1.32;
+    white-space:normal;overflow-wrap:normal;word-break:keep-all;hyphens:none;
+    width:auto;min-width:88px;max-width:132px}
   thead th.grp{text-align:center;border-left:1px solid var(--line-2);
     border-right:1px solid var(--line-2);text-transform:uppercase;letter-spacing:.04em;
-    font-size:9.5px;width:auto;max-width:none;padding-bottom:5px}
+    font-size:11.5px;width:auto;max-width:none;padding-bottom:5px}
   th.nm,td.nm{text-align:left;position:sticky;left:0;z-index:2;
-    width:232px;min-width:232px;max-width:232px}
+    width:284px;min-width:284px;max-width:284px}
   thead th.nm{background:var(--head);vertical-align:bottom}
   tbody td.nm{background:var(--panel);border-right:1px solid var(--line);
     white-space:normal;overflow-wrap:break-word}
   tbody tr.u td.nm{background:#fafaf7}
-  tbody td{padding:7px;text-align:right;border-bottom:1px solid var(--line);
+  tbody td{padding:9px;text-align:right;border-bottom:1px solid var(--line);
     white-space:nowrap;font-variant-numeric:tabular-nums}
   tbody tr:hover td{background:#fafaf8}
   tbody tr:hover td.nm{background:#f2f2ee}
-  tbody tr.u td{color:var(--ink-2);font-size:11px}
+  tbody tr.u td{color:var(--ink-2);font-size:13.5px}
   tbody tr.u td.nm{padding-left:24px}
   /* Wing subtotal row -- HQ units only, sits between the unit and its users. */
-  tbody tr.wg td{font-size:11px;font-weight:600;background:#f6f5ef}
+  tbody tr.wg td{font-size:13.5px;font-weight:600;background:#f6f5ef}
   tbody tr.wg td.nm{padding-left:24px;background:#f2f1e9;
     border-left:3px solid var(--ink-3)}
   tbody tr.wg.um td.nm{border-left-color:#d9a441;color:#8a6a1c}
@@ -197,19 +209,19 @@
     text-decoration-style:dotted;text-decoration-thickness:1px;text-underline-offset:3px}
   .dl:hover{text-decoration-style:solid}
   .dl.open{text-decoration-style:solid;color:var(--ink)}
-  .gt{font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3);font-weight:500}
-  .d{font-size:10px;font-weight:600;margin-left:5px;padding:1px 5px;border-radius:4px}
+  .gt{font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3);font-weight:500}
+  .d{font-size:12px;font-weight:600;margin-left:5px;padding:1px 5px;border-radius:4px}
   .d.increase{color:var(--grn);background:var(--grn-bg)}
   .d.decrease{color:var(--red);background:var(--red-bg)}
   .d.baseline,.d.same{color:var(--ink-3)}
-  .us{font-size:10.5px;color:var(--ink-3);font-weight:400;margin-top:1px}
-  .note{margin:12px 0 0;padding:10px 13px;font-size:11.5px;border-radius:9px;
+  .us{font-size:13px;color:var(--ink-3);font-weight:400;margin-top:1px}
+  .note{margin:12px 0 0;padding:10px 13px;font-size:14px;border-radius:9px;
     background:#fdf7e8;color:#6a5415;border:1px solid #f0e3c0;line-height:1.5}
-  .empty{padding:34px 16px;text-align:center;color:var(--ink-3);font-size:13px}
-  .btn{font-size:12px;border:1px solid var(--line-2);background:#fff;padding:6px 12px;
+  .empty{padding:34px 16px;text-align:center;color:var(--ink-3);font-size:16px}
+  .btn{font-size:14.5px;border:1px solid var(--line-2);background:#fff;padding:6px 12px;
     border-radius:8px;cursor:pointer;color:var(--ink-2)}
   .btn:hover{border-color:var(--acc);color:var(--acc)}
-  .lg{font-size:11.5px;color:var(--ink-2);display:flex;gap:13px;align-items:center}
+  .lg{font-size:14px;color:var(--ink-2);display:flex;gap:13px;align-items:center}
 
   /* ---- Mobile (<=640px) --------------------------------------------
      Filter rows stack label-over-chips instead of a fixed 104px label
@@ -232,47 +244,47 @@
     .fsum{display:flex;align-items:center;justify-content:space-between;gap:8px;
       border-radius:9px;padding:8px 11px;cursor:pointer;
       border:1px solid var(--c-bd);background:var(--c-bg);color:var(--c-fg)}
-    .fsum .fsl{font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px}
-    .fsum .n{font-size:9.5px;font-weight:600;background:rgba(255,255,255,.72);
+    .fsum .fsl{font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:6px}
+    .fsum .n{font-size:10.5px;font-weight:600;background:rgba(255,255,255,.72);
       border-radius:999px;padding:1px 7px}
-    .fsum .chg{font-size:10.5px;font-weight:600;text-decoration:underline;
+    .fsum .chg{font-size:12px;font-weight:600;text-decoration:underline;
       text-underline-offset:2px;white-space:nowrap}
 
     .ctgrp{margin-bottom:9px}
     .ctgrp:last-child{margin-bottom:0}
-    .ctgrp .gl{font-size:9.5px;font-weight:600;color:var(--ink-2);margin-bottom:5px}
+    .ctgrp .gl{font-size:10.5px;font-weight:600;color:var(--ink-2);margin-bottom:5px}
 
     .mcards{padding:12px}
-    .mcard{border:1px solid var(--line);border-radius:11px;padding:10px 11px;
-      margin-bottom:8px;background:var(--panel)}
+    .mcard{border:1px solid var(--line);border-radius:11px;padding:11px 12px;
+      margin-bottom:9px;background:var(--panel)}
     .mcard:last-child{margin-bottom:0}
     .mcard .mh{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-    .mcard .mname{font-size:12.5px;font-weight:600;color:var(--ink)}
-    .mcard .mtot{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;
+    .mcard .mname{font-size:14px;font-weight:600;color:var(--ink)}
+    .mcard .mtot{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums;
       white-space:nowrap}
     .mcard .mmeta{display:flex;align-items:center;justify-content:space-between;
-      gap:8px;font-size:10.5px;color:var(--ink-2);margin-top:2px}
+      gap:8px;font-size:12px;color:var(--ink-2);margin-top:2px}
     /* The whole card is the tap target -- a collapsed card is a name and
        a case number, and opening it brings the metrics and the roster
        together. The chevron is the only affordance it needs. */
     .mcard{cursor:pointer}
     .mcard.on{border-color:var(--forest-2)}
-    .mcard .mchev{flex:none;font-size:9px;color:var(--ink-3)}
+    .mcard .mchev{flex:none;font-size:10.5px;color:var(--ink-3)}
     .mcard.on .mchev{color:var(--forest-2)}
-    .mcard .mrecv{font-size:9.5px;color:var(--ink-3);margin-top:2px}
-    .mcrumb{font-size:10px;color:var(--ink-3);margin-bottom:7px}
+    .mcard .mrecv{font-size:10.5px;color:var(--ink-3);margin-top:2px}
+    .mcrumb{font-size:11px;color:var(--ink-3);margin-bottom:7px}
     .mcrumb .cur{color:var(--ink);font-weight:600}
 
     .mgrp{margin-top:8px;padding-top:7px;border-top:1px solid var(--line)}
     .mgrp .gl{display:flex;align-items:baseline;justify-content:space-between;
-      font-size:8.5px;font-weight:700;text-transform:uppercase;
+      font-size:10.5px;font-weight:700;text-transform:uppercase;
       letter-spacing:.045em;color:var(--ink-2);margin-bottom:5px}
-    .mgrp .gl .gt2{font-size:10px;letter-spacing:0;text-transform:none;
+    .mgrp .gl .gt2{font-size:11px;letter-spacing:0;text-transform:none;
       font-weight:600;color:var(--ink)}
     .mgrp.done .gl{color:var(--grn)}
-    .mtags{display:flex;flex-wrap:wrap;gap:5px}
-    .mtag{font-size:9.5px;background:#f2f1ea;color:var(--ink-2);border-radius:6px;
-      padding:3px 7px;line-height:1.3}
+    .mtags{display:flex;flex-wrap:wrap;gap:6px}
+    .mtag{font-size:10.5px;background:#f2f1ea;color:var(--ink-2);border-radius:6px;
+      padding:4px 8px;line-height:1.3}
     .mtag b{color:var(--ink);font-weight:700;margin-left:2px}
     .mtag.done{background:var(--grn-bg);color:var(--grn)}
     .mtag.done b{color:var(--grn)}
@@ -285,7 +297,7 @@
     .phb{border-left:3px solid var(--ph);padding-left:8px;margin-bottom:8px}
     .phb:last-child{margin-bottom:0}
     .phb .phh{display:flex;align-items:baseline;justify-content:space-between;
-      gap:8px;font-size:9.5px;font-weight:600;color:var(--ph-fg);margin-bottom:4px}
+      gap:8px;font-size:10.5px;font-weight:600;color:var(--ph-fg);margin-bottom:4px}
     .phb .phn{font-variant-numeric:tabular-nums;white-space:nowrap}
     .phb .mtag{background:var(--ph-bg);color:var(--ph-fg)}
     .phb .mtag b{color:var(--ph-fg)}
@@ -298,19 +310,19 @@
     .ph-ot{--ph:#9a988e;--ph-fg:#5d5b53;--ph-bg:#f2f1ea}
     /* Pending counts: a fall is progress, so down reads green. */
     .md{font-weight:600;margin-left:5px;font-variant-numeric:tabular-nums}
-    .md.sm{font-size:8.5px;margin-left:3px;opacity:.9}
+    .md.sm{font-size:10.5px;margin-left:3px;opacity:.9}
     .md.increase{color:#c0392f}
     .md.decrease{color:#1d8a68}
     .md.same{color:var(--ink-3)}
 
     .museres{margin-top:9px;padding-top:7px;border-top:1px solid var(--line)}
-    .museres .usl{font-size:8.5px;font-weight:700;text-transform:uppercase;
+    .museres .usl{font-size:10.5px;font-weight:700;text-transform:uppercase;
       letter-spacing:.045em;color:var(--ink-2);margin-bottom:2px}
     .muser{border-left:2px solid var(--line-2);padding:7px 0 7px 9px;
       margin-top:6px;cursor:pointer}
     .muser:hover{border-left-color:var(--acc)}
     .mback{display:flex;align-items:center;gap:4px;margin-top:10px;padding-top:9px;
-      border-top:1px solid var(--line);font-size:10.5px;color:var(--acc);cursor:pointer}
+      border-top:1px solid var(--line);font-size:12px;color:var(--acc);cursor:pointer}
 
     /* First-visit preference sheet -- mobile only, one-time. */
     .obk-ov{position:fixed;inset:0;background:rgba(20,24,20,.42);
@@ -319,14 +331,14 @@
       padding:16px 16px 18px;max-height:82vh;overflow-y:auto}
     .obk-grab{width:32px;height:3px;background:var(--line-2);border-radius:2px;
       margin:0 auto 14px}
-    .obk-t{font-size:14px;font-weight:600;margin:0 0 4px;color:var(--ink)}
-    .obk-d{font-size:11px;color:var(--ink-3);margin:0 0 12px;line-height:1.4}
+    .obk-t{font-size:15.5px;font-weight:600;margin:0 0 4px;color:var(--ink)}
+    .obk-d{font-size:12.5px;color:var(--ink-3);margin:0 0 12px;line-height:1.4}
     .obk-list{max-height:44vh;overflow-y:auto}
     .obk-opt{border:1px solid var(--line-2);border-radius:9px;padding:9px 12px;
-      margin-bottom:6px;font-size:12.5px;cursor:pointer}
+      margin-bottom:6px;font-size:14px;cursor:pointer}
     .obk-opt:hover{border-color:var(--acc)}
     .obk-actions{display:flex;gap:8px;margin-top:14px}
-    .obk-actions button{flex:1;font:inherit;font-size:12.5px;padding:9px;
+    .obk-actions button{flex:1;font:inherit;font-size:14px;padding:9px;
       border-radius:9px;cursor:pointer}
     .obk-skip{border:1px solid var(--line-2);background:#fff;color:var(--ink-2)}
     .obk-save{border:none;background:var(--acc);color:#fff;font-weight:600}
