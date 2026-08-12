@@ -90,8 +90,8 @@
      card face without competing with the figure itself. */
   .kpi .kd{font-size:13px;font-weight:700;padding:2px 6px;border-radius:5px;
     background:rgba(255,255,255,.78);font-variant-numeric:tabular-nums;line-height:1.2}
-  .kpi .kd.increase{color:var(--grn)}
-  .kpi .kd.decrease{color:var(--red)}
+  .kpi .kd.increase{color:var(--red)}
+  .kpi .kd.decrease{color:var(--grn)}
   .kpi .kd.same{color:var(--ink-3)}
   .kpi .d{font-size:13px;margin-top:4px;color:var(--ink-2);opacity:.85;line-height:1.35}
   .kpi.accent{border-color:var(--line-2)}
@@ -132,8 +132,8 @@
      when there is no change, so a busy row stays readable. */
   .chip .cd{font-size:11.5px;font-weight:700;margin-left:-1px;
     font-variant-numeric:tabular-nums;letter-spacing:-.01em}
-  .chip .cd.increase{color:var(--grn)}
-  .chip .cd.decrease{color:var(--red)}
+  .chip .cd.increase{color:var(--red)}
+  .chip .cd.decrease{color:var(--grn)}
   .chip.on .cd{color:#fff;opacity:.9}
 
   .frow.f-circle{--c-bg:#eaf1fa; --c-bd:#c2d6ee; --c-fg:#16559b}  /* blue    */
@@ -146,8 +146,15 @@
   /* Divides the wing chips from the division chips inside the one
      Wings / Divisions row. */
   .fsep{width:1px;align-self:stretch;margin:2px 4px;background:var(--c-bd)}
-  .freset{font-size:14px;color:var(--acc);cursor:pointer;margin-left:4px;
-    text-decoration:underline;text-underline-offset:2px}
+  /* Sits on its own line above the table, separated by a rule -- it is
+     an escape from the filters, not one of them, and it should not look
+     like a chip. */
+  .fresetrow{border-top:1px solid var(--line);padding:9px 0 2px;text-align:right}
+  .freset{display:inline-flex;align-items:center;gap:6px;font-size:13px;
+    color:var(--ink-3);cursor:pointer;padding:4px 10px;border-radius:999px;
+    border:1px solid var(--line-2);background:#fff}
+  .freset i{font-style:normal;font-size:14px;line-height:1}
+  .freset:hover{border-color:var(--red);color:var(--red)}
 
   .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;
     box-shadow:0 1px 2px rgba(20,24,20,.04)}
@@ -217,9 +224,15 @@
   .dl:hover{text-decoration-style:solid}
   .dl.open{text-decoration-style:solid;color:var(--ink)}
   .gt{font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3);font-weight:500}
+  /* One delta rule across the whole page: red is the wrong direction,
+     green is the right one. Every figure these sit on is a pending
+     count, so a rise is a growing backlog and reads red. The single
+     exception is the Completed group, which counts closed cases -- it
+     asks for .up/.down instead, so the same colours keep meaning
+     "worse" and "better" rather than flipping meaning per widget. */
   .d{font-size:12px;font-weight:600;margin-left:5px;padding:1px 5px;border-radius:4px}
-  .d.increase{color:var(--grn);background:var(--grn-bg)}
-  .d.decrease{color:var(--red);background:var(--red-bg)}
+  .d.increase{color:var(--red);background:var(--red-bg)}
+  .d.decrease{color:var(--grn);background:var(--grn-bg)}
   .d.baseline,.d.same{color:var(--ink-3)}
   .us{font-size:13px;color:var(--ink-3);font-weight:400;margin-top:1px}
   .note{margin:12px 0 0;padding:10px 13px;font-size:14px;border-radius:9px;
@@ -319,11 +332,11 @@
     .ph-po{--ph:#1d8a68;--ph-fg:#12654a;--ph-bg:#e4f3ec}
     .ph-dn{--ph:#7d7b72;--ph-fg:#4a4844;--ph-bg:#f2f1ea}
     .ph-ot{--ph:#9a988e;--ph-fg:#5d5b53;--ph-bg:#f2f1ea}
-    /* Pending counts: a fall is progress, so down reads green. */
+    /* Same rule as the rest of the page -- see .d above. */
     .md{font-weight:600;margin-left:5px;font-variant-numeric:tabular-nums}
     .md.sm{font-size:10.5px;margin-left:3px;opacity:.9}
-    .md.increase{color:#c0392f}
-    .md.decrease{color:#1d8a68}
+    .md.increase,.md.down{color:var(--red)}
+    .md.decrease,.md.up{color:var(--grn)}
     .md.same{color:var(--ink-3)}
 
     .museres{margin-top:9px;padding-top:7px;border-top:1px solid var(--line)}
@@ -1151,15 +1164,18 @@ function renderFilters(){
   }
 
   var active=(CIRCLE!=='ALL')+(WING!=='ALL')+(UNIT!=='ALL')+(COURT!=='ALL')+(STAGE!=='ALL');
+  // Its own line, on both layouts. It used to be appended inside the
+  // Stage row's chip list, which put it immediately after "Disposed" and
+  // "Not to appeal" -- an underlined control sitting in a run of chips
+  // reads as one more stage to filter by, not as the way out of them.
   var resetHTML=active
-    ? '<div style="padding:9px 0 2px;text-align:right"><span class="freset" onclick="resetFilters()">clear all filters</span></div>'
+    ? '<div class="fresetrow"><span class="freset" onclick="resetFilters()">'+
+      '<i>&times;</i>Clear all filters ('+active+')</span></div>'
     : '';
-  if(!IS_MOBILE && active) stageRowHTML = stageRowHTML.replace('</div></div>',
-    '<span class="freset" onclick="resetFilters()">clear all filters</span></div></div>');
 
   document.getElementById('filters').innerHTML= IS_MOBILE
     ? circleRowHTML+subRowHTML+row('Court',courtChips,'f-court')+typeRowHTML+resetHTML
-    : circleRowHTML+subRowHTML+row('Court',courtChips,'f-court')+typeRowHTML+stageRowHTML;
+    : circleRowHTML+subRowHTML+row('Court',courtChips,'f-court')+typeRowHTML+stageRowHTML+resetHTML;
 }
 
 function setStage(s){STAGE=s; renderKPIs(); renderFilters(); renderPanel();}
@@ -1424,14 +1440,17 @@ function mDelta(rec,keys){
   });
   return any?(now-was):null;
 }
-// Compact arrow for a chip or phase header. Down is good here: these are
-// pending counts, so a fall is progress.
+// Compact arrow for a chip or phase header. Colour follows the page-wide
+// rule: red is the wrong direction. For pending counts that means a rise
+// is red; goodUp flips it for the Completed group, where a rise is cases
+// closed. The arrow itself always points the way the number moved.
 // hideFlat drops the dash on chips: most stages don't move on a given
 // day, and a row of dashes buries the two that did.
-function mDeltaHTML(d,cls,hideFlat){
+function mDeltaHTML(d,cls,hideFlat,goodUp){
   if(d===null||d===undefined) return '';
   if(d===0) return hideFlat?'':'<span class="'+(cls||'md')+' same">&ndash;</span>';
-  return '<span class="'+(cls||'md')+' '+(d>0?'increase':'decrease')+'">'+
+  var good=goodUp?(d>0):(d<0);
+  return '<span class="'+(cls||'md')+' '+(good?'up':'down')+'">'+
          (d>0?'&#9650;+':'&#9660;&minus;')+Math.abs(d)+'</span>';
 }
 function mTagsHTML(m,cols,doneCls){
@@ -1454,14 +1473,17 @@ function mGroupsHTML(rec,cols){
   // One rail-coloured block: header carries the phase, its share of the
   // pending load and its movement; chips carry each stage and its own.
   function block(p,list,tot){
+    // Completed counts closed cases, so a rise there is the good
+    // direction -- the only place on the page where that is true.
+    var goodUp=(p.key==='done');
     var d=mDelta(rec,list.map(function(c){return c.key;}));
     var pct=tot?(' &middot; '+Math.round(sum(list)/tot*100)+'%'):'';
     return '<div class="phb '+p.cls+'">'+
       '<div class="phh"><span>'+esc(p.label)+pct+'</span>'+
-      '<span class="phn">'+sum(list)+mDeltaHTML(d,'md')+'</span></div>'+
+      '<span class="phn">'+sum(list)+mDeltaHTML(d,'md',false,goodUp)+'</span></div>'+
       '<div class="mtags">'+list.map(function(c){
         return '<span class="mtag">'+esc(shortOf(c))+' <b>'+m[c.key]+'</b>'+
-               mDeltaHTML(mDelta(rec,[c.key]),'md sm',true)+'</span>';
+               mDeltaHTML(mDelta(rec,[c.key]),'md sm',true,goodUp)+'</span>';
       }).join('')+'</div></div>';
   }
 
