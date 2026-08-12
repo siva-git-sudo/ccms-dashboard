@@ -34,7 +34,7 @@
   header.top .org{margin:2px 0 0;font-size:12px;color:var(--ink-2);line-height:1.4}
   /* Cap the measure -- the scope line is a long sentence and full-bleed
      lines at 1640px are genuinely hard to track back from. */
-  header.top .sub{margin:11px 0 0;font-size:11.5px;color:var(--ink-3);
+  header.top .sub{position:relative;margin:11px 0 0;font-size:11.5px;color:var(--ink-3);
     line-height:1.5;max-width:1020px}
   .hmeta{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:7px}
   .stamp{font-size:11.5px;color:var(--grn);background:var(--grn-bg);
@@ -49,6 +49,17 @@
     border:1px solid var(--line-2);border-radius:999px;padding:4px 10px;cursor:pointer}
   .periodsel select:hover{border-color:var(--forest-2);color:var(--forest-2)}
   .periodsel select:disabled{opacity:.55;cursor:default}
+  /* Mobile-only twin of the period select: the same three baselines laid
+     out as one pill segment, so the choice costs a tap instead of a menu.
+     Hidden on desktop, where the labelled select carries more detail. */
+  .pseg{display:none;align-items:center;border:1px solid var(--line-2);
+    border-radius:999px;overflow:hidden;background:#fff}
+  .pseg button{font:inherit;font-size:10.5px;font-weight:600;color:var(--ink-3);
+    background:none;border:0;border-left:1px solid var(--line-2);
+    padding:4px 11px;cursor:pointer;white-space:nowrap;line-height:1.5}
+  .pseg button:first-child{border-left:0}
+  .pseg button[aria-pressed="true"]{background:var(--grn-bg);color:var(--forest-2)}
+  .pseg button:disabled{opacity:.42;cursor:default}
 
   /* Seven KPIs, one row. Fixed 7-up rather than auto-fit: the set is a
      single glance-able strip, and a card wrapping onto its own line reads
@@ -213,6 +224,27 @@
      wide table is replaced entirely by tap-to-expand cards -- see
      .mcards below -- so no table CSS needs a mobile override. */
   @media (max-width:640px){
+    /* Masthead on a phone. Full-size it eats ~200px -- a third of the
+       viewport -- before a single number is visible. Shrink the mark and
+       title, drop the meta row to one strip carrying the stamp and a
+       three-way trend segment, and drop the scope sentence entirely --
+       it is orienting prose, not something a phone user reads twice. */
+    header.top .inner{padding:10px 14px 11px}
+    header.top .brand{gap:9px}
+    header.top .mark{width:26px;height:26px;border-radius:7px}
+    header.top .mark svg{width:15px;height:15px}
+    header.top h1{font-size:15px;line-height:1.2}
+    header.top .org{font-size:10.5px;margin-top:1px;
+      display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+    .hmeta{width:100%;margin-left:0;flex-direction:row;align-items:center;
+      justify-content:space-between;gap:8px}
+    .stamp{font-size:10.5px;padding:3px 9px}
+    /* The select is a control to learn and hides its own options; on a
+       phone there are only three, so show them all as one segment. */
+    .periodsel{display:none}
+    .pseg{display:inline-flex}
+    header.top .sub{display:none}
+
     .frow{grid-template-columns:1fr;row-gap:6px}
     .flabel{padding-top:0}
 
@@ -245,8 +277,11 @@
     .mcrumb .cur{color:var(--ink);font-weight:600}
 
     .mgrp{margin-top:8px;padding-top:7px;border-top:1px solid var(--line)}
-    .mgrp .gl{font-size:8.5px;font-weight:700;text-transform:uppercase;
+    .mgrp .gl{display:flex;align-items:baseline;justify-content:space-between;
+      font-size:8.5px;font-weight:700;text-transform:uppercase;
       letter-spacing:.045em;color:var(--ink-2);margin-bottom:5px}
+    .mgrp .gl .gt2{font-size:10px;letter-spacing:0;text-transform:none;
+      font-weight:600;color:var(--ink)}
     .mgrp.done .gl{color:var(--grn)}
     .mtags{display:flex;flex-wrap:wrap;gap:5px}
     .mtag{font-size:9.5px;background:#f2f1ea;color:var(--ink-2);border-radius:6px;
@@ -256,6 +291,28 @@
     .mtag.done b{color:var(--grn)}
     .mtag.warn{background:#fdf3e3;color:#8a6a1c}
     .mtag.warn b{color:#8a6a1c}
+
+    /* Phase blocks. The rail carries the colour so the chips can stay
+       pale enough to keep their figures legible; each phase owns one
+       hue across rail, header text and chip tint. */
+    .phb{border-left:3px solid var(--ph);padding-left:8px;margin-bottom:8px}
+    .phb:last-child{margin-bottom:0}
+    .phb .phh{display:flex;align-items:baseline;justify-content:space-between;
+      gap:8px;font-size:9.5px;font-weight:600;color:var(--ph-fg);margin-bottom:4px}
+    .phb .phn{font-variant-numeric:tabular-nums;white-space:nowrap}
+    .phb .mtag{background:var(--ph-bg);color:var(--ph-fg)}
+    .phb .mtag b{color:var(--ph-fg)}
+    .ph-st{--ph:#c0392f;--ph-fg:#8f2b23;--ph-bg:#fbeceb}
+    .ph-pr{--ph:#c98a12;--ph-fg:#83590a;--ph-bg:#fbf1de}
+    .ph-ct{--ph:#2f6fb5;--ph-fg:#1f5289;--ph-bg:#e9f1fa}
+    .ph-po{--ph:#1d8a68;--ph-fg:#12654a;--ph-bg:#e4f3ec}
+    .ph-ot{--ph:#9a988e;--ph-fg:#5d5b53;--ph-bg:#f2f1ea}
+    /* Pending counts: a fall is progress, so down reads green. */
+    .md{font-weight:600;margin-left:5px;font-variant-numeric:tabular-nums}
+    .md.sm{font-size:8.5px;margin-left:3px;opacity:.9}
+    .md.increase{color:#c0392f}
+    .md.decrease{color:#1d8a68}
+    .md.same{color:var(--ink-3)}
 
     .mshow{display:flex;align-items:center;gap:4px;margin-top:9px;
       font-size:10.5px;color:var(--acc);cursor:pointer}
@@ -310,6 +367,7 @@
           <span>Trend</span>
           <select id="period" onchange="setPeriod(this.value)"></select>
         </label>
+        <div class="pseg" id="pseg" role="group" aria-label="Trend period"></div>
       </div>
     </div>
     <p class="sub">Statewide &mdash; Aranya Bhavana HQ and all 13 circles (territorial, wildlife and social forestry divisions), before the High Court of Karnataka and the Karnataka State Administrative Tribunal.</p>
@@ -834,20 +892,35 @@ function periodLabel(k){
   if(!b.date) return (b.label||k)+' (not enough data)';
   return (b.label||k)+' \u00b7 vs '+b.span+'d ago';
 }
+// Short labels for the mobile segment. The desktop select spells out the
+// real span ("weekly - vs 5d ago"); the segment has no room, so the full
+// label rides along as the button's title/aria-label instead.
+var PSEG_LBL={d:'Daily',w:'7 days',m:'30 days'};
 function renderPeriodSelect(){
-  var sel=document.getElementById('period');
-  if(!sel) return;
   var keys=['d','w','m'];
   if(!periodOK(PERIOD)) PERIOD='d';
-  sel.innerHTML=keys.map(function(k){
-    return '<option value="'+k+'"'+(k===PERIOD?' selected':'')+
-           (periodOK(k)?'':' disabled')+'>'+esc(periodLabel(k))+'</option>';
-  }).join('');
-  sel.disabled=!periodOK('d');
+  var sel=document.getElementById('period');
+  if(sel){
+    sel.innerHTML=keys.map(function(k){
+      return '<option value="'+k+'"'+(k===PERIOD?' selected':'')+
+             (periodOK(k)?'':' disabled')+'>'+esc(periodLabel(k))+'</option>';
+    }).join('');
+    sel.disabled=!periodOK('d');
+  }
+  var seg=document.getElementById('pseg');
+  if(seg){
+    seg.innerHTML=keys.map(function(k){
+      return '<button type="button" onclick="setPeriod(\''+k+'\')"'+
+             ' aria-pressed="'+(k===PERIOD)+'"'+(periodOK(k)?'':' disabled')+
+             ' title="'+esc(periodLabel(k))+'" aria-label="'+esc(periodLabel(k))+'">'+
+             PSEG_LBL[k]+'</button>';
+    }).join('');
+  }
 }
 function setPeriod(k){
   if(!periodOK(k)) return;
   PERIOD=k;
+  renderPeriodSelect();
   renderKPIs(); renderFilters(); renderPanel();
 }
 // The baseline figures for one row or officer under the active period.
@@ -1251,29 +1324,126 @@ function pipelineCols(cols){
 function completedCols(cols){
   return cols.filter(function(c){ return COMPLETED.indexOf(c.key)>=0; });
 }
+// The pipeline stages in lifecycle order, bucketed into the four phases
+// an officer actually acts on: nothing started, work sitting with the
+// department, work sitting with the court, and work after an order. The
+// phase is what tells you whose desk the delay is on -- a division with
+// 40 cases in prep has a staffing problem, one with 40 in court does
+// not. Any column outside this map (reports carry different column sets,
+// and some arrive with unresolved keys) falls into a neutral bucket
+// rather than being dropped.
+var PHASES=[
+  {key:'stall',label:'Stalled',cls:'ph-st',
+   keys:['no_action_taken']},
+  {key:'prep', label:'Departmental prep',cls:'ph-pr',
+   keys:['lco_proposal_stage_pending','ga_lco_authorization_pending','draft_pwr_pending',
+         'approved_pwr_pending','draft_so_pending_from_advocate','approved_so_pending',
+         'affidavit_filing_pending']},
+  {key:'court',label:'In court',cls:'ph-ct',
+   keys:['affidavit_filed_hearing_stage','interim_order_compliance_pending']},
+  {key:'post', label:'Post-order',cls:'ph-po',
+   keys:['disposed_case','final_order_compliance_pending']},
+  {key:'other',label:'Other stages',cls:'ph-ot',keys:[]}
+];
+function phaseOf(key){
+  for(var i=0;i<PHASES.length;i++)
+    if(PHASES[i].keys.indexOf(key)>=0) return PHASES[i];
+  return PHASES[PHASES.length-1];
+}
+// Change in a set of columns against the active baseline. Returns null
+// when the baseline has nothing to say -- a missing baseline and a
+// genuine zero must not render the same.
+function mDelta(rec,keys){
+  var b=baseOf(rec); if(!b) return null;
+  var now=0,was=0,any=false;
+  keys.forEach(function(k){
+    var v=(rec.metrics||{})[k]; if(typeof v==='number') now+=v;
+    var w=b[k]; if(typeof w==='number'){ was+=w; any=true; }
+  });
+  return any?(now-was):null;
+}
+// Compact arrow for a chip or phase header. Down is good here: these are
+// pending counts, so a fall is progress.
+// hideFlat drops the dash on chips: most stages don't move on a given
+// day, and a row of dashes buries the two that did.
+function mDeltaHTML(d,cls,hideFlat){
+  if(d===null||d===undefined) return '';
+  if(d===0) return hideFlat?'':'<span class="'+(cls||'md')+' same">&ndash;</span>';
+  return '<span class="'+(cls||'md')+' '+(d>0?'increase':'decrease')+'">'+
+         (d>0?'&#9650;+':'&#9660;&minus;')+Math.abs(d)+'</span>';
+}
 function mTagsHTML(m,cols,doneCls){
   return cols.filter(function(c){ return typeof m[c.key]==='number' && m[c.key]>0; })
     .map(function(c){
       return '<span class="mtag'+(doneCls?' done':'')+'">'+esc(shortOf(c))+' <b>'+m[c.key]+'</b></span>';
     }).join('');
 }
-function mGroupsHTML(m,cols){
-  var out='';
-  var p=mTagsHTML(m,pipelineCols(cols),false);
-  if(p) out+='<div class="mgrp"><div class="gl">Pipeline</div><div class="mtags">'+p+'</div></div>';
-  var c=mTagsHTML(m,completedCols(cols),true);
-  if(c) out+='<div class="mgrp done"><div class="gl">Completed</div><div class="mtags">'+c+'</div></div>';
+// Pipeline as phase blocks: one rail-coloured block per phase carrying
+// its subtotal, its share of the pending load, its movement against the
+// baseline, and a chip per stage with that stage's own movement. Zero
+// stages stay omitted -- on a 17-column report most are zero and a card
+// full of zero chips is worse than a short one.
+function mGroupsHTML(rec,cols){
+  var m=rec.metrics||{},out='';
+  var pcols=pipelineCols(cols);
+  var live=pcols.filter(function(c){ return typeof m[c.key]==='number' && m[c.key]>0; });
+  var tot=live.reduce(function(s,c){ return s+m[c.key]; },0);
+
+  if(live.length){
+    var blocks=PHASES.map(function(p){
+      var mine=live.filter(function(c){ return phaseOf(c.key).key===p.key; });
+      if(!mine.length) return null;
+      var sub=mine.reduce(function(s,c){ return s+m[c.key]; },0);
+      return {p:p,cols:mine,sub:sub,pct:tot?Math.round(sub/tot*100):0};
+    }).filter(Boolean);
+
+    out+='<div class="mgrp"><div class="gl">Pipeline<span class="gt2">'+tot+' pending</span></div>'+
+         blocks.map(function(b){
+           var d=mDelta(rec,b.cols.map(function(c){return c.key;}));
+           return '<div class="phb '+b.p.cls+'">'+
+             '<div class="phh"><span>'+esc(b.p.label)+' &middot; '+b.pct+'%</span>'+
+             '<span class="phn">'+b.sub+mDeltaHTML(d,'md')+'</span></div>'+
+             '<div class="mtags">'+b.cols.map(function(c){
+               return '<span class="mtag">'+esc(shortOf(c))+' <b>'+m[c.key]+'</b>'+
+                      mDeltaHTML(mDelta(rec,[c.key]),'md sm',true)+'</span>';
+             }).join('')+'</div></div>';
+         }).join('')+'</div>';
+  }
+
+  var ccols=completedCols(cols).filter(function(c){
+    return typeof m[c.key]==='number' && m[c.key]>0; });
+  if(ccols.length){
+    var ctot=ccols.reduce(function(s,c){ return s+m[c.key]; },0);
+    out+='<div class="mgrp done"><div class="gl">Completed<span class="gt2">'+ctot+'</span></div>'+
+      '<div class="mtags">'+ccols.map(function(c){
+        return '<span class="mtag done">'+esc(shortOf(c))+' <b>'+m[c.key]+'</b></span>';
+      }).join('')+'</div></div>';
+  }
   return out;
 }
 function mCardState(i){ return MCARD[i]||(MCARD[i]={open:false,drill:null}); }
+// renderPanel() rewrites the whole card list, so a card that was tapped
+// near the bottom of a long roster ends up somewhere else on the page --
+// the officer's data renders above the viewport and reads as nothing
+// having happened. Re-anchor on the card that was acted on. rAF waits
+// for the new layout; 'auto' rather than 'smooth' because the answer
+// should already be on screen when the finger lifts.
+function mAnchor(i){
+  requestAnimationFrame(function(){
+    var el=document.getElementById('mc'+i);
+    if(!el) return;
+    var y=el.getBoundingClientRect().top+window.pageYOffset-10;
+    window.scrollTo(0,y<0?0:y);
+  });
+}
 function mToggleUsers(i){
-  var st=mCardState(i); st.open=!st.open; st.drill=null; renderPanel();
+  var st=mCardState(i); st.open=!st.open; st.drill=null; renderPanel(); mAnchor(i);
 }
 function mDrillUser(i,ui){
-  var st=mCardState(i); st.open=true; st.drill=ui; renderPanel();
+  var st=mCardState(i); st.open=true; st.drill=ui; renderPanel(); mAnchor(i);
 }
 function mDrillBack(i){
-  var st=mCardState(i); st.drill=null; renderPanel();
+  var st=mCardState(i); st.drill=null; renderPanel(); mAnchor(i);
 }
 // One division's card -- or, if a user has been tapped, that user's
 // card in its place with a breadcrumb and a way back. The division's
@@ -1291,9 +1461,9 @@ function mobCard(r,i,cols){
       '<div class="mmeta">'+esc(u.section||'')+recDeltaHTML(u)+'</div>';
     if(typeof u.metrics.cases_received_as_on_yesterday==='number')
       h+='<div class="mrecv">Received as on yesterday: '+u.metrics.cases_received_as_on_yesterday+'</div>';
-    h+=mGroupsHTML(u.metrics,cols);
+    h+=mGroupsHTML(u,cols);
     h+='<div class="mback" onclick="mDrillBack('+i+')">&larr;&nbsp;back to '+esc(r.name)+'</div>';
-    return '<div class="mcard">'+h+'</div>';
+    return '<div class="mcard" id="mc'+i+'">'+h+'</div>';
   }
   var h='<div class="mh"><span class="mname'+(n?' lk':'')+'"'+
     (n?' onclick="mToggleUsers('+i+')"':'')+'>'+esc(r.name)+'</span>'+
@@ -1302,7 +1472,7 @@ function mobCard(r,i,cols){
     (n?' &middot; '+n+' user'+(n===1?'':'s'):'')+recDeltaHTML(r)+'</div>';
   if(typeof r.metrics.cases_received_as_on_yesterday==='number')
     h+='<div class="mrecv">Received as on yesterday: '+r.metrics.cases_received_as_on_yesterday+'</div>';
-  h+=mGroupsHTML(r.metrics,cols);
+  h+=mGroupsHTML(r,cols);
   if(n){
     h+='<div class="mshow" onclick="mToggleUsers('+i+')">'+
       '<span>'+(st.open?'hide':'show')+' '+n+' user'+(n===1?'':'s')+'</span></div>';
@@ -1315,7 +1485,7 @@ function mobCard(r,i,cols){
       }).join('')+'</div>';
     }
   }
-  return '<div class="mcard">'+h+'</div>';
+  return '<div class="mcard" id="mc'+i+'">'+h+'</div>';
 }
 function renderPanelMobile(ct,ROWS,cols){
   var cards=ROWS.map(function(r,i){return mobCard(r,i,cols);}).join('');
