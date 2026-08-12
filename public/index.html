@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CCMS Court Case Dashboard — Karnataka Forest Department</title>
+<title>CCMS Dashboard</title>
 <style>
   :root{
     --bg:#f4f5f3; --panel:#ffffff; --line:#e6e4dd; --line-2:#d3d0c6;
@@ -204,6 +204,87 @@
     border-radius:8px;cursor:pointer;color:var(--ink-2)}
   .btn:hover{border-color:var(--acc);color:var(--acc)}
   .lg{font-size:11.5px;color:var(--ink-2);display:flex;gap:13px;align-items:center}
+
+  /* ---- Mobile (<=640px) --------------------------------------------
+     Filter rows stack label-over-chips instead of a fixed 104px label
+     column; HQ/Circle and Wings/Divisions collapse to a one-line
+     summary once onboarding (or a manual pick) has answered them, with
+     Court and Case type left fully expanded since those stay live. The
+     wide table is replaced entirely by tap-to-expand cards -- see
+     .mcards below -- so no table CSS needs a mobile override. */
+  @media (max-width:640px){
+    .frow{grid-template-columns:1fr;row-gap:6px}
+    .flabel{padding-top:0}
+
+    .fsum{display:flex;align-items:center;justify-content:space-between;gap:8px;
+      border-radius:9px;padding:8px 11px;cursor:pointer;
+      border:1px solid var(--c-bd);background:var(--c-bg);color:var(--c-fg)}
+    .fsum .fsl{font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px}
+    .fsum .n{font-size:9.5px;font-weight:600;background:rgba(255,255,255,.72);
+      border-radius:999px;padding:1px 7px}
+    .fsum .chg{font-size:10.5px;font-weight:600;text-decoration:underline;
+      text-underline-offset:2px;white-space:nowrap}
+
+    .ctgrp{margin-bottom:9px}
+    .ctgrp:last-child{margin-bottom:0}
+    .ctgrp .gl{font-size:9.5px;font-weight:600;color:var(--ink-2);margin-bottom:5px}
+
+    .mcards{padding:12px}
+    .mcard{border:1px solid var(--line);border-radius:11px;padding:10px 11px;
+      margin-bottom:8px;background:var(--panel)}
+    .mcard:last-child{margin-bottom:0}
+    .mcard .mh{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+    .mcard .mname{font-size:12.5px;font-weight:600;color:var(--ink)}
+    .mcard .mname.lk{color:var(--acc);text-decoration:underline dotted;
+      text-decoration-thickness:1px;text-underline-offset:3px}
+    .mcard .mtot{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;
+      white-space:nowrap}
+    .mcard .mmeta{font-size:10.5px;color:var(--ink-2);margin-top:2px}
+    .mcard .mrecv{font-size:9.5px;color:var(--ink-3);margin-top:2px}
+    .mcrumb{font-size:10px;color:var(--ink-3);margin-bottom:7px}
+    .mcrumb .cur{color:var(--ink);font-weight:600}
+
+    .mgrp{margin-top:8px;padding-top:7px;border-top:1px solid var(--line)}
+    .mgrp .gl{font-size:8.5px;font-weight:700;text-transform:uppercase;
+      letter-spacing:.045em;color:var(--ink-2);margin-bottom:5px}
+    .mgrp.done .gl{color:var(--grn)}
+    .mtags{display:flex;flex-wrap:wrap;gap:5px}
+    .mtag{font-size:9.5px;background:#f2f1ea;color:var(--ink-2);border-radius:6px;
+      padding:3px 7px;line-height:1.3}
+    .mtag b{color:var(--ink);font-weight:700;margin-left:2px}
+    .mtag.done{background:var(--grn-bg);color:var(--grn)}
+    .mtag.done b{color:var(--grn)}
+    .mtag.warn{background:#fdf3e3;color:#8a6a1c}
+    .mtag.warn b{color:#8a6a1c}
+
+    .mshow{display:flex;align-items:center;gap:4px;margin-top:9px;
+      font-size:10.5px;color:var(--acc);cursor:pointer}
+    .museres{margin-top:7px;padding-top:2px}
+    .muser{border-left:2px solid var(--line-2);padding:7px 0 7px 9px;
+      margin-top:6px;cursor:pointer}
+    .muser:hover{border-left-color:var(--acc)}
+    .mback{display:flex;align-items:center;gap:4px;margin-top:10px;padding-top:9px;
+      border-top:1px solid var(--line);font-size:10.5px;color:var(--acc);cursor:pointer}
+
+    /* First-visit preference sheet -- mobile only, one-time. */
+    .obk-ov{position:fixed;inset:0;background:rgba(20,24,20,.42);
+      display:flex;align-items:flex-end;z-index:80}
+    .obk-sheet{width:100%;background:#fff;border-radius:16px 16px 0 0;
+      padding:16px 16px 18px;max-height:82vh;overflow-y:auto}
+    .obk-grab{width:32px;height:3px;background:var(--line-2);border-radius:2px;
+      margin:0 auto 14px}
+    .obk-t{font-size:14px;font-weight:600;margin:0 0 4px;color:var(--ink)}
+    .obk-d{font-size:11px;color:var(--ink-3);margin:0 0 12px;line-height:1.4}
+    .obk-list{max-height:44vh;overflow-y:auto}
+    .obk-opt{border:1px solid var(--line-2);border-radius:9px;padding:9px 12px;
+      margin-bottom:6px;font-size:12.5px;cursor:pointer}
+    .obk-opt:hover{border-color:var(--acc)}
+    .obk-actions{display:flex;gap:8px;margin-top:14px}
+    .obk-actions button{flex:1;font:inherit;font-size:12.5px;padding:9px;
+      border-radius:9px;cursor:pointer}
+    .obk-skip{border:1px solid var(--line-2);background:#fff;color:var(--ink-2)}
+    .obk-save{border:none;background:var(--acc);color:#fff;font-weight:600}
+  }
 </style>
 </head>
 <body>
@@ -220,7 +301,7 @@
         </svg>
       </span>
       <div class="ttl">
-        <h1>CCMS court case dashboard</h1>
+        <h1>CCMS Dashboard</h1>
         <p class="org">Karnataka Forest Department &middot; Forest, Ecology and Environment</p>
       </div>
       <div class="hmeta">
@@ -256,6 +337,34 @@ var DATA=null, COURT='ALL', CT=null, CIRCLE='ALL', WING='ALL', UNIT='ALL', STAGE
 var UNIT_ORDER={circle:0, hq:0, division:1, wildlife:2, sf:3};
 var UNIT_KIND={hq:'Head office', circle:'Circle office', division:'Territorial',
                wildlife:'Wildlife', sf:'Social forestry'};
+
+// ---- Mobile layout -------------------------------------------------
+// Below 640px the page swaps the wide table for tap-to-expand cards and
+// condenses the HQ/Circle and Wings/Divisions filter rows once they've
+// been answered (by onboarding or a manual pick). Checked once at load
+// rather than on resize -- a phone doesn't rotate into a data table.
+var IS_MOBILE = window.matchMedia('(max-width:640px)').matches;
+var MOB_CIRCLE_OPEN=false, MOB_UNIT_OPEN=false;
+// Per-row card state, keyed by the row's position in the current ROWS
+// array: {open: are its users shown, drill: index of a user being
+// viewed in place of the division, or null}. Reset whenever a filter
+// change could reorder or replace ROWS -- see the setters below --
+// but left alone across a pure card interaction (renderPanel() runs
+// after every toggle and must not forget what's open).
+var MCARD={};
+var LS_CIRCLE='ccms_pref_circle', LS_UNIT='ccms_pref_unit';
+function lsGet(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
+function lsSet(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+// Attribute-safe JSON embed for onclick="" strings, same trick the
+// desktop chip builder uses locally -- shared here for the onboarding
+// sheet and the mobile card handlers.
+function qa(v){ return JSON.stringify(v).replace(/"/g,'&quot;'); }
+// 'YYYY-MM-DD' -> 'DD/MM'. The scraper's dates are always ISO, so this
+// is a straight split rather than a real date parse.
+function ddmm(iso){
+  var p=String(iso||'').split('-');
+  return p.length===3 ? (p[2]+'/'+p[1]) : (iso||'');
+}
 
 // Column headings, lightly trimmed so they wrap to two or three tidy
 // lines instead of being abbreviated into something unreadable. The full
@@ -808,6 +917,41 @@ function renderFilters(){
     }).join('');
   }
 
+  // Mobile: once HQ/Circle or Wings/Divisions has an answer (from
+  // onboarding or a manual pick), collapse it to a one-line summary --
+  // "change" reopens the same chip list above rather than a separate
+  // control, so there's only ever one way to alter a filter.
+  var circleRowHTML, subRowHTML;
+  if(IS_MOBILE && !MOB_CIRCLE_OPEN){
+    var ccTotal = CIRCLE==='ALL' ? grand : (cl.filter(function(c){return c.name===CIRCLE;})[0]||{total:0}).total;
+    circleRowHTML='<div class="frow f-circle"><span class="flabel">HQ / Circle</span>'+
+      '<div class="fsum" onclick="mobToggleCircle()"><span class="fsl">'+
+      esc(CIRCLE==='ALL'?'All circles':CIRCLE)+'<span class="n">'+ccTotal+'</span></span>'+
+      '<span class="chg">change</span></div></div>';
+  }else{
+    circleRowHTML=row('HQ / Circle',circleChips,'f-circle');
+  }
+  if(IS_MOBILE && !MOB_UNIT_OPEN){
+    var subLabel, subTotal;
+    if(UNIT!=='ALL'){
+      var uu=ul.filter(function(u){return u.code===UNIT;})[0];
+      subLabel=uu?shortUnit(uu.name):UNIT; subTotal=uu?uu.total:0;
+    }else if(WING!=='ALL'){
+      var ww=wl.filter(function(w){return w.name===WING;})[0];
+      subLabel=ww?shortWing(ww.name):WING; subTotal=ww?ww.total:0;
+    }else{
+      subLabel='All divisions'; subTotal=tally({wing:'ALL',unit:'ALL'});
+    }
+    subRowHTML='<div class="frow f-unit"><span class="flabel">Wings / Divisions</span>'+
+      (CIRCLE==='ALL'
+        ? '<div class="fchips"><span class="fhint">pick an HQ or circle above to set this</span></div>'
+        : '<div class="fsum" onclick="mobToggleUnit()"><span class="fsl">'+esc(subLabel)+
+          '<span class="n">'+subTotal+'</span></span><span class="chg">change</span></div>')+
+      '</div>';
+  }else{
+    subRowHTML=row('Wings / Divisions',subChips,'f-unit');
+  }
+
   // Court
   var courts=courtsOf().sort(function(a,b){
     return tally({court:b})-tally({court:a});
@@ -821,48 +965,95 @@ function renderFilters(){
                   dlt({court:c}));
     }).join('');
 
-  // Case type
-  var typeChips=typesFor(COURT).slice().sort(function(a,b){
-    return pend(b)-pend(a);
-  }).map(function(ct){
+  // Case type. Mobile groups the chips under their court with a short
+  // code instead of the full report name -- "WP" / "WA" / "CCP" /
+  // "S-KSAT" under High Court, "Original" / "Misc" / "Review" /
+  // "Contempt" under KSAT -- since both courts' reports are usually on
+  // screen together and the full names don't fit. A group that has no
+  // report in the current Court scope (e.g. Court is filtered to High
+  // Court only) is simply not printed, rather than shown empty.
+  var CT_CODE={'Writ Petition':'WP','Writ Appeal':'WA','Civil Contempt Petition':'CCP',
+    'S-KSAT':'S-KSAT','Original Application':'Original','Contempt Application':'Contempt',
+    'Miscellaneous Application':'Misc','Review Application':'Review'};
+  function ctChip(ct){
+    var n=pend(ct);
+    return chip(CT===ct.key,'setCT('+q(ct.key)+')',CT_CODE[ct.label]||ct.label,n,n===0?' zero':'',
+                ct.label+' — '+ct.court+(n===0?' — no pending cases in scope':''),
+                dlt({ct:ct.key}));
+  }
+  var typeList=typesFor(COURT).slice().sort(function(a,b){return pend(b)-pend(a);});
+  var typeChips=typeList.map(function(ct){
     var n=pend(ct);
     return chip(CT===ct.key,'setCT('+q(ct.key)+')',ct.label,n,n===0?' zero':'',
                 ct.court+(n===0?' — checked, no pending cases in scope':''),
                 dlt({ct:ct.key}));
   }).join('');
+  var typeChipsMobile='';
+  ['High Court','KSAT'].forEach(function(g){
+    var list=typeList.filter(function(ct){return shortCourt(ct.court)===g;});
+    if(!list.length) return;
+    typeChipsMobile+='<div class="ctgrp"><div class="gl">'+g+'</div><div class="fchips">'+
+      list.map(ctChip).join('')+'</div></div>';
+  });
 
-  // Stage -- narrows to units that have cases sitting at that stage
-  var sl=stageList().sort(function(a,b){return b.total-a.total;});
-  var slWas=dltBy({stage:'ALL'},'stage',function(b){return b.key;});
-  var stageChips=chip(STAGE==='ALL',"setStage('ALL')",'Any stage')+
-    sl.map(function(st){
-      return chip(STAGE===st.key,'setStage('+q(st.key)+')',st.label,st.total,
-                  st.total===0?' zero':'',
-                  st.units+' unit'+(st.units===1?'':'s')+' with cases at this stage',
-                  slWas?st.total-(slWas[st.key]||0):null);
-    }).join('');
+  var typeRowHTML = IS_MOBILE
+    ? '<div class="frow f-type"><span class="flabel">Case type</span><div>'+typeChipsMobile+'</div></div>'
+    : row('Case type',typeChips,'f-type');
+
+  // Stage -- desktop only. On mobile every stage's count already sits
+  // on its card as a tag (see mGroupsHTML), so a separate cross-unit
+  // stage filter would duplicate a control without adding a screen's
+  // worth of room to show it in. The trade-off: mobile can't filter
+  // *across* units by stage the way desktop can -- only see each
+  // unit's own breakdown.
+  var stageRowHTML='';
+  if(!IS_MOBILE){
+    var sl=stageList().sort(function(a,b){return b.total-a.total;});
+    var slWas=dltBy({stage:'ALL'},'stage',function(b){return b.key;});
+    var stageChips=chip(STAGE==='ALL',"setStage('ALL')",'Any stage')+
+      sl.map(function(st){
+        return chip(STAGE===st.key,'setStage('+q(st.key)+')',st.label,st.total,
+                    st.total===0?' zero':'',
+                    st.units+' unit'+(st.units===1?'':'s')+' with cases at this stage',
+                    slWas?st.total-(slWas[st.key]||0):null);
+      }).join('');
+    stageRowHTML=row('Stage',stageChips,'f-stage');
+  }
 
   var active=(CIRCLE!=='ALL')+(WING!=='ALL')+(UNIT!=='ALL')+(COURT!=='ALL')+(STAGE!=='ALL');
-  if(active) stageChips+='<span class="freset" onclick="resetFilters()">clear all filters</span>';
+  var resetHTML=active
+    ? '<div style="padding:9px 0 2px;text-align:right"><span class="freset" onclick="resetFilters()">clear all filters</span></div>'
+    : '';
+  if(!IS_MOBILE && active) stageRowHTML = stageRowHTML.replace('</div></div>',
+    '<span class="freset" onclick="resetFilters()">clear all filters</span></div></div>');
 
-  document.getElementById('filters').innerHTML=
-    row('HQ / Circle',circleChips,'f-circle')+
-    row('Wings / Divisions',subChips,'f-unit')+
-    row('Court',courtChips,'f-court')+row('Case type',typeChips,'f-type')+
-    row('Stage',stageChips,'f-stage');
+  document.getElementById('filters').innerHTML= IS_MOBILE
+    ? circleRowHTML+subRowHTML+row('Court',courtChips,'f-court')+typeRowHTML+resetHTML
+    : circleRowHTML+subRowHTML+row('Court',courtChips,'f-court')+typeRowHTML+stageRowHTML;
 }
 
 function setStage(s){STAGE=s; renderKPIs(); renderFilters(); renderPanel();}
 function resetFilters(){
   CIRCLE='ALL'; WING='ALL'; UNIT='ALL'; COURT='ALL'; STAGE='ALL';
+  MCARD={};
+  if(IS_MOBILE){
+    MOB_CIRCLE_OPEN=false; MOB_UNIT_OPEN=false;
+    lsSet(LS_CIRCLE,'ALL'); lsSet(LS_UNIT,'ALL');
+  }
   renderKPIs(); renderFilters(); renderPanel();
 }
 
 // Filters cascade downward: changing one clears anything below it that
 // the new selection has made impossible, rather than leaving a stale
-// chip lit over an empty table.
+// chip lit over an empty table. On mobile, picking a value also closes
+// its condensed row back up and remembers the choice for next visit --
+// see the HQ/Circle and Wings/Divisions rows in renderFilters().
 function setCircle(c){
-  CIRCLE=c; WING='ALL'; UNIT='ALL';
+  CIRCLE=c; WING='ALL'; UNIT='ALL'; MCARD={};
+  if(IS_MOBILE){
+    MOB_CIRCLE_OPEN=false; MOB_UNIT_OPEN=false;
+    lsSet(LS_CIRCLE,c); lsSet(LS_UNIT,'ALL');
+  }
   renderKPIs(); renderFilters(); renderPanel();
 }
 // Wing and division share one filter row, so they behave as one control:
@@ -870,26 +1061,87 @@ function setCircle(c){
 // division would otherwise read as an intersection, which is not what
 // the row offers.
 function setWing(w){
-  WING=w; UNIT='ALL';
+  WING=w; UNIT='ALL'; MCARD={};
+  if(IS_MOBILE){ MOB_UNIT_OPEN=false; lsSet(LS_UNIT,'ALL'); }
   renderKPIs(); renderFilters(); renderPanel();
 }
 function setUnit(u){
-  UNIT=u; WING='ALL';
+  UNIT=u; WING='ALL'; MCARD={};
+  if(IS_MOBILE){ MOB_UNIT_OPEN=false; lsSet(LS_UNIT,u); }
   renderKPIs(); renderFilters(); renderPanel();
 }
 function setSub(){
-  WING='ALL'; UNIT='ALL';
+  WING='ALL'; UNIT='ALL'; MCARD={};
+  if(IS_MOBILE){ MOB_UNIT_OPEN=false; lsSet(LS_UNIT,'ALL'); }
   renderKPIs(); renderFilters(); renderPanel();
 }
+// Toggle handlers for the condensed rows' "change" link -- reopen the
+// full chip list without touching the selection underneath it.
+function mobToggleCircle(){ MOB_CIRCLE_OPEN=!MOB_CIRCLE_OPEN; renderFilters(); }
+function mobToggleUnit(){ MOB_UNIT_OPEN=!MOB_UNIT_OPEN; renderFilters(); }
 
 function setCourt(c){
-  COURT=c;
+  COURT=c; MCARD={};
   var list=typesFor(COURT);
   var still=list.some(function(x){return x.key===CT&&pend(x)>0;});
   if(!still){var f=list.filter(function(x){return pend(x)>0;})[0]; CT=f?f.key:(list[0]&&list[0].key);}
   renderKPIs(); renderFilters(); renderPanel();
 }
-function setCT(k){CT=k; renderFilters(); renderPanel();}
+function setCT(k){CT=k; MCARD={}; renderFilters(); renderPanel();}
+
+// ---- First-visit mobile preference sheet -----------------------------
+// Asks which circle, then (if a specific one was picked) which division,
+// and remembers the answer in localStorage so it only runs once per
+// phone. Either step can be skipped -- this is a shortcut to a sensible
+// default, not a login, and nothing here is enforced or authenticated.
+function showOnboard(step,chosenCircle){
+  var ov=document.getElementById('obkOv');
+  if(!ov){
+    ov=document.createElement('div'); ov.id='obkOv'; ov.className='obk-ov';
+    document.body.appendChild(ov);
+  }
+  if(step===1){
+    var circles=(DATA.circles||[]).slice();
+    ov.innerHTML='<div class="obk-sheet"><div class="obk-grab"></div>'+
+      '<p class="obk-t">Which HQ or circle are you interested in?</p>'+
+      '<p class="obk-d">Filters to this by default on this phone. Change it anytime from HQ / Circle.</p>'+
+      '<div class="obk-list">'+circles.map(function(c){
+        return '<div class="obk-opt" onclick="obkPickCircle('+qa(c)+')">'+esc(c)+'</div>';
+      }).join('')+'</div>'+
+      '<div class="obk-actions">'+
+        '<button class="obk-skip" onclick="obkPickCircle(&quot;ALL&quot;)">Skip, show all circles</button>'+
+      '</div></div>';
+  }else{
+    var units=unitList();
+    ov.innerHTML='<div class="obk-sheet"><div class="obk-grab"></div>'+
+      '<p class="obk-t">Which division, in '+esc(chosenCircle)+'?</p>'+
+      '<p class="obk-d">Optional -- narrows things further. Change anytime from Wings / Divisions.</p>'+
+      '<div class="obk-list">'+units.map(function(u){
+        return '<div class="obk-opt" onclick="obkPickUnit('+qa(u.code)+')">'+esc(shortUnit(u.name))+
+          '<span class="gt"> &middot; '+(UNIT_KIND[u.group]||u.group)+'</span></div>';
+      }).join('')+'</div>'+
+      '<div class="obk-actions">'+
+        '<button class="obk-skip" onclick="obkPickUnit(&quot;ALL&quot;)">Skip, show all divisions</button>'+
+      '</div></div>';
+  }
+}
+function obkPickCircle(c){
+  CIRCLE=c; WING='ALL'; UNIT='ALL'; MCARD={};
+  lsSet(LS_CIRCLE,c);
+  renderKPIs(); renderFilters(); renderPanel();
+  if(c==='ALL'){ lsSet(LS_UNIT,'ALL'); closeOnboard(); }
+  else{ showOnboard(2,c); }
+}
+function obkPickUnit(u){
+  UNIT=u; MCARD={};
+  lsSet(LS_UNIT,u);
+  renderKPIs(); renderFilters(); renderPanel();
+  closeOnboard();
+}
+function closeOnboard(){
+  var ov=document.getElementById('obkOv');
+  if(ov) ov.parentNode.removeChild(ov);
+}
 
 function headHTML(ct){
   var cols=ct.columns;
@@ -967,6 +1219,112 @@ function userRows(r,i,cols,sortKey){
   }).join('');
 }
 
+// Report-level caveat about column headings -- identical on mobile and
+// desktop, factored out so the two renderers can't drift.
+function noteHTML(ct){
+  if(!ct.all_columns_known){
+    return '<div class="note"><strong>Column names unavailable.</strong> This report renders '+ct.column_count+
+      ' columns and the XML export omits their headings. The first two are verified as Cases Received / '+
+      'Total Cases Pending. Re-run the scraper to capture the real headings from the rendered report.</div>';
+  }
+  var scraped=ct.columns.some(function(c){return c.scraped;});
+  if(scraped){
+    return '<div class="note"><strong>Note:</strong> column names beyond the first two were read from the '+
+      'rendered report rather than a published schema. Worth a sanity check against the site.</div>';
+  }
+  return '';
+}
+
+// ---- Mobile card table ----------------------------------------------
+// Splits a report's columns the same way the desktop "Completed case"
+// header group already does (COMPLETED array), so a card shows two
+// labelled tag groups instead of a table's worth of headers. Zero and
+// missing values are simply omitted rather than shown as "0" tags --
+// on a division with 17 possible stages, most are zero, and a card
+// full of zero-tags is worse than a shorter one.
+function pipelineCols(cols){
+  return cols.filter(function(c){
+    return c.key!=='cases_received_as_on_yesterday' && c.key!=='total_cases_pending' &&
+           COMPLETED.indexOf(c.key)<0;
+  });
+}
+function completedCols(cols){
+  return cols.filter(function(c){ return COMPLETED.indexOf(c.key)>=0; });
+}
+function mTagsHTML(m,cols,doneCls){
+  return cols.filter(function(c){ return typeof m[c.key]==='number' && m[c.key]>0; })
+    .map(function(c){
+      return '<span class="mtag'+(doneCls?' done':'')+'">'+esc(shortOf(c))+' <b>'+m[c.key]+'</b></span>';
+    }).join('');
+}
+function mGroupsHTML(m,cols){
+  var out='';
+  var p=mTagsHTML(m,pipelineCols(cols),false);
+  if(p) out+='<div class="mgrp"><div class="gl">Pipeline</div><div class="mtags">'+p+'</div></div>';
+  var c=mTagsHTML(m,completedCols(cols),true);
+  if(c) out+='<div class="mgrp done"><div class="gl">Completed</div><div class="mtags">'+c+'</div></div>';
+  return out;
+}
+function mCardState(i){ return MCARD[i]||(MCARD[i]={open:false,drill:null}); }
+function mToggleUsers(i){
+  var st=mCardState(i); st.open=!st.open; st.drill=null; renderPanel();
+}
+function mDrillUser(i,ui){
+  var st=mCardState(i); st.open=true; st.drill=ui; renderPanel();
+}
+function mDrillBack(i){
+  var st=mCardState(i); st.drill=null; renderPanel();
+}
+// One division's card -- or, if a user has been tapped, that user's
+// card in its place with a breadcrumb and a way back. The division's
+// own users list stays open underneath so drilling into one officer
+// doesn't lose the rest of the roster.
+function mobCard(r,i,cols){
+  var st=mCardState(i);
+  var n=r.users.length;
+  if(st.drill!=null && r.users[st.drill]){
+    var u=r.users[st.drill];
+    var h='<div class="mcrumb"><span onclick="mDrillBack('+i+')" style="text-decoration:underline;cursor:pointer">'+
+      esc(r.name)+'</span> &rsaquo; <span class="cur">'+esc(u.post)+'</span></div>'+
+      '<div class="mh"><span class="mname">'+esc(u.post)+'</span>'+
+      '<span class="mtot">'+num(u.metrics.total_cases_pending)+'</span></div>'+
+      '<div class="mmeta">'+esc(u.section||'')+recDeltaHTML(u)+'</div>';
+    if(typeof u.metrics.cases_received_as_on_yesterday==='number')
+      h+='<div class="mrecv">Received as on yesterday: '+u.metrics.cases_received_as_on_yesterday+'</div>';
+    h+=mGroupsHTML(u.metrics,cols);
+    h+='<div class="mback" onclick="mDrillBack('+i+')">&larr;&nbsp;back to '+esc(r.name)+'</div>';
+    return '<div class="mcard">'+h+'</div>';
+  }
+  var h='<div class="mh"><span class="mname'+(n?' lk':'')+'"'+
+    (n?' onclick="mToggleUsers('+i+')"':'')+'>'+esc(r.name)+'</span>'+
+    '<span class="mtot">'+num(r.metrics.total_cases_pending)+'</span></div>'+
+    '<div class="mmeta">'+esc(UNIT_KIND[r.group]||r.group)+
+    (n?' &middot; '+n+' user'+(n===1?'':'s'):'')+recDeltaHTML(r)+'</div>';
+  if(typeof r.metrics.cases_received_as_on_yesterday==='number')
+    h+='<div class="mrecv">Received as on yesterday: '+r.metrics.cases_received_as_on_yesterday+'</div>';
+  h+=mGroupsHTML(r.metrics,cols);
+  if(n){
+    h+='<div class="mshow" onclick="mToggleUsers('+i+')">'+
+      '<span>'+(st.open?'hide':'show')+' '+n+' user'+(n===1?'':'s')+'</span></div>';
+    if(st.open){
+      h+='<div class="museres">'+r.users.map(function(u,ui){
+        return '<div class="muser" onclick="mDrillUser('+i+','+ui+')">'+
+          '<div class="mh"><span class="mname" style="font-size:11.5px">'+esc(u.post)+'</span>'+
+          '<span class="mtot" style="font-size:12.5px">'+num(u.metrics.total_cases_pending)+'</span></div>'+
+          '<div class="mmeta" style="font-size:9.5px">'+esc(u.section||'')+recDeltaHTML(u)+'</div></div>';
+      }).join('')+'</div>';
+    }
+  }
+  return '<div class="mcard">'+h+'</div>';
+}
+function renderPanelMobile(ct,ROWS,cols){
+  var cards=ROWS.map(function(r,i){return mobCard(r,i,cols);}).join('');
+  return '<div class="panel"><div class="phead">'+
+      '<h2>'+esc(ct.label)+' report'+(ct.all_columns_known?'':'<span class="badge">partial headings</span>')+'</h2>'+
+      '<span class="m">'+esc(ct.court)+' &middot; '+ROWS.length+' unit'+(ROWS.length===1?'':'s')+'</span></div>'+
+      '<div class="mcards">'+cards+'</div></div>'+noteHTML(ct);
+}
+
 function renderPanel(){
   var ct=DATA.case_types.filter(function(x){return x.key===CT;})[0];
   var el=document.getElementById('panel');
@@ -992,6 +1350,10 @@ function renderPanel(){
   ROWS=ROWS.slice().sort(function(a,b){
     return (b.metrics[sortKey]||0)-(a.metrics[sortKey]||0);
   });
+  if(IS_MOBILE){
+    el.innerHTML=renderPanelMobile(ct,ROWS,cols);
+    return;
+  }
   var body=ROWS.map(function(r,i){
     var n=r.users.length;
     // The name itself opens the user list -- no separate caret column.
@@ -1017,16 +1379,7 @@ function renderPanel(){
       return '<td'+cellClass(c.key)+'>'+num(ftot[c.key])+'</td>';
     }).join('')+'</tr>';
 
-  var scraped=cols.some(function(c){return c.scraped;});
-  var note='';
-  if(!ct.all_columns_known){
-    note='<div class="note"><strong>Column names unavailable.</strong> This report renders '+ct.column_count+
-      ' columns and the XML export omits their headings. The first two are verified as Cases Received / '+
-      'Total Cases Pending. Re-run the scraper to capture the real headings from the rendered report.</div>';
-  }else if(scraped){
-    note='<div class="note"><strong>Note:</strong> column names beyond the first two were read from the '+
-      'rendered report rather than a published schema. Worth a sanity check against the site.</div>';
-  }
+  var note=noteHTML(ct);
 
   el.innerHTML='<div class="panel"><div class="phead">'+
       '<h2>'+esc(ct.label)+' report &mdash; non secretariat department'+
@@ -1061,18 +1414,29 @@ async function loadData(FORCE){
   }catch(e){ if(window.CCMS_DATA){d=window.CCMS_DATA;src='data.js';} }
   if(!d){st.textContent='Could not load data. Run the scraper, or serve this folder with: python3 -m http.server';return;}
   DATA=d;
+  // Apply a saved mobile preference before the first render so the page
+  // never flashes "all circles" and then jumps -- desktop never reads
+  // these keys, so a phone and a desktop sharing a browser profile
+  // don't interfere with each other.
+  var savedCircle=IS_MOBILE?lsGet(LS_CIRCLE):null;
+  if(savedCircle!==null){
+    CIRCLE=savedCircle;
+    var savedUnit=lsGet(LS_UNIT);
+    if(savedUnit!==null) UNIT=savedUnit;
+  }
   if(!DATA.case_types||!DATA.case_types.length){
     document.getElementById('panel').innerHTML='<div class="panel"><div class="empty">No case-type detail — re-run the scraper.</div></div>';
-    st.textContent='Data as of '+(DATA.latest_date||'unknown'); return;
+    st.textContent='Data as on '+(DATA.latest_date?ddmm(DATA.latest_date):'unknown'); return;
   }
   var withData=DATA.case_types.filter(function(c){return pend(c)>0;});
   if(!CT||!DATA.case_types.some(function(c){return c.key===CT;}))
     CT=(withData[0]||DATA.case_types[0]).key;
   renderPeriodSelect();
   renderKPIs(); renderFilters(); renderPanel();
-  st.textContent='Data as of '+DATA.latest_date+
-    (DATA.previous_date?' · compared to '+DATA.previous_date:' · no prior snapshot yet')+
+  st.textContent='Data as on '+ddmm(DATA.latest_date)+
+    (DATA.previous_date?' · vs '+ddmm(DATA.previous_date):' · no prior snapshot yet')+
     (src==='data.js'?' · offline copy':'');
+  if(IS_MOBILE && savedCircle===null) showOnboard(1);
 }
 loadData();
 </script>
