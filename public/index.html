@@ -304,8 +304,10 @@
     .phb .mtag b{color:var(--ph-fg)}
     .ph-st{--ph:#c0392f;--ph-fg:#8f2b23;--ph-bg:#fbeceb}
     .ph-pr{--ph:#c98a12;--ph-fg:#83590a;--ph-bg:#fbf1de}
+    .ph-ad{--ph:#7a5cc4;--ph-fg:#54399a;--ph-bg:#efecfb}
     .ph-ct{--ph:#2f6fb5;--ph-fg:#1f5289;--ph-bg:#e9f1fa}
     .ph-po{--ph:#1d8a68;--ph-fg:#12654a;--ph-bg:#e4f3ec}
+    .ph-dn{--ph:#7d7b72;--ph-fg:#4a4844;--ph-bg:#f2f1ea}
     .ph-ot{--ph:#9a988e;--ph-fg:#5d5b53;--ph-bg:#f2f1ea}
     /* Pending counts: a fall is progress, so down reads green. */
     .md{font-weight:600;margin-left:5px;font-variant-numeric:tabular-nums}
@@ -550,6 +552,16 @@ function shortWing(name){
              .replace(/^Forest Resource Management$/,'Forest Resource Mgmt')
              .replace(/^Field offices under HQ code$/,'Field offices (misfiled)')
              .replace(/^System account \/ unallocated$/,'Unallocated');
+}
+// Loose name match. The scraper carries the source spelling, so the HQ
+// division arrives as "Araṇya bhavana" while the circle it sits in is
+// "Aranya Bhavana" -- fold diacritics and case before comparing.
+function sameName(a,b){
+  function n(s){
+    return String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'')
+           .toLowerCase().replace(/\s+/g,' ').trim();
+  }
+  return !!a && !!b && n(a)===n(b);
 }
 // ---- Chip counts -------------------------------------------------------
 //
@@ -983,7 +995,16 @@ function renderFilters(){
                     wlWas?w.total-(wlWas[w.name]||0):null);
       }).join('')+'<span class="fsep"></span>';
     }
-    subChips+=ul.filter(function(u){return u.total>0||UNIT===u.code;}).map(function(u){
+    subChips+=ul.filter(function(u){
+      // The HQ department carrying its own circle's name is the circle's
+      // catch-all -- Aranya Bhavana under Aranya Bhavana. "All" already
+      // stands for it and the wing chips already break it down, so the
+      // chip only repeats what is on either side of it. Scoped to group
+      // 'hq': every circle also has a same-named circle office, and that
+      // one is a real unit with its own caseload.
+      if(u.group==='hq' && sameName(u.name,CIRCLE)) return false;
+      return u.total>0||UNIT===u.code;
+    }).map(function(u){
       return chip(UNIT===u.code,'setUnit('+q(u.code)+')',shortUnit(u.name),u.total,
                   u.total===0?' zero':'',u.name+' — '+(UNIT_KIND[u.group]||u.group),
                   ulWas?u.total-(ulWas[u.code]||0):null);
@@ -1324,27 +1345,32 @@ function pipelineCols(cols){
 function completedCols(cols){
   return cols.filter(function(c){ return COMPLETED.indexOf(c.key)>=0; });
 }
-// The pipeline stages in lifecycle order, bucketed into the four phases
-// an officer actually acts on: nothing started, work sitting with the
-// department, work sitting with the court, and work after an order. The
-// phase is what tells you whose desk the delay is on -- a division with
-// 40 cases in prep has a staffing problem, one with 40 in court does
-// not. Any column outside this map (reports carry different column sets,
-// and some arrive with unresolved keys) falls into a neutral bucket
-// rather than being dropped.
+// The pipeline stages in lifecycle order, bucketed by whose desk the
+// case is actually sitting on. That is the question a phase answers: 40
+// cases stuck in Departmental is a staffing problem, 40 in Court is not,
+// and 40 with the Advocate is a conversation with the standing counsel.
+// Approved SO and affidavit filing sit under Departmental -- both are
+// pending departmental action, not the advocate's. Any column outside
+// this map (reports carry different column sets, and three arrive with
+// unresolved keys) falls into a neutral bucket rather than being
+// dropped. Completed is a phase here too, but it is scored separately:
+// those cases are closed, not pending, so they stay out of the pipeline
+// total and its percentages.
 var PHASES=[
   {key:'stall',label:'Stalled',cls:'ph-st',
    keys:['no_action_taken']},
-  {key:'prep', label:'Departmental prep',cls:'ph-pr',
+  {key:'dept', label:'Departmental',cls:'ph-pr',
    keys:['lco_proposal_stage_pending','ga_lco_authorization_pending','draft_pwr_pending',
-         'approved_pwr_pending','draft_so_pending_from_advocate','approved_so_pending',
-         'affidavit_filing_pending']},
-  {key:'court',label:'In court',cls:'ph-ct',
+         'approved_pwr_pending','approved_so_pending','affidavit_filing_pending']},
+  {key:'adv',  label:'Advocate',cls:'ph-ad',
+   keys:['draft_so_pending_from_advocate']},
+  {key:'court',label:'Court',cls:'ph-ct',
    keys:['affidavit_filed_hearing_stage','interim_order_compliance_pending']},
-  {key:'post', label:'Post-order',cls:'ph-po',
+  {key:'post', label:'Post order',cls:'ph-po',
    keys:['disposed_case','final_order_compliance_pending']},
   {key:'other',label:'Other stages',cls:'ph-ot',keys:[]}
 ];
+var DONE_PHASE={key:'done',label:'Completed',cls:'ph-dn'};
 function phaseOf(key){
   for(var i=0;i<PHASES.length;i++)
     if(PHASES[i].keys.indexOf(key)>=0) return PHASES[i];
@@ -1384,40 +1410,44 @@ function mTagsHTML(m,cols,doneCls){
 // stages stay omitted -- on a 17-column report most are zero and a card
 // full of zero chips is worse than a short one.
 function mGroupsHTML(rec,cols){
-  var m=rec.metrics||{},out='';
-  var pcols=pipelineCols(cols);
-  var live=pcols.filter(function(c){ return typeof m[c.key]==='number' && m[c.key]>0; });
-  var tot=live.reduce(function(s,c){ return s+m[c.key]; },0);
-
-  if(live.length){
-    var blocks=PHASES.map(function(p){
-      var mine=live.filter(function(c){ return phaseOf(c.key).key===p.key; });
-      if(!mine.length) return null;
-      var sub=mine.reduce(function(s,c){ return s+m[c.key]; },0);
-      return {p:p,cols:mine,sub:sub,pct:tot?Math.round(sub/tot*100):0};
-    }).filter(Boolean);
-
-    out+='<div class="mgrp"><div class="gl">Pipeline<span class="gt2">'+tot+' pending</span></div>'+
-         blocks.map(function(b){
-           var d=mDelta(rec,b.cols.map(function(c){return c.key;}));
-           return '<div class="phb '+b.p.cls+'">'+
-             '<div class="phh"><span>'+esc(b.p.label)+' &middot; '+b.pct+'%</span>'+
-             '<span class="phn">'+b.sub+mDeltaHTML(d,'md')+'</span></div>'+
-             '<div class="mtags">'+b.cols.map(function(c){
-               return '<span class="mtag">'+esc(shortOf(c))+' <b>'+m[c.key]+'</b>'+
-                      mDeltaHTML(mDelta(rec,[c.key]),'md sm',true)+'</span>';
-             }).join('')+'</div></div>';
-         }).join('')+'</div>';
+  var m=rec.metrics||{};
+  function live(list){
+    return list.filter(function(c){ return typeof m[c.key]==='number' && m[c.key]>0; });
+  }
+  function sum(list){ return list.reduce(function(s,c){ return s+m[c.key]; },0); }
+  // One rail-coloured block: header carries the phase, its share of the
+  // pending load and its movement; chips carry each stage and its own.
+  function block(p,list,tot){
+    var d=mDelta(rec,list.map(function(c){return c.key;}));
+    var pct=tot?(' &middot; '+Math.round(sum(list)/tot*100)+'%'):'';
+    return '<div class="phb '+p.cls+'">'+
+      '<div class="phh"><span>'+esc(p.label)+pct+'</span>'+
+      '<span class="phn">'+sum(list)+mDeltaHTML(d,'md')+'</span></div>'+
+      '<div class="mtags">'+list.map(function(c){
+        return '<span class="mtag">'+esc(shortOf(c))+' <b>'+m[c.key]+'</b>'+
+               mDeltaHTML(mDelta(rec,[c.key]),'md sm',true)+'</span>';
+      }).join('')+'</div></div>';
   }
 
-  var ccols=completedCols(cols).filter(function(c){
-    return typeof m[c.key]==='number' && m[c.key]>0; });
-  if(ccols.length){
-    var ctot=ccols.reduce(function(s,c){ return s+m[c.key]; },0);
-    out+='<div class="mgrp done"><div class="gl">Completed<span class="gt2">'+ctot+'</span></div>'+
-      '<div class="mtags">'+ccols.map(function(c){
-        return '<span class="mtag done">'+esc(shortOf(c))+' <b>'+m[c.key]+'</b></span>';
-      }).join('')+'</div></div>';
+  var out='';
+  var pend=live(pipelineCols(cols));
+  if(pend.length){
+    var tot=sum(pend);
+    out+='<div class="mgrp"><div class="gl">Pipeline<span class="gt2">'+tot+' pending</span></div>'+
+      PHASES.map(function(p){
+        var mine=pend.filter(function(c){ return phaseOf(c.key).key===p.key; });
+        return mine.length?block(p,mine,tot):'';
+      }).join('')+'</div>';
+  }
+
+  // Completed gets the same rail, but no percentage: it is not part of
+  // the pending total, and scoring it against one would imply these
+  // cases are still somewhere in the queue.
+  var done=live(completedCols(cols));
+  if(done.length){
+    // No group label here -- the block's own header already reads
+    // "Completed" and carries the count.
+    out+='<div class="mgrp">'+block(DONE_PHASE,done,0)+'</div>';
   }
   return out;
 }
