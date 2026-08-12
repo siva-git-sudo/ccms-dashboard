@@ -480,6 +480,13 @@ var SHORT={
 };
 var COMPLETED=['proposed_for_appeal','closed_with_appeal_number','not_to_appeal'];
 
+// Short code per report. Used on the mobile case-type chips and on the
+// three per-report KPI cards, which need to name the selected report in
+// the space of a chip.
+var CT_CODE={'Writ Petition':'WP','Writ Appeal':'WA','Civil Contempt Petition':'CCP',
+  'S-KSAT':'S-KSAT','Original Application':'Original','Contempt Application':'Contempt',
+  'Miscellaneous Application':'Misc','Review Application':'Review'};
+
 // Stage filter -- narrows the table to units that actually have cases
 // sitting at that stage, and highlights the column.
 var STAGES=[
@@ -818,6 +825,11 @@ function metricCoverage(re){
   list.forEach(function(ct){ if(metricKey(ct,re)) have++; });
   return {have:have,of:list.length};
 }
+// The case type currently selected in the Case type chip row.
+function currentCT(){
+  return DATA.case_types.filter(function(x){return x.key===CT;})[0]||null;
+}
+function ctShort(ct){ return ct?(CT_CODE[ct.label]||ct.label):''; }
 function courtNamed(frag){
   var cs=courtsOf();
   for(var i=0;i<cs.length;i++){
@@ -829,7 +841,18 @@ function contemptTypes(){
   return DATA.case_types.filter(function(ct){return /contempt/i.test(ct.label||'');});
 }
 
+// The KPI strip is deliberately stage-blind. The Stage chips narrow the
+// table to units holding cases at one stage; the cards above state the
+// size of the caseload the table is being cut out of, so re-cutting them
+// by the same stage would leave nothing on screen showing the whole. The
+// stage is neutralised for the duration of the render rather than at
+// each call site, so every figure on the strip -- tallies, deltas, chip
+// coverage, row counts -- is computed on the same unnarrowed basis.
 function renderKPIs(){
+  var keep=STAGE; STAGE='ALL';
+  try{ renderKPIsBody(); } finally { STAGE=keep; }
+}
+function renderKPIsBody(){
   var list=typesFor(COURT);
   var totalPending=list.reduce(function(s,c){return s+pend(c);},0);
   var divs={}, groupTotal={}, groupUnits={};
@@ -849,13 +872,10 @@ function renderKPIs(){
     var u=unitList().filter(function(x){return x.code===UNIT;})[0];
     uLabel=' · '+(u?shortUnit(u.name):UNIT);
   }
-  var sLabel='';
-  if(STAGE!=='ALL'){
-    var st=STAGES.filter(function(x){return x.key===STAGE;})[0];
-    sLabel=' · '+(st?st.label:STAGE);
-  }
+  // No stage in the scope line: the cards ignore the Stage filter, so
+  // naming it here would claim a narrowing the figures do not have.
   var scope = (COURT==='ALL' ? 'both courts' : COURT)+(CIRCLE==='ALL'?'':' · '+CIRCLE)+
-              (WING==='ALL'?'':' · '+WING)+uLabel+sLabel;
+              (WING==='ALL'?'':' · '+WING)+uLabel;
 
   // Court totals. Each honours the court chip rather than overriding it,
   // so selecting KSAT shows High Court as a real zero instead of quietly
@@ -875,19 +895,51 @@ function renderKPIs(){
   });
   var contempt=cHC+cKS;
 
-  var noAction=tally({metric:KPI_COL.noAction});
-  var lco     =tally({metric:KPI_COL.lco});
-  var finalOrd=tally({metric:KPI_COL.finalOrd});
-  var lcoCov  =metricCoverage(KPI_COL.lco);
+  // The last three cards follow the Case type chips rather than the whole
+  // court. Each is a column of one report -- and the same column means a
+  // different thing in each report, so summing "No action" across Writ
+  // Petition and Review Application produced a number no one could act
+  // on. Read against the selected report they are a pipeline: how many
+  // of *these* cases have not been picked up, are waiting on the LCO,
+  // and are decided but not complied with.
+  var ctSel  =currentCT();
+  var ctKey  =ctSel?ctSel.key:null;
+  var ctName =ctSel?ctSel.label:'';
+  var ctTag  =ctSel?(' · '+ctShort(ctSel)):'';
+  var ctPend =ctSel?tally({ct:ctKey}):0;
+
+  // A report that has no such column contributes nothing, and tally()
+  // would return a bare 0 that reads as "none pending". Distinguish the
+  // two: null means not reported, 0 means reported and empty.
+  function ctMetric(re){
+    if(!ctSel) return null;
+    return metricKey(ctSel,re)===null ? null : tally({ct:ctKey,metric:re});
+  }
+  function ctDelta(re){
+    if(!ctSel||metricKey(ctSel,re)===null) return null;
+    return dlt({ct:ctKey,metric:re});
+  }
+  var noAction=ctMetric(KPI_COL.noAction);
+  var lco     =ctMetric(KPI_COL.lco);
+  var finalOrd=ctMetric(KPI_COL.finalOrd);
 
   function share(v){
     return totalPending?((v*100/totalPending).toFixed(1)+'% of total'):'no cases in scope';
   }
+  // Per-report cards are a share of that report's own pending, not of
+  // the whole strip -- the denominator has to be the caseload the column
+  // is drawn from or the percentage means nothing.
+  function ctShare(v){
+    if(v===null) return ctName?('not reported in '+ctName):'no case type selected';
+    if(!ctPend)  return 'no '+(ctName||'cases')+' pending in scope';
+    return (v*100/ctPend).toFixed(1)+'% of '+ctShort(ctSel);
+  }
+  function ctVal(v){ return v===null?'&mdash;':kn(v); }
 
-  // "(all courts)" marks these four as cross-forum figures, but only
-  // while that is true. Select a court and the tag drops off entirely:
-  // the court chip above already states the scope, so repeating it on
-  // four cards is noise, and leaving the words there would be a lie.
+  // "(all courts)" marks Contempt as a cross-forum figure -- it is the
+  // one card that sums two case types across both courts -- but only
+  // while that is true. Select a court and the tag drops off: the court
+  // chip above already states the scope.
   var forum=(COURT==='ALL')?' (all courts)':'';
 
   // Deltas against the previous snapshot. Contempt spans two case types,
@@ -910,16 +962,22 @@ function renderKPIs(){
     {c:'k4',k:'Contempt'+forum,v:kn(contempt),d:share(contempt),dv:dContempt,
      t:'Civil Contempt Petition (High Court) '+kn(cHC)+
        ' + Contempt Application (KSAT) '+kn(cKS)},
-    {c:'k5',k:'No action'+forum,v:kn(noAction),d:share(noAction),
-     dv:dlt({metric:KPI_COL.noAction}),
-     t:'Cases with no action taken yet -- the first stage of the pipeline'},
-    {c:'k6',k:'LCO pending'+forum,v:kn(lco),dv:dlt({metric:KPI_COL.lco}),
-     d:lcoCov.have===lcoCov.of?share(lco):share(lco)+' · '+lcoCov.have+'/'+lcoCov.of+' reports',
-     t:'LCO Proposal Stage (pending from department). Writ Appeal and '+
-       'S-KSAT do not report this column, so they contribute nothing.'},
-    {c:'k7',k:'Final order compliance'+forum,v:kn(finalOrd),d:share(finalOrd),
-     dv:dlt({metric:KPI_COL.finalOrd}),
-     t:'Final order compliance pending -- decided cases awaiting departmental compliance'}
+    {c:'k5',k:'No action'+ctTag,v:ctVal(noAction),d:ctShare(noAction),
+     dv:ctDelta(KPI_COL.noAction),
+     t:noAction===null
+        ? (ctName||'This report')+' does not report a "No Action Taken" column'
+        : ctName+' — no action taken yet, the first stage of the pipeline'},
+    {c:'k6',k:'LCO pending'+ctTag,v:ctVal(lco),dv:ctDelta(KPI_COL.lco),
+     d:ctShare(lco),
+     t:lco===null
+        ? (ctName||'This report')+' has no "LCO Proposal Stage" column — it '+
+          'reports GA/LCO Authorization, which is a different stage and not folded in'
+        : ctName+' — LCO Proposal Stage, pending from department'},
+    {c:'k7',k:'Final order compliance'+ctTag,v:ctVal(finalOrd),d:ctShare(finalOrd),
+     dv:ctDelta(KPI_COL.finalOrd),
+     t:finalOrd===null
+        ? (ctName||'This report')+' does not report a "Final Order Compliance Pending" column'
+        : ctName+' — decided cases awaiting departmental compliance'}
   ];
   void active; void users; void divCount; void groupTotal; void groupUnits;
 
@@ -1115,9 +1173,6 @@ function renderFilters(){
   // screen together and the full names don't fit. A group that has no
   // report in the current Court scope (e.g. Court is filtered to High
   // Court only) is simply not printed, rather than shown empty.
-  var CT_CODE={'Writ Petition':'WP','Writ Appeal':'WA','Civil Contempt Petition':'CCP',
-    'S-KSAT':'S-KSAT','Original Application':'Original','Contempt Application':'Contempt',
-    'Miscellaneous Application':'Misc','Review Application':'Review'};
   function ctChip(ct){
     var n=pend(ct);
     return chip(CT===ct.key,'setCT('+q(ct.key)+')',CT_CODE[ct.label]||ct.label,n,n===0?' zero':'',
@@ -1233,7 +1288,10 @@ function setCourt(c){
   if(!still){var f=list.filter(function(x){return pend(x)>0;})[0]; CT=f?f.key:(list[0]&&list[0].key);}
   renderKPIs(); renderFilters(); renderPanel();
 }
-function setCT(k){CT=k; MCARD={}; renderFilters(); renderPanel();}
+// renderKPIs() is in this list because the last three cards are
+// per-report: picking a case type has to re-base them along with the
+// table.
+function setCT(k){CT=k; MCARD={}; renderKPIs(); renderFilters(); renderPanel();}
 
 // ---- First-visit mobile preference sheet -----------------------------
 // Asks which circle, then (if a specific one was picked) which division,
