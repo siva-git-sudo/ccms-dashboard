@@ -535,6 +535,112 @@ def _click_exact(page, selector: str, timeout_ms: int = 8000) -> bool:
         return False
 
 
+def _report_rendered(page) -> bool:
+    """True once the ReportViewer control exists on the page, i.e. the
+    View Report click has already taken effect."""
+    try:
+        return bool(
+            page.evaluate(
+                "(id) => !!document.getElementById(id)", REPORT_VIEWER_ID
+            )
+        )
+    except Exception:
+        return False
+
+
+def _click_view_report(page, label: str) -> None:
+    """Click 'View Report', tolerating the click's own postback.
+
+    The click fires a full ASP.NET postback that tears down and replaces
+    the document. Playwright routinely raises "Execution context was
+    destroyed" for the very click that *worked*, so _click_exact reports
+    False even though the report is already loading. The old code went
+    straight to the scored fallback, which then inspected a mid-postback
+    DOM -- `elements=14 inputs=0 selects=0`, a bare <head> shell -- found
+    no button, and raised.
+
+    court1_WP hit this on every run because it is by far the largest
+    report (2,158 cases against 64 for the next biggest), so its postback
+    leaves the document blank the longest. That is why the *first* combo
+    failed while the rest went through: nothing to do with Writ Petition
+    itself, only with how long its postback takes.
+
+    So: click, and if that reports failure, let the postback finish and
+    ask whether the report rendered anyway before assuming the worst.
+    """
+    if _click_exact(page, VIEW_REPORT_SELECTOR):
+        return
+
+    # Observed: when this path is reached the document usually never
+    # rebuilds, so a long wait here just burns time before the retry pass
+    # gets its turn. Keep it short.
+    try:
+        _wait_for_form_ready(page, timeout_ms=25000, context="the View Report postback")
+    except RuntimeError:
+        pass
+
+    if _report_rendered(page):
+        print(
+            f"  [{label}] View Report had already fired "
+            f"(the click's own postback masked it)",
+            file=sys.stderr,
+        )
+        return
+
+    # Genuinely not clicked -- the button may just have been missing while
+    # the page rebuilt. Retry the exact selector now the DOM is back.
+    if _click_exact(page, VIEW_REPORT_SELECTOR):
+        return
+
+    _click_scored(page, VIEW_REPORT_POSITIVE, VIEW_REPORT_NEGATIVE, "'View Report'")
+
+
+def _wait_for_report_rows(page, label: str, timeout_ms: int = 45000) -> int:
+    """Wait for the rendered report to actually contain data rows.
+
+    "networkidle plus three seconds" is not a guarantee: SSRS streams the
+    report body in after the postback settles, so exporting too early
+    yields a structurally valid XML file with no rows in it. That is the
+    other half of the 2026-08-12 failure -- six reports exported cleanly
+    and parsed to "0 department rows".
+
+    A real zero is possible, so a timeout here is a warning and not an
+    error; the publish gate in run_scrape.py is what decides whether the
+    overall result is trustworthy. Returns the row count seen.
+    """
+    js = """(id) => {
+        const rv = document.getElementById(id);
+        if (!rv) return -1;
+        return rv.querySelectorAll('tr').length;
+    }"""
+    try:
+        page.wait_for_function(
+            """([id, want]) => {
+                const rv = document.getElementById(id);
+                if (!rv) return false;
+                return rv.querySelectorAll('tr').length >= want;
+            }""",
+            arg=[REPORT_VIEWER_ID, 2],
+            timeout=timeout_ms,
+        )
+    except Exception:
+        pass
+
+    try:
+        rows = page.evaluate(js, REPORT_VIEWER_ID)
+    except Exception:
+        rows = -1
+
+    if rows < 0:
+        print(f"  [{label}] WARNING: no #{REPORT_VIEWER_ID} on the page after "
+              f"View Report -- the export will be empty", file=sys.stderr)
+    elif rows < 2:
+        print(f"  [{label}] WARNING: report rendered with {rows} row(s) after "
+              f"{timeout_ms/1000:.0f}s -- exporting anyway, but treat a zero "
+              f"here with suspicion", file=sys.stderr)
+    return rows
+
+
 def _click_scored(page, positives, negatives, what: str) -> bool:
     """Find the best-matching clickable control and click it, falling back
     to a JS click so hidden/overlaid controls still work.
@@ -633,11 +739,10 @@ def scrape_all_departments(page, combo: dict, out_xml_path: Path) -> None:
     # Clicking "View Report" is what actually renders the report and its
     # export toolbar -- nothing exists to export before this. The report
     # renders in the same tab (confirmed: no popup).
-    if not _click_exact(page, VIEW_REPORT_SELECTOR):
-        try:
-            _click_scored(page, VIEW_REPORT_POSITIVE, VIEW_REPORT_NEGATIVE, "'View Report'")
-        except RuntimeError as exc:
-            raise RuntimeError(f"[{label}] {exc}") from None
+    try:
+        _click_view_report(page, label)
+    except RuntimeError as exc:
+        raise RuntimeError(f"[{label}] {exc}") from None
 
     try:
         page.wait_for_load_state("networkidle", timeout=60000)
@@ -645,6 +750,7 @@ def scrape_all_departments(page, combo: dict, out_xml_path: Path) -> None:
         pass
     _wait_for_form_ready(page, context="clicking View Report")
     page.wait_for_timeout(3000)  # report render + postback settle
+    _wait_for_report_rows(page, label)
 
     # Grab the column headings off the rendered report before exporting --
     # the XML export does not include them.
@@ -974,8 +1080,7 @@ def capture_headers(only: list[str] | None = None) -> None:
                 _select_aspnet(page, "ddlCasetype", combo["ddlCasetype"], settle_ms=300)
                 _wait_for_form_ready(page, context="applying filters")
 
-                if not _click_exact(page, VIEW_REPORT_SELECTOR):
-                    _click_scored(page, VIEW_REPORT_POSITIVE, VIEW_REPORT_NEGATIVE, "'View Report'")
+                _click_view_report(page, label)
                 try:
                     page.wait_for_load_state("networkidle", timeout=60000)
                 except Exception:
@@ -1062,11 +1167,8 @@ def inspect_page() -> None:
         # export toolbar) only exists afterwards.
         print("\n=== clicking 'View Report' ===", file=sys.stderr)
         try:
-            if _click_exact(page, VIEW_REPORT_SELECTOR):
-                print(f"  clicked {VIEW_REPORT_SELECTOR} OK", file=sys.stderr)
-            else:
-                _click_scored(page, VIEW_REPORT_POSITIVE, VIEW_REPORT_NEGATIVE, "'View Report'")
-                print("  clicked via scoring fallback", file=sys.stderr)
+            _click_view_report(page, "probe")
+            print("  clicked OK", file=sys.stderr)
             try:
                 page.wait_for_load_state("networkidle", timeout=60000)
             except Exception:
@@ -1169,10 +1271,8 @@ def run_scrape() -> dict:
         context = browser.new_context(accept_downloads=True)
         page = context.new_page()
 
-        for combo in COURT_CASE_TYPE_COMBOS:
-            label = combo_label(combo)
-            xml_path = today_raw_dir / f"all_departments__{label}.xml"
-            print(f"scraping combo {label} (--All-- departments) ...", file=sys.stderr)
+        def attempt(combo, label, xml_path) -> bool:
+            """One go at a combo. Records success or the error, either way."""
             try:
                 headers = scrape_all_departments(page, combo, xml_path)
                 if isinstance(headers, dict) and headers.get("headers"):
@@ -1181,11 +1281,52 @@ def run_scrape() -> dict:
             except Exception as exc:
                 combo_errors[label] = str(exc)
                 print(f"  FAILED: {exc}", file=sys.stderr)
-                continue
+                return False
 
             parsed_reports[label] = by_division
             seen_names_by_combo[label] = set(by_division.keys())
+            combo_errors.pop(label, None)
             print(f"  {label}: report had {len(by_division)} department rows", file=sys.stderr)
+            return True
+
+        # Warm the session before the real work. The first View Report
+        # click of a run is the one that fails -- observed twice, on
+        # different combos-in-first-position -- so give the throwaway
+        # click that role instead of a combo we need.
+        print("warming up the session ...", file=sys.stderr)
+        try:
+            page.goto(REPORT_URL, wait_until="networkidle")
+            _wait_for_form_ready(page, context="warm-up load", min_selects=0)
+            _check_aspnet_radio(page, "rblstatereport", BASE_FILTERS["rblstatereport"])
+        except Exception as exc:
+            print(f"  warm-up did not complete ({exc}) -- carrying on", file=sys.stderr)
+
+        for combo in COURT_CASE_TYPE_COMBOS:
+            label = combo_label(combo)
+            xml_path = today_raw_dir / f"all_departments__{label}.xml"
+            print(f"scraping combo {label} (--All-- departments) ...", file=sys.stderr)
+            attempt(combo, label, xml_path)
+
+        # Retry pass. A failed combo is nearly always a transient page
+        # state rather than a report that cannot be fetched -- the same
+        # combo succeeds on a second go with a fresh tab. Worth one retry
+        # each: the alternative is a whole day's snapshot rejected over
+        # one report, which is what happened on 2026-08-12.
+        if combo_errors:
+            failed = [c for c in COURT_CASE_TYPE_COMBOS if combo_label(c) in combo_errors]
+            print(f"\nretrying {len(failed)} failed combo(s) on a fresh tab ...",
+                  file=sys.stderr)
+            for combo in failed:
+                label = combo_label(combo)
+                xml_path = today_raw_dir / f"all_departments__{label}.xml"
+                print(f"retry {label} ...", file=sys.stderr)
+                try:
+                    old, page = page, context.new_page()
+                    old.close()
+                except Exception as exc:
+                    print(f"  could not open a fresh tab ({exc})", file=sys.stderr)
+                if not attempt(combo, label, xml_path):
+                    print(f"  {label} failed on retry too", file=sys.stderr)
 
         browser.close()
 

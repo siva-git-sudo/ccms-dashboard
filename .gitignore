@@ -3,3 +3,8 @@ __pycache__/
 .DS_Store
 data/raw/
 logs/
+# Snapshots the sanity check refused to publish. Kept on disk as evidence
+# when diagnosing a bad scrape, but they are not part of the history the
+# dashboard's up/down arrows are computed from.
+*.json.rejected
+*.json.bak

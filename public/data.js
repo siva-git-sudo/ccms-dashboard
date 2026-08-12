@@ -2,55 +2,55 @@
 // Fallback copy of data.json so the dashboard also works when
 // index.html is opened directly from disk (file://).
 window.CCMS_DATA = {
-  "generated_at": "2026-08-11T23:38:12.170001+05:30",
-  "latest_date": "2026-08-11",
-  "previous_date": null,
+  "generated_at": "2026-08-12T07:00:28.828235+05:30",
+  "latest_date": "2026-08-12",
+  "previous_date": "2026-08-11",
   "divisions": [
     {
       "code": "D000",
       "name": "Araṇya bhavana",
       "group": "hq",
       "circle": "Aranya Bhavana",
-      "total_pending": 615,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 627,
+      "previous_total_pending": 615,
+      "delta": 12,
+      "direction": "increase",
       "metrics": {
+        "not_to_appeal": 369,
         "closed_with_appeal_number": 9,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 182,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 24,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 3,
-        "disposed_case": 14,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 1,
-        "col_13": 21,
-        "col_14": 0,
-        "approved_so_pending": 1,
-        "not_to_appeal": 369,
-        "total_cases_pending": 615,
-        "col_17": 0,
+        "col_4": 14,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 21,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 1,
+        "cases_received_as_on_yesterday": 1,
+        "total_cases_pending": 627,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 12,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 1,
+        "approved_pwr_pending": 13,
+        "col_3": 24,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 55,
+        "draft_so_pending_from_advocate": 3,
+        "col_8": 0,
+        "no_action_taken": 17,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 14,
+        "col_5": 1,
+        "col_16": 31,
+        "affidavit_filing_pending": 4,
+        "col_10": 0,
+        "final_order_compliance_pending": 193,
         "lco_proposal_stage_pending": 114,
         "draft_pwr_pending": 195,
-        "affidavit_filing_pending": 4,
-        "ga_lco_authorization_pending": 12,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 31,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 55,
-        "no_action_taken": 16,
-        "col_4": 14,
-        "approved_pwr_pending": 13
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -58,370 +58,370 @@ window.CCMS_DATA = {
           "post": "APCCF",
           "wing": "Administration & Coordination",
           "total_pending": 7,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 7,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Administrative Officer PCCF HOFF Office",
           "post": "Administrative Officer",
           "wing": "Administration & Coordination",
           "total_pending": 61,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 61,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bangalore Rural Division",
           "post": "Deputy Conservator Of Forests",
           "wing": "Field offices under HQ code",
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bangalore Urban Division",
           "post": "Deputy Conservator Of Forests",
           "wing": "Field offices under HQ code",
           "total_pending": 6,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 6,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bangalore Urban Range",
           "post": "Range Forest Officer",
           "wing": "Field offices under HQ code",
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "EST Non Gazetted",
           "post": "Administrative Assistant",
           "wing": "Personnel & Recruitment",
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Est Gazetted",
           "post": "Administrative Officer",
           "wing": "Personnel & Recruitment",
           "total_pending": 144,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 144,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Evaluation",
           "post": "APCCF",
           "wing": "Evaluation",
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "FC",
           "post": "CCF",
           "wing": "Forest Conservation (FCA)",
           "total_pending": 14,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 14,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "FC",
           "post": "PCCF",
           "wing": "Forest Conservation (FCA)",
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "FC",
           "post": "Section Officer",
           "wing": "Forest Conservation (FCA)",
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Forest Resource Management",
           "post": "Chief Conservator of Forests",
           "wing": "Forest Resource Management",
           "total_pending": 135,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 135,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Forest Resource Management",
           "post": "Additional Principal Chief Conservator of Forests",
           "wing": "Forest Resource Management",
           "total_pending": 31,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 31,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kaggalipura Range",
           "post": "Range Forest Officer",
           "wing": "Field offices under HQ code",
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kolar Division",
           "post": "Deputy Conservator of Forests",
           "wing": "Field offices under HQ code",
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "LEGAL CELL",
           "post": "Additional Principal Chief Conservator of Forests",
           "wing": "Legal Cell",
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Land Records",
           "post": "APCCF",
           "wing": "Land Records",
           "total_pending": 26,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 26,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Legal Cell",
           "post": "Additional Principal Chief Conservator of Forests",
           "wing": "Legal Cell",
-          "total_pending": 49,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 60,
+          "previous_total_pending": 49,
+          "delta": 11,
+          "direction": "increase"
         },
         {
           "section": "Legal Cell SO",
           "post": "Superintendent",
           "wing": "Legal Cell",
           "total_pending": 28,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 28,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Legal cell RI",
           "post": "First Division Assistant",
           "wing": "Legal Cell",
-          "total_pending": 6,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 7,
+          "previous_total_pending": 6,
+          "delta": 1,
+          "direction": "increase"
         },
         {
           "section": "Mysore WL Range",
           "post": "Range Forest Officer",
           "wing": "Field offices under HQ code",
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "PCCF WL",
           "post": "PCCF WL",
           "wing": "Wildlife",
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Personnel  Recruitment",
           "post": "AO",
           "wing": "Personnel & Recruitment",
           "total_pending": 50,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 50,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Personnel  Recruitment",
           "post": "APCCF",
           "wing": "Personnel & Recruitment",
           "total_pending": 8,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 8,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Personnel  Recruitment",
           "post": "FIRST DIVISION ASSISTANT- B3 SECTION",
           "wing": "Personnel & Recruitment",
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
-        },
-        {
-          "section": "Personnel  Recruitment",
-          "post": "MANAGER",
-          "wing": "Personnel & Recruitment",
-          "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Personnel  Recruitment",
           "post": "FIRST DIVISION ASSISTANT- A1  B1 SECTION",
           "wing": "Personnel & Recruitment",
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
+        },
+        {
+          "section": "Personnel  Recruitment",
+          "post": "MANAGER",
+          "wing": "Personnel & Recruitment",
+          "total_pending": 1,
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Vigilance",
           "post": "APCCF VIG",
           "wing": "Vigilance",
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "WILDLIFE",
           "post": "APCCF",
           "wing": "Wildlife",
           "total_pending": 7,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 7,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Working plan",
           "post": "APCCF working plan",
           "wing": "Working Plan",
           "total_pending": 11,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 11,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": [
         {
           "wing": "Personnel & Recruitment",
           "total_pending": 206,
-          "previous_total_pending": null,
+          "previous_total_pending": 206,
           "user_count": 7,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 1
         },
         {
           "wing": "Forest Resource Management",
           "total_pending": 166,
-          "previous_total_pending": null,
+          "previous_total_pending": 166,
           "user_count": 2,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 3
         },
         {
           "wing": "Legal Cell",
-          "total_pending": 86,
-          "previous_total_pending": null,
+          "total_pending": 98,
+          "previous_total_pending": 86,
           "user_count": 4,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 12,
+          "direction": "increase",
           "order": 2
         },
         {
           "wing": "Administration & Coordination",
           "total_pending": 68,
-          "previous_total_pending": null,
+          "previous_total_pending": 68,
           "user_count": 2,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 0
         },
         {
           "wing": "Land Records",
           "total_pending": 26,
-          "previous_total_pending": null,
+          "previous_total_pending": 26,
           "user_count": 1,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 5
         },
         {
           "wing": "Forest Conservation (FCA)",
           "total_pending": 24,
-          "previous_total_pending": null,
+          "previous_total_pending": 24,
           "user_count": 3,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 4
         },
         {
           "wing": "Field offices under HQ code",
           "total_pending": 14,
-          "previous_total_pending": null,
+          "previous_total_pending": 14,
           "user_count": 6,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 10
         },
         {
           "wing": "Wildlife",
           "total_pending": 12,
-          "previous_total_pending": null,
+          "previous_total_pending": 12,
           "user_count": 2,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 7
         },
         {
           "wing": "Working Plan",
           "total_pending": 11,
-          "previous_total_pending": null,
+          "previous_total_pending": 11,
           "user_count": 1,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 6
         },
         {
           "wing": "Vigilance",
           "total_pending": 1,
-          "previous_total_pending": null,
+          "previous_total_pending": 1,
           "user_count": 1,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 8
         },
         {
           "wing": "Evaluation",
           "total_pending": 1,
-          "previous_total_pending": null,
+          "previous_total_pending": 1,
           "user_count": 1,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 9
         }
       ]
@@ -432,45 +432,45 @@ window.CCMS_DATA = {
       "group": "hq",
       "circle": "Aranya Bhavana",
       "total_pending": 21,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 21,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 9,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 2,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 21,
-        "col_17": 0,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 2,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 21,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 1,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 9,
         "lco_proposal_stage_pending": 7,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 1,
-        "col_4": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -478,19 +478,19 @@ window.CCMS_DATA = {
           "post": "CCMS Admin",
           "wing": "System account / unallocated",
           "total_pending": 21,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 21,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": [
         {
           "wing": "System account / unallocated",
           "total_pending": 21,
-          "previous_total_pending": null,
+          "previous_total_pending": 21,
           "user_count": 1,
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "order": 11
         }
       ]
@@ -501,27 +501,28 @@ window.CCMS_DATA = {
       "group": "hq",
       "circle": "Aranya Bhavana",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -531,74 +532,74 @@ window.CCMS_DATA = {
       "name": "Bengaluru Circle",
       "group": "circle",
       "circle": "Bengaluru Circle",
-      "total_pending": 26,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 11,
+      "previous_total_pending": 26,
+      "delta": -15,
+      "direction": "decrease",
       "metrics": {
+        "not_to_appeal": 16,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 3,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 2,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 15,
-        "total_cases_pending": 26,
-        "col_17": 0,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 11,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 3,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 2,
+        "col_16": 0,
+        "affidavit_filing_pending": 1,
+        "col_10": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 1,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 14,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
           "section": "Bengaluru Circle",
           "post": "Conservator of Forests",
           "wing": null,
-          "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 2,
+          "previous_total_pending": 3,
+          "delta": -1,
+          "direction": "decrease"
         },
         {
           "section": "Bengaluru Circle",
           "post": "CF BENGALURU",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "EST-Gazetted",
           "post": "Assistant Administrator",
           "wing": null,
-          "total_pending": 23,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 9,
+          "previous_total_pending": 23,
+          "delta": -14,
+          "direction": "decrease"
         }
       ],
       "wings": []
@@ -608,46 +609,46 @@ window.CCMS_DATA = {
       "name": "Bengaluru Urban Division",
       "group": "division",
       "circle": "Bengaluru Circle",
-      "total_pending": 223,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 230,
+      "previous_total_pending": 223,
+      "delta": 7,
+      "direction": "increase",
       "metrics": {
+        "not_to_appeal": 35,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 68,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 10,
-        "disposed_case": 2,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 3,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 35,
-        "total_cases_pending": 223,
-        "col_17": 0,
-        "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
-        "col_12": 0,
-        "lco_proposal_stage_pending": 60,
-        "draft_pwr_pending": 38,
-        "affidavit_filing_pending": 2,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 24,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 6,
         "col_4": 4,
-        "approved_pwr_pending": 5
+        "col_9": 0,
+        "col_13": 3,
+        "affidavit_filed_hearing_stage": 24,
+        "col_7": 0,
+        "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 230,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 5,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 10,
+        "col_8": 0,
+        "no_action_taken": 9,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 2,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 2,
+        "col_10": 0,
+        "final_order_compliance_pending": 68,
+        "lco_proposal_stage_pending": 64,
+        "draft_pwr_pending": 38,
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -655,81 +656,81 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 8,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 8,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bengaluru Lake Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bengaluru North Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
-          "total_pending": 8,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 11,
+          "previous_total_pending": 8,
+          "delta": 3,
+          "direction": "increase"
         },
         {
           "section": "Bengaluru South Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bengaluru Urban Division",
           "post": "Deputy Conservator Of Forests",
           "wing": null,
-          "total_pending": 129,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 133,
+          "previous_total_pending": 129,
+          "delta": 4,
+          "direction": "increase"
         },
         {
           "section": "Bengaluru Urban Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 21,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 21,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "K R Puram Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 9,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 9,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kaggalipura Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 38,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 38,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Yelahanka Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -739,101 +740,101 @@ window.CCMS_DATA = {
       "name": "Bengaluru Rural Division",
       "group": "division",
       "circle": "Bengaluru Circle",
-      "total_pending": 41,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 44,
+      "previous_total_pending": 41,
+      "delta": 3,
+      "direction": "increase",
       "metrics": {
+        "not_to_appeal": 37,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 6,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 1,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 37,
-        "total_cases_pending": 41,
-        "col_17": 0,
-        "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
-        "col_12": 0,
-        "lco_proposal_stage_pending": 6,
-        "draft_pwr_pending": 12,
-        "affidavit_filing_pending": 14,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 1,
         "col_4": 1,
-        "approved_pwr_pending": 0
+        "col_9": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 6,
+        "col_7": 0,
+        "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 44,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 1,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 2,
+        "col_8": 0,
+        "no_action_taken": 4,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 9,
+        "col_10": 0,
+        "final_order_compliance_pending": 6,
+        "lco_proposal_stage_pending": 6,
+        "draft_pwr_pending": 9,
+        "proposed_for_appeal": 0
       },
       "users": [
         {
           "section": "Bengaluru Rural Division",
           "post": "Deputy Conservator Of Forests",
           "wing": null,
-          "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 7,
+          "previous_total_pending": 4,
+          "delta": 3,
+          "direction": "increase"
         },
         {
           "section": "Devanahalli Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Doddaballapura Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Doddaballapura Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 27,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 27,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hosakote Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Nelamangala Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -844,27 +845,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Bengaluru Circle",
       "total_pending": 19,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 19,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 10,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 19,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 1,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 10,
         "lco_proposal_stage_pending": 2,
         "draft_pwr_pending": 6,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -872,45 +873,45 @@ window.CCMS_DATA = {
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Magadi Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Ramanagar Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Ramanagara Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 12,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 12,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Ramanagara Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -921,45 +922,45 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Bengaluru Circle",
       "total_pending": 112,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 112,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 54,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 33,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 3,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 2,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 54,
-        "total_cases_pending": 112,
-        "col_17": 0,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 2,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 112,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 2,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 4,
+        "col_6": 1,
+        "col_19": 0,
+        "disposed_case": 3,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 33,
         "lco_proposal_stage_pending": 17,
         "draft_pwr_pending": 49,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 1,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 2,
-        "no_action_taken": 4,
-        "col_4": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -967,45 +968,45 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator Of Forests",
           "wing": null,
           "total_pending": 86,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 86,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kolar Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 21,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 21,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kolar Sub Division",
           "post": "Assistant Conservator Of Forest",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mulabagilu Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Shreenivasapura Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1015,46 +1016,46 @@ window.CCMS_DATA = {
       "name": "Chikkaballapura Division",
       "group": "division",
       "circle": "Bengaluru Circle",
-      "total_pending": 38,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 29,
+      "previous_total_pending": 38,
+      "delta": -9,
+      "direction": "decrease",
       "metrics": {
+        "not_to_appeal": 9,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 16,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 1,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 9,
-        "total_cases_pending": 38,
-        "col_17": 0,
-        "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
-        "col_12": 0,
-        "lco_proposal_stage_pending": 12,
-        "draft_pwr_pending": 7,
-        "affidavit_filing_pending": 2,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 0,
         "col_4": 0,
-        "approved_pwr_pending": 0
+        "col_9": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
+        "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 29,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 1,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 2,
+        "col_10": 0,
+        "final_order_compliance_pending": 6,
+        "lco_proposal_stage_pending": 13,
+        "draft_pwr_pending": 7,
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1062,54 +1063,54 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkaballapura Division",
           "post": "Deputy Conservator Of Forests",
           "wing": null,
-          "total_pending": 21,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 15,
+          "previous_total_pending": 21,
+          "delta": -6,
+          "direction": "decrease"
         },
         {
           "section": "Chikkaballapura Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkaballapura Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 7,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 7,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chintamani Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chintamani Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
-          "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 2,
+          "previous_total_pending": 5,
+          "delta": -3,
+          "direction": "decrease"
         }
       ],
       "wings": []
@@ -1120,45 +1121,45 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Bengaluru Circle",
       "total_pending": 7,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 7,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 7,
-        "col_17": 0,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 1,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 7,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 4,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 1,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1166,27 +1167,27 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bannerghatta Wildlife Division",
           "post": "Deputy Conservator Of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bannerghatta Wildlife Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1197,27 +1198,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Bengaluru Circle",
       "total_pending": 2,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 2,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
         "total_cases_pending": 2,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1225,18 +1226,18 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kaggalipura SF range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1247,27 +1248,28 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Bengaluru Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -1278,27 +1280,28 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Bengaluru Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -1309,41 +1312,41 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Bengaluru Circle",
       "total_pending": 2,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 2,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 2,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 2,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 1,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1351,9 +1354,9 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forest",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1364,41 +1367,41 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Bengaluru Circle",
       "total_pending": 3,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 3,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
-        "total_cases_pending": 3,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 3,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 1,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 1,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1406,18 +1409,18 @@ window.CCMS_DATA = {
           "post": "Assistant Conservator Of Forest",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkaballapura SF Division",
           "post": "Deputy Conservator Of Forest",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1428,41 +1431,41 @@ window.CCMS_DATA = {
       "group": "circle",
       "circle": "Ballari Circle",
       "total_pending": 9,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 9,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 6,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 6,
-        "total_cases_pending": 9,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 9,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 2,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 1,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 2,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 1,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 2,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1470,27 +1473,27 @@ window.CCMS_DATA = {
           "post": "Chief Conservator Of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Inward",
           "post": "Inward Officer",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
           "total_pending": 6,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 6,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1501,45 +1504,45 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Ballari Circle",
       "total_pending": 47,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 47,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 23,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 1,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
-        "total_cases_pending": 47,
-        "col_17": 0,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 47,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 3,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 1,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 23,
         "lco_proposal_stage_pending": 9,
         "draft_pwr_pending": 10,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 3,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1547,54 +1550,54 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 42,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 42,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Ballari Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Ballari Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hospet Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kudligi Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sandur North Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1605,41 +1608,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Ballari Circle",
       "total_pending": 37,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 37,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 4,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 12,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "draft_so_pending_from_advocate": 1,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 4,
-        "total_cases_pending": 37,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 37,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 1,
+        "col_8": 0,
+        "no_action_taken": 5,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 1,
+        "col_10": 0,
+        "final_order_compliance_pending": 12,
         "lco_proposal_stage_pending": 9,
         "draft_pwr_pending": 7,
-        "affidavit_filing_pending": 1,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 5,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1647,45 +1650,45 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 27,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 27,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chithradurga Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chitradurga Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Holalkere Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hosadurga Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1696,41 +1699,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Ballari Circle",
       "total_pending": 22,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 22,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 12,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
-        "total_cases_pending": 22,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 22,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 12,
         "lco_proposal_stage_pending": 6,
         "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1738,36 +1741,36 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 15,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 15,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Davanagere Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Davanagere Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Jagalur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1778,27 +1781,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Ballari Circle",
       "total_pending": 4,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 4,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 4,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 2,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1806,27 +1809,27 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Koppal Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kushtagi Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1837,27 +1840,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Ballari Circle",
       "total_pending": 3,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 3,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 3,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 2,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1865,9 +1868,9 @@ window.CCMS_DATA = {
           "post": "DCF SF",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1878,27 +1881,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Ballari Circle",
       "total_pending": 1,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 1,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 1,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1906,9 +1909,9 @@ window.CCMS_DATA = {
           "post": "DCF SF",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1919,27 +1922,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Ballari Circle",
       "total_pending": 2,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 2,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 2,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1947,9 +1950,9 @@ window.CCMS_DATA = {
           "post": "DCF SF",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -1960,27 +1963,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Ballari Circle",
       "total_pending": 1,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 1,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 1,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -1988,59 +1991,9 @@ window.CCMS_DATA = {
           "post": "DCF SF",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
-        }
-      ],
-      "wings": []
-    },
-    {
-      "code": "V024",
-      "name": "Vijayanagara Division",
-      "group": "division",
-      "circle": "Ballari Circle",
-      "total_pending": 13,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
-      "metrics": {
-        "closed_with_appeal_number": 0,
-        "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
-        "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 13,
-        "lco_proposal_stage_pending": 5,
-        "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 4,
-        "approved_pwr_pending": 0
-      },
-      "users": [
-        {
-          "section": "Hospet Sub Division",
-          "post": "Assistant Conservator of Forest Hospet",
-          "wing": null,
-          "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
-        },
-        {
-          "section": "Vijayanagara Division",
-          "post": "Deputy Conservator of Forests",
-          "wing": null,
-          "total_pending": 12,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2050,42 +2003,42 @@ window.CCMS_DATA = {
       "name": "Belagavi Circle",
       "group": "circle",
       "circle": "Belagavi Circle",
-      "total_pending": 20,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 21,
+      "previous_total_pending": 20,
+      "delta": 1,
+      "direction": "increase",
       "metrics": {
+        "not_to_appeal": 3,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 5,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 3,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 3,
-        "total_cases_pending": 20,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 21,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 7,
+        "col_6": 0,
+        "disposed_case": 3,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 1,
+        "col_10": 0,
+        "final_order_compliance_pending": 5,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 1,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 6,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2093,18 +2046,18 @@ window.CCMS_DATA = {
           "post": "Chief Conservator Of Forests",
           "wing": null,
           "total_pending": 10,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 10,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Inward officer",
           "post": "Inward officer",
           "wing": null,
-          "total_pending": 10,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 11,
+          "previous_total_pending": 10,
+          "delta": 1,
+          "direction": "increase"
         }
       ],
       "wings": []
@@ -2115,27 +2068,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Belagavi Circle",
       "total_pending": 16,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 16,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 10,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
         "total_cases_pending": 16,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 3,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 10,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 3,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2143,54 +2096,54 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 9,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 9,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Belagavi Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kankumbi Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Khanapur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Khanapur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Londa Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2201,27 +2154,28 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Belagavi Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -2232,27 +2186,28 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Belagavi Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -2263,27 +2218,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Belagavi Circle",
       "total_pending": 22,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 22,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 15,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 22,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 15,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 6,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2291,45 +2246,45 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 17,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 17,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Gokak Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Raibag Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Raibag Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Savadatti Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2340,27 +2295,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Belagavi Circle",
       "total_pending": 3,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 3,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 3,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2368,18 +2323,18 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Raibag SF Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2390,27 +2345,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Belagavi Circle",
       "total_pending": 3,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 3,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 3,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2418,18 +2373,18 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bagalakote SF Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2440,27 +2395,28 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Belagavi Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -2471,45 +2427,45 @@ window.CCMS_DATA = {
       "group": "circle",
       "circle": "Chamarajanagar Circle",
       "total_pending": 38,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 38,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 5,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 8,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 5,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 5,
-        "total_cases_pending": 38,
-        "col_17": 0,
+        "col_4": 3,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 5,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 38,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 8,
+        "col_6": 2,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 8,
         "lco_proposal_stage_pending": 4,
         "draft_pwr_pending": 7,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 2,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 8,
-        "col_4": 3,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2517,72 +2473,72 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator Of Forest",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chamarajanagara Circle",
           "post": "Chief Conservator Of Forests",
           "wing": null,
           "total_pending": 22,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 22,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Halaguru Range",
           "post": "RANGE FOREST OFFICER",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kanakpura Sub Division",
           "post": "Assistant Conservator Of Forest",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kollegala WL Sub Division",
           "post": "Assistant Conservator Of Forest",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Male Mahadeshwara Hills WL Division",
           "post": "Deputy Conservator Of Forest",
           "wing": null,
           "total_pending": 8,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 8,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "inward officer",
           "post": "Inward Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2593,41 +2549,41 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Chamarajanagar Circle",
       "total_pending": 28,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 28,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 6,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 3,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
-        "total_cases_pending": 28,
+        "col_4": 4,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 3,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 28,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 6,
         "lco_proposal_stage_pending": 8,
         "draft_pwr_pending": 7,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 4,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2635,45 +2591,45 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests  Director",
           "wing": null,
           "total_pending": 11,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 11,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chamarajnagar Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 11,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 11,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kollegal WL Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Yelandur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Yelandur WL Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2684,27 +2640,27 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Chamarajanagar Circle",
       "total_pending": 7,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 7,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 4,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 7,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 4,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2712,36 +2668,36 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Halagur WL Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hanur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sangam WL Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2752,27 +2708,27 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Chamarajanagar Circle",
       "total_pending": 2,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 2,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 2,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2780,9 +2736,9 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2793,27 +2749,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Chamarajanagar Circle",
       "total_pending": 5,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 5,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 4,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 5,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 4,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2821,27 +2777,27 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chamarajanagara SFSub  Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Gundlupet SF Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2852,45 +2808,45 @@ window.CCMS_DATA = {
       "group": "circle",
       "circle": "Chikkamagaluru Circle",
       "total_pending": 23,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 23,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 3,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 3,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 2,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 3,
-        "total_cases_pending": 23,
-        "col_17": 0,
+        "col_4": 2,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 2,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 23,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 5,
+        "col_6": 1,
+        "col_19": 0,
+        "disposed_case": 1,
+        "col_5": 0,
+        "col_16": 1,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 3,
         "lco_proposal_stage_pending": 5,
         "draft_pwr_pending": 4,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 1,
-        "col_6": 1,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 5,
-        "col_4": 2,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2898,36 +2854,36 @@ window.CCMS_DATA = {
           "post": "Conservator Of Forests",
           "wing": null,
           "total_pending": 16,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 16,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkamagaluru Circle",
           "post": "Chief Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkamagaluru Circle",
           "post": "Section Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Inward",
           "post": "Inward Officer",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -2938,41 +2894,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Chikkamagaluru Circle",
       "total_pending": 79,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 79,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 4,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 35,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 4,
-        "total_cases_pending": 79,
+        "col_4": 2,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 79,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 2,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 4,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 2,
+        "col_10": 0,
+        "final_order_compliance_pending": 35,
         "lco_proposal_stage_pending": 17,
         "draft_pwr_pending": 17,
-        "affidavit_filing_pending": 2,
-        "ga_lco_authorization_pending": 2,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 4,
-        "col_4": 2,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -2980,81 +2936,81 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkamagalur Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 30,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 30,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkamagalur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 16,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 16,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkamagalur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 12,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 12,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Government Timber Depot Kadur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kadur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 6,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 6,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mudigere Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mudigere Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Muthodi Range",
           "post": "Range Forest Offcer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3065,41 +3021,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Chikkamagaluru Circle",
       "total_pending": 33,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 33,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 14,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
-        "total_cases_pending": 33,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 33,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 1,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 14,
         "lco_proposal_stage_pending": 8,
         "draft_pwr_pending": 8,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3107,72 +3063,72 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Balehonnuru Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 8,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 8,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkagrahara Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kalasa Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Koppa Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 7,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 7,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Koppa Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Koppa Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sringeri Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3183,27 +3139,27 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Chikkamagaluru Circle",
       "total_pending": 6,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 6,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
         "total_cases_pending": 6,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 1,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 4,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3211,27 +3167,27 @@ window.CCMS_DATA = {
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bhadra WL Lakkavalli Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bhadra WL Lakkavalli Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3242,27 +3198,28 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Chikkamagaluru Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -3273,27 +3230,27 @@ window.CCMS_DATA = {
       "group": "circle",
       "circle": "Dharwad Circle",
       "total_pending": 10,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 10,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 10,
+        "ga_lco_authorization_pending": 1,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 1,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 3,
         "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3301,9 +3258,9 @@ window.CCMS_DATA = {
           "post": "Chief Conservator Of Forests",
           "wing": null,
           "total_pending": 10,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 10,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3314,27 +3271,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Dharwad Circle",
       "total_pending": 13,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 13,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 5,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 13,
+        "ga_lco_authorization_pending": 1,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 1,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 5,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 5,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3342,27 +3299,27 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 9,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 9,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Dharwad Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hubli Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3373,27 +3330,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Dharwad Circle",
       "total_pending": 3,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 3,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 3,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 3,
         "total_cases_pending": 3,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 3,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3401,18 +3358,18 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Gadag Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3423,27 +3380,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Dharwad Circle",
       "total_pending": 13,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 13,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 8,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 13,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 1,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 8,
         "lco_proposal_stage_pending": 3,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3451,36 +3408,36 @@ window.CCMS_DATA = {
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Haveri Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 7,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 7,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Haveri Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hirekerur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3491,27 +3448,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Dharwad Circle",
       "total_pending": 1,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 1,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 1,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3519,9 +3476,9 @@ window.CCMS_DATA = {
           "post": "DCF DHARWAD SOCIAL FORESTRY",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3531,46 +3488,46 @@ window.CCMS_DATA = {
       "name": "Hassan Circle",
       "group": "circle",
       "circle": "Hassan Circle",
-      "total_pending": 98,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 99,
+      "previous_total_pending": 98,
+      "delta": 1,
+      "direction": "increase",
       "metrics": {
+        "not_to_appeal": 15,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 29,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 1,
-        "col_13": 8,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 15,
-        "total_cases_pending": 98,
-        "col_17": 0,
+        "col_4": 1,
         "col_9": 1,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 8,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 1,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 99,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 2,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 39,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 1,
+        "col_5": 1,
+        "col_16": 2,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 29,
         "lco_proposal_stage_pending": 6,
         "draft_pwr_pending": 9,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 2,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 38,
-        "col_4": 1,
-        "approved_pwr_pending": 2
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3578,27 +3535,27 @@ window.CCMS_DATA = {
           "post": "Chief Conservator Of Forests",
           "wing": null,
           "total_pending": 49,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 49,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Inward officer",
           "post": "Inward officer",
           "wing": null,
           "total_pending": 28,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 28,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
-          "total_pending": 21,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 22,
+          "previous_total_pending": 21,
+          "delta": 1,
+          "direction": "increase"
         }
       ],
       "wings": []
@@ -3609,45 +3566,45 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Hassan Circle",
       "total_pending": 150,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 150,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 20,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 49,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 2,
-        "col_13": 3,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 20,
-        "total_cases_pending": 150,
-        "col_17": 0,
+        "col_4": 4,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 3,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 150,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 2,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 6,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 2,
+        "col_16": 0,
+        "affidavit_filing_pending": 2,
+        "col_10": 0,
+        "final_order_compliance_pending": 49,
         "lco_proposal_stage_pending": 21,
         "draft_pwr_pending": 61,
-        "affidavit_filing_pending": 2,
-        "ga_lco_authorization_pending": 2,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 6,
-        "col_4": 4,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3655,72 +3612,72 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Belur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 7,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 7,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Channarayapatna Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Channarayapatna Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 11,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 11,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hassan Division",
           "post": "Deputy Conservator Of Forests",
           "wing": null,
           "total_pending": 88,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 88,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hassan Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 14,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 14,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sakaleshpura Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sakaleshpura Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 19,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 19,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3731,41 +3688,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Hassan Circle",
       "total_pending": 35,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 35,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 8,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 10,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 8,
-        "total_cases_pending": 35,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 1,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 35,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 1,
+        "col_6": 0,
+        "disposed_case": 1,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 10,
         "lco_proposal_stage_pending": 2,
         "draft_pwr_pending": 18,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 1,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 1,
-        "col_4": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3773,81 +3730,81 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chikkanayakanahalli Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Gubbi Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kunigal Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Tiptur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Tumkur Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Tumkur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 10,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 10,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Tumkur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Tumkur Sub Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3858,45 +3815,45 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Hassan Circle",
       "total_pending": 7,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 7,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 7,
-        "col_17": 0,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 7,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 1,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 2,
         "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 1,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3904,27 +3861,27 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hassan Range SF",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sakaleshpur Range Sf",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -3935,27 +3892,28 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Hassan Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -3966,27 +3924,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Hassan Circle",
       "total_pending": 2,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 2,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 2,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 2,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -3994,18 +3952,18 @@ window.CCMS_DATA = {
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Pavagada Range SF",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4016,41 +3974,41 @@ window.CCMS_DATA = {
       "group": "circle",
       "circle": "Kalaburagi Circle",
       "total_pending": 35,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 35,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 15,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "draft_so_pending_from_advocate": 1,
-        "disposed_case": 8,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
-        "total_cases_pending": 35,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 35,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 1,
+        "col_8": 0,
+        "no_action_taken": 5,
+        "col_6": 0,
+        "disposed_case": 8,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 15,
         "lco_proposal_stage_pending": 5,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 5,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4058,27 +4016,27 @@ window.CCMS_DATA = {
           "post": "Chief Conservator of Forests",
           "wing": null,
           "total_pending": 22,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 22,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
           "total_pending": 7,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 7,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "inward officer",
           "post": "Inward Officer",
           "wing": null,
           "total_pending": 6,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 6,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4089,45 +4047,45 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kalaburagi Circle",
       "total_pending": 26,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 26,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 11,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
-        "total_cases_pending": 26,
-        "col_17": 0,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 26,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 1,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 11,
         "lco_proposal_stage_pending": 3,
         "draft_pwr_pending": 11,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 1,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4135,45 +4093,45 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kalaburagi  Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kalaburagi Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kalaburagi Division admin",
           "post": "Manager",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kalaburagi Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 13,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 13,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4184,41 +4142,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kalaburagi Circle",
       "total_pending": 48,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 48,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 12,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 19,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 7,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 2,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 2,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 12,
-        "total_cases_pending": 48,
+        "col_4": 5,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 2,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 2,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 48,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 7,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 3,
+        "col_6": 0,
+        "disposed_case": 2,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 19,
         "lco_proposal_stage_pending": 4,
         "draft_pwr_pending": 4,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 3,
-        "col_4": 5,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4226,63 +4184,63 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Basavakalyana Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bidar Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 8,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 8,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bidar Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 16,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 16,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bidar Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 16,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 16,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Chitguppa range",
           "post": "Chitguppa Range",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Humanabad",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4293,41 +4251,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kalaburagi Circle",
       "total_pending": 9,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 9,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 9,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 9,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 2,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 4,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 2,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4335,36 +4293,36 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Manvi Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Raichur Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Raichur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4375,41 +4333,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kalaburagi Circle",
       "total_pending": 2,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 2,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 2,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 2,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4417,18 +4375,18 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Yadgir Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4439,27 +4397,28 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Kalaburagi Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -4470,27 +4429,28 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Kalaburagi Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -4501,27 +4461,28 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Kalaburagi Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -4532,27 +4493,28 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Kalaburagi Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -4563,27 +4525,27 @@ window.CCMS_DATA = {
       "group": "circle",
       "circle": "Kanara Circle",
       "total_pending": 9,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 9,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 3,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
         "total_cases_pending": 9,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 5,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 3,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 5,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4591,27 +4553,27 @@ window.CCMS_DATA = {
           "post": "Inward officer",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kanara Circle",
           "post": "Chief Conservator Of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4622,41 +4584,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kanara Circle",
       "total_pending": 25,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 25,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 25,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 5,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 4,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 25,
-        "total_cases_pending": 25,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 25,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 4,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 5,
         "lco_proposal_stage_pending": 13,
         "draft_pwr_pending": 2,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4664,27 +4626,27 @@ window.CCMS_DATA = {
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Haliyal Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 20,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 20,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Haliyal Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4695,27 +4657,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kanara Circle",
       "total_pending": 19,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 19,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 6,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 1,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 19,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 1,
+        "no_action_taken": 3,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 6,
         "lco_proposal_stage_pending": 4,
         "draft_pwr_pending": 5,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 3,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4723,36 +4685,36 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Honnavara Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 11,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 11,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Honnavara Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Honnavara Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4763,41 +4725,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kanara Circle",
       "total_pending": 17,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 17,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 5,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 17,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 17,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 1,
+        "col_6": 0,
+        "disposed_case": 1,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 5,
         "lco_proposal_stage_pending": 6,
         "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 1,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4805,45 +4767,45 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Ankola Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Karwar Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 9,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 9,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Karwar Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Karwar Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4854,45 +4816,45 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kanara Circle",
       "total_pending": 32,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 32,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 17,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 32,
-        "col_17": 0,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 32,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 2,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 1,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 17,
         "lco_proposal_stage_pending": 4,
         "draft_pwr_pending": 8,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 2,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 1,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4900,36 +4862,36 @@ window.CCMS_DATA = {
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sirsi Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 25,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 25,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sirsi Range",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sirsi Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -4940,41 +4902,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kanara Circle",
       "total_pending": 22,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 22,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 7,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 2,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 1,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 22,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 22,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 1,
+        "col_6": 0,
+        "disposed_case": 2,
+        "col_5": 1,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 7,
         "lco_proposal_stage_pending": 8,
         "draft_pwr_pending": 2,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 1,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -4982,45 +4944,45 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mundhagodu Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Yellapura Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 15,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 15,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Yellapura Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Yellapura Sub Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5031,27 +4993,27 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Kanara Circle",
       "total_pending": 2,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 2,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 2,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5059,9 +5021,9 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5072,27 +5034,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Kanara Circle",
       "total_pending": 1,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 1,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 1,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5100,9 +5062,9 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5113,45 +5075,45 @@ window.CCMS_DATA = {
       "group": "circle",
       "circle": "Kodagu Circle",
       "total_pending": 7,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 7,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 3,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
-        "total_cases_pending": 7,
-        "col_17": 0,
+        "col_4": 2,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 7,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 3,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 0,
-        "col_4": 2,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5159,27 +5121,27 @@ window.CCMS_DATA = {
           "post": "Inward officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kodagu Circle",
           "post": "Conservator OF Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5190,45 +5152,45 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kodagu Circle",
       "total_pending": 60,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 60,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 20,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 3,
-        "disposed_case": 1,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 3,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
-        "total_cases_pending": 60,
-        "col_17": 0,
+        "col_4": 2,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 60,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 6,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 3,
+        "col_8": 0,
+        "no_action_taken": 1,
+        "col_6": 3,
+        "col_19": 0,
+        "disposed_case": 1,
+        "col_5": 3,
+        "col_16": 0,
+        "affidavit_filing_pending": 2,
+        "col_10": 0,
+        "final_order_compliance_pending": 20,
         "lco_proposal_stage_pending": 8,
         "draft_pwr_pending": 9,
-        "affidavit_filing_pending": 2,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 3,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 1,
-        "col_4": 2,
-        "approved_pwr_pending": 6
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5236,63 +5198,63 @@ window.CCMS_DATA = {
           "post": "Inward officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kushalnagara Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Madikeri Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 46,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 46,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Madikeri Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Shanivarasanthe Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Somwarpet Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5303,45 +5265,45 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kodagu Circle",
       "total_pending": 60,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 60,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 13,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 29,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 2,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 13,
-        "total_cases_pending": 60,
-        "col_17": 0,
+        "col_4": 3,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 60,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 2,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 1,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 1,
+        "col_6": 1,
+        "col_19": 0,
+        "disposed_case": 2,
+        "col_5": 0,
+        "col_16": 1,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 29,
         "lco_proposal_stage_pending": 11,
         "draft_pwr_pending": 10,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 2,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 1,
-        "col_6": 1,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 1,
-        "col_4": 3,
-        "approved_pwr_pending": 1
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5349,54 +5311,54 @@ window.CCMS_DATA = {
           "post": "Inward officer",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Makutta Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Ponnampet Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Thithimathi Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Virajpet Division",
           "post": "Deputy conservator of Forests",
           "wing": null,
           "total_pending": 48,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 48,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Virajpet Sub Dvision",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5407,27 +5369,28 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Kodagu Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -5438,41 +5401,41 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Kodagu Circle",
       "total_pending": 5,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 5,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
-        "total_cases_pending": 5,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 5,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 3,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5480,36 +5443,36 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Madikeri Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Madikeri WL Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Pushpagiri Wildlife Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5520,45 +5483,45 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Kodagu Circle",
       "total_pending": 12,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 12,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 12,
-        "col_17": 0,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 12,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 2,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 1,
+        "col_10": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 3,
         "draft_pwr_pending": 4,
-        "affidavit_filing_pending": 1,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 2,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 0,
-        "col_4": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5566,45 +5529,45 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hunsur Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Metikuppe Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Nagarahole Wildlife Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Nagarahole Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5614,74 +5577,74 @@ window.CCMS_DATA = {
       "name": "Mangaluru Circle",
       "group": "circle",
       "circle": "Mangaluru Circle",
-      "total_pending": 24,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 23,
+      "previous_total_pending": 24,
+      "delta": -1,
+      "direction": "decrease",
       "metrics": {
+        "not_to_appeal": 3,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 9,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 1,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 3,
-        "total_cases_pending": 24,
-        "col_17": 0,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 23,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 1,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 7,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 1,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 9,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 5,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 1,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 8,
-        "col_4": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
           "section": "Inward officer",
           "post": "Inward officer",
           "wing": null,
-          "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 0,
+          "previous_total_pending": 1,
+          "delta": -1,
+          "direction": "decrease"
         },
         {
           "section": "Mangaluru Circle",
           "post": "Chief Conservator Of Forests",
           "wing": null,
           "total_pending": 18,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 18,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5692,41 +5655,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Mangaluru Circle",
       "total_pending": 49,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 49,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 14,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
-        "total_cases_pending": 49,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 1,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 49,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 2,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 1,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 2,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 14,
         "lco_proposal_stage_pending": 11,
         "draft_pwr_pending": 17,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 2,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 2,
-        "col_4": 1,
-        "approved_pwr_pending": 1
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5734,99 +5697,99 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Belthangadi Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mangaluru Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 22,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 22,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mangaluru Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mangaluru Sub  Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Panja Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Puttur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Puttur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Subrahmanya Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Subrahmanya Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 9,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 9,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Uppina angadi Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5837,41 +5800,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Mangaluru Circle",
       "total_pending": 10,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 10,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 1,
-        "disposed_case": 2,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 10,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 10,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 1,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 1,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 2,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 1,
+        "col_10": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 1,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 1,
-        "approved_pwr_pending": 1
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5879,45 +5842,45 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kundapur Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kundapur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Kundapur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Moodabidre Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5928,45 +5891,45 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Mangaluru Circle",
       "total_pending": 8,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 8,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 1,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
-        "total_cases_pending": 8,
-        "col_17": 0,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 8,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 3,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 1,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 4,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 3,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -5974,18 +5937,18 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Siddapura Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -5996,27 +5959,28 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Mangaluru Circle",
       "total_pending": 0,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 0,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": null,
         "closed_with_appeal_number": null,
         "interim_order_compliance_pending": null,
-        "final_order_compliance_pending": null,
+        "affidavit_filed_hearing_stage": null,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": null,
-        "disposed_case": null,
-        "approved_so_pending": null,
-        "not_to_appeal": null,
         "total_cases_pending": 0,
+        "ga_lco_authorization_pending": null,
+        "approved_so_pending": null,
+        "approved_pwr_pending": null,
+        "draft_so_pending_from_advocate": null,
+        "no_action_taken": null,
+        "disposed_case": null,
+        "affidavit_filing_pending": null,
+        "final_order_compliance_pending": null,
         "lco_proposal_stage_pending": null,
         "draft_pwr_pending": null,
-        "affidavit_filing_pending": null,
-        "ga_lco_authorization_pending": null,
-        "affidavit_filed_hearing_stage": null,
         "proposed_for_appeal": null,
-        "no_action_taken": null,
-        "approved_pwr_pending": null
+        "_zero_reason": "absent from all reports; all reports succeeded"
       },
       "users": [],
       "wings": []
@@ -6027,27 +5991,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Mangaluru Circle",
       "total_pending": 5,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 5,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 3,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
         "total_cases_pending": 5,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 3,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6055,36 +6019,36 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Udupi Dvision SF",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Udupi Range SF",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "kundapura Range SF",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6095,45 +6059,45 @@ window.CCMS_DATA = {
       "group": "circle",
       "circle": "Mysuru Circle",
       "total_pending": 56,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 56,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 33,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 2,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 2,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
-        "total_cases_pending": 56,
-        "col_17": 0,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 2,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 56,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 2,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 5,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 33,
         "lco_proposal_stage_pending": 6,
         "draft_pwr_pending": 6,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 5,
-        "col_4": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6141,18 +6105,18 @@ window.CCMS_DATA = {
           "post": "Conservator Of Forests",
           "wing": null,
           "total_pending": 48,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 48,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
           "total_pending": 8,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 8,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6162,42 +6126,42 @@ window.CCMS_DATA = {
       "name": "Mysuru Division",
       "group": "division",
       "circle": "Mysuru Circle",
-      "total_pending": 35,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 34,
+      "previous_total_pending": 35,
+      "delta": -1,
+      "direction": "decrease",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 18,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 1,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
-        "total_cases_pending": 35,
-        "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
-        "col_12": 0,
-        "lco_proposal_stage_pending": 4,
-        "draft_pwr_pending": 11,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
         "col_4": 1,
-        "approved_pwr_pending": 0
+        "col_9": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
+        "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 34,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 1,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 18,
+        "lco_proposal_stage_pending": 4,
+        "draft_pwr_pending": 10,
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6205,45 +6169,45 @@ window.CCMS_DATA = {
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mysuru Division",
           "post": "Deputy Conservator Of Forests",
           "wing": null,
           "total_pending": 23,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 23,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mysuru Range",
           "post": "Range Forest Officer",
           "wing": null,
-          "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 4,
+          "previous_total_pending": 5,
+          "delta": -1,
+          "direction": "decrease"
         },
         {
           "section": "Mysuru Sub Division",
           "post": "Assistant Conservator Of Forests",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Nanjangudu Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6254,45 +6218,45 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Mysuru Circle",
       "total_pending": 69,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 69,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 33,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
-        "total_cases_pending": 69,
-        "col_17": 0,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 69,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 1,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 33,
         "lco_proposal_stage_pending": 6,
         "draft_pwr_pending": 27,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 1,
-        "col_4": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6300,54 +6264,54 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mandya Division",
           "post": "Deputy Conservator Of Forests",
           "wing": null,
           "total_pending": 52,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 52,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mandya Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mandya Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Nagamangala Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Srirangapattana Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6358,27 +6322,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Mysuru Circle",
       "total_pending": 12,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 12,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
         "total_cases_pending": 12,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 1,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 8,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6386,27 +6350,27 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator Of Forests",
           "wing": null,
           "total_pending": 8,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 8,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hunsur Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Periyapattana Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6417,41 +6381,41 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Mysuru Circle",
       "total_pending": 3,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 3,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 0,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 1,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 3,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 1,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 3,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 0,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6459,9 +6423,9 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator Of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6472,27 +6436,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Mysuru Circle",
       "total_pending": 1,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 1,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
         "total_cases_pending": 1,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6500,9 +6464,9 @@ window.CCMS_DATA = {
           "post": "Assistant Conservator Of Forest",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6513,45 +6477,45 @@ window.CCMS_DATA = {
       "group": "wildlife",
       "circle": "Mysuru Circle",
       "total_pending": 11,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 11,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 8,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 1,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 11,
-        "col_17": 0,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 11,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 1,
+        "col_8": 0,
+        "no_action_taken": 0,
+        "col_6": 1,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 0,
+        "col_10": 0,
+        "final_order_compliance_pending": 8,
         "lco_proposal_stage_pending": 1,
         "draft_pwr_pending": 0,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 1,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 0,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6559,9 +6523,9 @@ window.CCMS_DATA = {
           "post": "DIRECTOR",
           "wing": null,
           "total_pending": 11,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 11,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6571,46 +6535,46 @@ window.CCMS_DATA = {
       "name": "Shivamogga Circle",
       "group": "circle",
       "circle": "Shivamogga Circle",
-      "total_pending": 22,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 21,
+      "previous_total_pending": 22,
+      "delta": -1,
+      "direction": "decrease",
       "metrics": {
+        "not_to_appeal": 7,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 3,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 7,
-        "total_cases_pending": 22,
-        "col_17": 0,
+        "col_4": 0,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 3,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 21,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 0,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 1,
+        "draft_so_pending_from_advocate": 0,
+        "col_8": 0,
+        "no_action_taken": 7,
+        "col_6": 0,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 3,
+        "col_10": 0,
+        "final_order_compliance_pending": 2,
         "lco_proposal_stage_pending": 5,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 3,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 1,
-        "no_action_taken": 8,
-        "col_4": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6618,27 +6582,27 @@ window.CCMS_DATA = {
           "post": "Inward officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Section Officer",
           "post": "Section Officer",
           "wing": null,
-          "total_pending": 9,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 8,
+          "previous_total_pending": 9,
+          "delta": -1,
+          "direction": "decrease"
         },
         {
           "section": "Shivamogga Circle",
           "post": "Chief Conservator of Forests",
           "wing": null,
           "total_pending": 11,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 11,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6649,41 +6613,41 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Shivamogga Circle",
       "total_pending": 79,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 79,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 5,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 20,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "draft_so_pending_from_advocate": 4,
-        "disposed_case": 2,
-        "col_8": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 2,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 5,
-        "total_cases_pending": 79,
+        "col_4": 3,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 2,
+        "affidavit_filed_hearing_stage": 0,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 79,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 1,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "draft_so_pending_from_advocate": 4,
+        "col_8": 0,
+        "no_action_taken": 4,
+        "col_6": 0,
+        "disposed_case": 2,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 3,
+        "col_10": 0,
+        "final_order_compliance_pending": 20,
         "lco_proposal_stage_pending": 10,
         "draft_pwr_pending": 30,
-        "affidavit_filing_pending": 3,
-        "ga_lco_authorization_pending": 1,
-        "affidavit_filed_hearing_stage": 0,
-        "col_16": 0,
-        "col_6": 0,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 4,
-        "col_4": 3,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6691,81 +6655,81 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Ayanur Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 11,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 11,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Govt. Sandalwood Shivamogga Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mandagadde Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Rippanpate Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Shankar Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Shivamogga Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 34,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 34,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Thirthahalli Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 6,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 6,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Thirthahalli Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 17,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 17,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6776,27 +6740,27 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Shivamogga Circle",
       "total_pending": 64,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 64,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 13,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 22,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 2,
-        "approved_so_pending": 0,
-        "not_to_appeal": 13,
         "total_cases_pending": 64,
+        "ga_lco_authorization_pending": 3,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 4,
+        "disposed_case": 2,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 22,
         "lco_proposal_stage_pending": 15,
         "draft_pwr_pending": 18,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 3,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 4,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6804,108 +6768,108 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Anandapuram Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 0,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 0,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Anavatti Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hosanagara Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Hosanagara Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 6,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 6,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "RFO ICT Legal Sagar Division",
           "post": "RFO ICT Legal Sagar Division",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sagar Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 17,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 17,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sagar Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sagar Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 15,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 15,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Shikaripura Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 3,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Shiralkoppa Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Soraba Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -6916,45 +6880,45 @@ window.CCMS_DATA = {
       "group": "division",
       "circle": "Shivamogga Circle",
       "total_pending": 62,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 62,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 2,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 24,
-        "cases_received_as_on_yesterday": 0,
-        "col_3": 0,
-        "col_19": 0,
-        "draft_so_pending_from_advocate": 3,
-        "disposed_case": 0,
-        "col_8": 0,
-        "col_18": 0,
-        "col_7": 0,
-        "col_5": 0,
-        "col_13": 0,
-        "col_14": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 2,
-        "total_cases_pending": 62,
-        "col_17": 0,
+        "col_4": 1,
         "col_9": 0,
-        "col_11": 0,
-        "col_10": 0,
+        "col_13": 0,
+        "affidavit_filed_hearing_stage": 2,
+        "col_7": 0,
         "col_12": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 62,
+        "col_14": 0,
+        "ga_lco_authorization_pending": 2,
+        "col_18": 0,
+        "col_17": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "col_3": 0,
+        "col_11": 0,
+        "col_15": 0,
+        "col_20": 0,
+        "draft_so_pending_from_advocate": 3,
+        "col_8": 0,
+        "no_action_taken": 1,
+        "col_6": 1,
+        "col_19": 0,
+        "disposed_case": 0,
+        "col_5": 0,
+        "col_16": 0,
+        "affidavit_filing_pending": 1,
+        "col_10": 0,
+        "final_order_compliance_pending": 24,
         "lco_proposal_stage_pending": 4,
         "draft_pwr_pending": 23,
-        "affidavit_filing_pending": 1,
-        "ga_lco_authorization_pending": 2,
-        "affidavit_filed_hearing_stage": 2,
-        "col_16": 0,
-        "col_6": 1,
-        "col_15": 0,
-        "proposed_for_appeal": 0,
-        "col_20": 0,
-        "no_action_taken": 1,
-        "col_4": 1,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -6962,63 +6926,63 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bhadravathi Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
           "total_pending": 25,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 25,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Bhadravathi Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 5,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 5,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Channagiri Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 10,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 10,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Lakkavalli  Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Tharikere Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 15,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 15,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Umbalebyle Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 4,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 4,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -7028,28 +6992,28 @@ window.CCMS_DATA = {
       "name": "Shivamogga Wildlife Division",
       "group": "wildlife",
       "circle": "Shivamogga Circle",
-      "total_pending": 9,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "total_pending": 10,
+      "previous_total_pending": 9,
+      "delta": 1,
+      "direction": "increase",
       "metrics": {
+        "not_to_appeal": 0,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 2,
-        "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 1,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 0,
-        "total_cases_pending": 9,
-        "lco_proposal_stage_pending": 2,
-        "draft_pwr_pending": 4,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
         "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
+        "cases_received_as_on_yesterday": 0,
+        "total_cases_pending": 10,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 1,
         "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 2,
+        "lco_proposal_stage_pending": 3,
+        "draft_pwr_pending": 4,
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -7057,45 +7021,45 @@ window.CCMS_DATA = {
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Mugudthi Wildlife Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Sakrebylu Wildlife Range",
           "post": "Range Forest Officer",
           "wing": null,
           "total_pending": 1,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 1,
+          "delta": 0,
+          "direction": "same"
         },
         {
           "section": "Shivamogga Wildlife Division",
           "post": "Deputy Conservator of Forests",
           "wing": null,
-          "total_pending": 3,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "total_pending": 4,
+          "previous_total_pending": 3,
+          "delta": 1,
+          "direction": "increase"
         },
         {
           "section": "Shivamogga Wildlife Sub Division",
           "post": "Assistant Conservator of Forests",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -7106,27 +7070,27 @@ window.CCMS_DATA = {
       "group": "sf",
       "circle": "Shivamogga Circle",
       "total_pending": 2,
-      "previous_total_pending": null,
-      "delta": null,
-      "direction": "baseline",
+      "previous_total_pending": 2,
+      "delta": 0,
+      "direction": "same",
       "metrics": {
+        "not_to_appeal": 1,
         "closed_with_appeal_number": 0,
         "interim_order_compliance_pending": 0,
-        "final_order_compliance_pending": 1,
+        "affidavit_filed_hearing_stage": 0,
         "cases_received_as_on_yesterday": 0,
-        "draft_so_pending_from_advocate": 0,
-        "disposed_case": 0,
-        "approved_so_pending": 0,
-        "not_to_appeal": 1,
         "total_cases_pending": 2,
+        "ga_lco_authorization_pending": 0,
+        "approved_so_pending": 0,
+        "approved_pwr_pending": 0,
+        "draft_so_pending_from_advocate": 0,
+        "no_action_taken": 0,
+        "disposed_case": 0,
+        "affidavit_filing_pending": 0,
+        "final_order_compliance_pending": 1,
         "lco_proposal_stage_pending": 0,
         "draft_pwr_pending": 1,
-        "affidavit_filing_pending": 0,
-        "ga_lco_authorization_pending": 0,
-        "affidavit_filed_hearing_stage": 0,
-        "proposed_for_appeal": 0,
-        "no_action_taken": 0,
-        "approved_pwr_pending": 0
+        "proposed_for_appeal": 0
       },
       "users": [
         {
@@ -7134,9 +7098,9 @@ window.CCMS_DATA = {
           "post": "Deputy Conservator of Forest",
           "wing": null,
           "total_pending": 2,
-          "previous_total_pending": null,
-          "delta": null,
-          "direction": "baseline"
+          "previous_total_pending": 2,
+          "delta": 0,
+          "direction": "same"
         }
       ],
       "wings": []
@@ -7274,9 +7238,9 @@ window.CCMS_DATA = {
           "group": "hq",
           "circle": "Aranya Bhavana",
           "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 368,
-            "no_action_taken": 8,
+            "cases_received_as_on_yesterday": 1,
+            "total_cases_pending": 380,
+            "no_action_taken": 9,
             "lco_proposal_stage_pending": 58,
             "ga_lco_authorization_pending": 9,
             "draft_pwr_pending": 88,
@@ -7287,13 +7251,13 @@ window.CCMS_DATA = {
             "affidavit_filed_hearing_stage": 0,
             "interim_order_compliance_pending": 0,
             "disposed_case": 9,
-            "final_order_compliance_pending": 175,
+            "final_order_compliance_pending": 186,
             "proposed_for_appeal": 0,
             "closed_with_appeal_number": 9,
             "not_to_appeal": 343
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 12,
+          "direction": "increase",
           "users": [
             {
               "post": "Chief Conservator of Forests",
@@ -7318,8 +7282,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 5
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -7327,7 +7291,7 @@ window.CCMS_DATA = {
               "wing": "Legal Cell",
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 42,
+                "total_cases_pending": 53,
                 "no_action_taken": 0,
                 "lco_proposal_stage_pending": 6,
                 "ga_lco_authorization_pending": 0,
@@ -7339,13 +7303,13 @@ window.CCMS_DATA = {
                 "affidavit_filed_hearing_stage": 0,
                 "interim_order_compliance_pending": 0,
                 "disposed_case": 2,
-                "final_order_compliance_pending": 18,
+                "final_order_compliance_pending": 29,
                 "proposed_for_appeal": 0,
                 "closed_with_appeal_number": 8,
                 "not_to_appeal": 112
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 11,
+              "direction": "increase"
             },
             {
               "post": "Administrative Officer",
@@ -7370,8 +7334,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -7396,8 +7360,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF",
@@ -7422,8 +7386,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Administrative Officer",
@@ -7448,8 +7412,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "CCF",
@@ -7474,8 +7438,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF working plan",
@@ -7500,8 +7464,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF",
@@ -7526,8 +7490,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF",
@@ -7552,8 +7516,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator Of Forests",
@@ -7578,8 +7542,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "PCCF",
@@ -7604,8 +7568,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -7630,8 +7594,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "PCCF WL",
@@ -7656,8 +7620,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF",
@@ -7682,8 +7646,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -7708,8 +7672,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -7734,8 +7698,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "AO",
@@ -7760,8 +7724,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator Of Forests",
@@ -7786,8 +7750,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -7812,8 +7776,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF",
@@ -7838,8 +7802,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -7864,8 +7828,34 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 1,
                 "not_to_appeal": 58
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "First Division Assistant",
+              "section": "Legal cell RI",
+              "wing": "Legal Cell",
+              "metrics": {
+                "cases_received_as_on_yesterday": 1,
+                "total_cases_pending": 1,
+                "no_action_taken": 1,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 81
+              },
+              "delta": 1,
+              "direction": "increase"
             },
             {
               "post": "Superintendent",
@@ -7890,8 +7880,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 83
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF VIG",
@@ -7916,34 +7906,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "First Division Assistant",
-              "section": "Legal cell RI",
-              "wing": "Legal Cell",
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 0,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 81
-              },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -7954,9 +7918,9 @@ window.CCMS_DATA = {
           "circle": "Bengaluru Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 210,
-            "no_action_taken": 6,
-            "lco_proposal_stage_pending": 59,
+            "total_cases_pending": 217,
+            "no_action_taken": 9,
+            "lco_proposal_stage_pending": 63,
             "ga_lco_authorization_pending": 0,
             "draft_pwr_pending": 35,
             "approved_pwr_pending": 5,
@@ -7971,8 +7935,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 35
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 7,
+          "direction": "increase",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -7980,9 +7944,9 @@ window.CCMS_DATA = {
               "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 126,
+                "total_cases_pending": 130,
                 "no_action_taken": 1,
-                "lco_proposal_stage_pending": 35,
+                "lco_proposal_stage_pending": 39,
                 "ga_lco_authorization_pending": 0,
                 "draft_pwr_pending": 8,
                 "approved_pwr_pending": 2,
@@ -7997,8 +7961,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 22
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 4,
+              "direction": "increase"
             },
             {
               "post": "Range Forest Officer",
@@ -8023,8 +7987,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 3
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8049,8 +8013,34 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Assistant Conservator of Forests",
+              "section": "Bengaluru North Sub Division",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 11,
+                "no_action_taken": 7,
+                "lco_proposal_stage_pending": 3,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 1,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 5
+              },
+              "delta": 3,
+              "direction": "increase"
             },
             {
               "post": "Range Forest Officer",
@@ -8075,34 +8065,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Assistant Conservator of Forests",
-              "section": "Bengaluru North Sub Division",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 8,
-                "no_action_taken": 4,
-                "lco_proposal_stage_pending": 3,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 1,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 5
-              },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8127,8 +8091,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8153,8 +8117,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -8179,8 +8143,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -8205,8 +8169,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 4
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -8234,8 +8198,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 20
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -8260,8 +8224,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 9
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -8286,8 +8250,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 6
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -8312,8 +8276,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8338,8 +8302,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8364,8 +8328,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8390,8 +8354,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -8416,8 +8380,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8442,8 +8406,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -8471,8 +8435,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 54
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -8497,8 +8461,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 49
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8523,8 +8487,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator Of Forest",
@@ -8549,8 +8513,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8575,8 +8539,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 3
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8601,8 +8565,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -8630,8 +8594,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 4
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -8656,8 +8620,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 4
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8682,8 +8646,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -8708,8 +8672,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8734,8 +8698,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8760,8 +8724,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8786,8 +8750,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -8812,8 +8776,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -8838,8 +8802,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Offcer",
@@ -8864,8 +8828,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -8876,8 +8840,8 @@ window.CCMS_DATA = {
           "circle": "Hassan Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 70,
-            "no_action_taken": 33,
+            "total_cases_pending": 71,
+            "no_action_taken": 34,
             "lco_proposal_stage_pending": 2,
             "ga_lco_authorization_pending": 1,
             "draft_pwr_pending": 2,
@@ -8893,8 +8857,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 14
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 1,
+          "direction": "increase",
           "users": [
             {
               "post": "Inward officer",
@@ -8919,8 +8883,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 8
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Chief Conservator Of Forests",
@@ -8945,8 +8909,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -8954,8 +8918,8 @@ window.CCMS_DATA = {
               "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 18,
-                "no_action_taken": 11,
+                "total_cases_pending": 19,
+                "no_action_taken": 12,
                 "lco_proposal_stage_pending": 1,
                 "ga_lco_authorization_pending": 0,
                 "draft_pwr_pending": 1,
@@ -8971,8 +8935,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 4
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 1,
+              "direction": "increase"
             }
           ]
         },
@@ -9000,8 +8964,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 5
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -9026,8 +8990,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 4
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -9052,8 +9016,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -9078,8 +9042,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9104,8 +9068,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9130,8 +9094,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9156,8 +9120,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -9182,8 +9146,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9208,8 +9172,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -9237,8 +9201,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -9263,8 +9227,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -9289,8 +9253,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9315,8 +9279,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9341,8 +9305,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9367,8 +9331,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -9396,8 +9360,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 13
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -9422,8 +9386,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -9448,8 +9412,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 11
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -9474,8 +9438,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9500,8 +9464,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -9526,8 +9490,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9552,8 +9516,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9578,8 +9542,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -9604,8 +9568,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9630,8 +9594,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "RFO ICT Legal Sagar Division",
@@ -9656,8 +9620,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9682,8 +9646,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9708,8 +9672,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -9737,8 +9701,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -9763,8 +9727,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -9789,8 +9753,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -9815,8 +9779,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9841,8 +9805,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9867,8 +9831,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9893,8 +9857,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -9919,8 +9883,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -9948,8 +9912,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 13
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy conservator of Forests",
@@ -9974,8 +9938,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 12
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -10000,8 +9964,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -10026,8 +9990,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -10052,8 +10016,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward officer",
@@ -10078,8 +10042,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -10107,8 +10071,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -10133,8 +10097,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -10159,8 +10123,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -10185,8 +10149,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward officer",
@@ -10211,8 +10175,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -10237,8 +10201,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -10266,8 +10230,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -10292,8 +10256,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -10318,8 +10282,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -10344,8 +10308,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -10370,8 +10334,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -10396,8 +10360,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -10422,8 +10386,193 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
+            }
+          ]
+        },
+        {
+          "code": "AC",
+          "name": "Bengaluru Rural Division",
+          "group": "division",
+          "circle": "Bengaluru Circle",
+          "metrics": {
+            "cases_received_as_on_yesterday": 0,
+            "total_cases_pending": 43,
+            "no_action_taken": 4,
+            "lco_proposal_stage_pending": 6,
+            "ga_lco_authorization_pending": 0,
+            "draft_pwr_pending": 9,
+            "approved_pwr_pending": 1,
+            "draft_so_pending_from_advocate": 2,
+            "approved_so_pending": 0,
+            "affidavit_filing_pending": 9,
+            "affidavit_filed_hearing_stage": 6,
+            "interim_order_compliance_pending": 0,
+            "disposed_case": 0,
+            "final_order_compliance_pending": 6,
+            "proposed_for_appeal": 0,
+            "closed_with_appeal_number": 0,
+            "not_to_appeal": 37
+          },
+          "delta": 3,
+          "direction": "increase",
+          "users": [
+            {
+              "post": "Assistant Conservator of Forests",
+              "section": "Doddaballapura Sub Division",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 27,
+                "no_action_taken": 1,
+                "lco_proposal_stage_pending": 6,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 4,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 2,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 8,
+                "affidavit_filed_hearing_stage": 4,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 2,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 20
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Deputy Conservator Of Forests",
+              "section": "Bengaluru Rural Division",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 7,
+                "no_action_taken": 3,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 3,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 12
+              },
+              "delta": 3,
+              "direction": "increase"
+            },
+            {
+              "post": "Range Forest Officer",
+              "section": "Devanahalli Range",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 5,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 1,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 1,
+                "affidavit_filed_hearing_stage": 2,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 4
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Range Forest Officer",
+              "section": "Nelamangala Range",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 3,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 3,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Range Forest Officer",
+              "section": "Hosakote Range",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 1,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 1,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Range Forest Officer",
+              "section": "Doddaballapura Range",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 0,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 1
+              },
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -10451,8 +10600,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Conservator Of Forests",
@@ -10477,8 +10626,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -10503,378 +10652,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
-            }
-          ]
-        },
-        {
-          "code": "AC",
-          "name": "Bengaluru Rural Division",
-          "group": "division",
-          "circle": "Bengaluru Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 40,
-            "no_action_taken": 1,
-            "lco_proposal_stage_pending": 6,
-            "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 12,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 1,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 14,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 6,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 37
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": [
-            {
-              "post": "Assistant Conservator of Forests",
-              "section": "Doddaballapura Sub Division",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 27,
-                "no_action_taken": 1,
-                "lco_proposal_stage_pending": 6,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 5,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 1,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 12,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 2,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 20
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Range Forest Officer",
-              "section": "Devanahalli Range",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 5,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 3,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 2,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 4
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Deputy Conservator Of Forests",
-              "section": "Bengaluru Rural Division",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 4,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 3,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 12
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Range Forest Officer",
-              "section": "Nelamangala Range",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 3,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 3,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Range Forest Officer",
-              "section": "Hosakote Range",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 1,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 1,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Range Forest Officer",
-              "section": "Doddaballapura Range",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 0,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 1
-              },
-              "delta": null,
-              "direction": "baseline"
-            }
-          ]
-        },
-        {
-          "code": "AG",
-          "name": "Chikkaballapura Division",
-          "group": "division",
-          "circle": "Bengaluru Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 36,
-            "no_action_taken": 0,
-            "lco_proposal_stage_pending": 10,
-            "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 7,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 1,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 2,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 16,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 9
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": [
-            {
-              "post": "Deputy Conservator Of Forests",
-              "section": "Chikkaballapura Division",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 19,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 6,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 1,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 1,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 10,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 8
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Assistant Conservator of Forests",
-              "section": "Chikkaballapura Sub Division",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 7,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 2,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 1,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 3,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Assistant Conservator of Forests",
-              "section": "Chintamani Sub Division",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 5,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 1,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 3,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 1
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Range Forest Officer",
-              "section": "Bagepalli Range",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 2,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 2,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Range Forest Officer",
-              "section": "Chikkaballapura Range",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 2,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 1,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Range Forest Officer",
-              "section": "Chintamani Range",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 1,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -10902,8 +10681,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -10928,8 +10707,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -10954,8 +10733,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -10980,8 +10759,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11006,8 +10785,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11032,8 +10811,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -11058,8 +10837,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11084,8 +10863,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11110,8 +10889,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11136,8 +10915,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11162,8 +10941,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11188,8 +10967,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -11217,8 +10996,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 8
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -11243,8 +11022,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11269,8 +11048,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11295,8 +11074,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -11321,8 +11100,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11347,8 +11126,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -11373,8 +11152,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11399,8 +11178,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -11425,8 +11204,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 6
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -11451,8 +11230,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -11480,8 +11259,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 12
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -11506,8 +11285,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11532,8 +11311,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -11558,8 +11337,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 9
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -11584,8 +11363,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11610,8 +11389,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11636,8 +11415,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Chitguppa Range",
@@ -11662,8 +11441,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -11691,8 +11470,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 4
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -11717,8 +11496,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 4
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11743,8 +11522,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11769,8 +11548,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11795,8 +11574,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -11824,8 +11603,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -11850,8 +11629,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -11876,8 +11655,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -11902,8 +11681,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -11928,8 +11707,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -11940,11 +11719,11 @@ window.CCMS_DATA = {
           "circle": "Mysuru Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 30,
+            "total_cases_pending": 29,
             "no_action_taken": 0,
             "lco_proposal_stage_pending": 3,
             "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 9,
+            "draft_pwr_pending": 8,
             "approved_pwr_pending": 0,
             "draft_so_pending_from_advocate": 0,
             "approved_so_pending": 0,
@@ -11957,8 +11736,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": -1,
+          "direction": "decrease",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -11983,8 +11762,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -11992,11 +11771,11 @@ window.CCMS_DATA = {
               "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 5,
+                "total_cases_pending": 4,
                 "no_action_taken": 0,
                 "lco_proposal_stage_pending": 0,
                 "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
+                "draft_pwr_pending": 0,
                 "approved_pwr_pending": 0,
                 "draft_so_pending_from_advocate": 0,
                 "approved_so_pending": 0,
@@ -12009,8 +11788,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": -1,
+              "direction": "decrease"
             },
             {
               "post": "Assistant Conservator Of Forests",
@@ -12035,8 +11814,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12061,8 +11840,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -12087,8 +11866,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -12116,8 +11895,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -12142,8 +11921,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -12168,8 +11947,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12194,8 +11973,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12220,8 +11999,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12246,8 +12025,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -12272,8 +12051,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12298,8 +12077,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12324,8 +12103,193 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
+            }
+          ]
+        },
+        {
+          "code": "AG",
+          "name": "Chikkaballapura Division",
+          "group": "division",
+          "circle": "Bengaluru Circle",
+          "metrics": {
+            "cases_received_as_on_yesterday": 0,
+            "total_cases_pending": 27,
+            "no_action_taken": 0,
+            "lco_proposal_stage_pending": 11,
+            "ga_lco_authorization_pending": 0,
+            "draft_pwr_pending": 7,
+            "approved_pwr_pending": 0,
+            "draft_so_pending_from_advocate": 1,
+            "approved_so_pending": 0,
+            "affidavit_filing_pending": 2,
+            "affidavit_filed_hearing_stage": 0,
+            "interim_order_compliance_pending": 0,
+            "disposed_case": 0,
+            "final_order_compliance_pending": 6,
+            "proposed_for_appeal": 0,
+            "closed_with_appeal_number": 0,
+            "not_to_appeal": 9
+          },
+          "delta": -9,
+          "direction": "decrease",
+          "users": [
+            {
+              "post": "Deputy Conservator Of Forests",
+              "section": "Chikkaballapura Division",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 13,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 7,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 1,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 1,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 3,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 8
+              },
+              "delta": -6,
+              "direction": "decrease"
+            },
+            {
+              "post": "Assistant Conservator of Forests",
+              "section": "Chikkaballapura Sub Division",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 7,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 2,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 1,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 3,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Range Forest Officer",
+              "section": "Bagepalli Range",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 2,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 2,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Range Forest Officer",
+              "section": "Chikkaballapura Range",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 2,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 1,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Assistant Conservator of Forests",
+              "section": "Chintamani Sub Division",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 2,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 1,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 1
+              },
+              "delta": -3,
+              "direction": "decrease"
+            },
+            {
+              "post": "Range Forest Officer",
+              "section": "Chintamani Range",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 1,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -12353,8 +12317,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator of Forests",
@@ -12379,8 +12343,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward Officer",
@@ -12405,8 +12369,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -12431,8 +12395,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -12460,8 +12424,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -12486,8 +12450,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -12512,8 +12476,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12538,8 +12502,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12564,8 +12528,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12590,8 +12554,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -12619,8 +12583,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 25
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -12645,8 +12609,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 25
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -12671,8 +12635,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -12697,115 +12661,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
-            }
-          ]
-        },
-        {
-          "code": "BL",
-          "name": "Bengaluru Circle",
-          "group": "circle",
-          "circle": "Bengaluru Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 19,
-            "no_action_taken": 14,
-            "lco_proposal_stage_pending": 0,
-            "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 1,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 3,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 0,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 1,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 15
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": [
-            {
-              "post": "Assistant Administrator",
-              "section": "EST-Gazetted",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 18,
-                "no_action_taken": 14,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 3,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 12
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Conservator of Forests",
-              "section": "Bengaluru Circle",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 1,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 1,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 1
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "CF BENGALURU",
-              "section": "Bengaluru Circle",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 0,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 2
-              },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -12833,8 +12690,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -12859,8 +12716,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Manager",
@@ -12885,8 +12742,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12911,8 +12768,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -12937,8 +12794,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -12963,8 +12820,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -12992,8 +12849,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -13018,8 +12875,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13044,8 +12901,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -13070,8 +12927,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -13096,8 +12953,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13122,8 +12979,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -13151,8 +13008,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -13177,8 +13034,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -13203,8 +13060,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -13229,8 +13086,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13255,8 +13112,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13281,8 +13138,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -13310,8 +13167,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -13336,8 +13193,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13362,8 +13219,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -13388,8 +13245,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13414,115 +13271,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
-            }
-          ]
-        },
-        {
-          "code": "D076",
-          "name": "Mangaluru Circle",
-          "group": "circle",
-          "circle": "Mangaluru Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 18,
-            "no_action_taken": 4,
-            "lco_proposal_stage_pending": 0,
-            "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 5,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 0,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 0,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 9,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 3
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": [
-            {
-              "post": "Chief Conservator Of Forests",
-              "section": "Mangaluru Circle",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 14,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 5,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 9,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Section Officer",
-              "section": "Section Officer",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 3,
-                "no_action_taken": 3,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 1
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Inward officer",
-              "section": "Inward officer",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 1,
-                "no_action_taken": 1,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 2
-              },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -13550,8 +13300,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "CCMS Admin",
@@ -13576,8 +13326,89 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
+            }
+          ]
+        },
+        {
+          "code": "D024",
+          "name": "Belagavi Circle",
+          "group": "circle",
+          "circle": "Belagavi Circle",
+          "metrics": {
+            "cases_received_as_on_yesterday": 0,
+            "total_cases_pending": 17,
+            "no_action_taken": 7,
+            "lco_proposal_stage_pending": 0,
+            "ga_lco_authorization_pending": 0,
+            "draft_pwr_pending": 1,
+            "approved_pwr_pending": 0,
+            "draft_so_pending_from_advocate": 0,
+            "approved_so_pending": 0,
+            "affidavit_filing_pending": 1,
+            "affidavit_filed_hearing_stage": 0,
+            "interim_order_compliance_pending": 0,
+            "disposed_case": 3,
+            "final_order_compliance_pending": 5,
+            "proposed_for_appeal": 0,
+            "closed_with_appeal_number": 0,
+            "not_to_appeal": 3
+          },
+          "delta": 1,
+          "direction": "increase",
+          "users": [
+            {
+              "post": "Inward officer",
+              "section": "Inward officer",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 10,
+                "no_action_taken": 7,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 1,
+                "final_order_compliance_pending": 2,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 1,
+              "direction": "increase"
+            },
+            {
+              "post": "Chief Conservator Of Forests",
+              "section": "Belagavi Circle",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 7,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 1,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 2,
+                "final_order_compliance_pending": 3,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 3
+              },
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -13605,8 +13436,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests  Director",
@@ -13631,8 +13462,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -13657,8 +13488,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13683,8 +13514,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -13709,8 +13540,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13735,8 +13566,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -13764,8 +13595,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -13790,8 +13621,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -13816,8 +13647,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13842,8 +13673,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -13868,46 +13699,72 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
         {
-          "code": "D024",
-          "name": "Belagavi Circle",
+          "code": "D076",
+          "name": "Mangaluru Circle",
           "group": "circle",
-          "circle": "Belagavi Circle",
+          "circle": "Mangaluru Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 16,
-            "no_action_taken": 6,
+            "total_cases_pending": 17,
+            "no_action_taken": 3,
             "lco_proposal_stage_pending": 0,
             "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 1,
+            "draft_pwr_pending": 5,
             "approved_pwr_pending": 0,
             "draft_so_pending_from_advocate": 0,
             "approved_so_pending": 0,
-            "affidavit_filing_pending": 1,
+            "affidavit_filing_pending": 0,
             "affidavit_filed_hearing_stage": 0,
             "interim_order_compliance_pending": 0,
-            "disposed_case": 3,
-            "final_order_compliance_pending": 5,
+            "disposed_case": 0,
+            "final_order_compliance_pending": 9,
             "proposed_for_appeal": 0,
             "closed_with_appeal_number": 0,
             "not_to_appeal": 3
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": -1,
+          "direction": "decrease",
           "users": [
             {
-              "post": "Inward officer",
-              "section": "Inward officer",
+              "post": "Chief Conservator Of Forests",
+              "section": "Mangaluru Circle",
               "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 9,
-                "no_action_taken": 6,
+                "total_cases_pending": 14,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 5,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 9,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Section Officer",
+              "section": "Section Officer",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 3,
+                "no_action_taken": 3,
                 "lco_proposal_stage_pending": 0,
                 "ga_lco_authorization_pending": 0,
                 "draft_pwr_pending": 0,
@@ -13917,40 +13774,40 @@ window.CCMS_DATA = {
                 "affidavit_filing_pending": 0,
                 "affidavit_filed_hearing_stage": 0,
                 "interim_order_compliance_pending": 0,
-                "disposed_case": 1,
-                "final_order_compliance_pending": 2,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
                 "proposed_for_appeal": 0,
                 "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
+                "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
-              "post": "Chief Conservator Of Forests",
-              "section": "Belagavi Circle",
+              "post": "Inward officer",
+              "section": "Inward officer",
               "wing": null,
               "metrics": {
                 "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 7,
+                "total_cases_pending": 0,
                 "no_action_taken": 0,
                 "lco_proposal_stage_pending": 0,
                 "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
+                "draft_pwr_pending": 0,
                 "approved_pwr_pending": 0,
                 "draft_so_pending_from_advocate": 0,
                 "approved_so_pending": 0,
-                "affidavit_filing_pending": 1,
+                "affidavit_filing_pending": 0,
                 "affidavit_filed_hearing_stage": 0,
                 "interim_order_compliance_pending": 0,
-                "disposed_case": 2,
-                "final_order_compliance_pending": 3,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
                 "proposed_for_appeal": 0,
                 "closed_with_appeal_number": 0,
-                "not_to_appeal": 3
+                "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": -1,
+              "direction": "decrease"
             }
           ]
         },
@@ -13978,8 +13835,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -14004,8 +13861,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -14030,8 +13887,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -14056,8 +13913,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -14082,8 +13939,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -14108,8 +13965,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -14134,8 +13991,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -14163,8 +14020,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 3
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forest",
@@ -14189,8 +14046,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator Of Forest",
@@ -14215,8 +14072,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Chief Conservator Of Forests",
@@ -14241,8 +14098,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "RANGE FOREST OFFICER",
@@ -14267,8 +14124,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator Of Forest",
@@ -14293,8 +14150,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -14319,8 +14176,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward Officer",
@@ -14345,196 +14202,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
-            }
-          ]
-        },
-        {
-          "code": "D089",
-          "name": "Shivamogga Circle",
-          "group": "circle",
-          "circle": "Shivamogga Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 14,
-            "no_action_taken": 7,
-            "lco_proposal_stage_pending": 5,
-            "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 0,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 0,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 0,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 2,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 7
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": [
-            {
-              "post": "Section Officer",
-              "section": "Section Officer",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 6,
-                "no_action_taken": 6,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 2
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Chief Conservator of Forests",
-              "section": "Shivamogga Circle",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 6,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 4,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 2,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Inward officer",
-              "section": "Inward officer",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 2,
-                "no_action_taken": 1,
-                "lco_proposal_stage_pending": 1,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 0,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 5
-              },
-              "delta": null,
-              "direction": "baseline"
-            }
-          ]
-        },
-        {
-          "code": "V024",
-          "name": "Vijayanagara Division",
-          "group": "division",
-          "circle": "Ballari Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 13,
-            "no_action_taken": 4,
-            "lco_proposal_stage_pending": 5,
-            "ga_lco_authorization_pending": 1,
-            "draft_pwr_pending": 3,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 0,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 0,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 0,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 0
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": [
-            {
-              "post": "Deputy Conservator of Forests",
-              "section": "Vijayanagara Division",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 12,
-                "no_action_taken": 4,
-                "lco_proposal_stage_pending": 5,
-                "ga_lco_authorization_pending": 1,
-                "draft_pwr_pending": 2,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Assistant Conservator of Forest Hospet",
-              "section": "Hospet Sub Division",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 1,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 0,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -14562,8 +14231,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -14588,8 +14257,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -14614,8 +14283,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -14640,8 +14309,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -14666,8 +14335,115 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
+            }
+          ]
+        },
+        {
+          "code": "D089",
+          "name": "Shivamogga Circle",
+          "group": "circle",
+          "circle": "Shivamogga Circle",
+          "metrics": {
+            "cases_received_as_on_yesterday": 0,
+            "total_cases_pending": 13,
+            "no_action_taken": 6,
+            "lco_proposal_stage_pending": 5,
+            "ga_lco_authorization_pending": 0,
+            "draft_pwr_pending": 0,
+            "approved_pwr_pending": 0,
+            "draft_so_pending_from_advocate": 0,
+            "approved_so_pending": 0,
+            "affidavit_filing_pending": 0,
+            "affidavit_filed_hearing_stage": 0,
+            "interim_order_compliance_pending": 0,
+            "disposed_case": 0,
+            "final_order_compliance_pending": 2,
+            "proposed_for_appeal": 0,
+            "closed_with_appeal_number": 0,
+            "not_to_appeal": 7
+          },
+          "delta": -1,
+          "direction": "decrease",
+          "users": [
+            {
+              "post": "Chief Conservator of Forests",
+              "section": "Shivamogga Circle",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 6,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 4,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 2,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Section Officer",
+              "section": "Section Officer",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 5,
+                "no_action_taken": 5,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 2
+              },
+              "delta": -1,
+              "direction": "decrease"
+            },
+            {
+              "post": "Inward officer",
+              "section": "Inward officer",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 2,
+                "no_action_taken": 1,
+                "lco_proposal_stage_pending": 1,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 5
+              },
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -14695,8 +14471,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -14721,8 +14497,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -14747,8 +14523,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -14773,8 +14549,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -14799,8 +14575,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -14828,8 +14604,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -14854,8 +14630,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -14880,8 +14656,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -14906,8 +14682,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -14935,8 +14711,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "DIRECTOR",
@@ -14961,8 +14737,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -14990,8 +14766,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -15016,8 +14792,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Chief Conservator Of Forests",
@@ -15042,8 +14818,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward officer",
@@ -15068,8 +14844,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -15097,8 +14873,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -15123,8 +14899,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -15149,8 +14925,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -15175,8 +14951,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -15204,8 +14980,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -15230,8 +15006,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -15242,9 +15018,9 @@ window.CCMS_DATA = {
           "circle": "Shivamogga Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 7,
+            "total_cases_pending": 8,
             "no_action_taken": 0,
-            "lco_proposal_stage_pending": 1,
+            "lco_proposal_stage_pending": 2,
             "ga_lco_authorization_pending": 0,
             "draft_pwr_pending": 3,
             "approved_pwr_pending": 0,
@@ -15259,9 +15035,35 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 1,
+          "direction": "increase",
           "users": [
+            {
+              "post": "Deputy Conservator of Forests",
+              "section": "Shivamogga Wildlife Division",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 3,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 1,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 1,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 0
+              },
+              "delta": 1,
+              "direction": "increase"
+            },
             {
               "post": "Range Forest Officer",
               "section": "Hanagere Wildlife Range",
@@ -15285,34 +15087,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
-            },
-            {
-              "post": "Deputy Conservator of Forests",
-              "section": "Shivamogga Wildlife Division",
-              "wing": null,
-              "metrics": {
-                "cases_received_as_on_yesterday": 0,
-                "total_cases_pending": 2,
-                "no_action_taken": 0,
-                "lco_proposal_stage_pending": 0,
-                "ga_lco_authorization_pending": 0,
-                "draft_pwr_pending": 1,
-                "approved_pwr_pending": 0,
-                "draft_so_pending_from_advocate": 1,
-                "approved_so_pending": 0,
-                "affidavit_filing_pending": 0,
-                "affidavit_filed_hearing_stage": 0,
-                "interim_order_compliance_pending": 0,
-                "disposed_case": 0,
-                "final_order_compliance_pending": 0,
-                "proposed_for_appeal": 0,
-                "closed_with_appeal_number": 0,
-                "not_to_appeal": 0
-              },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -15337,8 +15113,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -15363,8 +15139,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -15389,8 +15165,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -15418,8 +15194,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 6
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -15444,8 +15220,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 4
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Chief Conservator Of Forests",
@@ -15470,8 +15246,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward Officer",
@@ -15496,8 +15272,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -15525,8 +15301,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -15551,8 +15327,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -15577,8 +15353,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -15603,8 +15379,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -15632,8 +15408,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -15658,8 +15434,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -15684,8 +15460,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -15710,8 +15486,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -15739,8 +15515,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -15765,8 +15541,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -15791,8 +15567,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -15817,8 +15593,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -15846,8 +15622,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -15872,8 +15648,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -15898,8 +15674,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -15924,8 +15700,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -15950,8 +15726,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -15979,8 +15755,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -16005,8 +15781,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -16031,8 +15807,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -16057,8 +15833,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -16083,8 +15859,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -16112,8 +15888,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -16138,8 +15914,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -16164,8 +15940,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -16193,8 +15969,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -16219,8 +15995,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -16245,8 +16021,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -16274,8 +16050,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -16300,8 +16076,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -16329,8 +16105,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -16355,8 +16131,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -16381,8 +16157,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -16407,8 +16183,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -16433,8 +16209,115 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
+            }
+          ]
+        },
+        {
+          "code": "BL",
+          "name": "Bengaluru Circle",
+          "group": "circle",
+          "circle": "Bengaluru Circle",
+          "metrics": {
+            "cases_received_as_on_yesterday": 0,
+            "total_cases_pending": 4,
+            "no_action_taken": 0,
+            "lco_proposal_stage_pending": 0,
+            "ga_lco_authorization_pending": 0,
+            "draft_pwr_pending": 1,
+            "approved_pwr_pending": 0,
+            "draft_so_pending_from_advocate": 3,
+            "approved_so_pending": 0,
+            "affidavit_filing_pending": 0,
+            "affidavit_filed_hearing_stage": 0,
+            "interim_order_compliance_pending": 0,
+            "disposed_case": 0,
+            "final_order_compliance_pending": 0,
+            "proposed_for_appeal": 0,
+            "closed_with_appeal_number": 0,
+            "not_to_appeal": 16
+          },
+          "delta": -15,
+          "direction": "decrease",
+          "users": [
+            {
+              "post": "Assistant Administrator",
+              "section": "EST-Gazetted",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 4,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 1,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 3,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 13
+              },
+              "delta": -14,
+              "direction": "decrease"
+            },
+            {
+              "post": "CF BENGALURU",
+              "section": "Bengaluru Circle",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 0,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 2
+              },
+              "delta": 0,
+              "direction": "same"
+            },
+            {
+              "post": "Conservator of Forests",
+              "section": "Bengaluru Circle",
+              "wing": null,
+              "metrics": {
+                "cases_received_as_on_yesterday": 0,
+                "total_cases_pending": 0,
+                "no_action_taken": 0,
+                "lco_proposal_stage_pending": 0,
+                "ga_lco_authorization_pending": 0,
+                "draft_pwr_pending": 0,
+                "approved_pwr_pending": 0,
+                "draft_so_pending_from_advocate": 0,
+                "approved_so_pending": 0,
+                "affidavit_filing_pending": 0,
+                "affidavit_filed_hearing_stage": 0,
+                "interim_order_compliance_pending": 0,
+                "disposed_case": 0,
+                "final_order_compliance_pending": 0,
+                "proposed_for_appeal": 0,
+                "closed_with_appeal_number": 0,
+                "not_to_appeal": 1
+              },
+              "delta": -1,
+              "direction": "decrease"
             }
           ]
         },
@@ -16462,8 +16345,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -16488,8 +16371,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -16514,8 +16397,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -16540,8 +16423,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -16569,8 +16452,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -16595,8 +16478,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -16621,8 +16504,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -16647,8 +16530,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -16676,8 +16559,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 3
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Conservator Of Forests",
@@ -16702,8 +16585,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -16728,8 +16611,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward Officer",
@@ -16754,8 +16637,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -16783,8 +16666,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -16809,8 +16692,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Conservator OF Forests",
@@ -16835,8 +16718,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -16864,8 +16747,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -16890,8 +16773,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -16916,8 +16799,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -16945,8 +16828,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -16971,8 +16854,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -16997,8 +16880,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17026,8 +16909,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 3
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -17052,8 +16935,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 3
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -17078,8 +16961,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17107,8 +16990,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -17133,8 +17016,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -17159,8 +17042,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -17185,8 +17068,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17214,8 +17097,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -17240,8 +17123,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -17266,8 +17149,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17295,8 +17178,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator Of Forest",
@@ -17321,8 +17204,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator Of Forest",
@@ -17347,8 +17230,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17376,8 +17259,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "DCF SF",
@@ -17402,8 +17285,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17431,8 +17314,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "DCF SF",
@@ -17457,8 +17340,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17486,8 +17369,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -17512,8 +17395,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17541,8 +17424,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -17567,8 +17450,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17596,8 +17479,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forest",
@@ -17622,8 +17505,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17651,8 +17534,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "DCF SF",
@@ -17677,8 +17560,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17706,8 +17589,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "DCF SF",
@@ -17732,8 +17615,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17761,8 +17644,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "DCF DHARWAD SOCIAL FORESTRY",
@@ -17787,8 +17670,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17816,8 +17699,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -17842,8 +17725,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17871,8 +17754,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -17897,8 +17780,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17926,8 +17809,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator Of Forest",
@@ -17952,8 +17835,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -17981,8 +17864,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forest",
@@ -18007,8 +17890,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -18462,23 +18345,23 @@ window.CCMS_DATA = {
         }
       ],
       "totals": {
-        "cases_received_as_on_yesterday": 0,
-        "total_cases_pending": 2158,
-        "no_action_taken": 150,
-        "lco_proposal_stage_pending": 367,
-        "ga_lco_authorization_pending": 35,
-        "draft_pwr_pending": 508,
-        "approved_pwr_pending": 27,
-        "draft_so_pending_from_advocate": 33,
+        "cases_received_as_on_yesterday": 1,
+        "total_cases_pending": 2143,
+        "no_action_taken": 139,
+        "lco_proposal_stage_pending": 368,
+        "ga_lco_authorization_pending": 34,
+        "draft_pwr_pending": 501,
+        "approved_pwr_pending": 28,
+        "draft_so_pending_from_advocate": 34,
         "approved_so_pending": 1,
-        "affidavit_filing_pending": 36,
-        "affidavit_filed_hearing_stage": 28,
+        "affidavit_filing_pending": 31,
+        "affidavit_filed_hearing_stage": 34,
         "interim_order_compliance_pending": 0,
         "disposed_case": 48,
         "final_order_compliance_pending": 925,
         "proposed_for_appeal": 0,
         "closed_with_appeal_number": 9,
-        "not_to_appeal": 671
+        "not_to_appeal": 672
       }
     },
     {
@@ -18607,8 +18490,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Superintendent",
@@ -18632,8 +18515,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Administrative Officer",
@@ -18657,8 +18540,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "First Division Assistant",
@@ -18682,8 +18565,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -18710,8 +18593,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -18735,8 +18618,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -18760,8 +18643,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -18785,8 +18668,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -18810,8 +18693,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -18838,8 +18721,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -18863,8 +18746,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -18891,8 +18774,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -18916,8 +18799,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -18944,8 +18827,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -18969,8 +18852,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -18997,8 +18880,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Inward officer",
@@ -19022,8 +18905,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19050,8 +18933,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -19075,8 +18958,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19103,8 +18986,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -19128,8 +19011,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19156,8 +19039,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -19181,8 +19064,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19209,8 +19092,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -19234,8 +19117,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19262,8 +19145,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -19287,8 +19170,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19315,8 +19198,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -19340,8 +19223,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19368,8 +19251,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -19393,8 +19276,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19421,8 +19304,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -19446,8 +19329,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19474,8 +19357,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -19499,8 +19382,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19527,8 +19410,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Conservator OF Forests",
@@ -19552,8 +19435,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19580,8 +19463,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy conservator of Forests",
@@ -19605,8 +19488,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19633,8 +19516,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -19658,8 +19541,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19686,8 +19569,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -19711,8 +19594,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19739,8 +19622,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -19764,8 +19647,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -19792,8 +19675,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -19817,8 +19700,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -20417,33 +20300,6 @@ window.CCMS_DATA = {
           "users": []
         },
         {
-          "code": "V024",
-          "name": "Vijayanagara Division",
-          "group": "division",
-          "circle": "Ballari Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 0,
-            "col_3": 0,
-            "col_4": 0,
-            "col_5": 0,
-            "col_6": 0,
-            "col_7": 0,
-            "col_8": 0,
-            "col_9": 0,
-            "col_10": 0,
-            "col_11": 0,
-            "col_12": 0,
-            "col_13": 0,
-            "col_14": 0,
-            "col_15": 0,
-            "col_16": 0
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": []
-        },
-        {
           "code": "D025",
           "name": "Belagavi Division",
           "group": "division",
@@ -20979,8 +20835,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -21004,8 +20860,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22047,8 +21903,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -22076,8 +21932,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -22105,8 +21961,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -22134,8 +21990,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22166,8 +22022,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -22195,8 +22051,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22227,8 +22083,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 55
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Administrative Officer",
@@ -22256,8 +22112,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -22285,8 +22141,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -22314,8 +22170,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 8
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -22343,8 +22199,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 32
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "First Division Assistant",
@@ -22372,8 +22228,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 13
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Superintendent",
@@ -22401,8 +22257,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22433,8 +22289,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -22462,8 +22318,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22494,8 +22350,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -22523,8 +22379,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22555,8 +22411,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -22584,8 +22440,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22616,8 +22472,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy conservator of Forests",
@@ -22645,8 +22501,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22677,8 +22533,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -22706,8 +22562,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -22735,8 +22591,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22767,8 +22623,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "CCMS Admin",
@@ -22796,8 +22652,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22828,8 +22684,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Administrator",
@@ -22857,8 +22713,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Conservator of Forests",
@@ -22886,8 +22742,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22918,8 +22774,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -22947,8 +22803,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -22979,8 +22835,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -23008,8 +22864,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23040,8 +22896,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator of Forests",
@@ -23069,8 +22925,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -23098,8 +22954,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23130,8 +22986,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -23159,8 +23015,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23191,8 +23047,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -23220,8 +23076,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23252,8 +23108,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -23281,8 +23137,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23313,8 +23169,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Inward officer",
@@ -23342,8 +23198,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23374,8 +23230,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -23403,8 +23259,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23435,8 +23291,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -23464,8 +23320,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23496,8 +23352,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "DIRECTOR",
@@ -23525,8 +23381,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23557,8 +23413,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -23586,8 +23442,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23680,8 +23536,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -23709,8 +23565,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -23741,8 +23597,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -23770,8 +23626,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -24151,37 +24007,6 @@ window.CCMS_DATA = {
           "code": "D023",
           "name": "KOPPALA Social Forestry Division",
           "group": "sf",
-          "circle": "Ballari Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 0,
-            "col_3": 0,
-            "col_4": 0,
-            "col_5": 0,
-            "col_6": 0,
-            "col_7": 0,
-            "col_8": 0,
-            "col_9": 0,
-            "col_10": 0,
-            "col_11": 0,
-            "col_12": 0,
-            "col_13": 0,
-            "col_14": 0,
-            "col_15": 0,
-            "col_16": 0,
-            "col_17": 0,
-            "col_18": 0,
-            "col_19": 0,
-            "col_20": 0
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": []
-        },
-        {
-          "code": "V024",
-          "name": "Vijayanagara Division",
-          "group": "division",
           "circle": "Ballari Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
@@ -24918,8 +24743,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -24947,8 +24772,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -25630,8 +25455,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 3
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -25659,8 +25484,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 3
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -25753,8 +25578,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -25782,8 +25607,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -25938,8 +25763,8 @@ window.CCMS_DATA = {
             "col_19": 0,
             "col_20": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator of Forests",
@@ -25967,8 +25792,8 @@ window.CCMS_DATA = {
                 "col_19": 0,
                 "col_20": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -26246,8 +26071,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 31
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Administrative Officer",
@@ -26271,8 +26096,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 3
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "AO",
@@ -26296,8 +26121,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "First Division Assistant",
@@ -26321,8 +26146,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 18
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF",
@@ -26346,8 +26171,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Administrative Officer",
@@ -26371,8 +26196,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Superintendent",
@@ -26396,8 +26221,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 4
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF",
@@ -26421,8 +26246,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Administrative Assistant",
@@ -26446,8 +26271,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -26471,8 +26296,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 3
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "FIRST DIVISION ASSISTANT- B3 SECTION",
@@ -26496,8 +26321,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -26521,8 +26346,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -26549,8 +26374,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -26574,8 +26399,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward Officer",
@@ -26599,8 +26424,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -26624,8 +26449,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -26652,8 +26477,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -26677,8 +26502,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -26705,8 +26530,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -26730,8 +26555,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -26758,8 +26583,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Conservator Of Forests",
@@ -26783,8 +26608,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -26811,8 +26636,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -26836,8 +26661,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -26861,8 +26686,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -26886,8 +26711,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -26914,8 +26739,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Conservator Of Forests",
@@ -26939,8 +26764,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -26967,8 +26792,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -26992,8 +26817,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27020,8 +26845,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Conservator of Forests",
@@ -27045,8 +26870,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Administrator",
@@ -27070,8 +26895,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27098,8 +26923,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -27123,8 +26948,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27151,8 +26976,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -27176,8 +27001,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -27201,8 +27026,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27229,8 +27054,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "CCMS Admin",
@@ -27254,8 +27079,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27282,8 +27107,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -27307,8 +27132,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward Officer",
@@ -27332,8 +27157,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27360,8 +27185,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -27385,8 +27210,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27413,8 +27238,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -27438,8 +27263,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -27463,8 +27288,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27491,8 +27316,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -27516,8 +27341,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -27541,8 +27366,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27569,8 +27394,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -27594,8 +27419,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27622,8 +27447,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -27647,8 +27472,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -27672,8 +27497,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27700,8 +27525,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -27725,8 +27550,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Chief Conservator of Forests",
@@ -27750,8 +27575,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27778,8 +27603,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forest",
@@ -27803,8 +27628,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27831,8 +27656,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -27856,8 +27681,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27884,8 +27709,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -27909,8 +27734,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27937,8 +27762,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -27962,8 +27787,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -27990,8 +27815,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -28015,8 +27840,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28043,8 +27868,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Inward officer",
@@ -28068,8 +27893,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28096,8 +27921,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -28121,8 +27946,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28149,8 +27974,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy conservator of Forests",
@@ -28174,8 +27999,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28202,8 +28027,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -28227,8 +28052,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28255,8 +28080,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -28280,8 +28105,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward officer",
@@ -28305,8 +28130,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28333,8 +28158,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator Of Forests",
@@ -28358,8 +28183,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28386,8 +28211,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -28411,8 +28236,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28439,8 +28264,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -28464,8 +28289,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28708,8 +28533,8 @@ window.CCMS_DATA = {
             "col_15": 0,
             "col_16": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forest",
@@ -28733,8 +28558,8 @@ window.CCMS_DATA = {
                 "col_15": 0,
                 "col_16": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -28877,33 +28702,6 @@ window.CCMS_DATA = {
           "code": "D023",
           "name": "KOPPALA Social Forestry Division",
           "group": "sf",
-          "circle": "Ballari Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 0,
-            "col_3": 0,
-            "col_4": 0,
-            "col_5": 0,
-            "col_6": 0,
-            "col_7": 0,
-            "col_8": 0,
-            "col_9": 0,
-            "col_10": 0,
-            "col_11": 0,
-            "col_12": 0,
-            "col_13": 0,
-            "col_14": 0,
-            "col_15": 0,
-            "col_16": 0
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": []
-        },
-        {
-          "code": "V024",
-          "name": "Vijayanagara Division",
-          "group": "division",
           "circle": "Ballari Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
@@ -30361,8 +30159,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 24
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Administrative Officer",
@@ -30387,8 +30185,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "AO",
@@ -30413,8 +30211,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Administrative Officer",
@@ -30439,8 +30237,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Superintendent",
@@ -30465,8 +30263,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -30491,8 +30289,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 18
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -30517,8 +30315,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 3
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator Of Forests",
@@ -30543,8 +30341,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator Of Forests",
@@ -30569,8 +30367,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -30595,8 +30393,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "FIRST DIVISION ASSISTANT- A1  B1 SECTION",
@@ -30621,8 +30419,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -30650,8 +30448,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -30676,8 +30474,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator Of Forests",
@@ -30702,8 +30500,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -30728,8 +30526,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -30757,8 +30555,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -30783,8 +30581,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -30809,8 +30607,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward officer",
@@ -30835,8 +30633,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -30864,8 +30662,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Conservator Of Forests",
@@ -30890,8 +30688,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Chief Conservator of Forests",
@@ -30916,8 +30714,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -30942,8 +30740,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -30971,8 +30769,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -30997,8 +30795,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator Of Forest",
@@ -31023,8 +30821,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Inward Officer",
@@ -31049,8 +30847,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 2
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31078,8 +30876,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -31104,8 +30902,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -31130,8 +30928,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -31156,8 +30954,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -31182,8 +30980,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31211,8 +31009,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Conservator Of Forests",
@@ -31237,8 +31035,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31266,8 +31064,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -31292,8 +31090,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -31318,8 +31116,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -31344,8 +31142,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -31370,8 +31168,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31399,8 +31197,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator of Forests",
@@ -31425,8 +31223,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -31451,8 +31249,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31480,8 +31278,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -31506,8 +31304,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -31532,8 +31330,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -31558,8 +31356,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Manager",
@@ -31584,8 +31382,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31613,8 +31411,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -31639,8 +31437,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31668,8 +31466,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -31694,8 +31492,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -31720,8 +31518,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -31746,8 +31544,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -31772,8 +31570,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31801,8 +31599,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator of Forests",
@@ -31827,8 +31625,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Section Officer",
@@ -31853,8 +31651,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31882,8 +31680,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -31908,8 +31706,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -31934,8 +31732,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator Of Forests",
@@ -31960,8 +31758,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -31989,8 +31787,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -32015,8 +31813,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -32041,8 +31839,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32070,8 +31868,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -32096,8 +31894,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -32122,8 +31920,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32151,8 +31949,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -32177,8 +31975,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -32203,8 +32001,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -32229,8 +32027,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32258,8 +32056,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -32284,8 +32082,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32313,8 +32111,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -32339,8 +32137,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -32365,8 +32163,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32394,8 +32192,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -32420,8 +32218,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy conservator of Forests",
@@ -32446,8 +32244,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32475,8 +32273,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -32501,8 +32299,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32530,8 +32328,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -32556,8 +32354,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator Of Forests",
@@ -32582,8 +32380,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32611,8 +32409,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Administrator",
@@ -32637,8 +32435,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32666,8 +32464,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -32692,8 +32490,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32721,8 +32519,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -32747,8 +32545,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32776,8 +32574,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -32802,8 +32600,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -32828,8 +32626,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32857,8 +32655,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -32883,8 +32681,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32912,8 +32710,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -32938,8 +32736,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -32967,8 +32765,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -32993,8 +32791,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33022,8 +32820,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -33048,8 +32846,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33077,8 +32875,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -33103,8 +32901,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33132,8 +32930,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests  Director",
@@ -33158,8 +32956,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33187,8 +32985,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -33213,8 +33011,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33242,8 +33040,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -33268,8 +33066,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Range Forest Officer",
@@ -33294,8 +33092,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33323,8 +33121,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -33349,8 +33147,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -33375,8 +33173,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33404,8 +33202,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -33430,8 +33228,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33459,8 +33257,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -33485,8 +33283,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33514,8 +33312,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -33540,8 +33338,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Deputy Conservator of Forests",
@@ -33566,8 +33364,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33595,8 +33393,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -33621,8 +33419,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -33647,8 +33445,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33676,8 +33474,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -33702,8 +33500,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33731,8 +33529,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -33757,8 +33555,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Assistant Conservator of Forests",
@@ -33783,8 +33581,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33812,8 +33610,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "CCMS Admin",
@@ -33838,8 +33636,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33867,8 +33665,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -33893,8 +33691,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33922,8 +33720,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -33948,8 +33746,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -33977,8 +33775,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forest",
@@ -34003,8 +33801,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34032,8 +33830,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -34058,8 +33856,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34087,8 +33885,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -34113,8 +33911,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34142,8 +33940,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "DCF SF",
@@ -34168,8 +33966,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34197,8 +33995,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -34223,8 +34021,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34252,8 +34050,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -34278,8 +34076,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34307,8 +34105,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -34333,8 +34131,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34362,8 +34160,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Range Forest Officer",
@@ -34388,8 +34186,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34417,8 +34215,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -34443,8 +34241,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34472,8 +34270,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -34498,8 +34296,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34527,8 +34325,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -34553,8 +34351,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34582,8 +34380,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -34608,8 +34406,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34637,8 +34435,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forest",
@@ -34663,8 +34461,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34832,8 +34630,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forest",
@@ -34858,8 +34656,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -34951,34 +34749,6 @@ window.CCMS_DATA = {
           "code": "D023",
           "name": "KOPPALA Social Forestry Division",
           "group": "sf",
-          "circle": "Ballari Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 0,
-            "no_action_taken": 0,
-            "lco_proposal_stage_pending": 0,
-            "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 0,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 0,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 0,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 0,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 0
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": []
-        },
-        {
-          "code": "V024",
-          "name": "Vijayanagara Division",
-          "group": "division",
           "circle": "Ballari Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
@@ -35643,8 +35413,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 1
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Section Officer",
@@ -35669,8 +35439,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -35953,8 +35723,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 2
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Administrative Officer",
@@ -35979,8 +35749,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "APCCF",
@@ -36005,8 +35775,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "AO",
@@ -36031,8 +35801,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "MANAGER",
@@ -36057,8 +35827,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -36083,8 +35853,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             },
             {
               "post": "Superintendent",
@@ -36109,8 +35879,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 1
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -36138,8 +35908,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -36164,8 +35934,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -36193,8 +35963,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator Of Forests",
@@ -36219,8 +35989,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -36248,8 +36018,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests  Director",
@@ -36274,8 +36044,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -36303,8 +36073,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Chief Conservator Of Forests",
@@ -36329,8 +36099,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -36358,8 +36128,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -36384,8 +36154,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -36413,8 +36183,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Deputy Conservator of Forests",
@@ -36439,8 +36209,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -36468,8 +36238,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Conservator Of Forests",
@@ -36494,8 +36264,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -37063,34 +36833,6 @@ window.CCMS_DATA = {
           "code": "D023",
           "name": "KOPPALA Social Forestry Division",
           "group": "sf",
-          "circle": "Ballari Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 0,
-            "no_action_taken": 0,
-            "lco_proposal_stage_pending": 0,
-            "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 0,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 0,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 0,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 0,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 0
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": []
-        },
-        {
-          "code": "V024",
-          "name": "Vijayanagara Division",
-          "group": "division",
           "circle": "Ballari Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
@@ -39102,8 +38844,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "AO",
@@ -39128,8 +38870,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -39753,34 +39495,6 @@ window.CCMS_DATA = {
           "code": "D023",
           "name": "KOPPALA Social Forestry Division",
           "group": "sf",
-          "circle": "Ballari Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 0,
-            "no_action_taken": 0,
-            "lco_proposal_stage_pending": 0,
-            "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 0,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 0,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 0,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 0,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 0
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": []
-        },
-        {
-          "code": "V024",
-          "name": "Vijayanagara Division",
-          "group": "division",
           "circle": "Ballari Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
@@ -41932,8 +41646,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Additional Principal Chief Conservator of Forests",
@@ -41958,8 +41672,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -41987,8 +41701,8 @@ window.CCMS_DATA = {
             "closed_with_appeal_number": 0,
             "not_to_appeal": 0
           },
-          "delta": null,
-          "direction": "baseline",
+          "delta": 0,
+          "direction": "same",
           "users": [
             {
               "post": "Assistant Conservator of Forests",
@@ -42013,8 +41727,8 @@ window.CCMS_DATA = {
                 "closed_with_appeal_number": 0,
                 "not_to_appeal": 0
               },
-              "delta": null,
-              "direction": "baseline"
+              "delta": 0,
+              "direction": "same"
             }
           ]
         },
@@ -42638,34 +42352,6 @@ window.CCMS_DATA = {
           "code": "D023",
           "name": "KOPPALA Social Forestry Division",
           "group": "sf",
-          "circle": "Ballari Circle",
-          "metrics": {
-            "cases_received_as_on_yesterday": 0,
-            "total_cases_pending": 0,
-            "no_action_taken": 0,
-            "lco_proposal_stage_pending": 0,
-            "ga_lco_authorization_pending": 0,
-            "draft_pwr_pending": 0,
-            "approved_pwr_pending": 0,
-            "draft_so_pending_from_advocate": 0,
-            "approved_so_pending": 0,
-            "affidavit_filing_pending": 0,
-            "affidavit_filed_hearing_stage": 0,
-            "interim_order_compliance_pending": 0,
-            "disposed_case": 0,
-            "final_order_compliance_pending": 0,
-            "proposed_for_appeal": 0,
-            "closed_with_appeal_number": 0,
-            "not_to_appeal": 0
-          },
-          "delta": null,
-          "direction": "baseline",
-          "users": []
-        },
-        {
-          "code": "V024",
-          "name": "Vijayanagara Division",
-          "group": "division",
           "circle": "Ballari Circle",
           "metrics": {
             "cases_received_as_on_yesterday": 0,
