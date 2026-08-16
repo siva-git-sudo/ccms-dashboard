@@ -8,3 +8,6 @@ logs/
 # dashboard's up/down arrows are computed from.
 *.json.rejected
 *.json.bak
+# Telegram bot token and chat ID. Anyone holding the token can post as the
+# bot, so this never goes near the repo.
+.telegram.env

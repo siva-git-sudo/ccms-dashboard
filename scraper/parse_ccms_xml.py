@@ -62,7 +62,7 @@ from __future__ import annotations
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-COLUMN_LABELS = [
+LAYOUT_17 = [
     "cases_received_as_on_yesterday",
     "total_cases_pending",
     "no_action_taken",
@@ -82,10 +82,53 @@ COLUMN_LABELS = [
     "not_to_appeal",
 ]
 
-# Human-readable headers exactly as they appear on the report, keyed by
-# the machine names above. "Completed Case" is a group header spanning
-# the last three columns.
+LAYOUT_20_CCC = [
+    "cases_received_as_on_yesterday",
+    "total_cases_pending",
+    "no_action_taken",
+    "lco_proposal_stage_pending",
+    "ga_lco_authorization_pending",
+    "pending_with_lco_accused",
+    "draft_affidavit_by_lco_accused",
+    "draft_compliance_affidavit_by_advocate",
+    "final_compliance_affidavit_done_filing_pending",
+    "compliance_affidavit_not_filed",
+    "affidavit_filed_hearing_stage",
+    "appeal_filed_not_admitted",
+    "appeal_filed_and_admitted",
+    "appeal_filed_and_stay_granted",
+    "interim_order_compliance_pending",
+    "disposed_case",
+    "final_order_compliance_pending",
+    "proposed_for_appeal",
+    "closed_with_appeal_number",
+    "not_to_appeal",
+]
+
+LAYOUT_16_WA = [
+    "cases_received_as_on_yesterday",
+    "total_cases_pending",
+    "no_action_taken",
+    "ga_lco_authorization_pending",
+    "ga_lco_authorization_for_appeal",
+    "draft_memo_of_appeal_with_ga_or_dept",
+    "interim_final_order_of_hc",
+    "filing_of_interim_application",
+    "writ_appeal_affidavit_filed",
+    "affidavit_filed_hearing_stage",
+    "interim_order_compliance_pending",
+    "disposed_case",
+    "final_order_compliance_pending",
+    "compliance_affidavit_filing_for_interim_order_pending",
+    "compliance_affidavit_of_final_order_filing_pending",
+    "not_to_appeal",
+]
+
+COLUMN_LABELS = LAYOUT_17
+
+# Human-readable headers across all report layouts
 COLUMN_HEADERS = {
+    # Core & Layout 17
     "cases_received_as_on_yesterday": "Cases Received As On Yesterday",
     "total_cases_pending": "Total Cases Pending",
     "no_action_taken": "No Action Taken",
@@ -103,9 +146,28 @@ COLUMN_HEADERS = {
     "proposed_for_appeal": "Proposed for Appeal",
     "closed_with_appeal_number": "Closed with Appeal Number",
     "not_to_appeal": "Not to Appeal",
+
+    # Layout 20 (Civil Contempt Petition)
+    "pending_with_lco_accused": "Pending with LCO / Accused",
+    "draft_affidavit_by_lco_accused": "Draft Affidavit by LCO / Accused",
+    "draft_compliance_affidavit_by_advocate": "Draft Compliance Affidavit by Advocate",
+    "final_compliance_affidavit_done_filing_pending": "Final Compliance Affidavit done, Filing pending",
+    "compliance_affidavit_not_filed": "Compliance Affidavit Not Filed",
+    "appeal_filed_not_admitted": "Appeal Filed not Admitted",
+    "appeal_filed_and_admitted": "Appeal Filed and Admitted",
+    "appeal_filed_and_stay_granted": "Appeal Filed and Stay Granted",
+
+    # Layout 16 (Writ Appeal / S-KSAT)
+    "ga_lco_authorization_for_appeal": "GA LCO Authorization For Appeal",
+    "draft_memo_of_appeal_with_ga_or_dept": "Draft Memo of Appeal with GA / Dept",
+    "interim_final_order_of_hc": "Interim / Final Order of HC",
+    "filing_of_interim_application": "Filing of Interim Application",
+    "writ_appeal_affidavit_filed": "Writ Appeal Affidavit Filed",
+    "compliance_affidavit_filing_for_interim_order_pending": "Compliance Affidavit Filing For Interim Order Pending",
+    "compliance_affidavit_of_final_order_filing_pending": "Compliance Affidavit of Final Order Filing Pending",
 }
 
-# Columns 15-17 sit under a "Completed Case" group header on the report.
+# Columns sitting under a "Completed Case" group header
 COMPLETED_CASE_GROUP = [
     "proposed_for_appeal",
     "closed_with_appeal_number",
@@ -113,32 +175,32 @@ COMPLETED_CASE_GROUP = [
 ]
 
 
+def labels_for_column_count(n_columns: int) -> list[str]:
+    """Map column count to known layout labels."""
+    if n_columns == 20:
+        return LAYOUT_20_CCC
+    if n_columns == 16:
+        return LAYOUT_16_WA
+    if n_columns == 17:
+        return LAYOUT_17
+    
+    labels = ["cases_received_as_on_yesterday", "total_cases_pending"]
+    for i in range(2, n_columns):
+        labels.append(f"col_{i + 1}")
+    return labels
+
+
 def columns_for_layout(n_columns: int) -> list[dict]:
-    """Return [{key, header, known}] describing a report's columns.
-
-    Only the 17-column layout has confirmed headers (the Writ Petition /
-    KSAT reports). Other case types render a different number of columns
-    -- Civil Contempt has 20, Writ Appeal and S-KSAT have 16 -- and their
-    headers are not known, so those extra columns are surfaced honestly
-    as "Column N" rather than being mislabelled with borrowed names.
-
-    The first two are always Cases Received / Total Cases Pending; that
-    holds across every layout and is verified against real exports.
-    """
-    if n_columns == len(COLUMN_LABELS):
-        return [
-            {"key": k, "header": COLUMN_HEADERS[k], "known": True}
-            for k in COLUMN_LABELS
-        ]
-
-    cols = []
-    for i in range(n_columns):
-        if i < 2:
-            key = COLUMN_LABELS[i]
-            cols.append({"key": key, "header": COLUMN_HEADERS[key], "known": True})
-        else:
-            cols.append({"key": f"col_{i + 1}", "header": f"Column {i + 1}", "known": False})
-    return cols
+    """Return [{key, header, known}] describing a report's columns."""
+    labels = labels_for_column_count(n_columns)
+    return [
+        {
+            "key": k,
+            "header": COLUMN_HEADERS.get(k, k.replace("_", " ").title()),
+            "known": not k.startswith("col_")
+        }
+        for k in labels
+    ]
 
 
 def _strip_namespaces(elem: ET.Element) -> None:
@@ -201,41 +263,17 @@ def parse_ccms_xml(path: str | Path) -> dict:
 
     # The footer row has no leading name attribute -- it is all figures --
     # so the two core columns are at positions 0 and 1 here.
-    result["cases_received_as_on_yesterday"] = values[0]
-    result["total_cases_pending"] = values[1]
-
-    if len(values) == len(COLUMN_LABELS):
-        for label, value in zip(COLUMN_LABELS, values):
-            result[label] = value
-    else:
-        # A different case-type report (different column set) -- keep the
-        # raw columns rather than mis-mapping them onto WP labels.
-        result["_columns"] = values
-        result["_column_count"] = len(values)
-
+    labels = labels_for_column_count(len(values))
+    for label, value in zip(labels, values):
+        result[label] = value
+    result["_columns"] = values
+    result["_column_count"] = len(values)
     return result
 
 
 def _row_from_attrs(attrs: dict) -> dict | None:
     """attrs is an element's .attrib: the name attribute first, then the
     report's numeric columns in left-to-right order.
-
-    IMPORTANT: the column count is NOT the same across reports. Each case
-    type is a separate SSRS report with its own columns -- confirmed
-    live: the Writ Petition report (OutsideSecretariat) has 17 numeric
-    columns, while the Civil Contempt Petition report
-    (OutsideSecretariat_CCC) has 20. An earlier version required exactly
-    17 and silently discarded every row of every other report.
-
-    What IS stable across all of them is the first two numeric columns:
-        1. Cases Received As On Yesterday
-        2. Total Cases Pending      <- the figure the dashboard shows
-    (verified: Writ Petition / Bengaluru Circle = 18, matching the
-    manually exported sample.)
-
-    So the first two are always read positionally, and the full 17-label
-    mapping is applied only when the layout actually matches that report.
-    Anything else keeps its raw column list under "_columns".
     """
     items = list(attrs.items())
     if len(items) < 3:
@@ -243,22 +281,9 @@ def _row_from_attrs(attrs: dict) -> dict | None:
 
     values = [_to_number(v) for _, v in items[1:]]  # skip the name attr
 
-    row = {
-        "cases_received_as_on_yesterday": values[0],
-        "total_cases_pending": values[1],
-    }
-
-    if len(values) == len(COLUMN_LABELS):
-        row.update(dict(zip(COLUMN_LABELS, values)))
-    else:
-        # Unknown layout: keep every column under a stable positional key
-        # so the dashboard can still show them (as "Column N"), rather
-        # than silently dropping data we cannot name.
-        for i, v in enumerate(values):
-            if i >= 2:
-                row[f"col_{i + 1}"] = v
-        row["_columns"] = values
-
+    labels = labels_for_column_count(len(values))
+    row = dict(zip(labels, values))
+    row["_columns"] = values
     row["_column_count"] = len(values)
     return row
 

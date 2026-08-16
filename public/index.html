@@ -390,6 +390,7 @@
       <div class="hmeta">
         <span class="pslab">Trend</span>
         <div class="pseg" id="pseg" role="group" aria-label="Trend period"></div>
+        <a href="analytics.html" title="Open Dual-Track Legal Analytics Tool" style="font-size:12.5px; font-weight:600; text-decoration:none; padding:4px 10px; border-radius:999px; border:1px solid var(--forest); color:var(--forest); background:#fff; white-space:nowrap;">⚡ Analytics Matrix &rarr;</a>
       </div>
     </div>
   </div>
@@ -1006,7 +1007,7 @@ function renderKPIsBody(){
 // every officer, so switching period re-bases the KPI cards, the filter
 // chips and the table together -- there is no second source of truth and
 // nothing extra to render.
-var PERIOD='d';
+var PERIOD='w';
 
 function periodOK(k){
   var b=(DATA&&DATA.baselines&&DATA.baselines[k])||null;
@@ -1022,10 +1023,10 @@ function periodLabel(k){
 }
 // Button labels. The segment has no room for the real span, so the full
 // label ("weekly - vs 5d ago") rides along as title and aria-label.
-var PSEG_LBL={d:'Daily',w:'7 days',m:'30 days'};
+var PSEG_LBL={w:'Weekly (7d)',m:'Monthly (30d)'};
 function renderPeriodSelect(){
-  var keys=['d','w','m'];
-  if(!periodOK(PERIOD)) PERIOD='d';
+  var keys=['w','m'];
+  if(!periodOK(PERIOD)) PERIOD='w';
   var seg=document.getElementById('pseg');
   if(seg){
     seg.innerHTML=keys.map(function(k){

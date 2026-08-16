@@ -301,6 +301,17 @@ def main() -> int:
             log(tee, f"=== SANITY CHECK FAILED at {datetime.now():%H:%M:%S} ===")
             return 2
 
+        # Gate-throughput scorecard for public/analytics.html. Additive: it
+        # only appends `scorecard` and `stats` blocks to data.json, so a
+        # failure here leaves the standard dashboard fully intact. Not fatal
+        # for that reason -- publish the core numbers even if this step trips.
+        log(tee)
+        log(tee, "--- building performance scorecard ---")
+        sc_status = run(tee, [python, "build_scorecard.py"], SCRAPER_DIR, env)
+        if sc_status != 0:
+            log(tee, f"WARNING: scorecard build failed (exit {sc_status}); "
+                     f"analytics.html will show the previous window.")
+
         if want_push:
             do_push(tee)
 

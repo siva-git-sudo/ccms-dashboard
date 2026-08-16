@@ -18,6 +18,8 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 from parse_ccms_xml import columns_for_layout, COLUMN_LABELS
+from scorecard import compute_gate_throughputs, generate_stagnation_report
+from flows import reconstruct_flows
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -157,11 +159,18 @@ def _delta_and_direction(total, prev_total):
 
 def _officers_with_deltas(
     latest_rows: list[dict],
-    prev_rows: list[dict],
+    base_officers_by_period: dict[str, list[dict]],
     wing_index: dict | None = None,
     winged: bool = False,
 ) -> list[dict]:
-    prev_by_key = {(r["section"], r["post"]): r for r in (prev_rows or [])}
+    prev_rows = base_officers_by_period.get("w") or []
+    prev_by_key = {(r["section"], r["post"]): r for r in prev_rows}
+    
+    by_period_and_key = {}
+    for pk, p_rows in base_officers_by_period.items():
+        if p_rows is not None:
+            by_period_and_key[pk] = {(r["section"], r["post"]): r for r in p_rows}
+
     out = []
     for row in latest_rows or []:
         key = (row["section"], row["post"])
@@ -169,6 +178,30 @@ def _officers_with_deltas(
         total = row.get("total_cases_pending")
         prev_total = prev_row.get("total_cases_pending") if prev_row else None
         delta, direction = _delta_and_direction(total, prev_total)
+        
+        metrics = {
+            k: v for k, v in row.items()
+            if isinstance(v, (int, float)) and not k.startswith("_")
+        }
+        
+        base_metrics = {}
+        for pk, p_dict in by_period_and_key.items():
+            base_r = p_dict.get(key)
+            if base_r:
+                base_metrics[pk] = {
+                    k: v for k, v in base_r.items()
+                    if isinstance(v, (int, float)) and not k.startswith("_")
+                }
+            else:
+                base_metrics[pk] = {}
+
+        prev_metrics = base_metrics.get("w", {})
+
+        stage_deltas = {}
+        for k, v in metrics.items():
+            pv = prev_metrics.get(k)
+            stage_deltas[k] = (v - pv) if pv is not None else 0
+
         out.append(
             {
                 "section": row["section"],
@@ -178,6 +211,10 @@ def _officers_with_deltas(
                 "previous_total_pending": prev_total,
                 "delta": delta,
                 "direction": direction,
+                "metrics": metrics,
+                "base_metrics": base_metrics,
+                "prev_metrics": prev_metrics,
+                "stage_deltas": stage_deltas,
             }
         )
     # Group by section, largest pending first within each section, for a
@@ -288,8 +325,8 @@ def build() -> dict:
         return payload
 
     latest = snapshots[-1]
-    previous = snapshots[-2] if len(snapshots) >= 2 else None
     baselines = _pick_baselines(snapshots)
+    previous = baselines.get("w") or (snapshots[-2] if len(snapshots) >= 2 else None)
     circle_index, circle_order, excluded = load_circle_index()
     wing_index, wing_order, wing_depts = load_wing_index()
     divisions = [d for d in divisions if _norm(d["name"]) not in excluded]
@@ -298,16 +335,71 @@ def build() -> dict:
     for d in divisions:
         code, name, group = d["code"], d["name"], d["group"]
         winged = _norm(name) in wing_depts
-        latest_rec = latest.get("divisions", {}).get(code)
-        prev_rec = previous.get("divisions", {}).get(code) if previous else None
+        latest_rec = (latest.get("results") or latest.get("divisions") or {}).get(code)
+        prev_rec = ((previous.get("results") or previous.get("divisions") or {}).get(code)) if previous else None
 
         total = latest_rec.get("total_cases_pending") if latest_rec else None
         prev_total = prev_rec.get("total_cases_pending") if prev_rec else None
         delta, direction = _delta_and_direction(total, prev_total)
 
         latest_officers = latest.get("officers", {}).get(code, [])
-        prev_officers = previous.get("officers", {}).get(code, []) if previous else []
-        users = _officers_with_deltas(latest_officers, prev_officers, wing_index, winged)
+        base_officers_by_period = {
+            pk: (snap.get("officers", {}).get(code, []) if snap else [])
+            for pk, snap in baselines.items()
+        }
+        users = _officers_with_deltas(latest_officers, base_officers_by_period, wing_index, winged)
+
+        metrics_dict = {
+            k: v
+            for k, v in (latest_rec or {}).items()
+            if k not in ("raw", "footer_tag", "_combined_from", "_skipped", "combined_from_combos")
+        }
+        prev_metrics_dict = {
+            k: v
+            for k, v in (prev_rec or {}).items()
+            if k not in ("raw", "footer_tag", "_combined_from", "_skipped", "combined_from_combos")
+        } if prev_rec else {}
+
+        base_metrics = {}
+        for pk, snap in baselines.items():
+            if snap:
+                div_rec = (snap.get("results") or snap.get("divisions") or {}).get(code)
+                if div_rec:
+                    base_metrics[pk] = {
+                        k: v for k, v in div_rec.items()
+                        if isinstance(v, (int, float)) and not k.startswith("_") and k not in ("raw", "footer_tag", "combined_from_combos")
+                    }
+                else:
+                    base_metrics[pk] = {}
+            else:
+                base_metrics[pk] = {}
+
+        stage_deltas = {}
+        for k, v in metrics_dict.items():
+            if isinstance(v, (int, float)):
+                pv = prev_metrics_dict.get(k)
+                stage_deltas[k] = (v - pv) if isinstance(pv, (int, float)) else 0
+
+        # Compute Scorecard Metrics (Intake-Proof Gate Throughputs)
+        scorecard_by_period = {}
+        intake_inflow = int(latest_rec.get("cases_received_as_on_yesterday") or 0) if latest_rec else 0
+        for pk, snap in baselines.items():
+            if snap:
+                div_rec_base = (snap.get("results") or snap.get("divisions") or {}).get(code, {})
+                sc = compute_gate_throughputs(latest_rec or {}, div_rec_base or {}, intake_inflow)
+                scorecard_by_period[pk] = sc
+            else:
+                scorecard_by_period[pk] = {}
+
+        # Also add scorecard to each officer
+        for u in users:
+            u_sc_by_period = {}
+            u_metrics = u.get("metrics", {})
+            for pk, snap in baselines.items():
+                u_bm = u.get("base_metrics", {}).get(pk, {})
+                u_sc = compute_gate_throughputs(u_metrics, u_bm, 0)
+                u_sc_by_period[pk] = u_sc
+            u["scorecard"] = u_sc_by_period
 
         out_divisions.append(
             {
@@ -319,15 +411,44 @@ def build() -> dict:
                 "previous_total_pending": prev_total,
                 "delta": delta,
                 "direction": direction,
-                "metrics": {
-                    k: v
-                    for k, v in (latest_rec or {}).items()
-                    if k not in ("raw", "footer_tag", "_combined_from", "_skipped", "combined_from_combos")
-                },
+                "metrics": metrics_dict,
+                "base_metrics": base_metrics,
+                "prev_metrics": prev_metrics_dict,
+                "stage_deltas": stage_deltas,
+                "scorecard": scorecard_by_period,
                 "users": users,
                 "wings": _wing_rollup(users, wing_order),
             }
         )
+
+    # Generate Statewide Stagnation Exception Report
+    stagnant_divisions = []
+    for d in out_divisions:
+        d_pending = d.get("total_pending") or 0
+        d_sc_d = d.get("scorecard", {}).get("d", {})
+        d_crossings = d_sc_d.get("total_gate_crossings", 0)
+        if d_pending >= 15 and d_crossings == 0:
+            stagnant_divisions.append({
+                "code": d["code"],
+                "name": d["name"],
+                "circle": d["circle"],
+                "total_pending": d_pending,
+                "no_action": (d.get("metrics") or {}).get("no_action_taken", 0),
+                "draft_pwr": (d.get("metrics") or {}).get("draft_pwr_pending", 0),
+                "final_orders": (d.get("metrics") or {}).get("final_order_compliance_pending", 0),
+                "no_action_share_pct": d_sc_d.get("no_action_share_pct", 0),
+            })
+    stagnant_divisions.sort(key=lambda x: x["total_pending"], reverse=True)
+
+    # Reconstruct Flows / Handovers
+    flows_data = {}
+    if len(snapshots) >= 2:
+        flows_daily = reconstruct_flows(snapshots[-1], snapshots[-2], min_count=1)
+        flows_weekly = reconstruct_flows(snapshots[-1], snapshots[0], min_count=1)
+        flows_data = {
+            "d": flows_daily,
+            "w": flows_weekly,
+        }
 
     payload = {
         "generated_at": datetime.now(IST).isoformat(),
@@ -337,9 +458,12 @@ def build() -> dict:
         "circles": circle_order + [OTHER_CIRCLE],
         "wings": wing_order,
         "case_types": _build_case_types(latest, previous, divisions, baselines),
-        # What each period actually compares against. The dropdown labels
-        # itself from this, so it can never offer a period the data cannot
-        # answer, or claim "weekly" over a two-day gap without saying so.
+        "flows": flows_data,
+        "scorecard_meta": {
+            "stagnant_divisions_count": len(stagnant_divisions),
+            "stagnant_divisions": stagnant_divisions,
+        },
+        # What each period actually compares against.
         "baselines": {
             key: (
                 {
@@ -365,9 +489,8 @@ def build() -> dict:
 #: day two; monthly refuses to answer below 28 days, because a "monthly"
 #: change measured over nine days would be actively misleading.
 BASELINE_PERIODS = [
-    ("d", "Daily", 1, 1),
     ("w", "Weekly", 7, 1),
-    ("m", "Monthly", 30, 28),
+    ("m", "Monthly", 30, 1),
 ]
 
 
@@ -391,16 +514,26 @@ def _pick_baselines(snapshots: list[dict]) -> dict:
     latest_date = latest.get("date") or ""
     for key, _label, want_days, min_span in BASELINE_PERIODS:
         pick = None
-        for snap in snapshots[:-1]:
-            date = snap.get("date")
-            if not date or not latest_date:
-                continue
-            if _days_between(date, latest_date) >= want_days:
-                pick = snap
-        if pick is None:
-            pick = snapshots[-2]  # nothing that old -- use the newest older one
-        span = _days_between(pick.get("date", latest_date), latest_date)
-        out[key] = pick if span >= min_span else None
+        if key == "w":
+            for snap in snapshots[:-1]:
+                date = snap.get("date")
+                if date and latest_date and _days_between(date, latest_date) >= want_days:
+                    pick = snap
+            if pick is None and len(snapshots) >= 2:
+                pick = snapshots[0]  # Fallback to the oldest snapshot held
+        elif key == "m":
+            for snap in snapshots[:-1]:
+                date = snap.get("date")
+                if date and latest_date and _days_between(date, latest_date) >= want_days:
+                    pick = snap
+            if pick is None and len(snapshots) >= 2:
+                pick = snapshots[0]  # Fallback to the oldest snapshot held
+
+        if pick:
+            span = _days_between(pick.get("date", latest_date), latest_date)
+            out[key] = pick if span >= min_span else None
+        else:
+            out[key] = None
     return out
 
 
@@ -542,6 +675,11 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
     divisions = [d for d in divisions if _norm(d["name"]) not in excluded]
     meta = latest.get("case_types") or []
     latest_by_ct = latest.get("by_case_type") or {}
+    if not meta:
+        meta = []
+        for key in latest_by_ct.keys():
+            court = "High Court" if any(x in key for x in ["Civil Contempt", "Writ Appeal", "Writ Petition"]) else "KSAT"
+            meta.append({"key": key, "label": key, "court": court})
     prev_by_ct = (previous or {}).get("by_case_type") or {}
     # One by_case_type map per period, so a row can be differenced against
     # any of them without re-reading the snapshots.
@@ -571,7 +709,7 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
         # checked this case type and your divisions have none", which is
         # different from "we never looked". Only skip it if the report
         # failed to scrape at all.
-        scraped_ok = key in (latest.get("seen_department_names_by_combo") or {})
+        scraped_ok = key in (latest.get("seen_department_names_by_combo") or {}) if latest.get("seen_department_names_by_combo") else bool(latest_rows)
         if not latest_rows and not scraped_ok:
             continue
 
@@ -638,6 +776,21 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
                     u_metrics.get("total_cases_pending"),
                     pu.get("total_cases_pending"),
                 )
+                u_base_metrics = {
+                    pk: _officer_metrics(
+                        (prev_users_by_period.get(pk) or {}).get(
+                            (u.get("section"), u.get("post"))
+                        )
+                    )
+                    for pk in base_rows
+                    if base_rows[pk] is not None
+                }
+                u_sc_by_period = {}
+                for pk in base_rows:
+                    u_bm = u_base_metrics.get(pk, {})
+                    u_sc = compute_gate_throughputs(u_metrics, u_bm, 0)
+                    u_sc_by_period[pk] = u_sc
+
                 users.append({
                     "post": u.get("post", ""),
                     "section": u.get("section", ""),
@@ -645,25 +798,22 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
                         u.get("section", ""), wing_index, _norm(d["name"]) in wing_depts
                     ),
                     "metrics": u_metrics,
-                    # One baseline per period, in full rather than as a
-                    # single precomputed delta: a KPI on "LCO pending"
-                    # filtered to one wing has to sum the baseline the same
-                    # way it sums today, which a delta on one column cannot
-                    # do. This is what lets the period dropdown re-base
-                    # every figure on the page.
-                    "base_metrics": {
-                        pk: _officer_metrics(
-                            (prev_users_by_period.get(pk) or {}).get(
-                                (u.get("section"), u.get("post"))
-                            )
-                        )
-                        for pk in base_rows
-                        if base_rows[pk] is not None
-                    },
+                    "base_metrics": u_base_metrics,
+                    "scorecard": u_sc_by_period,
                     "delta": u_delta,
                     "direction": u_direction,
                 })
             users.sort(key=lambda r: -(r["metrics"].get("total_cases_pending") or 0))
+
+            row_base_metrics = {
+                pk: _metrics_of((br or {}).get(code))
+                for pk, br in base_rows.items() if br is not None
+            }
+            row_sc_by_period = {}
+            for pk in base_rows:
+                bm = row_base_metrics.get(pk, {})
+                sc = compute_gate_throughputs(metrics, bm, 0)
+                row_sc_by_period[pk] = sc
 
             rows.append({
                 "code": code.strip(),
@@ -671,10 +821,8 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
                 "group": d["group"],
                 "circle": circle_index.get(_norm(d["name"]), OTHER_CIRCLE),
                 "metrics": metrics,
-                "base_metrics": {
-                    pk: _metrics_of((br or {}).get(code))
-                    for pk, br in base_rows.items() if br is not None
-                },
+                "base_metrics": row_base_metrics,
+                "scorecard": row_sc_by_period,
                 "delta": delta,
                 "direction": direction,
                 "users": users,
@@ -703,5 +851,9 @@ def _build_case_types(latest: dict, previous: dict | None, divisions: list[dict]
 
 
 if __name__ == "__main__":
+    import sys
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     result = build()
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+    print(f"Rebuilt public/data.json and public/data.js: {len(result.get('divisions', []))} divisions processed.")
+
