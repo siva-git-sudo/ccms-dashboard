@@ -1105,9 +1105,14 @@
       });
     });
 
-    Object.values(hqWingsMap).forEach(w => {
-      w.composite_score = Math.round((w.score_sum / Math.max(1, w.children.length)) * 10) / 10;
-      w.children.sort((a, b) => {
+    Object.values(hqWingsMap).forEach(wNode => {
+      const wr1 = wNode.open_no_act > 0 ? Math.min(1.0, wNode.g1 / wNode.open_no_act) : 0;
+      const wr2 = wNode.open_lco > 0 ? Math.min(1.0, wNode.g2 / wNode.open_lco) : 0;
+      const wr3 = wNode.open_pwr > 0 ? Math.min(1.0, wNode.g3 / wNode.open_pwr) : 0;
+      const wr4 = wNode.open_orders > 0 ? Math.min(1.0, wNode.g4 / wNode.open_orders) : 0;
+      wNode.composite_score = Math.round((0.10 * wr1 + 0.15 * wr2 + 0.45 * wr3 + 0.30 * wr4) * 1000) / 10;
+
+      wNode.children.sort((a, b) => {
         const aM = a.moves > 0, bM = b.moves > 0;
         if (aM && !bM) return -1;
         if (!aM && bM) return 1;
@@ -1129,7 +1134,11 @@
       }
       return b.total_pending - a.total_pending;
     });
-    hqNode.composite_score = Math.round((hqNode.score_sum / Math.max(1, hqDivisions.length)) * 10) / 10;
+    const hr1 = hqNode.open_no_act > 0 ? Math.min(1.0, hqNode.g1 / hqNode.open_no_act) : 0;
+    const hr2 = hqNode.open_lco > 0 ? Math.min(1.0, hqNode.g2 / hqNode.open_lco) : 0;
+    const hr3 = hqNode.open_pwr > 0 ? Math.min(1.0, hqNode.g3 / hqNode.open_pwr) : 0;
+    const hr4 = hqNode.open_orders > 0 ? Math.min(1.0, hqNode.g4 / hqNode.open_orders) : 0;
+    hqNode.composite_score = Math.round((0.10 * hr1 + 0.15 * hr2 + 0.45 * hr3 + 0.30 * hr4) * 1000) / 10;
     tree.push(hqNode);
 
     const circleOrder = (d.circles || []).filter(c => c !== 'Aranya Bhavana' && c !== 'Other / direct reporting');
@@ -1276,7 +1285,11 @@
         }
         return b.total_pending - a.total_pending;
       });
-      cNode.composite_score = Math.round((cNode.score_sum / Math.max(1, circleDivs.length)) * 10) / 10;
+      const cr1 = cNode.open_no_act > 0 ? Math.min(1.0, cNode.g1 / cNode.open_no_act) : 0;
+      const cr2 = cNode.open_lco > 0 ? Math.min(1.0, cNode.g2 / cNode.open_lco) : 0;
+      const cr3 = cNode.open_pwr > 0 ? Math.min(1.0, cNode.g3 / cNode.open_pwr) : 0;
+      const cr4 = cNode.open_orders > 0 ? Math.min(1.0, cNode.g4 / cNode.open_orders) : 0;
+      cNode.composite_score = Math.round((0.10 * cr1 + 0.15 * cr2 + 0.45 * cr3 + 0.30 * cr4) * 1000) / 10;
       tree.push(cNode);
     });
 
