@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CCMS Legal Performance — Circle &amp; Division Leaderboard (All Case Types)</title>
+<style>
+  :root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --line: #e2e8f0;
+    --line-subtle: #f1f5f9;
+    --ink: #0f172a;
+    --ink-secondary: #475569;
+    --ink-muted: #94a3b8;
+    
+    --forest: #166534;
+    --forest-light: #f0fdf4;
+    --forest-border: #bbf7d0;
+
+    --blue: #1d4ed8;
+    --blue-light: #eff6ff;
+    --blue-border: #bfdbfe;
+
+    --amber: #b45309;
+    --amber-light: #fffbeb;
+    --amber-border: #fde68a;
+
+    --red: #b91c1c;
+    --red-light: #fef2f2;
+    --red-border: #fca5a5;
+
+    --purple: #6d28d9;
+    --purple-light: #f5f3ff;
+    --purple-border: #ddd6fe;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  header.masthead {
+    background: #ffffff;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  .masthead-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .brand-block h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .brand-block p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: var(--ink-secondary);
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .period-toggle {
+    display: inline-flex;
+    background: #f1f5f9;
+    padding: 3px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+  }
+  .period-btn {
+    border: none;
+    background: transparent;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .period-btn.active {
+    background: #ffffff;
+    color: var(--ink);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .back-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .back-btn:hover {
+    color: var(--forest);
+    border-color: var(--forest);
+  }
+
+  /* Main Container */
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 32px 80px;
+  }
+
+  /* Case Type Selector Strip */
+  .ct-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 4px 2px 14px;
+    margin-bottom: 8px;
+  }
+  .ct-pill {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.15s;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+  .ct-pill:hover {
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+  .ct-pill.active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: #ffffff;
+  }
+  .ct-count-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: var(--ink-secondary);
+  }
+  .ct-pill.active .ct-count-tag {
+    background: rgba(255,255,255,0.2);
+    color: #ffffff;
+  }  /* Reactive KPI Summary Cards */
+  .kpi-scope-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  @media (max-width: 1250px) { .summary-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 768px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .summary-grid { grid-template-columns: 1fr; } }
+
+  .summary-box {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 15px 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .summary-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  .s-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-muted);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .s-val {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.15;
+    margin-bottom: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  .s-sub {
+    font-size: 11px;
+    color: var(--ink-secondary);
+    line-height: 1.35;
+  }
+
+  /* Filter & Action Bar */
+  .action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .filter-label {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+  }
+  .circle-select {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink);
+    outline: none;
+    cursor: pointer;
+  }
+  .circle-select:focus {
+    border-color: var(--forest);
+  }
+
+  .tools-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .search-box {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    width: 220px;
+    outline: none;
+  }
+  .search-box:focus {
+    border-color: var(--forest);
+  }
+  .view-btn {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-secondary);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s;
+  }
+  .view-btn:hover {
+    background: #f8fafc;
+    border-color: var(--ink-muted);
+    color: var(--ink);
+  }
+
+  /* Main Table */
+  .table-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    margin-bottom: 24px;
+  }
+  .table-header-info {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--line);
+    background: #fafbfc;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .table-scroll {
+    overflow-x: auto;
+  }
+  table.tree-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+    text-align: left;
+  }
+  table.tree-table th {
+    background: #f8fafc;
+    padding: 10px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  table.tree-table td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+  }
+  table.tree-table tr:hover td {
+    background: #f8fafc !important;
+  }
+
+  /* Hierarchy Row Indentations & Styles */
+  tr.lvl-circle {
+    background: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  tr.lvl-circle td {
+    border-top: 1px solid var(--line);
+  }
+  tr.lvl-division {
+    background: #fcfdfe;
+    cursor: pointer;
+  }
+  tr.lvl-officer {
+    background: #f8fafc;
+    font-size: 12px;
+  }
+
+  .circle-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .div-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 24px;
+  }
+  .officer-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 48px;
+  }
+
+  .chevron-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background: #f1f5f9;
+    color: var(--ink-secondary);
+    font-size: 10px;
+    transition: transform 0.15s;
+    user-select: none;
+  }
+
+  /* Badges & Tags */
+  .rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    background: #f1f5f9;
+    color: var(--ink-secondary);
+  }
+  .rank-1 { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+  .rank-2 { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+  .rank-3 { background: #ffedd5; color: #9a3412; border: 1px solid #fed7aa; }
+
+  .sub-rank {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--ink-muted);
+    min-width: 26px;
+  }
+  .sub-sub-rank {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--ink-muted);
+    min-width: 32px;
+  }
+
+  .score-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+  .score-high { background: #dcfce7; color: #166534; }
+  .score-mod { background: #e0f2fe; color: #075985; }
+  .score-idle { background: #f1f5f9; color: #64748b; }
+
+  .badge-moves {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .moves-high { background: #dcfce7; color: #166534; }
+  .moves-mod { background: #f0fdf4; color: #15803d; }
+  .moves-none { background: #f8fafc; color: var(--ink-muted); font-weight: 500; }
+
+  .badge-contempt {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 10.5px;
+    font-weight: 700;
+  }
+
+  /* Table Footer Summary */
+  tfoot tr td {
+    background: #f8fafc;
+    font-weight: 700;
+    border-top: 2px solid var(--line);
+    color: var(--ink);
+    padding: 12px 14px;
+  }
+
+  /* Methodological Footnote */
+  .footnote-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 12px;
+    color: var(--ink-secondary);
+    line-height: 1.5;
+  }
+  .footnote-head {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .footnote-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 8px;
+  }
+  @media (max-width: 900px) { .footnote-grid { grid-template-columns: 1fr; } }
+  .fn-item strong {
+    color: var(--ink);
+    display: block;
+    margin-bottom: 2px;
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand-block">
+      <h1>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        CCMS Legal Performance &middot; Circle &amp; Division Leaderboard
+      </h1>
+      <p>Karnataka Forest Department &middot; Multi-Level Performance Rankings Across All Case Types</p>
+    </div>
+    <div class="header-actions">
+      <div class="period-toggle">
+        <button type="button" class="period-btn active" id="btnPeriodW" onclick="setPeriod('w')">Weekly (7d)</button>
+        <button type="button" class="period-btn" id="btnPeriodM" onclick="setPeriod('m')">Monthly (30d)</button>
+      </div>
+      <a href="index.html" class="back-btn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Standard View
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- Case Type Selector Strip -->
+  <div class="ct-bar" id="caseTypeBar">
+    <button type="button" class="ct-pill active" onclick="setCaseType('ALL')">
+      <span>📂 All Case Types</span>
+      <span class="ct-count-tag" id="ctCountALL">2,763</span>
+    </button>
+    <!-- Dynamic Case Type Pills will populate here -->
+  </div>
+
+  <!-- Reactive KPI Section Title -->
+  <div class="kpi-scope-title">
+    <span>📊 Performance Scope:</span>
+    <span id="kpiScopeText" style="color:var(--forest);">Statewide Summary &middot; All Case Types</span>
+  </div>
+
+  <!-- Dynamic Reactive KPI Summary Cards -->
+  <div class="summary-grid">
+    <div class="summary-box">
+      <div class="s-label">1. Overall Movement</div>
+      <div class="s-val" style="color:var(--forest);" id="sMoves">+96 Moves</div>
+      <div class="s-sub" id="sMovesSub">Opening: <strong>2,782</strong> ➔ Active: <strong>2,763</strong> (-19 Net Caseload)</div>
+    </div>
+    <div class="summary-box">
+      <div class="s-label">2. No Action Movement</div>
+      <div class="s-val" style="color:var(--purple);" id="sNoActMoves">41 of 225 Cleared</div>
+      <div class="s-sub" id="sNoActSub"><strong style="color:var(--purple);">41 assigned</strong> &middot; 184 pending No Action</div>
+    </div>
+    <div class="summary-box">
+      <div class="s-label">3. LCO Movement</div>
+      <div class="s-val" style="color:var(--forest);" id="sLCOMoves">23 of 95 Authorized</div>
+      <div class="s-sub" id="sLCOSub"><strong style="color:var(--forest);">23 GA authorized</strong> &middot; 72 in LCO flow</div>
+    </div>
+    <div class="summary-box">
+      <div class="s-label">4. Hearing Movement</div>
+      <div class="s-val" style="color:var(--blue);" id="sHearingMoves">20 of 744 to Hearing</div>
+      <div class="s-sub" id="sHearingSub"><strong style="color:var(--blue);">20 remarks filed</strong> &middot; 724 Draft Remarks on desks</div>
+    </div>
+    <div class="summary-box">
+      <div class="s-label">5. Final Order Compliance Reduction</div>
+      <div class="s-val" style="color:var(--red);" id="sOrdersMoves">12 of 985 Reduced</div>
+      <div class="s-sub" id="sOrdersSub">Opening: <strong>985</strong> ➔ Remaining: <strong style="color:var(--red);">973 Pending</strong> &middot; <strong style="color:var(--red);">45 Contempt</strong></div>
+    </div>
+  </div>
+
+  <!-- Filter & Action Bar -->
+  <div class="action-bar">
+    <div class="filter-group">
+      <span class="filter-label">Filter by Circle / HQ:</span>
+      <select id="circleFilterSelect" class="circle-select" onchange="onCircleFilterChange()">
+        <option value="ALL">Statewide (All Circles Ranked)</option>
+      </select>
+    </div>
+
+    <div class="tools-group">
+      <input type="text" id="searchBox" class="search-box" placeholder="Search division or officer..." oninput="onSearch()" />
+      <button type="button" class="view-btn" id="expandBtn" onclick="toggleExpandAll()">👥 Expand All</button>
+      <button type="button" class="view-btn" onclick="exportHierarchyCSV()">📥 Export Leaderboard CSV</button>
+    </div>
+  </div>
+
+  <!-- Main Leaderboard Table -->
+  <div class="table-card">
+    <div class="table-header-info">
+      <div id="tableHeaderTitle">Statewide Circle &amp; Division Leaderboard &middot; Ranked by Real Stage Moves &amp; Scorecard %</div>
+      <div id="treeCountInfo" style="color:var(--forest);">14 Ranked Circles</div>
+    </div>
+    <div class="table-scroll">
+      <table class="tree-table">
+        <thead>
+          <tr>
+            <th style="width:320px;">Rank &middot; Circle / Division / Officer Desk</th>
+            <th style="width:125px;">Scorecard %</th>
+            <th style="width:135px;">Real Files Moved</th>
+            <th style="width:150px;">Intake / Counsel Flow</th>
+            <th style="width:150px;">Pre-Trial (Draft Remarks)</th>
+            <th style="width:160px;">Final Orders (Compliance)</th>
+            <th style="width:145px;">Caseload (Open ➔ Active)</th>
+            <th style="width:115px;">Priority Risk</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <!-- Dynamic Multi-Level Ranked Rows -->
+        </tbody>
+        <tfoot id="tfoot">
+          <!-- Totals -->
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <!-- Methodological Footnote -->
+  <div class="footnote-card">
+    <div class="footnote-head">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Methodological Footnote &middot; Definitions of Legal Gates (G1, G2, G3, G4) &amp; Ranking System</span>
+    </div>
+    <div class="footnote-grid">
+      <div class="fn-item">
+        <strong>1. Multi-Level Ranking Hierarchy</strong>
+        <span><strong>Circles (#1 to #14)</strong> are ranked statewide first by <em>Composite Score % (Weighted Clearance: 45% Draft Remarks, 30% Final Orders, 15% GA Auth, 10% Intake)</em>, then by <em>Real Files Moved</em>. Units with zero movement are placed at the bottom sorted by active caseload. <strong>Divisions (#N.1 to #N.D)</strong> and <strong>Officer Desks (#N.D.1 to #N.D.U)</strong> are similarly ranked within their respective parent circle/division.</span>
+      </div>
+      <div class="fn-item">
+        <strong>2. Definitions of the 4 Legal Gates (G1, G2, G3, G4)</strong>
+        <span>
+          &bull; <strong>Gate 1 (G1 &middot; 10% Weight): Intake Assignment</strong> &mdash; Files moved out of <em>No Action Taken</em> into <em>LCO Proposal Stage</em>. Clearance rate <code>g1 = G1 / Opening No-Action Stock</code>.<br>
+          &bull; <strong>Gate 2 (G2 &middot; 15% Weight): Counsel Sanction</strong> &mdash; Files moved out of <em>LCO Proposal</em> to <em>Government Advocate (GA) Authorization</em>. Clearance rate <code>g2 = G2 / Opening LCO Stock</code>.<br>
+          &bull; <strong>Gate 3 (G3 &middot; 45% Weight): Parawise Remarks &amp; Defense</strong> &mdash; Files completed with Parawise Remarks (PWR) and advanced into active <em>Court Hearing</em>. Clearance rate <code>g3 = G3 / Opening Draft Remarks Stock</code>.<br>
+          &bull; <strong>Gate 4 (G4 &middot; 30% Weight): Final Order Compliance &amp; Closed</strong> &mdash; Reduction in pending final court orders through executed compliance or appeal proposal. Clearance rate <code>g4 = G4 / Opening Final Orders Stock</code>.<br>
+          <code>Composite Score % = (0.10&middot;g1 + 0.15&middot;g2 + 0.45&middot;g3 + 0.30&middot;g4) &times; 100</code>
+        </span>
+      </div>
+      <div class="fn-item">
+        <strong>3. Full Multi-Stream Case Coverage</strong>
+        <span>Tracks all 8 CCMS legal streams: <strong>High Court:</strong> Writ Petitions (WP), Special KSAT (S-KSAT), Civil Contempt (CCC), Writ Appeals (WA); <strong>KSAT:</strong> Original Applications (OA), Contempt (CA), Misc Applications (MA), Review Applications (RA).</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Data Fallback -->
+<script src="data.js"></script>
+<script>
+  let RAW = null;
+  let PERIOD = 'w';
+  let SELECTED_CASE_TYPE = 'ALL';
+  let SELECTED_CIRCLE = 'ALL';
+  let SEARCH = '';
+  let EXPANDED_CIRCLES = new Set();
+  let EXPANDED_DIVS = new Set();
+  let EXPANDED_ALL = false;
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+  }
+
+  function setPeriod(p) {
+    PERIOD = p;
+    const btnW = document.getElementById('btnPeriodW');
+    const btnM = document.getElementById('btnPeriodM');
+    if (btnW) btnW.classList.toggle('active', p === 'w');
+    if (btnM) btnM.classList.toggle('active', p === 'm');
+    render();
+  }
+
+  function setCaseType(ctKey) {
+    SELECTED_CASE_TYPE = ctKey;
+    document.querySelectorAll('.ct-pill').forEach(p => {
+      p.classList.toggle('active', p.getAttribute('data-ct') === ctKey || (ctKey === 'ALL' && !p.hasAttribute('data-ct')));
+    });
+    render();
+  }
+
+  async function init() {
+    let d = null;
+    try {
+      const res = await fetch('data.json?t=' + Date.now(), { cache: 'no-cache' });
+      if (res.ok) d = await res.json();
+    } catch (e) {
+      if (window.CCMS_DATA) d = window.CCMS_DATA;
+    }
+    if (!d && window.CCMS_DATA) d = window.CCMS_DATA;
+    if (!d) return;
+    RAW = d;
+
+    // Period buttons label
+    const bW = (d.baselines && d.baselines.w) || {};
+    if (bW.span) {
+      const btnW = document.getElementById('btnPeriodW');
+      if (btnW) btnW.textContent = `Weekly (${bW.span}d)`;
+    }
+    const bM = (d.baselines && d.baselines.m) || {};
+    if (bM.span) {
+      const btnM = document.getElementById('btnPeriodM');
+      if (btnM) btnM.textContent = `Monthly (${bM.span}d)`;
+    }
+
+    // Build Case Type Pills
+    populateCaseTypePills();
+
+    // Populate Circle Filter Dropdown
+    populateCircleFilter();
+
+    render();
+  }
+
+  function populateCaseTypePills() {
+    const bar = document.getElementById('caseTypeBar');
+    bar.innerHTML = `
+      <button type="button" class="ct-pill ${SELECTED_CASE_TYPE === 'ALL' ? 'active' : ''}" onclick="setCaseType('ALL')">
+        <span>📂 All Case Types</span>
+        <span class="ct-count-tag" id="ctCountALL">0</span>
+      </button>
+    `;
+
+    let totalAll = 0;
+    const ctList = (RAW.case_types || []).map(ct => {
+      let ctTotal = 0;
+      (ct.rows || []).forEach(r => {
+        ctTotal += (r.metrics && r.metrics.total_cases_pending) || 0;
+      });
+      totalAll += ctTotal;
+      return { key: ct.key, label: ct.label || ct.key, court: ct.court || '', total: ctTotal };
+    });
+
+    document.getElementById('ctCountALL').textContent = totalAll.toLocaleString();
+
+    ctList.forEach(ct => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `ct-pill ${SELECTED_CASE_TYPE === ct.key ? 'active' : ''}`;
+      btn.setAttribute('data-ct', ct.key);
+      btn.onclick = () => setCaseType(ct.key);
+      btn.innerHTML = `
+        <span>${esc(ct.label)}</span>
+        <span class="ct-count-tag">${ct.total.toLocaleString()}</span>
+      `;
+      bar.appendChild(btn);
+    });
+  }
+
+  function populateCircleFilter() {
+    const select = document.getElementById('circleFilterSelect');
+    select.innerHTML = '<option value="ALL">Statewide (All Circles Ranked)</option>';
+    
+    // Sort Circles alphabetically for dropdown
+    const circles = (RAW.circles || []).filter(c => c !== 'Aranya Bhavana');
+    circles.sort((a, b) => a.localeCompare(b));
+
+    const optHQ = document.createElement('option');
+    optHQ.value = 'Aranya Bhavana';
+    optHQ.textContent = '🏛️ Araṇya bhavana (Head Office)';
+    select.appendChild(optHQ);
+
+    circles.forEach(c => {
+      const opt = document.createElement('option');
+      opt.value = c;
+      opt.textContent = `🌲 ${c}`;
+      select.appendChild(opt);
+    });
+  }
+
+  function onCircleFilterChange() {
+    const select = document.getElementById('circleFilterSelect');
+    SELECTED_CIRCLE = select.value;
+    render();
+  }
+
+  function onSearch() {
+    SEARCH = (document.getElementById('searchBox').value || '').trim().toLowerCase();
+    render();
+  }
+
+  function toggleCircle(id) {
+    if (EXPANDED_CIRCLES.has(id)) {
+      EXPANDED_CIRCLES.delete(id);
+    } else {
+      EXPANDED_CIRCLES.add(id);
+    }
+    render();
+  }
+
+  function toggleDiv(id) {
+    if (EXPANDED_DIVS.has(id)) {
+      EXPANDED_DIVS.delete(id);
+    } else {
+      EXPANDED_DIVS.add(id);
+    }
+    render();
+  }
+
+  function toggleExpandAll() {
+    EXPANDED_ALL = !EXPANDED_ALL;
+    if (EXPANDED_ALL) {
+      document.getElementById('expandBtn').textContent = '📁 Collapse to Circles';
+    } else {
+      document.getElementById('expandBtn').textContent = '👥 Expand All';
+      EXPANDED_CIRCLES.clear();
+      EXPANDED_DIVS.clear();
+    }
+    render();
+  }
+
+  function getMetricsForScope(divCode, userSection, userPost) {
+    if (SELECTED_CASE_TYPE === 'ALL') {
+      const div = (RAW.divisions || []).find(d => d.code === divCode);
+      if (!div) return { total: 0, opening: 0, no_action: 0, ga_auth: 0, draft_pwr: 0, hearing: 0, final_orders: 0, cleared: 0, moves: 0, g1: 0, g2: 0, g3: 0, g4: 0, open_no_act: 0, open_lco: 0, open_pwr: 0, open_orders: 0, intake: 0, score: 0 };
+      if (!userPost) {
+        const sc = (div.scorecard && div.scorecard[PERIOD]) || {};
+        const m = div.metrics || {};
+        const bm = (div.base_metrics && div.base_metrics[PERIOD]) || {};
+        const open_p = bm.total_cases_pending != null ? bm.total_cases_pending : (div.total_pending || 0);
+        return {
+          total: div.total_pending || 0,
+          opening: open_p,
+          no_action: m.no_action_taken || 0,
+          ga_auth: m.ga_lco_authorization_pending || 0,
+          draft_pwr: m.draft_pwr_pending || 0,
+          hearing: m.affidavit_filed_hearing_stage || 0,
+          final_orders: m.final_order_compliance_pending || 0,
+          cleared: (m.not_to_appeal || 0) + (m.closed_with_appeal_number || 0),
+          moves: sc.total_gate_crossings || 0,
+          g1: Math.max(0, sc.G1_intake_reduced || 0),
+          g2: Math.max(0, sc.G2_lco_dispatched || 0),
+          g3: Math.max(0, sc.G3_hearing_reached || 0),
+          g4: Math.max(0, sc.G4_compliance_closed || 0),
+          open_no_act: sc.base_no_act != null ? sc.base_no_act : (bm.no_action_taken || 0),
+          open_lco: sc.base_lco != null ? sc.base_lco : (bm.lco_proposal_stage_pending || 0),
+          open_pwr: sc.base_pre_trial != null ? sc.base_pre_trial : ((bm.draft_pwr_pending || 0) + (bm.approved_pwr_pending || 0) + (bm.affidavit_filing_pending || 0)),
+          open_orders: sc.base_final_orders != null ? sc.base_final_orders : (bm.final_order_compliance_pending || 0),
+          intake: (m.cases_received_as_on_yesterday || 0),
+          score: sc.composite_score || 0.0
+        };
+      } else {
+        const u = (div.users || []).find(x => x.post === userPost && (x.section || '') === (userSection || ''));
+        if (!u) return { total: 0, opening: 0, no_action: 0, ga_auth: 0, draft_pwr: 0, hearing: 0, final_orders: 0, cleared: 0, moves: 0, g1: 0, g2: 0, g3: 0, g4: 0, open_no_act: 0, open_lco: 0, open_pwr: 0, open_orders: 0, intake: 0, score: 0 };
+        const u_sc = (u.scorecard && u.scorecard[PERIOD]) || {};
+        const u_m = u.metrics || {};
+        const u_bm = (u.base_metrics && u.base_metrics[PERIOD]) || {};
+        const u_open = u_bm.total_cases_pending != null ? u_bm.total_cases_pending : (u.total_pending || 0);
+        return {
+          total: u.total_pending || 0,
+          opening: u_open,
+          no_action: u_m.no_action_taken || 0,
+          ga_auth: u_m.ga_lco_authorization_pending || 0,
+          draft_pwr: u_m.draft_pwr_pending || 0,
+          hearing: u_m.affidavit_filed_hearing_stage || 0,
+          final_orders: u_m.final_order_compliance_pending || 0,
+          cleared: (u_m.not_to_appeal || 0) + (u_m.closed_with_appeal_number || 0),
+          moves: u_sc.total_gate_crossings || 0,
+          g1: Math.max(0, u_sc.G1_intake_reduced || 0),
+          g2: Math.max(0, u_sc.G2_lco_dispatched || 0),
+          g3: Math.max(0, u_sc.G3_hearing_reached || 0),
+          g4: Math.max(0, u_sc.G4_compliance_closed || 0),
+          open_no_act: u_sc.base_no_act != null ? u_sc.base_no_act : (u_bm.no_action_taken || 0),
+          open_lco: u_sc.base_lco != null ? u_sc.base_lco : (u_bm.lco_proposal_stage_pending || 0),
+          open_pwr: u_sc.base_pre_trial != null ? u_sc.base_pre_trial : ((u_bm.draft_pwr_pending || 0) + (u_bm.approved_pwr_pending || 0) + (u_bm.affidavit_filing_pending || 0)),
+          open_orders: u_sc.base_final_orders != null ? u_sc.base_final_orders : (u_bm.final_order_compliance_pending || 0),
+          intake: (u_m.cases_received_as_on_yesterday || 0),
+          score: u_sc.composite_score || 0.0
+        };
+      }
+    } else {
+      const ct = (RAW.case_types || []).find(c => c.key === SELECTED_CASE_TYPE);
+      if (!ct) return { total: 0, opening: 0, no_action: 0, ga_auth: 0, draft_pwr: 0, hearing: 0, final_orders: 0, cleared: 0, moves: 0, g1: 0, g2: 0, g3: 0, g4: 0, open_no_act: 0, open_lco: 0, open_pwr: 0, open_orders: 0, intake: 0, score: 0 };
+      const row = (ct.rows || []).find(r => r.code === divCode);
+      if (!row) return { total: 0, opening: 0, no_action: 0, ga_auth: 0, draft_pwr: 0, hearing: 0, final_orders: 0, cleared: 0, moves: 0, g1: 0, g2: 0, g3: 0, g4: 0, open_no_act: 0, open_lco: 0, open_pwr: 0, open_orders: 0, intake: 0, score: 0 };
+      
+      if (!userPost) {
+        const m = row.metrics || {};
+        const sc = (row.scorecard && row.scorecard[PERIOD]) || {};
+        const bm = (row.base_metrics && row.base_metrics[PERIOD]) || {};
+        const open_p = bm.total_cases_pending != null ? bm.total_cases_pending : (m.total_cases_pending || 0);
+        return {
+          total: m.total_cases_pending || 0,
+          opening: open_p,
+          no_action: m.no_action_taken || 0,
+          ga_auth: m.ga_lco_authorization_pending || 0,
+          draft_pwr: m.draft_pwr_pending || 0,
+          hearing: m.affidavit_filed_hearing_stage || 0,
+          final_orders: m.final_order_compliance_pending || 0,
+          cleared: (m.not_to_appeal || 0) + (m.closed_with_appeal_number || 0),
+          moves: sc.total_gate_crossings != null ? sc.total_gate_crossings : Math.abs((row.periods && row.periods[PERIOD] && row.periods[PERIOD].delta) || 0),
+          g1: Math.max(0, sc.G1_intake_reduced || 0),
+          g2: Math.max(0, sc.G2_lco_dispatched || 0),
+          g3: Math.max(0, sc.G3_hearing_reached || 0),
+          g4: Math.max(0, sc.G4_compliance_closed || 0),
+          open_no_act: sc.base_no_act != null ? sc.base_no_act : (bm.no_action_taken || 0),
+          open_lco: sc.base_lco != null ? sc.base_lco : (bm.lco_proposal_stage_pending || 0),
+          open_pwr: sc.base_pre_trial != null ? sc.base_pre_trial : ((bm.draft_pwr_pending || 0) + (bm.approved_pwr_pending || 0) + (bm.affidavit_filing_pending || 0)),
+          open_orders: sc.base_final_orders != null ? sc.base_final_orders : (bm.final_order_compliance_pending || 0),
+          intake: (m.cases_received_as_on_yesterday || 0),
+          score: sc.composite_score || 0.0
+        };
+      } else {
+        const u = (row.users || []).find(x => x.post === userPost && (x.section || '') === (userSection || ''));
+        if (!u) return { total: 0, opening: 0, no_action: 0, ga_auth: 0, draft_pwr: 0, hearing: 0, final_orders: 0, cleared: 0, moves: 0, g1: 0, g2: 0, g3: 0, g4: 0, open_no_act: 0, open_lco: 0, open_pwr: 0, open_orders: 0, intake: 0, score: 0 };
+        const u_m = u.metrics || {};
+        const u_sc = (u.scorecard && u.scorecard[PERIOD]) || {};
+        const u_bm = (u.base_metrics && u.base_metrics[PERIOD]) || {};
+        const u_open = u_bm.total_cases_pending != null ? u_bm.total_cases_pending : (u_m.total_cases_pending || 0);
+        return {
+          total: u_m.total_cases_pending || 0,
+          opening: u_open,
+          no_action: u_m.no_action_taken || 0,
+          ga_auth: u_m.ga_lco_authorization_pending || 0,
+          draft_pwr: u_m.draft_pwr_pending || 0,
+          hearing: u_m.affidavit_filed_hearing_stage || 0,
+          final_orders: u_m.final_order_compliance_pending || 0,
+          cleared: (u_m.not_to_appeal || 0) + (u_m.closed_with_appeal_number || 0),
+          moves: u_sc.total_gate_crossings != null ? u_sc.total_gate_crossings : Math.abs((u.periods && u.periods[PERIOD] && u.periods[PERIOD].delta) || 0),
+          g1: Math.max(0, u_sc.G1_intake_reduced || 0),
+          g2: Math.max(0, u_sc.G2_lco_dispatched || 0),
+          g3: Math.max(0, u_sc.G3_hearing_reached || 0),
+          g4: Math.max(0, u_sc.G4_compliance_closed || 0),
+          open_no_act: u_sc.base_no_act != null ? u_sc.base_no_act : (u_bm.no_action_taken || 0),
+          open_lco: u_sc.base_lco != null ? u_sc.base_lco : (u_bm.lco_proposal_stage_pending || 0),
+          open_pwr: u_sc.base_pre_trial != null ? u_sc.base_pre_trial : ((u_bm.draft_pwr_pending || 0) + (u_bm.approved_pwr_pending || 0) + (u_bm.affidavit_filing_pending || 0)),
+          open_orders: u_sc.base_final_orders != null ? u_sc.base_final_orders : (u_bm.final_order_compliance_pending || 0),
+          intake: (u_m.cases_received_as_on_yesterday || 0),
+          score: u_sc.composite_score || 0.0
+        };
+      }
+    }
+  }
+
+  function buildTreeData() {
+    if (!RAW) return [];
+    const d = RAW;
+    const tree = [];
+
+    const contemptMap = {};
+    (d.case_types || []).forEach(ct => {
+      if (/contempt/i.test(ct.label || '')) {
+        (ct.rows || []).forEach(r => {
+          if (r.metrics && r.metrics.total_cases_pending) {
+            contemptMap[r.code] = (contemptMap[r.code] || 0) + r.metrics.total_cases_pending;
+          }
+        });
+      }
+    });
+
+    const hqDivisions = (d.divisions || []).filter(div => 
+      div.circle === 'Aranya Bhavana' || 
+      div.name === 'Araṇya bhavana' || 
+      div.name === 'PCCFHead Of Forest Force' || 
+      div.name === 'PCCF WL'
+    );
+
+    const hqNode = {
+      id: 'Aranya Bhavana',
+      name: 'Araṇya bhavana (Head Office)',
+      type: 'hq',
+      isHQ: true,
+      children: [],
+      total_pending: 0,
+      opening: 0,
+      moves: 0,
+      g1: 0,
+      g2: 0,
+      g3: 0,
+      g4: 0,
+      open_no_act: 0,
+      open_lco: 0,
+      open_pwr: 0,
+      open_orders: 0,
+      score_sum: 0,
+      no_action: 0,
+      ga_auth: 0,
+      draft_pwr: 0,
+      hearing: 0,
+      final_orders: 0,
+      cleared: 0,
+      intake: 0,
+      contempt: 0,
+    };
+
+    const hqWingsMap = {};
+    hqDivisions.forEach(div => {
+      const dm = getMetricsForScope(div.code, null, null);
+      hqNode.total_pending += dm.total;
+      hqNode.opening += dm.opening;
+      hqNode.moves += dm.moves;
+      hqNode.g1 += dm.g1;
+      hqNode.g2 += dm.g2;
+      hqNode.g3 += dm.g3;
+      hqNode.g4 += dm.g4;
+      hqNode.open_no_act += dm.open_no_act;
+      hqNode.open_lco += dm.open_lco;
+      hqNode.open_pwr += dm.open_pwr;
+      hqNode.open_orders += dm.open_orders;
+      hqNode.score_sum += dm.score;
+      hqNode.no_action += dm.no_action;
+      hqNode.ga_auth += dm.ga_auth;
+      hqNode.draft_pwr += dm.draft_pwr;
+      hqNode.hearing += dm.hearing;
+      hqNode.final_orders += dm.final_orders;
+      hqNode.cleared += dm.cleared;
+      hqNode.intake += (dm.intake || 0);
+      hqNode.contempt += contemptMap[div.code] || 0;
+
+      (div.users || []).forEach(u => {
+        const wingName = u.wing || 'Other HQ Sections';
+        if (!hqWingsMap[wingName]) {
+          hqWingsMap[wingName] = {
+            id: `HQ_WING:${wingName}`,
+            name: `${wingName} Wing`,
+            parent: 'Aranya Bhavana',
+            isWing: true,
+            children: [],
+            total_pending: 0,
+            opening: 0,
+            moves: 0,
+            g1: 0,
+            g2: 0,
+            g3: 0,
+            g4: 0,
+            open_no_act: 0,
+            open_lco: 0,
+            open_pwr: 0,
+            open_orders: 0,
+            composite_score: 0,
+            score_sum: 0,
+            no_action: 0,
+            ga_auth: 0,
+            draft_pwr: 0,
+            hearing: 0,
+            final_orders: 0,
+            cleared: 0,
+            intake: 0,
+            contempt: 0,
+          };
+        }
+        const wNode = hqWingsMap[wingName];
+        const um = getMetricsForScope(div.code, u.section, u.post);
+
+        wNode.total_pending += um.total;
+        wNode.opening += um.opening;
+        wNode.moves += um.moves;
+        wNode.g1 += um.g1;
+        wNode.g2 += um.g2;
+        wNode.g3 += um.g3;
+        wNode.g4 += um.g4;
+        wNode.open_no_act += um.open_no_act;
+        wNode.open_lco += um.open_lco;
+        wNode.open_pwr += um.open_pwr;
+        wNode.open_orders += um.open_orders;
+        wNode.score_sum += um.score;
+        wNode.no_action += um.no_action;
+        wNode.ga_auth += um.ga_auth;
+        wNode.draft_pwr += um.draft_pwr;
+        wNode.hearing += um.hearing;
+        wNode.final_orders += um.final_orders;
+        wNode.cleared += um.cleared;
+        wNode.intake += (um.intake || 0);
+
+        wNode.children.push({
+          id: `USER:${div.code}:${u.section}:${u.post}`,
+          name: u.post,
+          section: u.section || 'Field Desk',
+          parent: wNode.id,
+          isUser: true,
+          total_pending: um.total,
+          opening: um.opening,
+          moves: um.moves,
+          g1: um.g1,
+          g2: um.g2,
+          g3: um.g3,
+          g4: um.g4,
+          open_no_act: um.open_no_act,
+          open_lco: um.open_lco,
+          open_pwr: um.open_pwr,
+          open_orders: um.open_orders,
+          composite_score: um.score,
+          no_action: um.no_action,
+          ga_auth: um.ga_auth,
+          draft_pwr: um.draft_pwr,
+          hearing: um.hearing,
+          final_orders: um.final_orders,
+          cleared: um.cleared,
+          intake: (um.intake || 0),
+          contempt: 0,
+        });
+      });
+    });
+
+    Object.values(hqWingsMap).forEach(w => {
+      w.composite_score = Math.round((w.score_sum / Math.max(1, w.children.length)) * 10) / 10;
+      w.children.sort((a, b) => {
+        const aM = a.moves > 0, bM = b.moves > 0;
+        if (aM && !bM) return -1;
+        if (!aM && bM) return 1;
+        if (aM && bM) {
+          if (b.composite_score !== a.composite_score) return b.composite_score - a.composite_score;
+          if (b.moves !== a.moves) return b.moves - a.moves;
+        }
+        return b.total_pending - a.total_pending;
+      });
+    });
+
+    hqNode.children = Object.values(hqWingsMap).sort((a, b) => {
+      const aM = a.moves > 0, bM = b.moves > 0;
+      if (aM && !bM) return -1;
+      if (!aM && bM) return 1;
+      if (aM && bM) {
+        if (b.composite_score !== a.composite_score) return b.composite_score - a.composite_score;
+        if (b.moves !== a.moves) return b.moves - a.moves;
+      }
+      return b.total_pending - a.total_pending;
+    });
+    hqNode.composite_score = Math.round((hqNode.score_sum / Math.max(1, hqDivisions.length)) * 10) / 10;
+    tree.push(hqNode);
+
+    const circleOrder = (d.circles || []).filter(c => c !== 'Aranya Bhavana' && c !== 'Other / direct reporting');
+    circleOrder.push('Other / direct reporting');
+
+    circleOrder.forEach(cName => {
+      const circleDivs = (d.divisions || []).filter(div => div.circle === cName && !hqDivisions.includes(div));
+      if (!circleDivs.length) return;
+
+      const cNode = {
+        id: cName,
+        name: cName,
+        type: 'circle',
+        isCircle: true,
+        children: [],
+        total_pending: 0,
+        opening: 0,
+        moves: 0,
+        g1: 0,
+        g2: 0,
+        g3: 0,
+        g4: 0,
+        open_no_act: 0,
+        open_lco: 0,
+        open_pwr: 0,
+        open_orders: 0,
+        score_sum: 0,
+        composite_score: 0,
+        no_action: 0,
+        ga_auth: 0,
+        draft_pwr: 0,
+        hearing: 0,
+        final_orders: 0,
+        cleared: 0,
+        intake: 0,
+        contempt: 0,
+      };
+
+      circleDivs.forEach(div => {
+        const dm = getMetricsForScope(div.code, null, null);
+        const divContempt = contemptMap[div.code] || 0;
+
+        cNode.total_pending += dm.total;
+        cNode.opening += dm.opening;
+        cNode.moves += dm.moves;
+        cNode.g1 += dm.g1;
+        cNode.g2 += dm.g2;
+        cNode.g3 += dm.g3;
+        cNode.g4 += dm.g4;
+        cNode.open_no_act += dm.open_no_act;
+        cNode.open_lco += dm.open_lco;
+        cNode.open_pwr += dm.open_pwr;
+        cNode.open_orders += dm.open_orders;
+        cNode.score_sum += dm.score;
+        cNode.no_action += dm.no_action;
+        cNode.ga_auth += dm.ga_auth;
+        cNode.draft_pwr += dm.draft_pwr;
+        cNode.hearing += dm.hearing;
+        cNode.final_orders += dm.final_orders;
+        cNode.cleared += dm.cleared;
+        cNode.intake += (dm.intake || 0);
+        cNode.contempt += divContempt;
+
+        const divNode = {
+          id: `DIV:${div.code}`,
+          name: div.name,
+          code: div.code,
+          parent: cName,
+          isDivision: true,
+          children: [],
+          total_pending: dm.total,
+          opening: dm.opening,
+          moves: dm.moves,
+          g1: dm.g1,
+          g2: dm.g2,
+          g3: dm.g3,
+          g4: dm.g4,
+          open_no_act: dm.open_no_act,
+          open_lco: dm.open_lco,
+          open_pwr: dm.open_pwr,
+          open_orders: dm.open_orders,
+          composite_score: dm.score,
+          no_action: dm.no_action,
+          ga_auth: dm.ga_auth,
+          draft_pwr: dm.draft_pwr,
+          hearing: dm.hearing,
+          final_orders: dm.final_orders,
+          cleared: dm.cleared,
+          intake: (dm.intake || 0),
+          contempt: divContempt,
+        };
+
+        (div.users || []).forEach(u => {
+          const um = getMetricsForScope(div.code, u.section, u.post);
+          divNode.children.push({
+            id: `USER:${div.code}:${u.section}:${u.post}`,
+            name: u.post,
+            section: u.section || 'Field Desk',
+            parent: divNode.id,
+            isUser: true,
+            total_pending: um.total,
+            opening: um.opening,
+            moves: um.moves,
+            g1: um.g1,
+            g2: um.g2,
+            g3: um.g3,
+            g4: um.g4,
+            open_no_act: um.open_no_act,
+            open_lco: um.open_lco,
+            open_pwr: um.open_pwr,
+            open_orders: um.open_orders,
+            composite_score: um.score,
+            no_action: um.no_action,
+            ga_auth: um.ga_auth,
+            draft_pwr: um.draft_pwr,
+            hearing: um.hearing,
+            final_orders: um.final_orders,
+            cleared: um.cleared,
+            intake: (um.intake || 0),
+            contempt: 0,
+          });
+        });
+
+        divNode.children.sort((a, b) => {
+          const aM = a.moves > 0, bM = b.moves > 0;
+          if (aM && !bM) return -1;
+          if (!aM && bM) return 1;
+          if (aM && bM) {
+            if (b.composite_score !== a.composite_score) return b.composite_score - a.composite_score;
+            if (b.moves !== a.moves) return b.moves - a.moves;
+          }
+          return b.total_pending - a.total_pending;
+        });
+        cNode.children.push(divNode);
+      });
+
+      cNode.children.sort((a, b) => {
+        const aM = a.moves > 0, bM = b.moves > 0;
+        if (aM && !bM) return -1;
+        if (!aM && bM) return 1;
+        if (aM && bM) {
+          if (b.composite_score !== a.composite_score) return b.composite_score - a.composite_score;
+          if (b.moves !== a.moves) return b.moves - a.moves;
+        }
+        return b.total_pending - a.total_pending;
+      });
+      cNode.composite_score = Math.round((cNode.score_sum / Math.max(1, circleDivs.length)) * 10) / 10;
+      tree.push(cNode);
+    });
+
+    tree.sort((a, b) => {
+      const aM = a.moves > 0, bM = b.moves > 0;
+      if (aM && !bM) return -1;
+      if (!aM && bM) return 1;
+      if (aM && bM) {
+        if (b.composite_score !== a.composite_score) return b.composite_score - a.composite_score;
+        if (b.moves !== a.moves) return b.moves - a.moves;
+      }
+      return b.total_pending - a.total_pending;
+    });
+
+    return tree;
+  }
+
+  function render() {
+    const tree = buildTreeData();
+    const tbody = document.getElementById('tbody');
+    let html = '';
+
+    let displayTree = tree;
+    if (SELECTED_CIRCLE !== 'ALL') {
+      displayTree = tree.filter(c => c.id === SELECTED_CIRCLE);
+    }
+
+    let kpiTotal = 0, kpiOpening = 0, kpiMoves = 0, kpiIntake = 0;
+    let kpiG1 = 0, kpiG2 = 0, kpiG3 = 0, kpiG4 = 0;
+    let kpiOpenNoAct = 0, kpiNoAction = 0;
+    let kpiOpenLCO = 0, kpiGAAuth = 0;
+    let kpiOpenDraft = 0, kpiDraft = 0;
+    let kpiOpenOrders = 0, kpiOrders = 0;
+    let kpiContempt = 0;
+
+    displayTree.forEach(c => {
+      kpiTotal += c.total_pending;
+      kpiOpening += c.opening;
+      kpiMoves += c.moves;
+      kpiIntake += (c.intake || 0);
+      kpiG1 += c.g1;
+      kpiG2 += c.g2;
+      kpiG3 += c.g3;
+      kpiG4 += c.g4;
+      kpiOpenNoAct += (c.open_no_act || 0);
+      kpiNoAction += (c.no_action || 0);
+      kpiOpenLCO += (c.open_lco || 0);
+      kpiGAAuth += (c.ga_auth || 0);
+      kpiOpenDraft += (c.open_pwr || 0);
+      kpiDraft += (c.draft_pwr || 0);
+      kpiOpenOrders += (c.open_orders || 0);
+      kpiOrders += (c.final_orders || 0);
+      kpiContempt += (c.contempt || 0);
+    });
+
+    const netDelta = kpiTotal - kpiOpening;
+    const addedCount = kpiIntake > 0 ? kpiIntake : Math.max(0, netDelta + kpiG4);
+    const closedCount = kpiG4;
+
+    const ctLabel = SELECTED_CASE_TYPE === 'ALL' ? 'All Case Types' : SELECTED_CASE_TYPE;
+    const scopeLabel = SELECTED_CIRCLE === 'ALL' ? `Statewide Summary &middot; ${ctLabel}` : `${displayTree[0]?.name || SELECTED_CIRCLE} &middot; ${ctLabel}`;
+    document.getElementById('kpiScopeText').innerHTML = scopeLabel;
+
+    document.getElementById('sMoves').textContent = `+${kpiMoves} Moves`;
+    document.getElementById('sMovesSub').innerHTML = `Opening: <strong>${kpiOpening.toLocaleString()}</strong> ➔ Active: <strong>${kpiTotal.toLocaleString()}</strong> &middot; <strong style="color:var(--amber);">+${addedCount} Added</strong> &middot; <strong style="color:var(--forest);">${closedCount > 0 ? '-' + closedCount : '0'} Closed</strong>`;
+
+    document.getElementById('sNoActMoves').textContent = `${kpiG1} of ${kpiOpenNoAct.toLocaleString()} Cleared`;
+    document.getElementById('sNoActSub').innerHTML = `<strong style="color:var(--purple);">${kpiG1} assigned</strong> &middot; ${kpiNoAction.toLocaleString()} pending No Action`;
+
+    document.getElementById('sLCOMoves').textContent = `${kpiG2} of ${kpiOpenLCO.toLocaleString()} Authorized`;
+    document.getElementById('sLCOSub').innerHTML = `<strong style="color:var(--forest);">${kpiG2} GA authorized</strong> &middot; ${kpiGAAuth.toLocaleString()} in LCO flow`;
+
+    document.getElementById('sHearingMoves').textContent = `${kpiG3} of ${kpiOpenDraft.toLocaleString()} to Hearing`;
+    document.getElementById('sHearingSub').innerHTML = `<strong style="color:var(--blue);">${kpiG3} remarks filed</strong> &middot; ${kpiDraft.toLocaleString()} Draft Remarks on desks`;
+
+    document.getElementById('sOrdersMoves').textContent = `${kpiG4} of ${kpiOpenOrders.toLocaleString()} Reduced`;
+    document.getElementById('sOrdersSub').innerHTML = `Opening: <strong>${kpiOpenOrders.toLocaleString()}</strong> ➔ Remaining: <strong style="color:var(--red);">${kpiOrders.toLocaleString()} Pending</strong> &middot; <strong style="color:var(--red);">${kpiContempt} Contempt</strong>`;
+
+    document.getElementById('tableHeaderTitle').innerHTML = SELECTED_CIRCLE === 'ALL' ? 
+      `Statewide Leaderboard &middot; Showing <strong>${tree.length}</strong> Circles Ranked by Performance (${ctLabel})` : 
+      `Showing <strong>${displayTree[0]?.name}</strong> &middot; Divisions Ranked (${ctLabel})`;
+
+    let circleRank = 1;
+
+    displayTree.forEach(circle => {
+      const circleMatches = !SEARCH || circle.name.toLowerCase().includes(SEARCH);
+      const matchingChildren = circle.children.filter(child => {
+        if (!SEARCH) return true;
+        if (child.name.toLowerCase().includes(SEARCH)) return true;
+        return child.children.some(u => u.name.toLowerCase().includes(SEARCH) || (u.section || '').toLowerCase().includes(SEARCH));
+      });
+
+      if (SEARCH && !circleMatches && !matchingChildren.length) return;
+
+      const isCircleOpen = EXPANDED_ALL || (SELECTED_CIRCLE !== 'ALL') || (SEARCH ? true : EXPANDED_CIRCLES.has(circle.id));
+      const childCount = circle.children.length;
+      const childType = circle.isHQ ? 'Wings' : 'Divisions';
+      const currentCircleRankNum = circleRank;
+      const rankCls = currentCircleRankNum === 1 ? 'rank-1' : (currentCircleRankNum === 2 ? 'rank-2' : (currentCircleRankNum === 3 ? 'rank-3' : ''));
+      const rankBadge = `<span class="rank-badge ${rankCls}">#${currentCircleRankNum}</span>`;
+      circleRank++;
+
+      const cNet = circle.total_pending - circle.opening;
+      const cAdded = circle.intake > 0 ? circle.intake : Math.max(0, cNet + circle.g4);
+      const cClosed = circle.g4;
+
+      html += `
+        <tr class="lvl-circle" onclick="toggleCircle('${circle.id}')">
+          <td>
+            <div class="circle-title">
+              ${rankBadge}
+              <span class="chevron-btn">${isCircleOpen ? '▼' : '▶'}</span>
+              <span>${circle.isHQ ? '🏛️' : '🌲'}</span>
+              <span>${esc(circle.name)}</span>
+              <span style="font-size:11px; color:var(--ink-muted); font-weight:500;">(${childCount} ${childType})</span>
+            </div>
+          </td>
+
+          <td>
+            <span class="score-badge ${circle.composite_score >= 10 ? 'score-high' : (circle.composite_score > 0 ? 'score-mod' : 'score-idle')}">
+              ${circle.composite_score > 0 ? '⚡ ' + circle.composite_score + '%' : '0.0%'}
+            </span>
+          </td>
+
+          <td>
+            <span class="badge-moves ${circle.moves >= 10 ? 'moves-high' : (circle.moves > 0 ? 'moves-mod' : 'moves-none')}">
+              ${circle.moves > 0 ? '⚡ +' + circle.moves + ' Moves' : '0 (Stagnant)'}
+            </span>
+          </td>
+
+          <td>
+            <strong>${circle.no_action}</strong> <span style="font-size:10.5px; color:var(--ink-muted);">No Act &middot;</span> <strong style="color:var(--purple);">${circle.ga_auth}</strong> <span style="font-size:10.5px; color:var(--ink-muted);">GA Auth</span>
+          </td>
+
+          <td>
+            <strong style="color:var(--amber);">${circle.draft_pwr}</strong> <span style="font-size:10.5px; color:var(--ink-muted);">Draft &middot;</span> <strong style="color:var(--blue);">${circle.hearing}</strong> <span style="font-size:10.5px; color:var(--ink-muted);">in Court</span>
+          </td>
+
+          <td>
+            <strong style="color:var(--red);">${circle.final_orders}</strong> <span style="font-size:10.5px; color:var(--ink-muted);">Pending</span> &middot; <strong style="color:var(--forest);">${circle.g4 > 0 ? '(-' + circle.g4 + ' closed)' : '<span style="font-size:10.5px; font-weight:500; color:var(--ink-muted);">(0 closed)</span>'}</strong>
+          </td>
+
+          <td>
+            <div style="font-weight:700; font-variant-numeric:tabular-nums;">
+              <span style="font-size:11px; color:var(--ink-muted);">${circle.opening} ➔</span> ${circle.total_pending.toLocaleString()}
+            </div>
+            <div style="font-size:10.5px; color:var(--ink-secondary); margin-top:1px;">
+              ${cAdded > 0 ? `<strong style="color:var(--amber);">+${cAdded} add</strong> &middot; ` : ''}<strong style="${cClosed > 0 ? 'color:var(--forest);' : 'color:var(--ink-muted);'}">-${cClosed} close</strong>
+            </div>
+          </td>
+
+          <td>
+            ${circle.contempt > 0 ? `<span class="badge-contempt">🚨 ${circle.contempt} Contempt</span>` : `<span style="color:var(--ink-muted); font-size:11px;">Normal</span>`}
+          </td>
+        </tr>
+      `;
+
+      if (isCircleOpen) {
+        let divRank = 1;
+        matchingChildren.forEach(div => {
+          const isDivOpen = EXPANDED_ALL || (SEARCH ? true : EXPANDED_DIVS.has(div.id));
+          const uCount = div.children.length;
+          const currentDivRankNum = divRank;
+          const subRankText = `${currentCircleRankNum}.${currentDivRankNum}`;
+          divRank++;
+
+          const dNet = div.total_pending - div.opening;
+          const dAdded = (div.intake || 0) > 0 ? div.intake : Math.max(0, dNet + div.g4);
+          const dClosed = div.g4;
+
+          html += `
+            <tr class="lvl-division" onclick="toggleDiv('${div.id}')">
+              <td>
+                <div class="div-title">
+                  <span class="sub-rank">${subRankText}</span>
+                  <span class="chevron-btn">${isDivOpen ? '▼' : '▶'}</span>
+                  <span>${div.isWing ? '🏢' : '📁'}</span>
+                  <span style="font-weight:700;">${esc(div.name)}</span>
+                  ${uCount > 0 ? `<span style="font-size:10.5px; color:var(--ink-muted);">(${uCount} Desks)</span>` : ''}
+                </div>
+              </td>
+
+              <td>
+                <span class="score-badge ${div.composite_score >= 10 ? 'score-high' : (div.composite_score > 0 ? 'score-mod' : 'score-idle')}" style="font-size:10.5px; padding:1px 5px;">
+                  ${div.composite_score > 0 ? div.composite_score + '%' : '0%'}
+                </span>
+              </td>
+
+              <td>
+                <span class="badge-moves ${div.moves > 0 ? 'moves-mod' : 'moves-none'}">
+                  ${div.moves > 0 ? '+' + div.moves + ' moves' : '-'}
+                </span>
+              </td>
+
+              <td>${div.no_action} No Act &middot; ${div.ga_auth} GA</td>
+              <td><span style="color:var(--amber); font-weight:600;">${div.draft_pwr} Draft</span> &middot; <span style="color:var(--blue); font-weight:600;">${div.hearing} in Court</span></td>
+              <td><span style="color:var(--red); font-weight:700;">${div.final_orders} Orders</span> &middot; <span style="color:var(--forest); font-weight:700;">${div.g4 > 0 ? '(-' + div.g4 + ' closed)' : '<span style="color:var(--ink-muted); font-weight:500;">0 closed</span>'}</span></td>
+              <td>
+                <div style="font-weight:700; color:var(--ink-secondary); font-variant-numeric:tabular-nums;">
+                  <span style="font-size:10.5px; color:var(--ink-muted);">${div.opening} ➔</span> ${div.total_pending.toLocaleString()}
+                </div>
+                <div style="font-size:10px; color:var(--ink-muted); margin-top:1px;">
+                  ${dAdded > 0 ? `<strong style="color:var(--amber);">+${dAdded} add</strong> &middot; ` : ''}<strong style="${dClosed > 0 ? 'color:var(--forest);' : 'color:var(--ink-muted);'}">-${dClosed} close</strong>
+                </div>
+              </td>
+              <td>
+                ${div.contempt > 0 ? `<span class="badge-contempt">🚨 ${div.contempt} Contempt</span>` : 
+                  (div.draft_pwr >= 15 ? `<span style="background:#fef3c7; color:#92400e; padding:2px 6px; border-radius:4px; font-weight:600; font-size:10.5px;">📝 Submit PWR</span>` : 
+                  `<span style="color:var(--ink-muted); font-size:11px;">-</span>`)}
+              </td>
+            </tr>
+          `;
+
+          if (isDivOpen && div.children.length) {
+            let uRank = 1;
+            div.children.forEach(u => {
+              if (SEARCH && !u.name.toLowerCase().includes(SEARCH) && !(u.section || '').toLowerCase().includes(SEARCH) && !div.name.toLowerCase().includes(SEARCH)) return;
+
+              const uRankText = `${subRankText}.${uRank}`;
+              uRank++;
+
+              const uNet = u.total_pending - u.opening;
+              const uAdded = (u.intake || 0) > 0 ? u.intake : Math.max(0, uNet + u.g4);
+              const uClosed = u.g4;
+
+              html += `
+                <tr class="lvl-officer">
+                  <td>
+                    <div class="officer-name">
+                      <span class="sub-sub-rank">${uRankText}</span>
+                      <span>👤</span>
+                      <span><strong>${esc(u.name)}</strong></span>
+                      <span style="font-size:10.5px; color:var(--ink-muted);">(${esc(u.section)})</span>
+                    </div>
+                  </td>
+                  <td>
+                    <span style="font-size:10.5px; color:var(--ink-muted);">${u.composite_score > 0 ? u.composite_score + '%' : '-'}</span>
+                  </td>
+                  <td>
+                    <span style="font-weight:600; ${u.moves > 0 ? 'color:var(--forest);' : 'color:var(--ink-muted);'}">
+                      ${u.moves > 0 ? '+' + u.moves + ' moves' : '-'}
+                    </span>
+                  </td>
+                  <td>${u.no_action} No Act &middot; ${u.ga_auth} GA</td>
+                  <td><span style="color:var(--amber); font-weight:600;">${u.draft_pwr} Draft</span> &middot; <span style="color:var(--blue); font-weight:600;">${u.hearing} in Court</span></td>
+                  <td><span style="color:var(--red); font-weight:700;">${u.final_orders} Orders</span> &middot; <span style="color:var(--forest); font-weight:700;">${u.g4 > 0 ? '(-' + u.g4 + ' closed)' : '<span style="color:var(--ink-muted); font-weight:500;">0 closed</span>'}</span></td>
+                  <td>
+                    <div style="font-weight:600; color:var(--ink-secondary); font-variant-numeric:tabular-nums;">
+                      <span style="font-size:10px; color:var(--ink-muted);">${u.opening} ➔</span> ${u.total_pending}
+                    </div>
+                    <div style="font-size:9.5px; color:var(--ink-muted);">
+                      ${uAdded > 0 ? `<strong style="color:var(--amber);">+${uAdded}</strong> &middot; ` : ''}<strong style="${uClosed > 0 ? 'color:var(--forest);' : 'color:var(--ink-muted);'}">-${uClosed} close</strong>
+                    </div>
+                  </td>
+                  <td>-</td>
+                </tr>
+              `;
+            });
+          }
+        });
+      }
+    });
+
+    tbody.innerHTML = html;
+    document.getElementById('treeCountInfo').textContent = `${displayTree.length} Ranked Circles`;
+
+    document.getElementById('tfoot').innerHTML = `
+      <tr>
+        <td>Scope Total (${displayTree.length} Circles)</td>
+        <td>-</td>
+        <td style="font-weight:800; color:var(--forest);">+${kpiMoves} Moves</td>
+        <td>-</td>
+        <td>${kpiDraft.toLocaleString()} Draft Remarks</td>
+        <td style="font-weight:700;"><span style="color:var(--red);">${kpiOrders.toLocaleString()} Pending</span> &middot; <span style="color:var(--forest);">(-${kpiG4} closed)</span></td>
+        <td>
+          <div style="font-size:12.5px; font-weight:800;"><span style="font-size:10.5px; font-weight:600; color:var(--ink-muted);">${kpiOpening.toLocaleString()} ➔</span> ${kpiTotal.toLocaleString()}</div>
+          <div style="font-size:10.5px; color:var(--ink-secondary);"><strong style="color:var(--amber);">+${addedCount} add</strong> &middot; <strong style="color:var(--forest);">${closedCount > 0 ? '-' + closedCount : '0'} close</strong></div>
+        </td>
+        <td>${kpiContempt > 0 ? `🚨 ${kpiContempt} Contempt` : '-'}</td>
+      </tr>
+    `;
+  }
+
+  function exportHierarchyCSV() {
+    const tree = buildTreeData();
+    let csv = "Case Type,Circle Rank,Circle Name,Division Rank,Division/Wing Name,Officer Desk,Section,Opening Caseload,Active Caseload,New Added,Cases Closed,Net Caseload Delta,Real Files Moved,Composite Score %,No Action,GA Auth,Draft Remarks,In Court Hearing,Final Orders Pending,Contempt\n";
+
+    tree.forEach((c, cIdx) => {
+      c.children.forEach((d, dIdx) => {
+        d.children.forEach(u => {
+          const uNet = u.total_pending - u.opening;
+          const uAdded = (u.intake || 0) > 0 ? u.intake : Math.max(0, uNet + u.g4);
+          csv += `"${SELECTED_CASE_TYPE}","${cIdx + 1}","${c.name}",${dIdx + 1},"${d.name}","${u.name}","${u.section}",${u.opening},${u.total_pending},${uAdded},${u.g4},${uNet},${u.moves},${u.composite_score},${u.no_action},${u.ga_auth},${u.draft_pwr},${u.hearing},${u.final_orders},0\n`;
+        });
+      });
+    });
+
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `CCMS_Ranked_${SELECTED_CASE_TYPE.replace(/[^a-zA-Z0-9]/g, '_')}_${PERIOD}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
+  document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
