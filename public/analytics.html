@@ -686,8 +686,9 @@
 
   function setCaseType(ctKey) {
     SELECTED_CASE_TYPE = ctKey;
+    // Fix #1: use consistent data-ct='ALL' on the rebuilt pill, match by attribute only
     document.querySelectorAll('.ct-pill').forEach(p => {
-      p.classList.toggle('active', p.getAttribute('data-ct') === ctKey || (ctKey === 'ALL' && !p.hasAttribute('data-ct')));
+      p.classList.toggle('active', p.getAttribute('data-ct') === ctKey);
     });
     render();
   }
@@ -701,7 +702,11 @@
       if (window.CCMS_DATA) d = window.CCMS_DATA;
     }
     if (!d && window.CCMS_DATA) d = window.CCMS_DATA;
-    if (!d) return;
+    // Fix #10: show user-facing error instead of silently returning
+    if (!d) {
+      document.getElementById('tbody').innerHTML = `<tr><td colspan="8" style="text-align:center; padding:32px; color:var(--red); font-weight:600;">⚠️ Data could not be loaded. Please refresh the page or check your connection.</td></tr>`;
+      return;
+    }
     RAW = d;
 
     // Period buttons label
@@ -727,8 +732,9 @@
 
   function populateCaseTypePills() {
     const bar = document.getElementById('caseTypeBar');
+    // Fix #1: give the "ALL" pill data-ct="ALL" so setCaseType toggle works consistently
     bar.innerHTML = `
-      <button type="button" class="ct-pill ${SELECTED_CASE_TYPE === 'ALL' ? 'active' : ''}" onclick="setCaseType('ALL')">
+      <button type="button" class="ct-pill ${SELECTED_CASE_TYPE === 'ALL' ? 'active' : ''}" data-ct="ALL" onclick="setCaseType('ALL')">
         <span>📂 All Case Types</span>
         <span class="ct-count-tag" id="ctCountALL">0</span>
       </button>
@@ -961,12 +967,9 @@
       }
     });
 
-    const hqDivisions = (d.divisions || []).filter(div => 
-      div.circle === 'Aranya Bhavana' || 
-      div.name === 'Araṇya bhavana' || 
-      div.name === 'PCCFHead Of Forest Force' || 
-      div.name === 'PCCF WL'
-    );
+    // Fix #9: use only div.circle to identify HQ divisions — name fallbacks caused
+    // duplication when circle field was set but name also matched another check.
+    const hqDivisions = (d.divisions || []).filter(div => div.circle === 'Aranya Bhavana');
 
     const hqNode = {
       id: 'Aranya Bhavana',
@@ -1192,7 +1195,7 @@
         cNode.open_lco += dm.open_lco;
         cNode.open_pwr += dm.open_pwr;
         cNode.open_orders += dm.open_orders;
-        cNode.score_sum += dm.score;
+        // Fix #8: removed dead score_sum accumulation — circle composite_score is recalculated below
         cNode.no_action += dm.no_action;
         cNode.ga_auth += dm.ga_auth;
         cNode.draft_pwr += dm.draft_pwr;
@@ -1201,6 +1204,14 @@
         cNode.cleared += dm.cleared;
         cNode.intake += (dm.intake || 0);
         cNode.contempt += divContempt;
+
+        // Fix #7: recalculate composite_score from aggregated gate rates (same formula as circle)
+        // so it stays accurate when filtering by a specific case type
+        const dr1 = dm.open_no_act > 0 ? Math.min(1.0, dm.g1 / dm.open_no_act) : 0;
+        const dr2 = dm.open_lco > 0 ? Math.min(1.0, dm.g2 / dm.open_lco) : 0;
+        const dr3 = dm.open_pwr > 0 ? Math.min(1.0, dm.g3 / dm.open_pwr) : 0;
+        const dr4 = dm.open_orders > 0 ? Math.min(1.0, dm.g4 / dm.open_orders) : 0;
+        const divCompositeScore = Math.round((0.10 * dr1 + 0.15 * dr2 + 0.45 * dr3 + 0.30 * dr4) * 1000) / 10;
 
         const divNode = {
           id: `DIV:${div.code}`,
@@ -1220,7 +1231,7 @@
           open_lco: dm.open_lco,
           open_pwr: dm.open_pwr,
           open_orders: dm.open_orders,
-          composite_score: dm.score,
+          composite_score: divCompositeScore,
           no_action: dm.no_action,
           ga_auth: dm.ga_auth,
           draft_pwr: dm.draft_pwr,
@@ -1346,14 +1357,17 @@
     });
 
     const netDelta = kpiTotal - kpiOpening;
-    const addedCount = kpiIntake > 0 ? kpiIntake : Math.max(0, netDelta + kpiG4);
+    // Fix #3: addedCount = intake if available; otherwise estimate as net caseload change + all gate closures
+    // (G4 = final order compliance closures — the only gate that removes from active caseload)
     const closedCount = kpiG4;
+    const addedCount = kpiIntake > 0 ? kpiIntake : Math.max(0, netDelta + closedCount);
 
     const ctLabel = SELECTED_CASE_TYPE === 'ALL' ? 'All Case Types' : SELECTED_CASE_TYPE;
     const scopeLabel = SELECTED_CIRCLE === 'ALL' ? `Statewide Summary &middot; ${ctLabel}` : `${displayTree[0]?.name || SELECTED_CIRCLE} &middot; ${ctLabel}`;
     document.getElementById('kpiScopeText').innerHTML = scopeLabel;
 
-    document.getElementById('sMoves').textContent = `+${kpiMoves} Moves`;
+    // Fix #2: don't show '+' prefix when moves = 0
+    document.getElementById('sMoves').textContent = kpiMoves > 0 ? `+${kpiMoves} Moves` : `${kpiMoves} Moves`;
     document.getElementById('sMovesSub').innerHTML = `Opening: <strong>${kpiOpening.toLocaleString()}</strong> ➔ Active: <strong>${kpiTotal.toLocaleString()}</strong> &middot; <strong style="color:var(--amber);">+${addedCount} Added</strong> &middot; <strong style="color:var(--forest);">${closedCount > 0 ? '-' + closedCount : '0'} Closed</strong>`;
 
     document.getElementById('sNoActMoves').textContent = `${kpiG1} of ${kpiOpenNoAct.toLocaleString()} Cleared`;
@@ -1393,8 +1407,9 @@
       circleRank++;
 
       const cNet = circle.total_pending - circle.opening;
-      const cAdded = circle.intake > 0 ? circle.intake : Math.max(0, cNet + circle.g4);
+      // Fix #3 (circle level): consistent addedCount formula
       const cClosed = circle.g4;
+      const cAdded = (circle.intake || 0) > 0 ? circle.intake : Math.max(0, cNet + cClosed);
 
       html += `
         <tr class="lvl-circle" onclick="toggleCircle('${circle.id}')">
@@ -1457,8 +1472,9 @@
           divRank++;
 
           const dNet = div.total_pending - div.opening;
-          const dAdded = (div.intake || 0) > 0 ? div.intake : Math.max(0, dNet + div.g4);
+          // Fix #3 (division level): consistent addedCount formula
           const dClosed = div.g4;
+          const dAdded = (div.intake || 0) > 0 ? div.intake : Math.max(0, dNet + dClosed);
 
           html += `
             <tr class="lvl-division" onclick="toggleDiv('${div.id}')">
@@ -1512,8 +1528,9 @@
               uRank++;
 
               const uNet = u.total_pending - u.opening;
-              const uAdded = (u.intake || 0) > 0 ? u.intake : Math.max(0, uNet + u.g4);
+              // Fix #3 (officer level): consistent addedCount formula
               const uClosed = u.g4;
+              const uAdded = (u.intake || 0) > 0 ? u.intake : Math.max(0, uNet + uClosed);
 
               html += `
                 <tr class="lvl-officer">
@@ -1554,7 +1571,11 @@
     });
 
     tbody.innerHTML = html;
-    document.getElementById('treeCountInfo').textContent = `${displayTree.length} Ranked Circles`;
+    // Fix #6: correct label for single-circle and HQ view
+    const treeCountLabel = SELECTED_CIRCLE === 'ALL'
+      ? `${displayTree.length} Ranked Circle${displayTree.length !== 1 ? 's' : ''}`
+      : (displayTree[0]?.isHQ ? 'Head Office View' : `1 Circle Selected`);
+    document.getElementById('treeCountInfo').textContent = treeCountLabel;
 
     document.getElementById('tfoot').innerHTML = `
       <tr>
@@ -1575,14 +1596,29 @@
 
   function exportHierarchyCSV() {
     const tree = buildTreeData();
-    let csv = "Case Type,Circle Rank,Circle Name,Division Rank,Division/Wing Name,Officer Desk,Section,Opening Caseload,Active Caseload,New Added,Cases Closed,Net Caseload Delta,Real Files Moved,Composite Score %,No Action,GA Auth,Draft Remarks,In Court Hearing,Final Orders Pending,Contempt\n";
+    // Fix #4 & #5: include circle and division summary rows; export real contempt values
+    let csv = "Level,Case Type,Circle Rank,Circle Name,Division Rank,Division/Wing Name,Officer Desk,Section,Opening Caseload,Active Caseload,New Added,Cases Closed,Net Caseload Delta,Real Files Moved,Composite Score %,No Action,GA Auth,Draft Remarks,In Court Hearing,Final Orders Pending,Contempt\n";
 
     tree.forEach((c, cIdx) => {
+      const cNet = c.total_pending - c.opening;
+      const cClosed = c.g4;
+      const cAdded = (c.intake || 0) > 0 ? c.intake : Math.max(0, cNet + cClosed);
+      // Circle summary row
+      csv += `"Circle","${SELECTED_CASE_TYPE}","${cIdx + 1}","${c.name}","","","","",${c.opening},${c.total_pending},${cAdded},${cClosed},${cNet},${c.moves},${c.composite_score},${c.no_action},${c.ga_auth},${c.draft_pwr},${c.hearing},${c.final_orders},${c.contempt}\n`;
+
       c.children.forEach((d, dIdx) => {
+        const dNet = d.total_pending - d.opening;
+        const dClosed = d.g4;
+        const dAdded = (d.intake || 0) > 0 ? d.intake : Math.max(0, dNet + dClosed);
+        // Division/Wing summary row
+        csv += `"Division","${SELECTED_CASE_TYPE}","${cIdx + 1}","${c.name}","${dIdx + 1}","${d.name}","","",${d.opening},${d.total_pending},${dAdded},${dClosed},${dNet},${d.moves},${d.composite_score},${d.no_action},${d.ga_auth},${d.draft_pwr},${d.hearing},${d.final_orders},${d.contempt}\n`;
+
         d.children.forEach(u => {
           const uNet = u.total_pending - u.opening;
-          const uAdded = (u.intake || 0) > 0 ? u.intake : Math.max(0, uNet + u.g4);
-          csv += `"${SELECTED_CASE_TYPE}","${cIdx + 1}","${c.name}",${dIdx + 1},"${d.name}","${u.name}","${u.section}",${u.opening},${u.total_pending},${uAdded},${u.g4},${uNet},${u.moves},${u.composite_score},${u.no_action},${u.ga_auth},${u.draft_pwr},${u.hearing},${u.final_orders},0\n`;
+          const uClosed = u.g4;
+          const uAdded = (u.intake || 0) > 0 ? u.intake : Math.max(0, uNet + uClosed);
+          // Fix #4: use u.contempt (not hardcoded 0)
+          csv += `"Officer","${SELECTED_CASE_TYPE}","${cIdx + 1}","${c.name}","${dIdx + 1}","${d.name}","${u.name}","${u.section}",${u.opening},${u.total_pending},${uAdded},${uClosed},${uNet},${u.moves},${u.composite_score},${u.no_action},${u.ga_auth},${u.draft_pwr},${u.hearing},${u.final_orders},${u.contempt || 0}\n`;
         });
       });
     });
@@ -1595,6 +1631,7 @@
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   }
 
   document.addEventListener('DOMContentLoaded', init);
