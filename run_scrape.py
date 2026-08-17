@@ -253,9 +253,11 @@ def do_push(tee: Tee) -> None:
     env_rebase = {**os.environ, "GIT_EDITOR": "true"}
     pull_code, pull_out = capture(["git", "pull", "--rebase"], PROJECT_DIR)
     if pull_code != 0:
-        # Conflict in data files -- take ours (today's fresh scrape) and continue.
+        # Conflict in data files -- take the local scrape and continue.
+        # NOTE: in `git rebase`, --theirs = the local commits being replayed
+        # (our fresh scrape), --ours = upstream/remote. Opposite of git merge.
         log(tee, f"conflict during pull -- taking local data files and continuing.\n{pull_out}")
-        capture(["git", "checkout", "--ours", "public/data.json", "public/data.js"], PROJECT_DIR)
+        capture(["git", "checkout", "--theirs", "public/data.json", "public/data.js"], PROJECT_DIR)
         capture(["git", "add", "public/data.json", "public/data.js"], PROJECT_DIR)
         subprocess.run(
             ["git", "rebase", "--continue"],

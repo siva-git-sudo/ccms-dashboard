@@ -99,8 +99,10 @@ if [ $PUSH -eq 1 ]; then
     echo "sync OK."
   else
     # Conflict in data files -- take ours (today's scrape) and continue.
+    # NOTE: in `git rebase`, --theirs = the local commits being replayed (our
+    # fresh scrape), --ours = the upstream/remote. Opposite of `git merge`.
     echo "conflict during pull -- taking local data files and continuing."
-    git checkout --ours public/data.json public/data.js 2>/dev/null
+    git checkout --theirs public/data.json public/data.js 2>/dev/null
     git add public/data.json public/data.js 2>/dev/null
     GIT_EDITOR=true git rebase --continue 2>&1 || true
   fi
