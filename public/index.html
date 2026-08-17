@@ -1202,7 +1202,11 @@ function renderFilters(){
                 dlt({ct:ct.key}));
   }
   var typeList=typesFor(COURT).slice().sort(function(a,b){return pend(b)-pend(a);});
-  var typeChips=typeList.map(function(ct){
+  var allPend=typesFor(COURT).reduce(function(s,ct){return s+pend(ct);},0);
+  var allDlt=hasPrev()?dlt({ct:null}):null;
+  var allChip=chip(CT===null,'setCT(null)','All',allPend,'',
+    'All case types — total pending across every report in scope',allDlt);
+  var typeChips=allChip+typeList.map(function(ct){
     var n=pend(ct);
     return chip(CT===ct.key,'setCT('+q(ct.key)+')',ct.label,n,n===0?' zero':'',
                 ct.court+(n===0?' — checked, no pending cases in scope':''),
@@ -1212,18 +1216,15 @@ function renderFilters(){
   ['High Court','KSAT'].forEach(function(g){
     var list=typeList.filter(function(ct){return shortCourt(ct.court)===g;});
     if(!list.length) return;
-    typeChipsMobile+='<div class="ctgrp"><div class="gl">'+g+'</div><div class="fchips">'+
-      list.map(ctChip).join('')+'</div></div>';
+    typeChipsMobile+='<div class="ctgrp"><div class="gl">'+g+'</div><div class="fchips">';
+    if(g==='High Court') typeChipsMobile+=allChip;
+    typeChipsMobile+=list.map(ctChip).join('')+'</div></div>';
   });
 
   var typeRowHTML = IS_MOBILE
     ? '<div class="frow f-type"><span class="flabel">Case type</span><div>'+typeChipsMobile+'</div></div>'
     : row('Case type',typeChips,'f-type');
 
-  // Stage -- desktop only. On mobile every stage's count already sits
-  // on its card as a tag (see mGroupsHTML), so a separate cross-unit
-  // stage filter would duplicate a control without adding a screen's
-  // worth of room to show it in. The trade-off: mobile can't filter
   // *across* units by stage the way desktop can -- only see each
   // unit's own breakdown.
   var stageRowHTML='';
@@ -1305,9 +1306,13 @@ function mobToggleUnit(){ MOB_UNIT_OPEN=!MOB_UNIT_OPEN; renderFilters(); }
 
 function setCourt(c){
   COURT=c; MCARD={};
-  var list=typesFor(COURT);
-  var still=list.some(function(x){return x.key===CT&&pend(x)>0;});
-  if(!still){var f=list.filter(function(x){return pend(x)>0;})[0]; CT=f?f.key:(list[0]&&list[0].key);}
+  // Only auto-correct CT if a specific one is selected but no longer valid
+  // for the new court. CT=null (All) is always valid.
+  if(CT!==null){
+    var list=typesFor(COURT);
+    var still=list.some(function(x){return x.key===CT&&pend(x)>0;});
+    if(!still){var f=list.filter(function(x){return pend(x)>0;})[0]; CT=f?f.key:null;}
+  }
   renderKPIs(); renderFilters(); renderPanel();
 }
 // renderKPIs() is in this list because the last three cards are
@@ -1750,8 +1755,40 @@ function renderPanelMobile(ct,ROWS,cols){
 }
 
 function renderPanel(){
-  var ct=DATA.case_types.filter(function(x){return x.key===CT;})[0];
   var el=document.getElementById('panel');
+  // CT=null means "All" -- render every case type panel stacked.
+  if(CT===null){
+    var types=typesFor(COURT);
+    el.innerHTML=types.map(function(ct){
+      var ROWS=rowsOf(ct).slice().sort(function(a,b){
+        return (b.metrics.total_cases_pending||0)-(a.metrics.total_cases_pending||0);
+      });
+      if(!ROWS.length) return '';
+      if(IS_MOBILE) return renderPanelMobile(ct,mobRows(ROWS,ct.columns).sort(
+        function(a,b){return (b.metrics.total_cases_pending||0)-(a.metrics.total_cases_pending||0);}),ct.columns);
+      var cols=ct.columns;
+      var body=ROWS.map(function(r,i){
+        var n=r.users.length;
+        var nm=n?'<a class="dl" id="c'+ct.key+i+'" onclick="tog(\''+ct.key+i+'\')" title="Show '+n+' user row'+(n===1?'':'s')+' under '+esc(r.name)+'">'+esc(r.name)+'</a>'
+               :'<span>'+esc(r.name)+'</span>';
+        return '<tr><td class="nm"><span class="dn">'+nm+recDeltaHTML(r)+'</span><span class="gt">'+esc(UNIT_KIND[r.group]||r.group)+(n?' &middot; '+n+' user'+(n===1?'':'s'):'')+
+               '</span></td>'+cells(r.metrics,cols)+'</tr>'+userRows(r,ct.key+i,cols,'total_cases_pending');
+      }).join('');
+      var ftot={};
+      cols.forEach(function(c){
+        ftot[c.key]=ROWS.reduce(function(s,r){var v=r.metrics[c.key];return s+(typeof v==='number'?v:0);},0);
+      });
+      var foot='<tr><td class="nm">Total &mdash; '+ROWS.length+' unit'+(ROWS.length===1?'':'s')+'</td>'+
+        cols.map(function(c){return '<td'+cellClass(c.key)+'>'+num(ftot[c.key])+'</td>';}).join('')+'</tr>';
+      return '<div class="panel"><div class="phead"><h2>'+esc(ct.label)+' report &mdash; non secretariat department'+
+        (ct.all_columns_known?'':'<span class="badge">partial headings</span>')+'</h2>'+
+        '<span class="m">'+esc(ct.court)+' &middot; '+ct.column_count+' columns &middot; '+ROWS.length+' unit'+(ROWS.length===1?'':'s')+'</span></div>'+
+        '<div class="scroll"><table><thead>'+headHTML(ct)+'</thead><tbody>'+body+'</tbody><tfoot>'+foot+'</tfoot></table></div></div>'+noteHTML(ct);
+    }).join('');
+    if(!el.innerHTML) el.innerHTML='<div class="panel"><div class="empty"><strong>No pending cases.</strong></div></div>';
+    return;
+  }
+  var ct=DATA.case_types.filter(function(x){return x.key===CT;})[0];
   if(!ct){el.innerHTML='';return;}
   var ROWS=rowsOf(ct);
   if(!ROWS.length){
@@ -1855,8 +1892,9 @@ async function loadData(FORCE){
     st.textContent='Data as on '+(DATA.latest_date?ddmm(DATA.latest_date):'unknown'); return;
   }
   var withData=DATA.case_types.filter(function(c){return pend(c)>0;});
-  if(!CT||!DATA.case_types.some(function(c){return c.key===CT;}))
-    CT=(withData[0]||DATA.case_types[0]).key;
+  // Default to CT=null (All case types) on first load.
+  if(CT===null || !DATA.case_types.some(function(c){return c.key===CT;}))
+    CT=null;  // null = All
   renderPeriodSelect();
   renderKPIs(); renderFilters(); renderPanel();
   // Date only. What it is compared against is the trend segment's job to
