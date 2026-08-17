@@ -91,6 +91,20 @@ git -c user.name="ccms-bot" -c user.email="ccms-bot@local" \
     commit -q -m "CCMS data $(date '+%Y-%m-%d')" && echo "committed."
 
 if [ $PUSH -eq 1 ]; then
+  # Pull remote changes first (e.g. code commits from a dev machine) so the
+  # push is never rejected for being behind. --rebase keeps history linear.
+  # If there's a conflict in the data files, ours (the fresh scrape) wins.
+  echo "syncing with remote before push ..."
+  if git pull --rebase 2>&1; then
+    echo "sync OK."
+  else
+    # Conflict in data files -- take ours (today's scrape) and continue.
+    echo "conflict during pull -- taking local data files and continuing."
+    git checkout --ours public/data.json public/data.js 2>/dev/null
+    git add public/data.json public/data.js 2>/dev/null
+    GIT_EDITOR=true git rebase --continue 2>&1 || true
+  fi
+
   if git push 2>&1; then
     echo "pushed. GitHub Pages will republish in about a minute."
   else

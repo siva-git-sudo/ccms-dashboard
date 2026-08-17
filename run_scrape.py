@@ -246,6 +246,25 @@ def do_push(tee: Tee) -> None:
         return
     log(tee, "committed.")
 
+    # Pull remote changes before pushing so code commits from a dev machine
+    # never cause a "rejected: fetch first" failure on the Pi.
+    # --rebase keeps history linear; GIT_EDITOR=true accepts the message as-is.
+    log(tee, "syncing with remote before push ...")
+    env_rebase = {**os.environ, "GIT_EDITOR": "true"}
+    pull_code, pull_out = capture(["git", "pull", "--rebase"], PROJECT_DIR)
+    if pull_code != 0:
+        # Conflict in data files -- take ours (today's fresh scrape) and continue.
+        log(tee, f"conflict during pull -- taking local data files and continuing.\n{pull_out}")
+        capture(["git", "checkout", "--ours", "public/data.json", "public/data.js"], PROJECT_DIR)
+        capture(["git", "add", "public/data.json", "public/data.js"], PROJECT_DIR)
+        subprocess.run(
+            ["git", "rebase", "--continue"],
+            cwd=str(PROJECT_DIR), env=env_rebase,
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+        )
+    else:
+        log(tee, "sync OK.")
+
     code, out = capture(["git", "push"], PROJECT_DIR)
     if code != 0:
         log(tee, f"WARNING: git push failed (check credentials / remote):\n{out}")
