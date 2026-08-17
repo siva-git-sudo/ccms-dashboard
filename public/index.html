@@ -43,7 +43,15 @@
   header.top .org{margin:1px 0 0;font-size:13px;color:var(--ink-2);line-height:1.4;
     display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
   .stamp{color:var(--grn);font-weight:600;white-space:nowrap}
-  .hmeta{margin-left:auto;display:flex;flex-direction:row;align-items:center;gap:9px}
+  .hmeta{margin-left:auto;display:flex;flex-direction:row;align-items:center;gap:9px;flex-wrap:wrap}
+  /* Analytics Leaderboard button */
+  .analytics-btn{flex-shrink:0;display:inline-flex;align-items:center;gap:5px;
+    background:#15803d;color:#fff;padding:5px 11px;border-radius:7px;
+    font-size:12.5px;font-weight:600;text-decoration:none;letter-spacing:-0.01em;
+    white-space:nowrap;transition:background .15s}
+  .analytics-btn:hover{background:#166534}
+  /* Trend label + period toggle grouped so they can move as one unit */
+  .trend-ctrl{display:inline-flex;align-items:center;gap:7px;flex-shrink:0}
   /* Names the segment beside it: three bare durations do not say what
      they re-base. */
   .pslab{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;
@@ -260,7 +268,15 @@
     header.top .org{-webkit-line-clamp:2}
     header.top .org .osep{display:none}
     header.top .org .stamp{display:block}
-    .hmeta{width:100%;margin-left:0;justify-content:space-between;gap:8px}
+    /* On mobile: hmeta stacks into two rows.
+       Row 1: Analytics button spans the full width.
+       Row 2: Trend toggle right-aligned. */
+    .hmeta{width:100%;margin-left:0;flex-direction:column;align-items:stretch;gap:7px}
+    .analytics-btn{width:100%;justify-content:center;padding:8px 14px;font-size:13px;border-radius:8px}
+    .trend-ctrl{justify-content:flex-end;gap:6px}
+    /* Hide the "Trend" label on mobile — the toggle is self-explanatory */
+    .pslab{display:none}
+    .pseg button{padding:5px 13px;font-size:13px}
 
     .frow{grid-template-columns:1fr;row-gap:6px}
     .flabel{padding-top:0}
@@ -388,12 +404,14 @@
            class="stamp" id="stamp">Loading&hellip;</span></p>
       </div>
       <div class="hmeta">
-        <a href="analytics.html" style="display:inline-flex;align-items:center;gap:5px;background:#15803d;color:#fff;padding:5px 11px;border-radius:7px;font-size:12.5px;font-weight:600;text-decoration:none;letter-spacing:-0.01em;">
+        <a href="analytics.html" class="analytics-btn">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           Analytics Leaderboard &rarr;
         </a>
-        <span class="pslab">Trend</span>
-        <div class="pseg" id="pseg" role="group" aria-label="Trend period"></div>
+        <div class="trend-ctrl">
+          <span class="pslab">Trend</span>
+          <div class="pseg" id="pseg" role="group" aria-label="Trend period"></div>
+        </div>
       </div>
     </div>
   </div>
