@@ -930,16 +930,21 @@ function renderKPIsBody(){
   var ctTag  =ctSel?(' · '+ctShort(ctSel)):'';
   var ctPend =ctSel?tally({ct:ctKey}):0;
 
-  // A report that has no such column contributes nothing, and tally()
-  // would return a bare 0 that reads as "none pending". Distinguish the
-  // two: null means not reported, 0 means reported and empty.
+  // When CT is selected: single report. When CT is null (All): sum across all reports that report it.
   function ctMetric(re){
-    if(!ctSel) return null;
-    return metricKey(ctSel,re)===null ? null : tally({ct:ctKey,metric:re});
+    if(ctSel){
+      return metricKey(ctSel,re)===null ? null : tally({ct:ctKey,metric:re});
+    }
+    var cov=metricCoverage(re);
+    return cov.have > 0 ? tally({metric:re}) : null;
   }
   function ctDelta(re){
-    if(!ctSel||metricKey(ctSel,re)===null) return null;
-    return dlt({ct:ctKey,metric:re});
+    if(ctSel){
+      if(metricKey(ctSel,re)===null) return null;
+      return dlt({ct:ctKey,metric:re});
+    }
+    var cov=metricCoverage(re);
+    return cov.have > 0 ? dlt({metric:re}) : null;
   }
   var noAction=ctMetric(KPI_COL.noAction);
   var lco     =ctMetric(KPI_COL.lco);
@@ -948,13 +953,18 @@ function renderKPIsBody(){
   function share(v){
     return totalPending?((v*100/totalPending).toFixed(1)+'% of total'):'no cases in scope';
   }
-  // Per-report cards are a share of that report's own pending, not of
-  // the whole strip -- the denominator has to be the caseload the column
-  // is drawn from or the percentage means nothing.
-  function ctShare(v){
-    if(v===null) return ctName?('not reported in '+ctName):'no case type selected';
-    if(!ctPend)  return 'no '+(ctName||'cases')+' pending in scope';
-    return (v*100/ctPend).toFixed(1)+'% of '+ctShort(ctSel);
+  // Per-report cards are a share of that report's own pending when filtered,
+  // or share of total pending across available reports when All is active.
+  function ctShare(v,re){
+    if(ctSel){
+      if(v===null) return ctName?('not reported in '+ctName):'no case type selected';
+      if(!ctPend)  return 'no '+(ctName||'cases')+' pending in scope';
+      return (v*100/ctPend).toFixed(1)+'% of '+ctShort(ctSel);
+    }
+    if(v===null) return 'not reported in current scope';
+    if(!totalPending) return 'no cases in scope';
+    var cov=metricCoverage(re);
+    return (v*100/totalPending).toFixed(1)+'% of total ('+cov.have+'/'+cov.of+' reports)';
   }
   function ctVal(v){ return v===null?'&mdash;':kn(v); }
 
@@ -972,6 +982,10 @@ function renderKPIsBody(){
     contemptTypes().forEach(function(ct){ dContempt+=dlt({ct:ct.key})||0; });
   }
 
+  var covNoAct=metricCoverage(KPI_COL.noAction);
+  var covLco=metricCoverage(KPI_COL.lco);
+  var covFinal=metricCoverage(KPI_COL.finalOrd);
+
   var cards=[
     {c:'k1',k:'Total cases',v:kn(totalPending),d:scope,dv:dlt({}),
      t:'Total cases pending, summed across every report in scope'},
@@ -984,22 +998,28 @@ function renderKPIsBody(){
     {c:'k4',k:'Contempt'+forum,v:kn(contempt),d:share(contempt),dv:dContempt,
      t:'Civil Contempt Petition (High Court) '+kn(cHC)+
        ' + Contempt Application (KSAT) '+kn(cKS)},
-    {c:'k5',k:'No action'+ctTag,v:ctVal(noAction),d:ctShare(noAction),
+    {c:'k5',k:'No action'+ctTag,v:ctVal(noAction),d:ctShare(noAction,KPI_COL.noAction),
      dv:ctDelta(KPI_COL.noAction),
-     t:noAction===null
-        ? (ctName||'This report')+' does not report a "No Action Taken" column'
-        : ctName+' — no action taken yet, the first stage of the pipeline'},
+     t:ctSel
+        ? (noAction===null
+            ? (ctName||'This report')+' does not report a "No Action Taken" column'
+            : ctName+' — no action taken yet, the first stage of the pipeline')
+        : 'Total no action taken across '+covNoAct.have+' of '+covNoAct.of+' reports in scope carrying this column'},
     {c:'k6',k:'LCO pending'+ctTag,v:ctVal(lco),dv:ctDelta(KPI_COL.lco),
-     d:ctShare(lco),
-     t:lco===null
-        ? (ctName||'This report')+' has no "LCO Proposal Stage" column — it '+
-          'reports GA/LCO Authorization, which is a different stage and not folded in'
-        : ctName+' — LCO Proposal Stage, pending from department'},
-    {c:'k7',k:'Final order compliance'+ctTag,v:ctVal(finalOrd),d:ctShare(finalOrd),
+     d:ctShare(lco,KPI_COL.lco),
+     t:ctSel
+        ? (lco===null
+            ? (ctName||'This report')+' has no "LCO Proposal Stage" column — it '+
+              'reports GA/LCO Authorization, which is a different stage and not folded in'
+            : ctName+' — LCO Proposal Stage, pending from department')
+        : 'Total LCO Proposal Stage pending across '+covLco.have+' of '+covLco.of+' reports in scope carrying this column'},
+    {c:'k7',k:'Final order compliance'+ctTag,v:ctVal(finalOrd),d:ctShare(finalOrd,KPI_COL.finalOrd),
      dv:ctDelta(KPI_COL.finalOrd),
-     t:finalOrd===null
-        ? (ctName||'This report')+' does not report a "Final Order Compliance Pending" column'
-        : ctName+' — decided cases awaiting departmental compliance'}
+     t:ctSel
+        ? (finalOrd===null
+            ? (ctName||'This report')+' does not report a "Final Order Compliance Pending" column'
+            : ctName+' — decided cases awaiting departmental compliance')
+        : 'Total decided cases awaiting departmental compliance across '+covFinal.have+' of '+covFinal.of+' reports in scope'}
   ];
   void active; void users; void divCount; void groupTotal; void groupUnits;
 
