@@ -326,7 +326,7 @@ def build() -> dict:
 
     latest = snapshots[-1]
     baselines = _pick_baselines(snapshots)
-    previous = baselines.get("w") or (snapshots[-2] if len(snapshots) >= 2 else None)
+    previous = baselines.get("d") or baselines.get("w") or (snapshots[-2] if len(snapshots) >= 2 else None)
     circle_index, circle_order, excluded = load_circle_index()
     wing_index, wing_order, wing_depts = load_wing_index()
     divisions = [d for d in divisions if _norm(d["name"]) not in excluded]
@@ -488,7 +488,9 @@ def build() -> dict:
 #: Weekly falls back to the oldest snapshot held so it says something from
 #: day two; monthly refuses to answer below 28 days, because a "monthly"
 #: change measured over nine days would be actively misleading.
+#: Baseline periods for comparison.
 BASELINE_PERIODS = [
+    ("d", "Daily", 1, 1),
     ("w", "Weekly", 7, 1),
     ("m", "Monthly", 30, 1),
 ]
@@ -514,7 +516,9 @@ def _pick_baselines(snapshots: list[dict]) -> dict:
     latest_date = latest.get("date") or ""
     for key, _label, want_days, min_span in BASELINE_PERIODS:
         pick = None
-        if key == "w":
+        if key == "d":
+            pick = snapshots[-2] if len(snapshots) >= 2 else None
+        elif key == "w":
             for snap in snapshots[:-1]:
                 date = snap.get("date")
                 if date and latest_date and _days_between(date, latest_date) >= want_days:

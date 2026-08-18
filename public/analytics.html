@@ -524,6 +524,7 @@
     </div>
     <div class="header-actions">
       <div class="period-toggle">
+        <button type="button" class="period-btn" id="btnPeriodD" onclick="setPeriod('d')">Daily (1d)</button>
         <button type="button" class="period-btn active" id="btnPeriodW" onclick="setPeriod('w')">Weekly (7d)</button>
         <button type="button" class="period-btn" id="btnPeriodM" onclick="setPeriod('m')">Monthly (30d)</button>
       </div>
@@ -677,8 +678,10 @@
 
   function setPeriod(p) {
     PERIOD = p;
+    const btnD = document.getElementById('btnPeriodD');
     const btnW = document.getElementById('btnPeriodW');
     const btnM = document.getElementById('btnPeriodM');
+    if (btnD) btnD.classList.toggle('active', p === 'd');
     if (btnW) btnW.classList.toggle('active', p === 'w');
     if (btnM) btnM.classList.toggle('active', p === 'm');
     render();
@@ -710,6 +713,11 @@
     RAW = d;
 
     // Period buttons label
+    const bD = (d.baselines && d.baselines.d) || {};
+    if (bD.span) {
+      const btnD = document.getElementById('btnPeriodD');
+      if (btnD) btnD.textContent = `Daily (${bD.span}d)`;
+    }
     const bW = (d.baselines && d.baselines.w) || {};
     if (bW.span) {
       const btnW = document.getElementById('btnPeriodW');
