@@ -96,11 +96,13 @@
     font-variant-numeric:tabular-nums;color:var(--c,var(--ink))}
   /* The delta rides on a white chip so it stays legible on the tinted
      card face without competing with the figure itself. */
-  .kpi .kd{font-size:13px;font-weight:700;padding:2px 6px;border-radius:5px;
-    background:rgba(255,255,255,.78);font-variant-numeric:tabular-nums;line-height:1.2}
+  .kpi .kd{font-size:12.5px;font-weight:700;padding:2px 6px;border-radius:5px;
+    background:rgba(255,255,255,.78);font-variant-numeric:tabular-nums;line-height:1.2;
+    display:inline-flex;align-items:center}
   .kpi .kd.increase{color:var(--red)}
   .kpi .kd.decrease{color:var(--grn)}
   .kpi .kd.same{color:var(--ink-3)}
+  .kpi .kd + .kd{margin-left:3px}
   .kpi .d{font-size:13px;margin-top:4px;color:var(--ink-2);opacity:.85;line-height:1.35}
   .kpi.accent{border-color:var(--line-2)}
   .kpi.accent .v{color:var(--forest-2)}
@@ -138,11 +140,13 @@
   /* Chip delta. Sits after the count, deliberately smaller than it: the
      count is what you filter on, the delta is context. Absent entirely
      when there is no change, so a busy row stays readable. */
-  .chip .cd{font-size:11.5px;font-weight:700;margin-left:-1px;
-    font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .chip .cd{font-size:11px;font-weight:700;margin-left:0;
+    font-variant-numeric:tabular-nums;letter-spacing:-.01em;display:inline-flex;align-items:center}
   .chip .cd.increase{color:var(--red)}
   .chip .cd.decrease{color:var(--grn)}
-  .chip.on .cd{color:#fff;opacity:.9}
+  .chip .cd + .cd{margin-left:3px}
+  .chip.on .cd.increase{color:#fca5a5;opacity:1}
+  .chip.on .cd.decrease{color:#86efac;opacity:1}
 
   .frow.f-circle{--c-bg:#eaf1fa; --c-bd:#c2d6ee; --c-fg:#16559b}  /* blue    */
   .frow.f-unit  {--c-bg:#e9f4ec; --c-bd:#bfdfc9; --c-fg:#1d6b40}  /* green   */
@@ -238,10 +242,11 @@
      exception is the Completed group, which counts closed cases -- it
      asks for .up/.down instead, so the same colours keep meaning
      "worse" and "better" rather than flipping meaning per widget. */
-  .d{font-size:12px;font-weight:600;margin-left:5px;padding:1px 5px;border-radius:4px}
+  .d{font-size:12px;font-weight:600;margin-left:5px;padding:1px 5px;border-radius:4px;display:inline-flex;align-items:center}
   .d.increase{color:var(--red);background:var(--red-bg)}
   .d.decrease{color:var(--grn);background:var(--grn-bg)}
   .d.baseline,.d.same{color:var(--ink-3)}
+  .d + .d{margin-left:3px}
   .us{font-size:13px;color:var(--ink-3);font-weight:400;margin-top:1px}
   .note{margin:12px 0 0;padding:10px 13px;font-size:14px;border-radius:9px;
     background:#fdf7e8;color:#6a5415;border:1px solid #f0e3c0;line-height:1.5}
@@ -349,11 +354,12 @@
     .ph-dn{--ph:#7d7b72;--ph-fg:#4a4844;--ph-bg:#f2f1ea}
     .ph-ot{--ph:#9a988e;--ph-fg:#5d5b53;--ph-bg:#f2f1ea}
     /* Same rule as the rest of the page -- see .d above. */
-    .md{font-weight:600;margin-left:5px;font-variant-numeric:tabular-nums}
+    .md{font-weight:600;margin-left:5px;font-variant-numeric:tabular-nums;display:inline-flex;align-items:center}
     .md.sm{font-size:10.5px;margin-left:3px;opacity:.9}
     .md.increase,.md.down{color:var(--red)}
     .md.decrease,.md.up{color:var(--grn)}
     .md.same{color:var(--ink-3)}
+    .md + .md{margin-left:3px}
 
     .museres{margin-top:9px;padding-top:7px;border-top:1px solid var(--line)}
     .museres .usl{font-size:10.5px;font-weight:700;text-transform:uppercase;
@@ -528,22 +534,57 @@ function arw(d){return d==='increase'?'&#9650;':d==='decrease'?'&#9660;':'';}
 // dropdown along with everything else.
 function recDelta(rec){
   var b=baseOf(rec);
-  if(!b) return {dir:'no_data',delta:null};
-  var now=(rec.metrics||{}).total_cases_pending||0;
-  var was=b.total_cases_pending;
-  if(was===undefined||was===null) return {dir:'baseline',delta:null};
-  var d=now-was;
-  return {dir:d>0?'increase':(d<0?'decrease':'same'),delta:d};
+  if(!b) return {dir:'no_data',inc:0,dec:0,net:0,delta:null};
+  var us=(rec.users||[]);
+  var inc=0, dec=0;
+  if(us.length>0){
+    var anyBase=false;
+    us.forEach(function(u){
+      var ub=baseOf(u)||{};
+      var u_now=(u.metrics||{}).total_cases_pending||0;
+      var u_was=ub.total_cases_pending;
+      if(typeof u_was==='number'){
+        anyBase=true;
+        var diff=u_now-u_was;
+        if(diff>0) inc+=diff;
+        else if(diff<0) dec+=(-diff);
+      }
+    });
+    if(!anyBase && b.total_cases_pending===undefined) return {dir:'baseline',inc:0,dec:0,net:0,delta:null};
+  } else {
+    var now=(rec.metrics||{}).total_cases_pending||0;
+    var was=b.total_cases_pending;
+    if(was===undefined||was===null) return {dir:'baseline',inc:0,dec:0,net:0,delta:null};
+    var diff=now-was;
+    if(diff>0) inc=diff;
+    else if(diff<0) dec=(-diff);
+  }
+  var net=inc-dec;
+  return {
+    dir: inc>0 && dec===0 ? 'increase' : (dec>0 && inc===0 ? 'decrease' : (inc>0 && dec>0 ? 'split' : 'same')),
+    inc: inc,
+    dec: dec,
+    net: net,
+    delta: net
+  };
 }
 function recDeltaHTML(rec){
   var x=recDelta(rec);
-  return dHTML(x.dir,x.delta);
+  return dHTML(x);
 }
-function dHTML(dir,delta){
-  if(dir==='increase'||dir==='decrease')
-    return '<span class="d '+dir+'">'+arw(dir)+(delta>0?'+':'')+delta+'</span>';
-  if(dir==='baseline') return '<span class="d baseline">new</span>';
-  return '';
+function dHTML(x,delta){
+  if(x===null||x===undefined) return '';
+  if(typeof x==='string'){
+    if(x==='increase'||x==='decrease')
+      return '<span class="d '+x+'">'+arw(x)+(delta>0?'+':'')+delta+'</span>';
+    if(x==='baseline') return '<span class="d baseline">new</span>';
+    return '';
+  }
+  if(x.dir==='baseline') return '<span class="d baseline">new</span>';
+  var html='';
+  if(x.inc>0) html+='<span class="d increase" title="Increased by +'+x.inc+'">&#9650;+'+x.inc+'</span>';
+  if(x.dec>0) html+='<span class="d decrease" title="Decreased by -'+x.dec+'">&#9660;-'+x.dec+'</span>';
+  return html;
 }
 function num(v){
   if(v===null||v===undefined) return '<span class="z">&mdash;</span>';
@@ -789,24 +830,159 @@ function withPrev(ov){
   var o={}; for(var k in (ov||{})) o[k]=ov[k];
   o.prev=true; return o;
 }
-// null means "nothing to compare against", which is not the same as 0.
+// Compute separate increase and decrease values for a filter scope.
 function dlt(ov){
   if(!hasPrev()) return null;
-  return tally(ov)-tally(withPrev(ov));
+  var o={court:COURT,circle:CIRCLE,wing:WING,unit:UNIT,stage:STAGE,ct:null,metric:null};
+  for(var k in (ov||{})) o[k]=ov[k];
+  var inc=0, dec=0;
+  var MK='total_cases_pending';
+
+  DATA.case_types.forEach(function(ct){
+    if(o.ct!==null && ct.key!==o.ct) return;
+    if(o.court!=='ALL' && ct.court!==o.court) return;
+
+    var curMK=MK;
+    if(o.metric){ curMK=metricKey(ct,o.metric); if(!curMK) return; }
+
+    ct.rows.forEach(function(r){
+      if(o.circle!=='ALL' && r.circle!==o.circle) return;
+      if(o.unit!=='ALL' && r.code!==o.unit) return;
+
+      var us=r.users||[];
+      if(o.wing!=='ALL'){
+        us=us.filter(function(u){return u.wing===o.wing;});
+        if(!us.length) return;
+      }
+
+      if(us.length>0){
+        us.forEach(function(u){
+          var um=u.metrics||{};
+          var upm=baseOf(u)||{};
+          if(o.stage!=='ALL' && !(um[o.stage]>0 || upm[o.stage]>0)) return;
+          var now_v = typeof um[curMK]==='number' ? um[curMK] : 0;
+          var was_v = typeof upm[curMK]==='number' ? upm[curMK] : 0;
+          var diff = now_v - was_v;
+          if(diff>0) inc += diff;
+          else if(diff<0) dec += (-diff);
+        });
+      } else {
+        var m=r.metrics||{};
+        var pm=baseOf(r)||{};
+        if(o.stage!=='ALL' && !(m[o.stage]>0 || pm[o.stage]>0)) return;
+        var now_v = typeof m[curMK]==='number' ? m[curMK] : 0;
+        var was_v = typeof pm[curMK]==='number' ? pm[curMK] : 0;
+        var diff = now_v - was_v;
+        if(diff>0) inc += diff;
+        else if(diff<0) dec += (-diff);
+      }
+    });
+  });
+
+  return { inc: inc, dec: dec, net: inc - dec, delta: inc - dec };
 }
-// Bucketed version: returns {key: delta} so a whole row of chips costs
-// one extra pass rather than one per chip.
+
+// Bucketed version: returns {key: {inc, dec, net, delta}}
 function dltBy(ov,by,keyOf){
   if(!hasPrev()) return null;
-  var was={};
-  tally(withPrev(ov),by).forEach(function(b){ was[keyOf(b)]=b.total; });
-  return was;
+  var o={court:COURT,circle:CIRCLE,wing:WING,unit:UNIT,stage:STAGE,ct:null,metric:null};
+  for(var k in (ov||{})) o[k]=ov[k];
+  var out={};
+  var MK='total_cases_pending';
+
+  DATA.case_types.forEach(function(ct){
+    if(o.ct!==null && ct.key!==o.ct) return;
+    if(o.court!=='ALL' && ct.court!==o.court) return;
+
+    var curMK=MK;
+    if(o.metric){ curMK=metricKey(ct,o.metric); if(!curMK) return; }
+
+    ct.rows.forEach(function(r){
+      if(o.circle!=='ALL' && r.circle!==o.circle) return;
+      if(o.unit!=='ALL' && r.code!==o.unit) return;
+
+      var us=r.users||[];
+      if(o.wing!=='ALL'){
+        us=us.filter(function(u){return u.wing===o.wing;});
+        if(!us.length) return;
+      }
+
+      function record(key, diff){
+        if(!key) return;
+        if(!out[key]) out[key]={ inc:0, dec:0, net:0, delta:0 };
+        if(diff>0){
+          out[key].inc += diff;
+          out[key].net += diff;
+          out[key].delta += diff;
+        } else if(diff<0){
+          out[key].dec += (-diff);
+          out[key].net += diff;
+          out[key].delta += diff;
+        }
+      }
+
+      if(by==='circle'){
+        if(us.length>0){
+          us.forEach(function(u){
+            var um=u.metrics||{}, upm=baseOf(u)||{};
+            if(o.stage!=='ALL' && !(um[o.stage]>0 || upm[o.stage]>0)) return;
+            var diff=(um[curMK]||0)-(upm[curMK]||0);
+            record(r.circle, diff);
+          });
+        } else {
+          var m=r.metrics||{}, pm=baseOf(r)||{};
+          if(o.stage!=='ALL' && !(m[o.stage]>0 || pm[o.stage]>0)) return;
+          var diff=(m[curMK]||0)-(pm[curMK]||0);
+          record(r.circle, diff);
+        }
+      } else if(by==='unit'){
+        if(us.length>0){
+          us.forEach(function(u){
+            var um=u.metrics||{}, upm=baseOf(u)||{};
+            if(o.stage!=='ALL' && !(um[o.stage]>0 || upm[o.stage]>0)) return;
+            var diff=(um[curMK]||0)-(upm[curMK]||0);
+            record(r.code, diff);
+          });
+        } else {
+          var m=r.metrics||{}, pm=baseOf(r)||{};
+          if(o.stage!=='ALL' && !(m[o.stage]>0 || pm[o.stage]>0)) return;
+          var diff=(m[curMK]||0)-(pm[curMK]||0);
+          record(r.code, diff);
+        }
+      } else if(by==='wing'){
+        us.forEach(function(u){
+          if(!u.wing) return;
+          var um=u.metrics||{}, upm=baseOf(u)||{};
+          if(o.stage!=='ALL' && !(um[o.stage]>0 || upm[o.stage]>0)) return;
+          var diff=(um[curMK]||0)-(upm[curMK]||0);
+          record(u.wing, diff);
+        });
+      } else if(by==='stage'){
+        STAGES.forEach(function(st){
+          var m=r.metrics||{}, pm=baseOf(r)||{};
+          var now_v = typeof m[st.key]==='number' ? m[st.key] : 0;
+          var was_v = typeof pm[st.key]==='number' ? pm[st.key] : 0;
+          var diff = now_v - was_v;
+          record(st.key, diff);
+        });
+      }
+    });
+  });
+
+  return out;
 }
-function dHTMLsmall(delta){
-  if(delta===null||delta===undefined||delta===0) return '';
-  var dir=delta>0?'increase':'decrease';
-  return '<span class="cd '+dir+'">'+(delta>0?'&#9650;':'&#9660;')+
-         Math.abs(delta)+'</span>';
+
+function dHTMLsmall(d){
+  if(!d) return '';
+  if(typeof d==='number'){
+    if(d===0) return '';
+    var dir=d>0?'increase':'decrease';
+    return '<span class="cd '+dir+'">'+(d>0?'&#9650;+':'&#9660;-')+Math.abs(d)+'</span>';
+  }
+  var res='';
+  if(d.inc>0) res+='<span class="cd increase" title="Increased by +'+d.inc+'">&#9650;+'+d.inc+'</span>';
+  if(d.dec>0) res+='<span class="cd decrease" title="Decreased by -'+d.dec+'">&#9660;-'+d.dec+'</span>';
+  return res;
 }
 // Trim the repeated boilerplate so the chips stay readable.
 function shortUnit(name){
@@ -978,8 +1154,16 @@ function renderKPIsBody(){
   // so its delta is the sum of theirs rather than a single tally.
   var dContempt=null;
   if(hasPrev()){
-    dContempt=0;
-    contemptTypes().forEach(function(ct){ dContempt+=dlt({ct:ct.key})||0; });
+    dContempt={inc:0, dec:0, net:0, delta:0};
+    contemptTypes().forEach(function(ct){
+      var d=dlt({ct:ct.key});
+      if(d){
+        dContempt.inc += d.inc;
+        dContempt.dec += d.dec;
+        dContempt.net += d.net;
+        dContempt.delta += d.net;
+      }
+    });
   }
 
   var covNoAct=metricCoverage(KPI_COL.noAction);
@@ -1023,15 +1207,26 @@ function renderKPIsBody(){
   ];
   void active; void users; void divCount; void groupTotal; void groupUnits;
 
-  var since=DATA.previous_date?(' vs '+DATA.previous_date):'';
+  var bPeriod = (DATA && DATA.baselines && DATA.baselines[PERIOD]) || {};
+  var since = bPeriod.date ? (' vs ' + bPeriod.date + ' (' + (bPeriod.span || 0) + 'd ago)') : '';
   document.getElementById('kpis').innerHTML=cards.map(function(c){
     var dv='';
     if(c.dv!==null&&c.dv!==undefined){
-      dv=(c.dv===0)
-        ? '<span class="kd same" title="no change'+since+'">&ndash;</span>'
-        : '<span class="kd '+(c.dv>0?'increase':'decrease')+'" title="'+
-          (c.dv>0?'up ':'down ')+Math.abs(c.dv)+since+'">'+
-          (c.dv>0?'&#9650;':'&#9660;')+Math.abs(c.dv)+'</span>';
+      if(typeof c.dv==='number'){
+        dv=(c.dv===0)
+          ? '<span class="kd same" title="no change'+since+'">&ndash;</span>'
+          : '<span class="kd '+(c.dv>0?'increase':'decrease')+'" title="'+
+            (c.dv>0?'up +':'down -')+Math.abs(c.dv)+since+'">'+
+            (c.dv>0?'&#9650;+':'&#9660;-')+Math.abs(c.dv)+'</span>';
+      } else {
+        var parts = [];
+        if(c.dv.inc > 0) parts.push('<span class="kd increase" title="up +' + c.dv.inc + ' cases' + since + '">&#9650;+' + c.dv.inc + '</span>');
+        if(c.dv.dec > 0) parts.push('<span class="kd decrease" title="down -' + c.dv.dec + ' cases' + since + '">&#9660;-' + c.dv.dec + '</span>');
+        if(!parts.length){
+          parts.push('<span class="kd same" title="no change' + since + '">&ndash;</span>');
+        }
+        dv = parts.join('');
+      }
     }
     return '<div class="kpi '+(c.c||'')+(c.accent?' accent':'')+'"'+
            (c.t?' title="'+esc(c.t)+'"':'')+'>'+
@@ -1108,14 +1303,13 @@ function renderFilters(){
   // circles, so the row is named for both.
   var cl=circleList();
   var grand=cl.reduce(function(s,c){return s+c.total;},0);
-  var clWas=dltBy({circle:'ALL',wing:'ALL',unit:'ALL'},'circle',function(b){return b.name;});
-  var grandWas=clWas?Object.keys(clWas).reduce(function(s,k){return s+clWas[k];},0):null;
-  var circleChips=chip(CIRCLE==='ALL',"setCircle('ALL')",'All',grand,'','',
-                       grandWas===null?null:grand-grandWas)+
+  var allCircleDlt=dlt({circle:'ALL',wing:'ALL',unit:'ALL'});
+  var clDlt=dltBy({circle:'ALL',wing:'ALL',unit:'ALL'},'circle');
+  var circleChips=chip(CIRCLE==='ALL',"setCircle('ALL')",'All',grand,'','',allCircleDlt)+
     cl.map(function(c){
       return chip(CIRCLE===c.name,'setCircle('+q(c.name)+')',
                   c.name.replace(/ Circle$/,''),c.total,c.total===0?' zero':'',c.name,
-                  clWas?c.total-(clWas[c.name]||0):null);
+                  clDlt?clDlt[c.name]:null);
     }).join('');
 
   // Wings / Divisions -- one row for both, because they are the same
@@ -1132,16 +1326,16 @@ function renderFilters(){
       (wl.length?wl.length+' wings and ':'')+ul.length+' divisions</span>';
   }else{
     var allOn=(WING==='ALL'&&UNIT==='ALL');
-    subChips=chip(allOn,"setSub('ALL')",'All',tally({wing:'ALL',unit:'ALL'}),'','',
-                  dlt({wing:'ALL',unit:'ALL'}));
-    var wlWas=dltBy({wing:'ALL',unit:'ALL'},'wing',function(b){return b.name;});
-    var ulWas=dltBy({unit:'ALL',wing:'ALL'},'unit',function(b){return b.code;});
+    var subAllDlt=dlt({wing:'ALL',unit:'ALL'});
+    subChips=chip(allOn,"setSub('ALL')",'All',tally({wing:'ALL',unit:'ALL'}),'','',subAllDlt);
+    var wlDlt=dltBy({wing:'ALL',unit:'ALL'},'wing');
+    var ulDlt=dltBy({unit:'ALL',wing:'ALL'},'unit');
     if(wl.length){
       subChips+=wl.map(function(w){
         return chip(WING===w.name,'setWing('+q(w.name)+')',shortWing(w.name),w.total,
                     w.total===0?' zero':'',
                     'Wing — '+w.name+', '+w.users+' user'+(w.users===1?'':'s'),
-                    wlWas?w.total-(wlWas[w.name]||0):null);
+                    wlDlt?wlDlt[w.name]:null);
       }).join('')+'<span class="fsep"></span>';
     }
     subChips+=ul.filter(function(u){
@@ -1156,7 +1350,7 @@ function renderFilters(){
     }).map(function(u){
       return chip(UNIT===u.code,'setUnit('+q(u.code)+')',shortUnit(u.name),u.total,
                   u.total===0?' zero':'',u.name+' — '+(UNIT_KIND[u.group]||u.group),
-                  ulWas?u.total-(ulWas[u.code]||0):null);
+                  ulDlt?ulDlt[u.code]:null);
     }).join('');
   }
 
@@ -1223,7 +1417,7 @@ function renderFilters(){
   }
   var typeList=typesFor(COURT).slice().sort(function(a,b){return pend(b)-pend(a);});
   var allPend=typesFor(COURT).reduce(function(s,ct){return s+pend(ct);},0);
-  var allDlt=hasPrev()?dlt({ct:null}):null;
+  var allDlt=dlt({ct:null});
   var allChip=chip(CT===null,'setCT(null)','All',allPend,'',
     'All case types — total pending across every report in scope',allDlt);
   var typeChips=allChip+typeList.map(function(ct){
@@ -1250,13 +1444,14 @@ function renderFilters(){
   var stageRowHTML='';
   if(!IS_MOBILE){
     var sl=stageList().sort(function(a,b){return b.total-a.total;});
-    var slWas=dltBy({stage:'ALL'},'stage',function(b){return b.key;});
-    var stageChips=chip(STAGE==='ALL',"setStage('ALL')",'Any stage')+
+    var slDlt=dltBy({stage:'ALL'},'stage');
+    var allStageDlt=dlt({stage:'ALL'});
+    var stageChips=chip(STAGE==='ALL',"setStage('ALL')",'Any stage','','','',allStageDlt)+
       sl.map(function(st){
         return chip(STAGE===st.key,'setStage('+q(st.key)+')',st.label,st.total,
                     st.total===0?' zero':'',
                     st.units+' unit'+(st.units===1?'':'s')+' with cases at this stage',
-                    slWas?st.total-(slWas[st.key]||0):null);
+                    slDlt?slDlt[st.key]:null);
       }).join('');
     stageRowHTML=row('Stage',stageChips,'f-stage');
   }
@@ -1463,7 +1658,7 @@ function userRows(r,i,cols,sortKey){
     // under the HQ department code, and the CCMS Admin system account.
     var odd=/^(Field offices|System account|Unassigned)/.test(w);
     return '<tr class="wg'+(odd?' um':'')+'" data-p="'+i+'" style="display:none">'+
-      '<td class="nm">'+esc(w)+'<span class="gt"> &middot; '+list.length+
+      '<td class="nm">'+esc(w)+recDeltaHTML({users: list})+'<span class="gt"> &middot; '+list.length+
       ' user'+(list.length===1?'':'s')+'</span></td>'+
       cells(m,cols)+'</tr>'+
       list.map(function(u){return urow(u,true);}).join('');
@@ -1798,7 +1993,12 @@ function renderPanel(){
       cols.forEach(function(c){
         ftot[c.key]=ROWS.reduce(function(s,r){var v=r.metrics[c.key];return s+(typeof v==='number'?v:0);},0);
       });
-      var foot='<tr><td class="nm">Total &mdash; '+ROWS.length+' unit'+(ROWS.length===1?'':'s')+'</td>'+
+      var footDlt=dlt({ct:ct.key});
+      var footDltHtml=footDlt ? dHTMLsmall(footDlt) : '';
+      var foot='<tr><td class="nm">Total &mdash; '+ROWS.length+' unit'+(ROWS.length===1?'':'s')+
+        (CIRCLE==='ALL'?'':' in '+esc(CIRCLE))+
+        (WING==='ALL'?'':' &middot; '+esc(WING)+' only')+
+        footDltHtml+'</td>'+
         cols.map(function(c){return '<td'+cellClass(c.key)+'>'+num(ftot[c.key])+'</td>';}).join('')+'</tr>';
       return '<div class="panel"><div class="phead"><h2>'+esc(ct.label)+' report &mdash; non secretariat department'+
         (ct.all_columns_known?'':'<span class="badge">partial headings</span>')+'</h2>'+
@@ -1855,10 +2055,12 @@ function renderPanel(){
     ftot[c.key]=ROWS.reduce(function(s,r){
       var v=r.metrics[c.key]; return s+(typeof v==='number'?v:0);},0);
   });
+  var footDlt=dlt({ct:ct.key});
+  var footDltHtml=footDlt ? dHTMLsmall(footDlt) : '';
   var foot='<tr><td class="nm">Total &mdash; '+ROWS.length+' unit'+(ROWS.length===1?'':'s')+
     (CIRCLE==='ALL'?'':' in '+esc(CIRCLE))+
     (WING==='ALL'?'':' &middot; '+esc(WING)+' only')+
-    '</td>'+cols.map(function(c){
+    footDltHtml+'</td>'+cols.map(function(c){
       return '<td'+cellClass(c.key)+'>'+num(ftot[c.key])+'</td>';
     }).join('')+'</tr>';
 
